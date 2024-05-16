@@ -1,0 +1,1777 @@
+{
+  "id" : "machine_guilds",
+  "name" : "Machine Guilds",
+  "author" : "guitarninja#5707",
+  "background" : "The Machine Guilds are a group of aspiring machinist and tinkerers, expanding their mortal bodies with cybernetic upgrades. They rely on advanced weaponry and superior tactics which they can maximize through a hivemind-like neural link.",
+  "hidden_units" : {
+    "machine_grand_master" : {
+      "name" : "Machine Grand Master",
+      "description" : "The smartest and most intelligent machine guild leader.",
+      "category" : "command",
+      "rules" : [
+        "engineer",
+        {
+          "id" : "leader_x",
+          "x" : "Infantry, Heavy Infantry"
+        },
+        {
+          "id" : "wounds",
+          "x" : 3
+        }
+      ],
+      "models" : [
+        {
+          "name" : "Machine Grand Master",
+          "courage" : 7,
+          "movement" : 6,
+          "shoot" : 8,
+          "fight" : 8,
+          "defense" : 11,
+          "reflexes" : 7,
+          "weapons" : [
+            {
+              "id" : "axe_halberd",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "addRule" : [
+                {
+                  "id" : "ward",
+                  "x" : 1,
+                  "name" : "Machine Powers"
+                },
+                {
+                  "id" : "ward",
+                  "x" : "2",
+                  "name" : "Master Machine Powers"
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "eradication_ray",
+                "combustion_blaster"
+              ],
+              "limit" : 1
+            },
+            {
+              "addWeapon" : [
+                "macro_pistol",
+                "thermal_carbine"
+              ],
+              "limit" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    }
+  },
+  "units" : {
+    "machine_lord" : {
+      "name" : "Guild Lord",
+      "description" : "A master craftsman and leader of the machine guild.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Machine Lord",
+          "courage" : 7,
+          "movement" : 6,
+          "shoot" : 7,
+          "fight" : 6,
+          "defense" : 9,
+          "reflexes" : 6,
+          "rules" : [
+            "engineer",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Heavy Infantry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            "radiation_pistol",
+            {
+              "id" : "heavy_ccw",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "radiation_pistol"
+              ],
+              "withWeapon" : [
+                "smg",
+                "thermal_carbine",
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol",
+                "eradication_blaster"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "energy_fist",
+                  "count" : 3
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 3
+                },
+                {
+                  "id" : "energy_axe",
+                  "count" : 3
+                },
+                {
+                  "id" : "energy_sword",
+                  "count" : 3
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 3
+                },
+                {
+                  "id" : "energy_staff",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "thermal_rifle",
+                "eradication_ray",
+                "plasma_rifle",
+                "emp_rifle",
+                "fusion_rifle",
+                "flamethrower"
+              ],
+              "limit" : 1
+            },
+            {
+              "addWeapon" : [
+                "servo_arm"
+              ],
+              "limit" : 2
+            },
+            {
+              "addRule" : [
+                "protocols",
+                {
+                  "id" : "power",
+                  "x" : 1
+                },
+                {
+                  "id" : "power",
+                  "x" : 2
+                }
+              ],
+              "limit" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "machine_apprentice" : {
+      "name" : "Guild Apprentice",
+      "description" : "A master craftsman and leader of the machine guild.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Guild Apprentice",
+          "courage" : 6,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 8,
+          "reflexes" : 6,
+          "rules" : [
+            "engineer",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Heavy Infantry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "weapons" : [
+            "radiation_pistol",
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "radiation_pistol"
+              ],
+              "withWeapon" : [
+                "smg",
+                "thermal_carbine",
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol",
+                "eradication_blaster"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_axe",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "thermal_rifle",
+                "eradication_ray",
+                "plasma_rifle",
+                "emp_rifle",
+                "fusion_rifle",
+                "flamethrower"
+              ],
+              "limit" : 1
+            },
+            {
+              "addWeapon" : [
+                "servo_arm"
+              ],
+              "limit" : 2
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "power",
+                  "x" : 1
+                },
+                "protocols"
+              ],
+              "limit" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "data_specialist" : {
+      "name" : "Data Specialist",
+      "description" : "An expert in manipulating machine data.",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Data Specialist",
+          "courage" : 6,
+          "movement" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 9,
+          "reflexes" : 6,
+          "weapons" : [
+            "heavy_ccw",
+            "radiation_pistol"
+          ],
+          "rules" : [
+            "engineer",
+            "protocols",
+            {
+              "id" : "support_x",
+              "x" : "Vehicles"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "radiation_pistol",
+              "withWeapon" : [
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw"
+              },
+              "withWeapon" : [
+                "energy_fist",
+                "taser_sword",
+                "energy_mace",
+                "energy_sword"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "trooper_commander" : {
+      "name" : "Trooper Commander",
+      "description" : "Commander of the foot-mobile machine guild protection forces.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Trooper Commander",
+          "courage" : 6,
+          "movement" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "rules" : [
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "vanguard_tactics",
+              "x" : 1
+            }
+          ],
+          "weapons" : [
+            "long_rifle",
+            "ccw",
+            "smoke_grenades"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "long_rifle"
+              ],
+              "withWeapon" : [
+                "radiation_carbine",
+                "tesla_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "long_rifle",
+                "ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "radiation_pistol",
+                  {
+                    "id" : "heavy_ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : "radiation_pistol",
+              "withWeapon" : [
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw",
+                "count" : 2
+              },
+              "withWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 2
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "replaceRule" : {
+                "id" : "vanguard_tactics",
+                "x" : 1
+              },
+              "withRule" : {
+                "id" : "vanguard_tactics",
+                "x" : 2
+              }
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_trooper" : {
+      "name" : "Guild Trooper",
+      "description" : "Machine guild ground-forces used for recon and guard missions.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Trooper",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 6,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "long_rifle"
+              ],
+              "withWeapon" : [
+                "radiation_carbine",
+                "tesla_rifle"
+              ]
+            },
+            {
+              "addRule" : [
+                "scout"
+              ]
+            },
+            {
+              "addRule" : [
+                "data_link",
+                "heat_scanner"
+              ],
+              "limit" : 1
+            }
+          ],
+          "weapons" : [
+            "long_rifle",
+            "ccw",
+            "smoke_grenades"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_trooper_sergeant" : {
+      "name" : "Guild Trooper Sergeant",
+      "description" : "Machine guild ground-forces leader used for recon and guard missions.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Trooper Sergeant",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 6,
+          "rules" : [
+            "leader"
+          ],
+          "weapons" : [
+            "long_rifle",
+            "ccw",
+            "smoke_grenades"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "long_rifle"
+              ],
+              "withWeapon" : [
+                "radiation_carbine",
+                "tesla_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "long_rifle",
+                "ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "radiation_pistol",
+                  {
+                    "id" : "heavy_ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : "radiation_pistol",
+              "withWeapon" : [
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw",
+                "count" : 2
+              },
+              "withWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 2
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "scout"
+              ]
+            },
+            {
+              "addRule" : [
+                "data_link",
+                "heat_scanner"
+              ],
+              "limit" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_trooper_specialist" : {
+      "name" : "Guild Trooper Specialist",
+      "description" : "Machine guild ground-forces specialist used for recon and guard missions.",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Trooper Specialist",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 6,
+          "options" : [
+            {
+              "replaceWeapon" : "thermal_rifle",
+              "withWeapon" : [
+                "flamethrower",
+                "emp_rifle",
+                "plasma_rifle",
+                "rail_rifle",
+                "fusion_rifle"
+              ]
+            },
+            {
+              "addRule" : [
+                "scout"
+              ]
+            }
+          ],
+          "weapons" : [
+            "thermal_rifle",
+            "ccw",
+            "smoke_grenades"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_protector" : {
+      "name" : "Guild Protector",
+      "description" : "Machine guild guardian clad with shock spear and shield.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Protector",
+          "courage" : 5,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "shock_spear_melee",
+              "count" : 2
+            },
+            "shock_spear_shoot"
+          ],
+          "options" : [
+            {
+              "addRule" : [
+                "data_link",
+                "heat_scanner"
+              ],
+              "limit" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_protector_sergeant" : {
+      "name" : "Guild Protector Sergeant",
+      "description" : "Machine guild guardian leader clad with shock spear and shield.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Protector Sergeant",
+          "courage" : 5,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "leader"
+          ],
+          "weapons" : [
+            {
+              "id" : "shock_spear_melee",
+              "count" : 2
+            },
+            "shock_spear_shoot"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "shock_spear_melee",
+                  "count" : 2
+                },
+                "shock_spear_shoot"
+              ],
+              "withWeapon" : [
+                [
+                  "radiation_pistol",
+                  {
+                    "id" : "heavy_ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : "radiation_pistol",
+              "withWeapon" : [
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw",
+                "count" : 2
+              },
+              "withWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 2
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "data_link",
+                "heat_scanner"
+              ],
+              "limit" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_acolyte" : {
+      "name" : "Guild Acolyte",
+      "description" : "Fervent adept of the guild, using experimental weapons to overwhelm their enemies.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Acolyte",
+          "courage" : 6,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "resilient",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "shock_staff",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : {
+                "id" : "shock_staff",
+                "count" : 2
+              },
+              "withWeapon" : [
+                [
+                  "taser_gauntlets_zap",
+                  {
+                    "id" : "taser_gauntlets_strike",
+                    "count" : 2
+                  }
+                ]
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "guild_acolyte_sergeant" : {
+      "name" : "Guild Acolyte Sergeant",
+      "description" : "Fervent adept leader of the guild, using experimental weapons to overwhelm their enemies.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Acolyte Sergeant",
+          "courage" : 6,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "rules" : [
+            "leader",
+            {
+              "id" : "resilient",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "shock_staff",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : {
+                "id" : "shock_staff",
+                "count" : 2
+              },
+              "withWeapon" : [
+                [
+                  "taser_gauntlets_zap",
+                  {
+                    "id" : "taser_gauntlets_strike",
+                    "count" : 2
+                  }
+                ]
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "stalker" : {
+      "name" : "Cyborg Stalker",
+      "description" : "Master of subterfuge, using advanced weapons to kill and sabotage their foes.",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Cyborg Stalker",
+          "courage" : 5,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "agile",
+            "evasive",
+            "scout"
+          ],
+          "weapons" : [
+            "burst_carbine",
+            {
+              "id" : "energy_sword",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "burst_carbine"
+              ],
+              "withWeapon" : [
+                "sonic_blade",
+                "smg"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "sonic_blade",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_claws",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addRule" : {
+                "id" : "ambush",
+                "name" : "Infiltration Protocol"
+              }
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "stalker_sergeant" : {
+      "name" : "Cyborg Stalker Sergeant",
+      "description" : "Leader and master of subterfuge, using advanced weapons to kill and sabotage their foes.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Cyborg Stalker Sergeant",
+          "courage" : 5,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "agile",
+            "evasive",
+            "leader",
+            "scout"
+          ],
+          "weapons" : [
+            "burst_carbine",
+            {
+              "id" : "energy_sword",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "burst_carbine"
+              ],
+              "withWeapon" : [
+                "sonic_blade",
+                "smg"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "sonic_blade",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_claws",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addRule" : {
+                "id" : "ambush",
+                "name" : "Infiltration Protocol"
+              }
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "raider" : {
+      "name" : "Raider",
+      "description" : "Mounted trooper moving across the battlefield on a mechanical steed.",
+      "category" : "strike",
+      "models" : [
+        {
+          "name" : "Raider",
+          "courage" : 5,
+          "movement" : 8,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "agile",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "scout"
+          ],
+          "weapons" : [
+            "heavy_carbine",
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_carbine",
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "thermal_pistol",
+                    "count" : 2
+                  },
+                  "ccw"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : "heavy_carbine",
+              "withWeapon" : "thermal_carbine"
+            },
+            {
+              "addWeapon" : [
+                "heavy_flamethrower"
+              ]
+            },
+            {
+              "addRule" : [
+                "data_link"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "raider_sergeant" : {
+      "name" : "Raider Sergeant",
+      "description" : "Mounted trooper leader moving across the battlefield on a mechanical steed.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Raider Sergeant",
+          "courage" : 5,
+          "movement" : 8,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "agile",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "leader",
+            "scout"
+          ],
+          "weapons" : [
+            "heavy_carbine",
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "heavy_carbine",
+              "withWeapon" : [
+                "thermal_carbine",
+                "revolver_pistol",
+                "radiation_pistol",
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw",
+                "count" : 2
+              },
+              "withWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 2
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_carbine",
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "thermal_pistol",
+                    "count" : 2
+                  },
+                  "ccw"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "heavy_flamethrower"
+              ]
+            },
+            {
+              "addRule" : [
+                "data_link"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "sky_stalker" : {
+      "name" : "Sky Stalker",
+      "description" : "A metallic stalking cyborg for hunting and killing targets.",
+      "category" : "strike",
+      "models" : [
+        {
+          "name" : "Sky Stalker",
+          "courage" : 5,
+          "movement" : 8,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "fly"
+          ],
+          "weapons" : [
+            "twin_carbine",
+            "piercing_claws"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "twin_carbine",
+              "withWeapon" : {
+                "id" : "flamethrower"
+              }
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "impact",
+                  "x" : 1,
+                  "name" : "Cluster Grenades"
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "sky_stalker_sergeant" : {
+      "name" : "Sky Stalker Sergeant",
+      "description" : "A metallic stalking cyborg leader for hunting and killing targets.",
+      "category" : "command",
+      "models" : [
+        {
+          "name" : "Sky Stalker Sergeant",
+          "courage" : 5,
+          "movement" : 8,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "fly",
+            "leader"
+          ],
+          "weapons" : [
+            "twin_carbine",
+            "piercing_claws"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "twin_carbine",
+              "withWeapon" : {
+                "id" : "flamethrower"
+              }
+            },
+            {
+              "replaceWeapon" : [
+                "twin_carbine",
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "radiation_pistol",
+                  {
+                    "id" : "energy_sword",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "radiation_pistol"
+              ],
+              "withWeapon" : [
+                "thermal_pistol",
+                "emp_pistol",
+                "plasma_pistol",
+                "fusion_pistol",
+                "smg"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "energy_sword",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                },
+                {
+                  "id" : "taser_sword",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_mace",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "impact",
+                  "x" : 1,
+                  "name" : "Cluster Grenades"
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "breacher" : {
+      "name" : "Breacher",
+      "description" : "A cyborg specialized in breaching defenses and fighting armored targets.",
+      "category" : "heavy",
+      "keywords" : [
+        "Heavy Infantry"
+      ],
+      "models" : [
+        {
+          "name" : "Breacher",
+          "courage" : 5,
+          "movement" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 9,
+          "reflexes" : 5,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "weapons" : [
+            "fusion_cannon",
+            {
+              "id" : "claws",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "fusion_cannon",
+              "withWeapon" : [
+                "heavy_gravity_cannon",
+                "plasma_cannon",
+                "emp_cannon"
+              ]
+            },
+            {
+              "addWeapon" : [
+                "thermal_rifle",
+                "flamethrower",
+                "light_machinegun"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "claws",
+                "count" : 3
+              },
+              "withWeapon" : {
+                "id" : "iron_claws",
+                "count" : 3
+              }
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "emp_pistol" : {
+      "name" : "EMP Pistol",
+      "attacks" : 1,
+      "short" : 6,
+      "ap" : 4,
+      "rules" : [
+        {
+          "id" : "critical",
+          "x" : 1
+        },
+        "pistol"
+      ]
+    },
+    "emp_rifle" : {
+      "name" : "EMP Rifle",
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "ap" : 4,
+      "rules" : [
+        {
+          "id" : "critical",
+          "x" : 1
+        },
+        "rapid_fire"
+      ]
+    },
+    "emp_cannon" : {
+      "name" : "EMP Cannon",
+      "attacks" : 2,
+      "short" : 18,
+      "medium" : 36,
+      "ap" : 5,
+      "rules" : [
+        {
+          "id" : "critical",
+          "x" : 1
+        },
+        "heavy"
+      ]
+    },
+    "taser_gauntlets_zap" : {
+      "name" : "Taser Gauntlets (Shooting)",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : 6,
+      "rules" : [
+        "lethal",
+        "pistol"
+      ]
+    },
+    "taser_gauntlets_strike" : {
+      "name" : "Taser Gauntlets (Melee)",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "taser_sword" : {
+      "name" : "Taser Sword",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "taser_lance" : {
+      "name" : "Taser Lance",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lance",
+        "lethal"
+      ]
+    },
+    "taser_arm" : {
+      "name" : "Taser Arm",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "radiation_pistol" : {
+      "name" : "Radiation Pistol",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "pistol",
+        "poison"
+      ]
+    },
+    "radiation_carbine" : {
+      "name" : "Radiation Carbine",
+      "attacks" : 2,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "poison"
+      ]
+    },
+    "radiation_sniper" : {
+      "name" : "Radiation Sniper",
+      "attacks" : 1,
+      "short" : 15,
+      "medium" : 30,
+      "ap" : 3,
+      "rules" : [
+        "sniper",
+        "poison"
+      ]
+    },
+    "long_rifle" : {
+      "name" : "Long Rifle",
+      "attacks" : 1,
+      "short" : 15,
+      "medium" : 30,
+      "ap" : 1,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "sonic_blade" : {
+      "name" : "Sonic Blade",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "disruption_missiles" : {
+      "name" : "Disruption Missiles",
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "ap" : 5
+    },
+    "revolver_pistol" : {
+      "name" : "Revolver Pistol",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 6,
+      "medium" : 12
+    },
+    "shock_caster" : {
+      "name" : "Shock Caster",
+      "profiles" : [
+        {
+          "name" : "Focused",
+          "attacks" : 1,
+          "short" : 12,
+          "medium" : 24,
+          "ap" : 2,
+          "rules" : [
+            "indirect"
+          ]
+        },
+        {
+          "name" : "Dispersed",
+          "attacks" : 2,
+          "short" : 9,
+          "medium" : 18,
+          "ap" : 1,
+          "rules" : [
+            "indirect"
+          ]
+        }
+      ]
+    },
+    "shock_spear_shoot" : {
+      "name" : "Shock Spear (Shooting)",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "assault",
+        {
+          "id" : "critical",
+          "x" : 1
+        }
+      ]
+    },
+    "shock_spear_melee" : {
+      "name" : "Shock Spear (Melee)",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "critical",
+          "x" : 1
+        },
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "claws" : {
+      "name" : "Claws",
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "iron_claws" : {
+      "name" : "Iron Claws",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 2
+    },
+    "robot_fist" : {
+      "name" : "Robot Fist",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 8
+    },
+    "burst_carbine" : {
+      "name" : "Burst Carbine",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "eradication_beam" : {
+      "name" : "Eradication Beam",
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "ap" : 4,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 6
+        }
+      ]
+    },
+    "eradication_ray" : {
+      "name" : "Eradication Ray",
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "ap" : 3,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 3
+        }
+      ]
+    },
+    "eradication_blaster" : {
+      "name" : "Eradication Blaster",
+      "attacks" : 1,
+      "short" : 6,
+      "ap" : 3,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "pistol"
+      ]
+    },
+    "death_laser" : {
+      "name" : "Death Laser",
+      "attacks" : 1,
+      "short" : 24,
+      "medium" : 48,
+      "ap" : 10,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 2
+        }
+      ]
+    },
+    "bomb_rack" : {
+      "name" : "Bomb Rack",
+      "attacks" : 2,
+      "short" : 6,
+      "ap" : 3,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "bomb"
+      ]
+    },
+    "aa_missiles" : {
+      "name" : "AA Missile System",
+      "attacks" : 1,
+      "short" : 24,
+      "medium" : 48,
+      "ap" : 5,
+      "rules" : [
+        "anti_air"
+      ]
+    },
+    "twin_carbine" : {
+      "name" : "Twin Carbine",
+      "attacks" : 2,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault"
+      ]
+    }
+  },
+  "rules" : {
+    "vanguard_tactics" : {
+      "name" : "Guild Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+\n * Re-roll failed Strength tests of 9+",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "data_link" : {
+      "name" : "Data Link",
+      "description" : "This model and friendly _Infantry_ units within 3\" gain +1 Courage. This bonus does not stack.",
+      "points" : 5
+    },
+    "heat_scanner" : {
+      "name" : "Heat Scanner",
+      "description" : "This model and friendly _Infantry_ units within 3\" gain +6\" to long range when shooting. This bonus does not stack.",
+      "points" : 5
+    },
+    "protocols" : {
+      "name" : "Combat Protocols",
+      "description" : "When this unit is activated, choose a Protocol for this unit or a friendly _Infantry_ or _Heavy Infantry_ unit within 6\" to be active until the end of the turn:\n* Advance: This unit has +2“ Movement.\n* Extermination: When this unit shoots, hit rolls of 1 or 2 generate an additional hit.\n* Protection: Roll a die when a model in this unit loses a wound. On a roll of 1 or 2 that wound is not lost.",
+      "points" : [
+        15
+      ]
+    },
+    "legend_machine_whisperer" : {
+      "name" : "Machine Whisperer",
+      "description" : "This model may reroll failed _Engineer_ rolls.",
+      "points" : 5
+    },
+    "legend_masterwork_mechanisms" : {
+      "name" : "Masterwork Mechanisms",
+      "description" : "This model has +1 save.",
+      "points" : 5
+    }
+  },
+  "strategies" : [
+    {
+      "name" : "Fearless",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "Machine Guild members are trained to stay strong even in the toughest fights.",
+      "cost" : 1
+    },
+    {
+      "name" : "Cybernetic Enhancements",
+      "phase" : "activation",
+      "description" : "Use before taking Save rolls for an _Infantry_ unit. That unit may re-roll failed Save rolls.",
+      "flavor" : "Half-man and half-machine, Machine Guild infantry can withstand even the toughest attacks.",
+      "cost" : 2
+    },
+    {
+      "name" : "Volley Fire",
+      "phase" : "activation",
+      "description" : "Use before an _Infantry_ unit shoots. Hit rolls of 1 or 2 generate an additional hit.",
+      "flavor" : "With a devastating barrage of supercharged guns the Machine Guilds overwhelm their foes.",
+      "cost" : 1
+    }
+  ],
+  "powers" : {
+    "volatile_discharge" : {
+      "name" : "Volatile Discharge",
+      "description" : "Target enemy unit within 18\" takes 3 hits with AP(2).",
+      "charge" : 7
+    },
+    "overclock" : {
+      "name" : "Overclock",
+      "description" : "Target friendly unit within 12\" gains +1 AP with one Ranged weapon until the end of the turn.",
+      "charge" : 6
+    },
+    "reinforce" : {
+      "name" : "Reinforce",
+      "description" : "Target friendly unit within 12\" gains +2 Save until the end of the turn.",
+      "charge" : 5
+    }
+  },
+  "relics" : {
+    "machine_whisperer" : {
+      "name" : "Machine Whisperer",
+      "rule" : "legend_machine_whisperer",
+      "description" : "Choose one _Leader_ or _Support_ model to be upgraded with Machine Whisperer",
+      "flavor" : "Some machine masters understand machines better than others.",
+      "cost" : 5
+    },
+    "masterwork_mechanisms" : {
+      "name" : "Masterwork Mechanisms",
+      "rule" : "legend_masterwork_mechanisms",
+      "description" : "Choose one _Leader_ or _Support_ model to have Masterwork Mechanisms",
+      "flavor" : "A particularly lucky guild-leader may find themselves with a superior chassis to his kin",
+      "cost" : 5
+    }
+  }
+}

@@ -1,0 +1,640 @@
+{
+    "name": "Mountain Dwarves",
+    "id": "mountain_dwarves",
+    "author": "Xekon#8266",
+    "description": "A stout race of miners, engineers and warriors who were driven into the dark eons again. Now that they have returned they take revenge on those that once betrayed them.",
+    "alliance": "order",
+    "units": {
+        "thane": {
+            "name": "Thane",
+            "description": "The head of a dwarven clan.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Thane",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "great_weapon", "count": 4}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "great_weapon", "count": 5}, {"id": "grand_weapon", "count": 4}, {"id": "grand_hammer", "count": 4}, {"id": "heavy_polearm", "count": 4}]
+                        },
+                        {"addRule": ["shield", {"id": "icon", "x": "Infantry"}]},
+                        {"addWeapon": ["heavy_crossbow", "heavy_pistol"], "limit": 1},
+                        {"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}
+                    ],
+                    "max": 1,
+                    "min": 1
+                }
+            ]
+        },
+        "thane_roughrider": {
+            "name": "Thane on War-Beast",
+            "description": "A dwarven leader riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Thane on War-Beast",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "heavy_impact", "x": 1}, {"id": "knight_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "great_weapon", "count": 4}, {"id": "heavy_hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "great_weapon", "count": 5}, {"id": "grand_hammer", "count": 4}, {"id": "grand_weapon", "count": 4}, {"id": "heavy_lance", "count": 4}]
+                        },
+                        {"addRule": ["shield", {"id": "icon", "x": "Infantry, Cavalry"}]},
+                        {"addWeapon": ["heavy_crossbow", "heavy_pistol"], "limit": 1},
+                        {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "runepriest": {
+            "name": "Runepriest",
+            "description": "A master of his craft, hammering raw magic into magical runes.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Runepriest",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": ["handweapon", "staff"],
+                    "options": [
+                        {"replaceWeapon": ["handweapon", "staff"], "withWeapon": ["great_staff", "grand_hammer"]},
+                        {"addRule": ["shield"]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "runepriest_roughrider": {
+            "name": "Runepriest on War-Beast",
+            "description": "A dwarven wizard riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Runepriest on War-Beast",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "heavy_impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, "handweapon", "staff"],
+                    "options": [
+                        {"replaceWeapon": ["handweapon", "staff"], "withWeapon": ["great_staff", "grand_hammer"]},
+                        {"addRule": ["shield"]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "master_engineer": {
+            "name": "Master Engineer",
+            "description": "A master of his craft, equipped with an array of tools and guns.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Master Engineer",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["engineer", {"id": "blackpowder_tactics", "x": 1}, {"id": "leader_x", "x": "Warmachine"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_pistol", "count": 2}, {"id": "great_weapon", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_pistol", "count": 2}], "withWeapon": [{"id": "handgun", "count": 2}, {"id": "shotgun", "count": 2}, "volley_gun"]},
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 3}], "withWeapon": [{"id": "grand_hammer", "count": 3}, {"id": "grand_weapon", "count": 3}]},
+                        {"replaceRule": [{"id": "blackpowder_tactics", "x": 1}], "withRule": [{"id": "blackpowder_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "commando": {
+            "name": "Commando",
+            "description": "A master pathfinder with great tenacity.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Commando",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["ambush", "leader", {"id": "ranger_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "handweapon", "count": 4}, "heavy_crossbow"],
+                    "options": [{"addRule": ["shield"]}, {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "berserker_champion": {
+            "name": "Berserker Champion",
+            "description": "First into the fray, this champion leads his allies into battle.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Berserker Champion",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["fanatical", "furious", "leader", {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "grand_weapon", "count": 6}],
+                    "options": [{"addRule": [{"id": "icon", "x": "Infantry"}]}, {"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "berserker_champion_roughrider": {
+            "name": "Berserker Champion on War-Beast",
+            "description": "A dwarven berserker champion riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Berserker Champion on War-Beast",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["fanatical", "furious", {"id": "heavy_impact", "x": 1}, {"id": "knight_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "grand_weapon", "count": 6}],
+                    "options": [{"addRule": [{"id": "icon", "x": "Infantry, Cavalry"}]}, {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_warrior": {
+            "name": "Dwarven Warrior",
+            "description": "A dwarven soldier.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Warrior",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["handweapon", "shield"],
+                    "options": [
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["polearm", "great_weapon", ["spear", "shield"], ["crossbow", "light_handweapon"]]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_warrior_leader": {
+            "name": "Dwarven Warrior Leader",
+            "description": "A dwarven soldier leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Warrior Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["handweapon", "shield"],
+                    "options": [
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["polearm", "great_weapon", ["spear", "shield"], ["crossbow", "light_handweapon"]]},
+                        {"addRule": ["champion"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_gunner": {
+            "name": "Dwarven Gunner",
+            "description": "A heavy rifleman.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Gunner",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["handgun", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["handgun"], "withWeapon": [["heavy_pistol", "frag_grenade"]]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_gunner_leader": {
+            "name": "Dwarven Gunner Leader",
+            "description": "A heavy rifleman leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Gunner Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["handgun", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["handgun"], "withWeapon": [["heavy_pistol", "frag_grenade"]]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "roughrider": {
+            "name": "Dwarven Warrior on War-Beast",
+            "description": "A dwarven warrior riding atop a ferocious beast into battle.",
+            "category": "elite",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Dwarven Warrior on War-Beast",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": [{"id": "heavy_impact", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, "lance"],
+                    "options": [{"replaceWeapon": ["lance"], "withWeapon": ["grand_weapon", "grand_hammer"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "roughrider_leader": {
+            "name": "Dwarven Warrior Leader on War-Beast",
+            "description": "A dwarven warrior leader riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Dwarven Warrior Leader on War-Beast",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": [{"id": "heavy_impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, "lance"],
+                    "options": [{"replaceWeapon": ["lance"], "withWeapon": ["grand_weapon", "grand_hammer"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_ranger": {
+            "name": "Dwarven Ranger",
+            "description": "A dwarven scout.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Ranger",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["scout"],
+                    "weapons": ["heavy_crossbow", {"id": "handweapon", "count": 2}],
+                    "options": [{"replaceWeapon": ["heavy_crossbow"], "withWeapon": [["throwing_axe", "shield"]]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_ranger_leader": {
+            "name": "Dwarven Ranger Leader",
+            "description": "A dwarven scout leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Ranger Leader",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["leader", "scout"],
+                    "weapons": ["heavy_crossbow", {"id": "handweapon", "count": 2}],
+                    "options": [{"replaceWeapon": ["heavy_crossbow"], "withWeapon": [["throwing_axe", "shield"]]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_engineer": {
+            "name": "Dwarven Engineer",
+            "description": "A veteran combat engineer.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Engineer",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["shotgun", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["shotgun"], "withWeapon": ["flamethrower"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_engineer_leader": {
+            "name": "Dwarven Engineer Leader",
+            "description": "A veteran combat engineer leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Engineer Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["shotgun", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["shotgun"], "withWeapon": ["flamethrower"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_berserker": {
+            "name": "Dwarven Berserker",
+            "description": "A dwarven warrior that rushes into the fray.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Berserker",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["fanatical", "furious"],
+                    "weapons": [{"id": "grand_weapon", "count": 3}],
+                    "options": [{"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_berserker_leader": {
+            "name": "Dwarven Berserker Leader",
+            "description": "A dwarven warrior leader that rushes into the fray.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Berserker Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["fanatical", "furious", "leader"],
+                    "weapons": [{"id": "grand_weapon", "count": 3}],
+                    "options": [{"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "berserker_roughrider": {
+            "name": "Dwarven Berserker on War-Beast",
+            "description": "A dwarven berserker riding atop a ferocious beast into battle.",
+            "category": "elite",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Dwarven Berserker on War-Beast",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["fanatical", "furious", {"id": "heavy_impact", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "grand_weapon", "count": 3}],
+                    "options": [{"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "berserker_roughrider_leader": {
+            "name": "Dwarven Berserker Leader on War-Beast",
+            "description": "A dwarven berserker leader riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Dwarven Berserker Leader on War-Beast",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["fanatical", "furious", {"id": "heavy_impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "grand_weapon", "count": 3}],
+                    "options": [{"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_miner": {
+            "name": "Dwarven Miner",
+            "description": "A dwarven miner, digging tunnels beneath the battlefield.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Miner",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["paired_ambush"],
+                    "weapons": ["mining_pick"],
+                    "options": [{"replaceWeapon": ["mining_pick"], "withWeapon": ["mining_drill", "drill_cannon"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dwarf_miner_leader": {
+            "name": "Dwarven Miner Leader",
+            "description": "A dwarven miner leader, digging tunnels beneath the battlefield.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Miner Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["leader", "paired_ambush"],
+                    "weapons": ["mining_pick"],
+                    "options": [{"replaceWeapon": ["mining_pick"], "withWeapon": ["mining_drill", "drill_cannon"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "runic_golem": {
+            "name": "Runic Golem",
+            "description": "A golems animated by dwarven magic, ancient defender of their mountain fortresses.",
+            "category": "elite",
+            "keywords": ["Monster"],
+            "models": [
+                {
+                    "name": "Runic Golem",
+                    "movement": 5,
+                    "fight": 6,
+                    "shoot": 5,
+                    "defense": 8,
+                    "courage": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "grand_hammer", "count": 2}],
+                    "rules": ["damage_chart"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {},
+    "rules": {
+        "paired_ambush": {
+            "name": "Paired Ambush",
+            "description": "This unit and a paired _Infantry_ unit may be placed in _Ambush Reserves_ before the game begins. When this unit arrives from _Ambush_, setup the paired unit within 3\" of it.",
+            "points": 10
+        },
+        "legend_drillmaster": {"name": "Drillmaster", "description": "This model and friendly units within 12\" gain +3\" to their long range when shooting.", "points": 10}
+    },
+    "powers": {
+        "ancestral_wrath": {"name": "Ancestral Wrath", "description": "Target enemy unit within 12\" takes 4 hits with AP(4).", "charge": 5},
+        "runic_barrier": {
+            "name": "Runic Barrier",
+            "description": "Target friendly unit within 24\" rolls a D10 each time that unit is hit until the end of the turn. On a 2 or less, that hit is ignored.",
+            "charge": 6
+        },
+        "blink": {
+            "name": "Blink",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7
+        }
+    },
+    "strategies": [
+        {
+            "name": "Stubborn",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Standing steadfast like their mountain halls.",
+            "cost": 1
+        },
+        {
+            "name": "Shieldwall",
+            "phase": "activation",
+            "description": "Use when an _Infanty_ unit with Shields is charged or targeted by a shooting attack. That unit gains +1 Save until end of turn.",
+            "flavor": "Forming a shieldwall, dwarven formations are able to hold objectives against all odds.",
+            "cost": 2
+        },
+        {
+            "phase": "activation",
+            "name": "Final Stand",
+            "description": "Use when a friendly unit would be destroyed. If that unit has not activated yet this round, it may perform one shoot or fight action before it is destroyed.",
+            "flavor": "A dwarf fights to the last breath.",
+            "cost": 1
+        }
+    ],
+    "relics": [
+        {
+            "name": "Dwarven Brew",
+            "rule": "regeneration",
+            "description": "Upgrade one _Leader_ model with Regeneration.",
+            "flavor": "Dwarves are known for their love of alcohol, which they even carry into battle.",
+            "points": 5
+        },
+        {
+            "name": "Mastercrafted Armor",
+            "rule": {"id": "defiant", "x": 3},
+            "description": "Upgrade one _Leader_ model with Defiant(3).",
+            "flavor": "This suit of armor is covered in runes of power.",
+            "points": 5
+        },
+        {
+            "name": "Drillmaster",
+            "rule": "legend_drillmaster",
+            "description": "Upgrade one _Leader_ model with Drillmaster.",
+            "flavor": "This warrior is known for their strict combat training.",
+            "points": 10
+        }
+    ]
+}

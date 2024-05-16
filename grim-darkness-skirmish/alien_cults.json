@@ -1,0 +1,793 @@
+{
+    "name": "Alien Cults",
+    "id": "alien_cults",
+    "color": "#606060",
+    "author": "guitarninja#5707",
+    "units": {
+        "militia_commander": {
+            "name": "Militia Commander",
+            "description": "Foot infantry platoon leader of the imperial defense force.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Militia Commander",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "militia_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "chainsword", "count": 3}
+                            ]
+                        },
+                        {"replaceRule": {"id": "militia_tactics", "x": 1}, "withRule": {"id": "militia_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_overlord": {
+            "name": "Cult Overlord",
+            "description": "A cult leader commanding his fellow revolutionaries from the shadows.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Cult Overlord",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "rifle_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "bone_sword", "count": 4}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "web_pistol", "needle_pistol"]},
+                        {"replaceWeapon": {"id": "bone_sword", "count": 4}, "withWeapon": [{"id": "energy_pick", "count": 4}, {"id": "energy_mace", "count": 4}, {"id": "energy_hammer", "count": 4}]},
+                        {"addRule": ["cult_icon"]},
+                        {"replaceRule": {"id": "rifle_tactics", "x": 1}, "withRule": {"id": "rifle_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_psychic": {
+            "name": "Cult Psychic",
+            "description": "A cultist leader with poweful psychic abilities.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Cult Psychic",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "bone_sword", "count": 2}]},
+                        {"addRule": ["companion"]},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "outrider_assassin": {
+            "name": "Cult Outrider Assassin",
+            "description": "A highly mobile assassin mounted on a dirt bike.",
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Cult Outrider Assassin",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "rules": ["evasive", "spotting_laser", {"id": "support_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 2}],
+                    "weapons": ["blasting_charges", {"id": "heavy_ccw", "count": 3}, "heavy_sniper_rifle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_assasin": {
+            "name": "Cult Assasin",
+            "description": "A cunning killer of the cult, striking from the shadows without a trace.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Cult Assasin",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["evasive", "spotting_laser", "support", {"id": "wounds", "x": 2}],
+                    "weapons": ["blasting_charges", {"id": "heavy_ccw", "count": 3}, "heavy_sniper_rifle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "great_abomination": {
+            "name": "Great Abomination",
+            "description": "An extremely tough alpha-abomination.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Great Abomination",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": ["chosen_abomination", {"id": "leader", "x": "Infantry, Heavy Infantry"}, {"id": "resistant", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "energy_hammer", "count": 4}],
+                    "options": [{"addRule": [{"id": "ward", "x": 1}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "soul_stealer_lord": {
+            "name": "Soul Stealer Lord",
+            "description": "A ferocious alien with enhanced psychic power.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Soul Stealer Lord",
+                    "courage": 7,
+                    "shoot": 0,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "movement": 8,
+                    "rules": ["agile", "leader", {"id": "melee_tactics", "x": 1}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "large_razor_talons", "count": 6}],
+                    "options": [{"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_strategist": {
+            "name": "Cult Strategist",
+            "description": "A cult specialist who rallies the hordes of troops.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Cult Strategist",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["legend_strategist", "support", {"id": "wounds", "x": 2}],
+                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_proclamator": {
+            "name": "Cult Proclamator",
+            "description": "A cult specialist who rallies the hordes of troops.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Cult Proclamator",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["inspiration", "scrambler", "support", {"id": "wounds", "x": 2}],
+                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_gunslinger": {
+            "name": "Cult Gunslinger",
+            "description": "A three-armed gunfighter fighting for the cult",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Cult Gunslinger",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["assassin", "relentless", "scout", "support", {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "heavy_pistol", "count": 3}, "ccw"],
+                    "options": [{"replaceWeapon": ["heavy_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "web_pistol"], "limit": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "soul_stealer": {
+            "name": "Soul Stealer",
+            "description": "Ferocious alien that rips apart their foes with unnerving speed.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Soul Stealer",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "rules": ["agile"],
+                    "weapons": [{"id": "razor_talons", "count": 3}],
+                    "options": [{"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "soul_stealer_leader": {
+            "name": "Soul Stealer Leader",
+            "description": "Ferocious alien leader that rips apart their foes with unnerving speed.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Soul Stealer Leader",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "rules": ["agile", "leader"],
+                    "weapons": [{"id": "razor_talons", "count": 3}],
+                    "options": [{"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_militia_trooper": {
+            "name": "Cult Militia Trooper",
+            "description": "A defense force soldier turned to the cult.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Trooper",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_militia_sergeant": {
+            "name": "Cult Militia Sergeant",
+            "description": "A defense force sergeant turned to the cult.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Sergeant",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": ["leader"],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "chainsword", "count": 2}
+                            ]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_militia_specialist": {
+            "name": "Cult Militia Trooper Specialist",
+            "description": "A defense force gunner turned to the cult.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Trooper Specialist",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["flamethrower", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle", "light_machinegun"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_heavy_weapon": {
+            "name": "Cult Militia Weapon Team",
+            "description": "A heavy weapons team loaded out to deal with a variety of targets.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Cult Militia Weapon Team",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", "ccw"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte": {
+            "name": "Neophyte",
+            "description": "A miner or other manual laborer who has revolted and turned to the cult.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Neophyte",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_sergeant": {
+            "name": "Neophyte Sergeant",
+            "description": "A miner or other manual laborer sergeant who has revolted and turned to the cult.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Neophyte Sergeant",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"},
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "chainsword", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_specialist": {
+            "name": "Neophyte Specialist",
+            "description": "A gunner who has revolted and turned to the cult.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Neophyte Specialist",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["flamethrower", "blasting_charges", "ccw"],
+                    "options": [{"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "web_gun"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_heavy": {
+            "name": "Neophyte Heavy",
+            "description": "A heavy gunner who has revolted and turned to the cult.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Neophyte Heavy",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["mining_laser", "blasting_charges", "ccw"],
+                    "options": [{"replaceWeapon": "mining_laser", "withWeapon": ["light_machinegun", "seismic_cannon"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "acolyte": {
+            "name": "Acolyte",
+            "description": "A disfigured human turned to the cult.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Acolyte",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["blasting_charges", {"id": "heavy_ccw", "count": 2}, "pistol"],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]}, {"addRule": "banner"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "acolyte_sergeant": {
+            "name": "Acolyte Sergeant",
+            "description": "A disfigured human sergeant turned to the cult.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Acolyte Sergeant",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["blasting_charges", {"id": "heavy_ccw", "count": 2}, "pistol"],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "bone_sword", "count": 2}]},
+                        {"addWeapon": ["lashing_whip"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "acolyte_specialist": {
+            "name": "Acolyte Specialist",
+            "description": "A disfigured human specialist turned to the cult.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Acolyte Specialist",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "rock_drill", "count": 2}, "blasting_charges"],
+                    "options": [{"replaceWeapon": [{"id": "rock_drill", "count": 2}], "withWeapon": ["demolition_charges", {"id": "rock_cutter", "count": 2}, {"id": "rock_saw", "count": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "metamorph": {
+            "name": "Metamorph",
+            "description": "Half alien and half human, this hybrid is the last step before becoming fully alien.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Metamorph",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "huge_mutated_claw", "count": 3}],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]}, {"addWeapon": ["lashing_whip"]}, {"addRule": "banner"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "metamorph_sergeant": {
+            "name": "Metamorph Sergeant",
+            "description": "Half alien and half human, this hybrid sergeant is the last step before becoming fully alien.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Metamorph Sergeant",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "rules": ["leader"],
+                    "weapons": ["pistol", "blasting_charges", {"id": "huge_mutated_claw", "count": 3}],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]}, {"addWeapon": ["lashing_whip"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "abomination": {
+            "name": "Abomination",
+            "description": "Mutated with super strength, this alien will tear enemies to shreds.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Abomination",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": [{"id": "resistant", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "energy_pick", "count": 3}],
+                    "options": [{"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "abomination_leader": {
+            "name": "Abomination Leader",
+            "description": "Mutated with super strength, this alien leader will tear enemies to shreds.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Abomination Leader",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "resistant", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "energy_pick", "count": 3}],
+                    "options": [{"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_outrider": {
+            "name": "Neophyte Outrider",
+            "description": "A cultist using a dirt bike or quad to overwhelm their foes with sheer speed.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Neophyte Outrider",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher", "shotgun"]},
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_outrider_sergeant": {
+            "name": "Neophyte Outrider Sergeant",
+            "description": "A cultist sergeant using a dirt bike or quad to overwhelm their foes with sheer speed.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Neophyte Outrider Sergeant",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Biker"}],
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun", "grenade_launcher"]},
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "chainsword", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_outrider_heavy": {
+            "name": "Neophyte Outrider Heavy",
+            "description": "A cultist heavy gunner using a dirt bike or quad to overwhelm their foes with sheer speed.",
+            "category": "heavy",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Neophyte Outrider Heavy",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["flamethrower", "blasting_charges", "ccw"],
+                    "options": [{"replaceWeapon": "flamethrower", "withWeapon": ["light_machinegun", "mining_laser", "seismic_cannon"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "large_razor_talons": {"name": "Large Razor Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+        "needle_pistol": {"name": "Needle Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "poison"]},
+        "demolition_charges": {"name": "Demolition Charges", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+        "lashing_whip": {"name": "Lashing Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+        "toxic_claw": {"name": "Toxic Claw", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
+        "rock_cutter": {"name": "Rock Cutter", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "rock_drill": {"name": "Rock Drill", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+        "rock_saw": {"name": "Rock Saw", "attacks": 1, "short": "Melee", "ap": 5},
+        "web_gun": {"name": "Web Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", {"id": "slowing", "x": 2}]},
+        "web_pistol": {"name": "Web Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", {"id": "slowing", "x": 2}]},
+        "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
+        "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
+        "bone_sword": {"name": "Bone Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "legend_sacrificial_dagger": {"name": "Sacrificial Dagger", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["sacrifice"]}
+    },
+    "rules": {
+        "militia_tactics": {
+            "name": "Militia Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+            "points": ["rule.x", {"multiply": 5}]
+        },
+        "cult_speaker": {"name": "Cult Speaker", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
+        "chosen_abomination": {"name": "Chosen Abomination", "description": "Once per round, a friendly _Heavy Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
+        "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
+        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Chart rolls for this model.", "points": 10},
+        "legend_mind_link": {"name": "Mind Link", "description": "Increase the range of all abilities which target friendly units by 6\".", "points": 10},
+        "legend_supernatural_speed": {"name": "Supernatural Speed", "description": "Increase this model's Movement by 2\".", "points": 10},
+        "sacrifice": {
+            "name": "Sacrifice",
+            "description": "When this model activates, you may choose to remove a model from a friendly unit within 3\". If you do, restore one Wound(x) to this model.",
+            "points": 10
+        },
+        "companion": {"name": "Alien Companion", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5}
+    },
+    "relics": {
+        "sacrificial_dagger": {
+            "name": "The Sacrificial Dagger",
+            "weapon": "legend_sacrificial_dagger",
+            "description": "Replace one Leader or Support model's CCW(x) with the Sacrificial Dagger(x).",
+            "flavor": "This dagger is known to possess the ability to restore life if offered a sacrifice.",
+            "points": 10
+        },
+        "supernatural_speed": {
+            "name": "Supernatural Speed",
+            "rule": "legend_supernatural_speed",
+            "description": "Upgrade one _Leader_ or _Support_ model with Supernatural Speed.",
+            "flavor": "This model has an inherent supernatural speed.",
+            "points": 5
+        },
+        "mind_link": {
+            "name": "Mind Link",
+            "rule": "legend_mind_link",
+            "description": "Upgrade one _Leader_ or _Support_ model with Mind Link.",
+            "flavor": "This model has an unnatural connection to those it commands.",
+            "points": 10
+        }
+    },
+    "strategies": [
+        {
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "Alien Cults typically lie in wait for the best moment to strike from surprise.",
+            "cost": "1/per"
+        },
+        {
+            "name": "Swarm Reflexes",
+            "phase": "activation",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "Mutated by the alien swarm, these cultists gain super-human reflexes.",
+            "cost": 1
+        },
+        {
+            "name": "Marked for Death",
+            "phase": "activation",
+            "description": "An enemy unit visible to a friendly _Infantry_ unit it gains 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack:\n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+            "flavor": "When the cult emerges from the shadows, they will cover their enemies in a crossfire of bullets.",
+            "cost": 1
+        }
+    ],
+    "powers": {
+        "vitality": {
+            "name": "Unnatural Vitality",
+            "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
+            "charge": 7
+        },
+        "horror": {"name": "Horrific Visions", "description": "Target enemy unit within 24\" suffers -1 Accuracy, -1 Strength, and -1 Courage until the end of the activation phase.", "charge": 6},
+        "mind_control": {"name": "Mind Control", "description": "Target enemy unit within 12\" makes a Fight action against itself.", "charge": 5}
+    },
+    "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+4251244224"}]
+}

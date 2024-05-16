@@ -1,0 +1,182 @@
+{
+  "id": "wasteland_patrol",
+  "name": "Wasteland Patrol",
+  "author": "guitarninja#5707",
+  "units": {
+    "patrol_chief": {
+      "name": "Patrol Chief",
+      "description": "A standard sedan patrol car carrying the chief or other higher ranking officer.",
+      "category": "command",
+      "keywords": ["Vehicle"],
+      "rules": ["leader"],
+      "models": [
+        {
+          "name": "Patrol Chief",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun"]}, {"addRule": ["nitrous", "light_armor", "heavy_armor"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "patrol_car": {
+      "name": "Patrol Car",
+      "description": "A standard sedan patrol car with average speed and manoeuvring.",
+      "category": "core",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Patrol Car",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "patrol_suv": {
+      "name": "Patrol SUV",
+      "description": "A heavier patrol SUV with heavier plating to resist enemy attacks.",
+      "category": "core",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Patrol SUV",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun", "heavy_shotgun"]}, {"addRule": ["light_armor", "heavy_armor"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "pursuit_car": {
+      "name": "Pursuit Car",
+      "description": "A fast car meant to pursue and outrun other vehicles.",
+      "category": "strike",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Pursuit Car",
+          "movement": 7,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun"]}],
+          "rules": ["nitrous"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "sharpshooter_car": {
+      "name": "Sharpshooter Car",
+      "description": "A car meant to take out important targets.",
+      "category": "specialist",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Sharpshooter Car",
+          "movement": 7,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["sniper_rifle"],
+          "options": [{"replaceWeapon": "sniper_rifle", "withWeapon": ["heavy_sniper_rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "escort_truck": {
+      "name": "Escort Truck",
+      "description": "A heavier patrol truck with large guns to escort other cars.",
+      "category": "heavy",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Escort Truck",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["medium_machinegun"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun", "heavy_shotgun"]}, {"addRule": ["light_armor", "heavy_armor"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ambulance": {
+      "name": "Ambulance",
+      "description": "A heavier patrol SUV with heavier plating to resist enemy attacks.",
+      "category": "specialist",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Ambulance",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun"]}],
+          "rules": ["medic"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {},
+  "rules": {},
+  "strategies": {
+    "blaring_siren": {
+      "name": "Blaring Siren",
+      "phase": "activation",
+      "flavor": "A siren acts as a warning or intimidation to those in its path.",
+      "description": "Use when a unit activates. Choose an enemy unit within 6\" to gain 2 Shock.",
+      "cost": 1
+    },
+    "pit_manoeuvre": {
+      "name": "Pit Manoeuvre",
+      "phase": "activation",
+      "flavor": "Standard training for most law enforcement vehicles, this can cause enemy vehicles to lose control.",
+      "description": "Use when a _Vehicle_ collides with an enemy _Vehicle_ in its _Rear_ arc. You may rotate the enemy _Vehicle_ up to 45 degrees in either direction.",
+      "cost": 2
+    },
+    "bravery": {
+      "name": "Bravery",
+      "phase": "activation",
+      "description": "Use when activating a unit. That unit gets +1 Courage.",
+      "flavor": "Bravery even in the face of death is extraordinary.",
+      "cost": 1
+    }
+  }
+}

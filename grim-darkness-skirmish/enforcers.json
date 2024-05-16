@@ -1,0 +1,354 @@
+{
+    "id": "enforcers",
+    "name": "Planetary Enforcers",
+    "author": "Xekon#8266",
+    "color": "#262b34",
+    "secondary_color": "#455a64",
+    "alliance": "imperial_alliance",
+    "descriptions": "The Planetary Enforcers are responsible for maintaining peace on worlds part of the Imperial Alliance. While they tend to avoid combat when possible, it is sometimes necessary for them to step in. They are equipped with many crowd-control measures to ensure they can keep order in the worst of circumstances.",
+    "units": {
+        "enforcer_captain": {
+            "name": "Enforcer Captain",
+            "description": "A captain of the Planetary Enforcers, trained in hunting and taking down dangerous criminals.",
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}],
+            "models": [
+                {
+                    "name": "Enforcer Captain",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["pistol", "gas_grenades", {"id": "energy_knife", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["marine_rifle", "marine_shotgun", "smg", "burst_pistol", {"id": "pistol", "count": 2}]},
+                        {
+                            "replaceWeapon": [{"id": "energy_knife", "count": 3}],
+                            "withWeapon": [{"id": "energy_gauntlets", "count": 3}, {"id": "shock_baton", "count": 2}, {"id": "shock_staff", "count": 2}]
+                        },
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "destroyer_captain": {
+            "name": "Destroyer Captain",
+            "description": "A heavily armored captain of the Planetary Enforcers, able to even shrug off tank shells.",
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ambush"],
+            "models": [
+                {
+                    "name": "Destroyer Captain",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 5,
+                    "weapons": ["pistol", "gas_grenades", {"id": "energy_knife", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": ["pistol", {"id": "energy_knife", "count": 3}], "withWeapon": ["assault_ram"]},
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["marine_shotgun", "twin_marine_rifle", "smg", "burst_pistol", {"id": "pistol", "count": 2}, "seismic_cannon", "marine_rifle"]},
+                        {
+                            "replaceWeapon": [{"id": "energy_knife", "count": 3}],
+                            "withWeapon": [{"id": "shock_staff", "count": 2}, {"id": "energy_gauntlets", "count": 3}, {"id": "shock_baton", "count": 2}]
+                        },
+                        {"addWeapon": ["riot_shield"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "enforcer": {
+            "name": "Enforcer",
+            "description": "A trooper of the Planetary Enforcers, trained in taking down dangerous criminals.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Enforcer",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", {"id": "energy_knife", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["marine_rifle", "marine_shotgun", "smg", "burst_pistol", {"id": "pistol", "count": 2}]},
+                        {"replaceWeapon": [{"id": "energy_knife", "count": 2}], "withWeapon": ["shock_staff", "shock_baton", {"id": "energy_gauntlets", "count": 2}]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "medic_specialist": {
+            "name": "Medic Specialist",
+            "description": "An enforcer of the Planetary Enforcers, trained in battlefield medicine.",
+            "category": "specialist",
+            "rules": ["medic"],
+            "models": [
+                {
+                    "name": "Medic Specialist",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "energy_knife"],
+                    "options": [
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["marine_rifle", "marine_shotgun"]},
+                        {"replaceWeapon": ["energy_knife"], "withWeapon": ["energy_gauntlets", "shock_baton"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "gunner_specialist": {
+            "name": "Gunner Specialist",
+            "description": "An enforcer of the Planetary Enforcers, trained in wielding heavy weapons.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Gunner Specialist",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["flamethrower", "energy_knife", "gas_grenades"],
+                    "options": [
+                        {"replaceWeapon": ["flamethrower"], "withWeapon": ["light_machinegun", "assault_missile_launcher", "fusion_rifle", "plasma_rifle", "seismic_cannon", "laser_cannon"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sniper_specialist": {
+            "name": "Sniper Specialist",
+            "description": "An enforcer of the Planetary Enforcers, specialized in removing important targets from far away.",
+            "category": "specialist",
+            "rules": ["evasive", "scout"],
+            "models": [
+                {
+                    "name": "Sniper Specialist",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["sniper_rifle", "energy_knife"],
+                    "options": [{"replaceWeapon": ["sniper_rifle"], "withWeapon": ["spotter_rifle"]}, {"addRule": [{"name": "Jetpack", "id": "fly"}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "enforcer_destroyer": {
+            "name": "Enforcer Destroyer",
+            "description": "A heavily armored trooper of the Planetary Enforcers, shrugging off even tank shells.",
+            "category": "specialist",
+            "rules": ["ambush"],
+            "models": [
+                {
+                    "name": "Enforcer Destroyer",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "weapons": ["pistol", {"id": "energy_knife", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["pistol", {"id": "energy_knife", "count": 3}], "withWeapon": ["assault_ram"]},
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["marine_shotgun", "twin_marine_rifle", "smg", "burst_pistol", {"id": "pistol", "count": 2}, "seismic_cannon", "marine_rifle"]},
+                        {
+                            "replaceWeapon": [{"id": "energy_knife", "count": 3}],
+                            "withWeapon": [{"id": "shock_staff", "count": 2}, {"id": "energy_gauntlets", "count": 3}, {"id": "shock_baton", "count": 2}]
+                        },
+                        {"addWeapon": ["riot_shield"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "engineer_specialist": {
+            "name": "Engineer Specialist",
+            "description": "An enforcer of the Planetary Enforcers, trained in engineering and hacking.",
+            "category": "specialist",
+            "rules": [{"id": "engineer", "x": "1"}],
+            "models": [
+                {
+                    "name": "Engineer Specialist",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "energy_knife"],
+                    "options": [{"replaceWeapon": ["pistol"], "withWeapon": ["marine_shotgun", "marine_rifle"]}, {"addRule": [{"name": "Jetpack", "id": "fly"}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "robot_hound": {
+            "name": "Robot Hound",
+            "description": "A mechanical beast, hunting down anyone and anything.",
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Robot Hound",
+                    "movement": 7,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["scout"]
+                }
+            ]
+        },
+        "gun_hound": {
+            "name": "Gun Hound",
+            "description": "A mechanical beast, armed with heavy weaponry.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Gun Hound",
+                    "movement": 7,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_ccw", "count": 2}, "light_machinegun"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["heavy_machinegun", "rocket_pod", "twin_flamethrower", "fusion_cannon"]}]
+                }
+            ]
+        },
+        "enforcer_jet_bike": {
+            "name": "Enforcer on Jetbike",
+            "description": "A trooper of the Planetary Enforcers, rushing into the fray on a super fast jetbike.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Enforcer on Jetbike",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["energy_knife", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "rules": [{"id": "impact", "x": 1}, "hover"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Front"]}],
+                            "withWeapon": [{"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        }
+                    ]
+                }
+            ]
+        },
+        "enforcer_mechsuit": {
+            "name": "Enforcer Mechsuit",
+            "description": "A combat walker of the Planetary Enforcers, designed to take down heavily defended fortifications.",
+            "category": "heavy",
+            "rules": ["scout", "walker"],
+            "models": [
+                {
+                    "name": "Enforcer Mechsuit",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["heavy_flamethrower", "walker_chainsaw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_flamethrower", "walker_chainsaw"], "withWeapon": ["laser_machinegun"]},
+                        {"replaceWeapon": ["heavy_flamethrower"], "withWeapon": ["walker_chainsaw"]},
+                        {"replaceWeapon": ["walker_chainsaw"], "withWeapon": ["heavy_flamethrower"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "rookie": {
+            "name": "Rookie",
+            "description": "A rookie of the Planetary Enforcers, who is used in reconnaissance.",
+            "category": "core",
+            "rules": ["scout"],
+            "models": [
+                {
+                    "name": "Rookie",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", {"id": "energy_knife", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["marine_shotgun", "smg", "marine_rifle", "burst_pistol", {"id": "pistol", "count": 2}]},
+                        {"replaceWeapon": [{"id": "energy_knife", "count": 2}], "withWeapon": ["shock_staff", "shock_baton", {"id": "energy_gauntlets", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "strategies": {
+        "pacify": {
+            "name": "Pacify",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit fights. That attack assigns 1 additional Shock.",
+            "flavor": "Pacification is the first step to stopping a threat.",
+            "cost": 1
+        },
+        "move_move": {
+            "phase": "activation",
+            "name": "Move Move!",
+            "description": "Use this strategy when an _Infantry_ unit makes a _Move_ action. That unit gains +3\\\" of Movement for that action.",
+            "flavor": "Getting somewhere quickly is important for quick responding.",
+            "cost": 1
+        },
+        "pride": {
+            "phase": "activation",
+            "name": "Pride",
+            "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
+            "flavor": "It takes incredible courage to fight to the last man.",
+            "cost": 1
+        }
+    },
+    "weapons": {},
+    "rules": {}
+}

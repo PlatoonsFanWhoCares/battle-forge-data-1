@@ -1,0 +1,653 @@
+{
+  "id": "free_colonies",
+  "name": "Free Colonies",
+  "author": "guitarninja#5707",
+  "background": "The Free Colonies are a group of cooperating aliens and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
+  "units": {
+    "battlesuit_commander": {
+      "name": "Battlesuit Commander",
+      "description": "An elite commander piloting a light mech.",
+      "category": "command",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Battlesuit Commander",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": ["fly", {"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "suit_fists", "count": 2}],
+              "withWeapon": ["energy_greatsword", "energy_fist", "flamethrower", "plasma_rifle", "fusion_blaster", "assault_mortar", "ion_gatling", "pulse_gatling", "rocket_pod"]
+            },
+            {
+              "replaceWeapon": [{"id": "suit_fists", "count": 2}],
+              "withWeapon": ["energy_greatsword", "energy_fist", "assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"]
+            },
+            {"addWeapon": ["assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"], "limit": 2},
+            {
+              "addRule": [
+                "advanced_plating",
+                {"name": "Orbital Insertion", "id": "ambush"},
+                {"name": "Shield Generator", "id": "resilient", "x": 3},
+                "lookout_system",
+                "threat_detector_suit",
+                "booster",
+                "targeting_array"
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "celestial": {
+      "name": "Celestial",
+      "description": "A high ranking Colony psychic.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Celestial",
+          "movement": 7,
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 5,
+          "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+          "weapons": [{"id": "energy_sword", "count": 3}],
+          "options": [{"addRule": "hover_drone"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warrior_commander": {
+      "name": "Warrior Commander",
+      "description": "A commander who is in charge of the colony strike teams.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Warrior Commander",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_rifle", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "rules": ["leader", {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+          "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "tribal_volunteer": {
+      "name": "Tribal Volunteer",
+      "description": "Volunteer soldiers from the local mutant tribes sent to assist the free colonies.",
+      "category": "core",
+      "keywords": ["Infantry"],
+      "models": [{"name": "Tribal Volunteer", "movement": 6, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 6, "courage": 5, "weapons": ["tribal_rifle", "heavy_ccw"], "min": 1, "max": 1}]
+    },
+    "warrior": {
+      "name": "Warrior",
+      "description": "Infantry specialized in various battlefield roles.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Warrior",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "options": [{"replaceWeapon": "pulse_rifle", "withWeapon": ["pulse_carbine", "pulse_shotgun"]}],
+          "weapons": ["pulse_rifle", "ccw", "stun_grenades"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warrior_sergeant": {
+      "name": "Warrior Sergeant",
+      "description": "A leader specialized in various battlefield roles.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Warrior Sergeant",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_rifle", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_rifle", "withWeapon": ["pulse_carbine", "pulse_shotgun"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "rules": ["leader"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "pathfinder": {
+      "name": "Pathfinder",
+      "description": "Infantry which excels at forward scouting and spotting.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Pathfinder",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 4,
+          "defense": 5,
+          "reflexes": 6,
+          "rules": ["scout"],
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [
+            {"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_sniper_rifle", "rail_rifle", "pulse_sniper"]},
+            {"addWeapon": "stun_grenade_launcher_attachment"},
+            {"addRule": "spotting_laser"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "pathfinder_sergeant": {
+      "name": "Pathfinder Sergeant",
+      "description": "A leader who excels at forward scouting and spotting.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Pathfinder Sergeant",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 4,
+          "defense": 5,
+          "reflexes": 6,
+          "rules": ["leader", "scout"],
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "militia": {
+      "name": "Militia",
+      "description": "Infantry that has volunteered or have been pressed into Colony service.",
+      "category": "core",
+      "models": [{"name": "Militia", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["defense_rifle", "ccw", "frags"], "min": 1, "max": 1}]
+    },
+    "militia_gunner": {
+      "name": "Militia Gunner",
+      "description": "Infantry with a heavy weapon that has volunteered or have been pressed into Colony service.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Militia Specialist",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": ["flamethrower", "ccw", "frags"],
+          "options": [{"replaceWeapon": ["flamethrower"], "withWeapon": ["plasma_rifle", "fusion_blaster", "stun_grenade_launcher"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "militia_sergeant": {
+      "name": "Militia Sergeant",
+      "description": "A leader that has volunteered or has been pressed into Colony service.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Militia Sergeant",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": ["defense_rifle", "ccw", "frags"],
+          "options": [{"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pulse_pistol", {"id": "ccw", "count": 2}]]}],
+          "rules": ["leader"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "insect_warrior": {
+      "name": "Insect Warrior",
+      "description": "A flying insect alien with a powerful rifle.",
+      "category": "strike",
+      "models": [
+        {"name": "Insect Warrior", "movement": 8, "courage": 5, "shoot": 5, "fight": 5, "defense": 7, "reflexes": 5, "rules": ["fly"], "weapons": ["neutron_carbine", "ccw"], "min": 1, "max": 1}
+      ]
+    },
+    "insect_warrior_sergeant": {
+      "name": "Insect Warrior Sergeant",
+      "description": "A flying insect alien leader with a powerful rifle.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Insect Warrior Sergeant",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "rules": ["fly", "leader"],
+          "weapons": ["neutron_carbine", "ccw"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stealth_suit": {
+      "name": "Stealth Suit",
+      "description": "A light mech equipped with advanced cloaking technology.",
+      "category": "specialist",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Stealth Suit",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": ["evasive", "fly"],
+          "weapons": ["pulse_gatling", "suit_fists", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster", "plasma_rifle"]}, {"addRule": ["spotting_laser", "homing_beacon"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stealth_suit_sergeant": {
+      "name": "Stealth Suit Sergeant",
+      "description": "A light mech leader equipped with advanced cloaking technology.",
+      "category": "command",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Stealth Suit Sergeant",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": ["evasive", "fly", "leader"],
+          "weapons": ["pulse_gatling", "suit_fist", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster", "plasma_rifle"]}, {"addRule": ["spotting_laser", "homing_beacon"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "assault_suit": {
+      "name": "Assault Suit",
+      "description": "A light mech are armed with deadly close combat weaponry.",
+      "category": "specialist",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Assault Suit",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 8,
+          "reflexes": 6,
+          "weapons": ["pulse_carbine", {"id": "energy_sword", "count": 2}, "stun_grenades"],
+          "options": [{"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}]}, {"addRule": ["homing_beacon", "pulse_shield"]}],
+          "rules": ["fly"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "assault_suit_sergant": {
+      "name": "Assault Suit Sergeant",
+      "description": "A light mech leader are armed with deadly close combat weaponry.",
+      "category": "command",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Assault Suit Sergeant",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 8,
+          "reflexes": 6,
+          "weapons": ["pulse_carbine", {"id": "energy_sword", "count": 2}, "stun_grenades"],
+          "options": [{"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}]}, {"addRule": ["homing_beacon", "pulse_shield"]}],
+          "rules": ["fly", "leader"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "battle_suit": {
+      "name": "Battlesuit",
+      "description": "A light mech that can be armed with a wide variety of different systems and weapons.",
+      "category": "specialist",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Battlesuit",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": ["fly", {"id": "wounds", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "suit_fists", "count": 2}],
+              "withWeapon": ["energy_greatsword", "energy_fist", "assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"]
+            },
+            {
+              "replaceWeapon": [{"id": "suit_fists", "count": 2}],
+              "withWeapon": ["energy_greatsword", "energy_fist", "assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"]
+            },
+            {"addWeapon": ["assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"], "limit": 1},
+            {
+              "addRule": [
+                {"name": "Orbital Insertion", "id": "ambush"},
+                {"name": "Shield Generator", "id": "defiant", "x": 3, "ArrayItem": "lookout_system"},
+                "threat_detector_suit",
+                "advanced_plating",
+                "targeting_array"
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "battle_suit_sergeant": {
+      "name": "Battlesuit Sergeant",
+      "description": "A light mech leader that can be armed with a wide variety of different systems and weapons.",
+      "category": "command",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Battlesuit Sergeant",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": ["fly", "leader", {"id": "wounds", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "suit_fists", "count": 2}],
+              "withWeapon": ["energy_greatsword", "energy_fist", "assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"]
+            },
+            {
+              "replaceWeapon": [{"id": "suit_fists", "count": 2}],
+              "withWeapon": ["energy_greatsword", "energy_fist", "assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"]
+            },
+            {"addWeapon": ["assault_mortar", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "rocket_pod"], "limit": 1},
+            {
+              "addRule": [
+                {"name": "Orbital Insertion", "id": "ambush"},
+                {"name": "Shield Generator", "id": "defiant", "x": 3, "ArrayItem": "lookout_system"},
+                "threat_detector_suit",
+                "advanced_plating",
+                "targeting_array"
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "support_drone": {
+      "name": "Support Drone",
+      "description": "A support drone used for frontline repair and medical purposes.",
+      "category": "specialist",
+      "keywords": ["Drone"],
+      "models": [
+        {
+          "name": "Support Drone",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 0,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["pulse_pistol"],
+          "rules": ["fly", "engineer"],
+          "options": [{"replaceRule": "engineer", "withRule": "medic"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "tactical_drone": {
+      "name": "Tactical Drone",
+      "description": "A squad of tactical drones used to support offensive actions.",
+      "category": "specialist",
+      "keywords": ["Drone"],
+      "models": [
+        {
+          "name": "Tactical Drone",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 0,
+          "defense": 6,
+          "reflexes": 6,
+          "options": [{"addWeapon": ["pulse_carbine", "missile_pod", "fusion_blaster", "plasma_rifle", "railgun", "flamethrower"]}, {"addRule": ["pulse_shield", "spotting_laser"], "limit": 1}],
+          "rules": ["fly"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "gun_drone": {
+      "name": "Heavy Gun Drone",
+      "description": "A drone with heavy weapons.",
+      "category": "strike",
+      "keywords": ["Drone"],
+      "models": [
+        {
+          "name": "Heavy Gun Drone",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 0,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["pulse_gatling"],
+          "rules": ["fly"],
+          "options": [{"addWeapon": "pulse_gatling"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "sniper_drone": {
+      "name": "Sniper Drones",
+      "description": "A drone with a sniper rifle.",
+      "category": "specialist",
+      "keywords": ["Drone"],
+      "models": [
+        {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 5, "fight": 0, "defense": 6, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["evasive", "fly"], "min": 1, "max": 1}
+      ]
+    }
+  },
+  "weapons": {
+    "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", "scatter", {"id": "blast", "x": 3}]},
+    "homing_missile": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": [{"id": "ammo", "x": 1}, "homing", "indirect"]},
+    "assault_mortar": {"name": "Assault Mortar", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["assault", {"id": "blast", "x": 3}, "indirect"]},
+    "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]},
+    "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]},
+    "missile_pod": {"name": "Missile Pod", "attacks": 1, "short": 18, "medium": 36, "ap": 4},
+    "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["heavy"]},
+    "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
+    "ion_sniper_rifle": {"name": "Ion Sniper Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4, "rules": ["overcharge", "sniper"]},
+    "quad_ion_rifle": {"name": "Quad Ion Rifle", "attacks": 4, "short": 15, "medium": 30, "ap": 4, "rules": ["overcharge"]},
+    "ion_gatling": {"name": "Ion Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 3, "rules": ["assault", "overcharge"]},
+    "ion_cannon": {"name": "Ion Cannon", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 6}]},
+    "smart_missiles": {"name": "Smart Missile Pod", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
+    "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "brutal"]},
+    "pulse_carbine": {"name": "Pulse Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+    "pulse_rifle": {"name": "Pulse Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
+    "pulse_sniper": {"name": "Pulse Sniper", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["sniper"]},
+    "pulse_pistol": {"name": "Pulse Pistol", "attacks": 1, "short": 6, "ap": 2, "rules": ["pistol"]},
+    "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+    "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 10, "short": 18, "medium": 36, "ap": 3},
+    "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
+    "suit_fists": {"name": "Suit Fists", "attacks": 1, "short": "Melee", "ap": 2},
+    "suit_shield": {"name": "Shielded Suit Fist", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["fist_shield"]},
+    "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3},
+    "energy_greatsword": {"name": "Energy Greatsword", "attacks": 1, "short": "Melee", "ap": 5},
+    "amplified_pulse_rifle": {"name": "Amplified Pulse Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "rules": ["rapid_fire"]},
+    "stun_grenade_launcher_attachment": {
+      "name": "Colony Grenade Launcher Attachment",
+      "profiles": [{"name": "Stun", "attacks": 1, "short": 6, "medium": 12, "rules": ["stun"]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3}]
+    },
+    "stun_grenade_launcher": {
+      "name": "Colony Grenade Launcher",
+      "profiles": [{"name": "Stun", "attacks": 1, "short": 12, "medium": 24, "rules": ["stun"]}, {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 3}]
+    },
+    "tribal_rifle": {"name": "Tribal Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+    "tribal_carbine": {"name": "Tribal Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1}
+  },
+  "rules": {
+    "stealth_field": {
+      "name": "Stealth Field",
+      "description": "Once per round, enemy units targeting this unit suffer -1 Accuracy. This may be used one additional time per round for each model with this rule.",
+      "points": 10
+    },
+    "pulse_shield": {
+      "name": "Pulse Shield",
+      "description": "Once per round, roll a die for each hit this unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.",
+      "points": 5
+    },
+    "commander_tactics": {
+      "name": "Commander Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Heavy Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+      "points": ["rule.x", {"multiply": 10}]
+    },
+    "warrior_tactics": {
+      "name": "Warrior Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+      "points": ["rule.x", {"multiply": 10}]
+    },
+    "spotting_laser": {
+      "name": "Spotting Laser",
+      "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "points": 5
+    },
+    "homing_beacon": {
+      "name": "Homing Beacon",
+      "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model and automatically pass Initiative tests to Ambush.",
+      "points": 5
+    },
+    "advanced_plating": {"name": "Advanced Plating", "hidden": "true", "description_short": "+1 Save", "points": ["model.rules.wounds.x", {"max": 1}, {"multiply": 2}]},
+    "inhibitor": {"name": "Inhibitor", "description": "Enemy units suffer -2\" of movement with Charge actions against friendly units within 3\".", "points": 5},
+    "recon_drone": {"name": "Laser Targetting", "description": "Models in this unit may ignores cover bonuses.", "points": 10},
+    "accelerator": {"name": "Accelerator", "description": "This model and models in its unit add +6\" maximum Range to all weapons.", "points": 5},
+    "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "points": 5, "hidden": true},
+    "hover_drone": {"name": "Hover Drone", "hidden": "true", "description_short": "+4\" Move, Fly", "points": 5},
+    "protection": {"name": "Protection", "description": "Models in this unit get +1 Save.", "points": 20},
+    "targeting_array": {"name": "Targeting Array", "description_short": "+1 Accuracy", "points": 10, "hidden": true},
+    "lookout_system": {
+      "name": "Lookout System",
+      "description": "Models in this unit may reroll Initiative checks when attempting the Counter-Attack reaction. Multiple Lookout Systems do not stack bonuses.",
+      "points": 5
+    },
+    "legend_emergency_kit": {
+      "name": "Emergency Kit",
+      "description": "Once per game at the start this unit's activation, it may choose to regain Wounds(x) equal to half its total Wounds(x) value rounded up. This may not bring the unit above its maximum Wounds(x) value.",
+      "points": 4
+    },
+    "legend_advanced_spotting_laser": {
+      "name": "Advanced Spotting Laser",
+      "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 2 spotting markers. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "points": 5
+    },
+    "booster": {"name": "Booster", "description_short": "+4\" Movement", "points": 10, "hidden": true}
+  },
+  "strategies": {
+    "covering_fire": {
+      "name": "Covering Fire",
+      "phase": "activation",
+      "flavor": "Members of the Colonies are tirelessly drilled on covering one another in the event that one unit is overrun.",
+      "description": "Use when a friendly _Infantry_ or _Heavy Infantry_ unit is Charged. One friendly _Infantry_ or _Heavy Infantry_ unit within 6\" may take an Initiative test and attempt to react to the charging unit.",
+      "cost": 1
+    },
+    "preservation_protocols": {
+      "name": "Preservation Protocols",
+      "phase": "activation",
+      "flavor": "Colony drones are programmed to protect their creators at all costs.",
+      "description": "Use after an _Infantry_ or _Heavy Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. If there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
+      "cost": 2
+    },
+    "danger_close": {
+      "phase": "activation",
+      "name": "Danger Close",
+      "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
+      "flavor": "Colony troops are trained to use defensive tactics to protect themselves in close quarters.",
+      "cost": 1
+    }
+  },
+  "relics": {
+    "emergency_kit": {
+      "name": "Emergency Kit",
+      "rule": "legend_emergency_kit",
+      "description": "Upgrade one _Leader_ model to be upgraded with Emergency Kit.",
+      "flavor": "It never hurts to have a backup plan.",
+      "points": 5
+    },
+    "advanced_spotting_laser": {
+      "name": "Advanced Spotting Laser",
+      "rule": "legend_advanced_spotting_laser",
+      "description": "Replace one Spotting Laser with an Advanced Spotting Laser.",
+      "flavor": "Upgraded with advanced optics, this spotting laser can iluminate targets twice as bright.",
+      "points": 5
+    },
+    "amplified_pulse_rifle": {
+      "name": "Amplified Pulse Rifle",
+      "weapon": "amplified_pulse_rifle",
+      "description": "Replace one _Leader_ Pulse Rifle with an Amplified Pulse Rifle.",
+      "flavor": "Specifically crafted for longer range fire support, this pulse rifle can rapidly fire and cause significant damage.",
+      "points": 5
+    }
+  },
+  "powers": {
+    "laser_blast": {"name": "Laser Blast", "description": "Target enemy unit within 24\" takes 1 hit with AP(6).", "charge": 7},
+    "sap": {"name": "Sap", "description": "Target enemy unit within 24\" suffers -1 Strength or Accuracy with its next attack.", "charge": 5},
+    "senses": {"name": "Heightened Senses", "description": "Target friendly unit within 18\" gains +1 Accuracy.", "charge": 6}
+  }
+}

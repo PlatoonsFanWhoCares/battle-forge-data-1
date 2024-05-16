@@ -1,0 +1,140 @@
+{
+  "id": "speed_demons",
+  "name": "Speed Demons",
+  "author": "guitarninja#5707",
+  "units": {
+    "speed_champion": {
+      "name": "Speed Champion",
+      "description": "A hot rod with a race champion driver.",
+      "category": "command",
+      "keywords": ["Vehicle"],
+      "rules": ["leader"],
+      "models": [
+        {
+          "name": "Speed Champion",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun"]}, {"addRule": ["nitrous"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "modified_car": {
+      "name": "Modified Car",
+      "description": "A souped up sedan car with some extra performance.",
+      "category": "core",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Modified Car",
+          "movement": 7,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "muscle_car": {
+      "name": "Muscle Car",
+      "description": "A muscle car with speed and extra armor.",
+      "category": "core",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Muscle Car",
+          "movement": 7,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "shotgun", "rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "sport_car": {
+      "name": "Sport Car",
+      "description": "An extra agile sport car with some extra speed.",
+      "category": "core",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Sport Car",
+          "movement": 7,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "rules": ["agile"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "concert_truck": {
+      "name": "Concert Truck",
+      "description": "A truck equipped with speakers and sometimes a live musician to inspire the other cars.",
+      "category": "specialist",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Concert Truck",
+          "movement": 5,
+          "courage": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["pistol"],
+          "options": [{"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "rifle", "smg", "shotgun"]}],
+          "rules": ["musician"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {},
+  "rules": {},
+  "strategies": {
+    "extra_juice": {
+      "name": "Juice Up",
+      "phase": "activation",
+      "flavor": "Some extra juice to get the advantage.",
+      "description": "Use when a unit moves. It may move an additional 3\".",
+      "cost": 1
+    },
+    "expert_drivers": {
+      "name": "Expert Drivers",
+      "phase": "activation",
+      "description": "Use when taking an Initiative test. That unit is treated as having +2 Initiative for that test.",
+      "flavor": "With countless hours of driving experience, these drivers can react to the most dangerous situations.",
+      "cost": 1
+    },
+    "focused": {
+      "name": "Focused",
+      "phase": "activation",
+      "description": "Use when a unit is in a collision. That unit does not gain any Shock for the collision.",
+      "flavor": "Safely colliding with other vehicles or objects is a skill in and of itself.",
+      "cost": 2
+    }
+  }
+}

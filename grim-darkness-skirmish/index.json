@@ -1,0 +1,1583 @@
+{
+    "name": "Stellar Frontiers Skirmishes",
+    "id": "stellar_frontiers_skirmish",
+    "author": "guitarninja#5707",
+    "reportUrl": "https://github.com/dice-guild/grim-darkness-skirmish/issues",
+    "factions": {
+        "high_elves": {
+            "version": "1.0",
+            "name": "High Elf Worlds",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#295788",
+            "secondary_color": "#e8bb00",
+            "alliance": "elven_coaliation",
+            "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "dark_elves": {
+            "version": "1.0",
+            "name": "Dark Elf Raiders",
+            "id": "dark_elves",
+            "url": "dark_elves.json",
+            "color": "#0b474a",
+            "alliance": "elven_coaliation",
+            "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "alien_swarm": {
+            "version": "1.0",
+            "name": "Alien Swarm",
+            "id": "alien_swarm",
+            "url": "alien_swarm.json",
+            "color": "#3d3354",
+            "alliance": "alien_swarm",
+            "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "alien_cults": {
+            "version": "1.0",
+            "name": "Alien Cults",
+            "id": "alien_cults",
+            "url": "alien_cults.json",
+            "color": "#606060",
+            "secondary_color": "#7d0a15",
+            "alliance": "alien_swarm",
+            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "corrupted_marines": {
+            "version": "1.0",
+            "name": "Corrupted Marines",
+            "id": "corrupted_marines",
+            "url": "corrupted_marines.json",
+            "color": "#343a40",
+            "alliance": "corrupted_pact",
+            "description": "The corrupted marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "undying_machines": {
+            "version": "1.0",
+            "name": "Undying Machines",
+            "id": "undying_machines",
+            "url": "undying_machines.json",
+            "color": "#1e7331",
+            "alliance": "corrupted_pact",
+            "description": "The Undying Machines are a race of once-people now cursed with unending machine immortality. They rely on waves of reanimating soldiers and advanced ancient technology to win their battles.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "elven_keepers": {
+            "version": "1.0",
+            "name": "Elven Keepers",
+            "id": "elven_keepers",
+            "url": "elven_keepers.json",
+            "color": "#7761ab",
+            "alliance": "elven_coaliation",
+            "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "free_colonies": {
+            "version": "1.0",
+            "alliance": "federation",
+            "name": "Free Colonies",
+            "id": "free_colonies",
+            "url": "free_colonies.json",
+            "color": "#008080",
+            "description": "The Free Colonies are an alliance of several alien worlds cooperating together in the name of survival and prosperity. They rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "faith_wardens": {
+            "version": "1.0",
+            "name": "Faith Wardens",
+            "id": "faith_wardens",
+            "url": "faith_wardens.json",
+            "color": "#383838",
+            "secondary_color": "#9a1115",
+            "alliance": "imperial_alliance",
+            "description": "The Faith Wardens are a sect of the Human Empire which have a uniquely faithful and religious background. The Faith Wardens rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "machine_guilds": {
+            "version": "1.0",
+            "name": "Machine Guilds",
+            "id": "machine_guilds",
+            "url": "machine_guilds.json",
+            "color": "#9a1115",
+            "alliance": "imperial_alliance",
+            "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "imperial_defense_force": {
+            "version": "1.0",
+            "name": "Imperial Defence Force",
+            "id": "imperial_defense_force",
+            "url": "imperial_defense_force.json",
+            "color": "#314821",
+            "alliance": "imperial_alliance",
+            "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "imperial_marines": {
+            "version": "1.0",
+            "name": "Imperial Marines",
+            "id": "imperial_marines",
+            "url": "imperial_marines.json",
+            "color": "#0d407f",
+            "alliance": "imperial_alliance",
+            "description": "The Imperial Marines are the pride of the Human Empire and its elite order-keeping force should they need to be deployed. The Imperial Marines rely on tough infantry and somewhat advanced vehicle technology to outsmart and eliminate their enemies.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "throne_guardians": {
+            "version": "1.0",
+            "name": "Throne Guardians",
+            "id": "throne_guardians",
+            "url": "throne_guardians.json",
+            "color": "#D4AF37",
+            "secondary_color": "#7d0a15",
+            "alliance": "imperial_alliance",
+            "description": "The Throne Guardians are the defenders of the Human Empire's capital. Only the most elite Imperial Marines are recruited to be Throne Guardians and with that they are the most well-trained. The Throne Guardians rely on the most elite and well-trained infantry along with powerful and ancient war weaponry to defend their home planet.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "orc_clans": {
+            "version": "1.0",
+            "name": "Orc Clans",
+            "id": "orc_clans",
+            "url": "orc_clans.json",
+            "color": "#50974A",
+            "alliance": "greenskins",
+            "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "imperial_inquisition": {
+            "version": "1.0",
+            "name": "Imperial Inquisition",
+            "id": "imperial_inquisition",
+            "url": "imperial_inquisition.json",
+            "color": "#7d0a15",
+            "secondary_color": "#010203",
+            "alliance": "imperial_alliance",
+            "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "undercity_gangs": {
+            "version": "1.0",
+            "name": "Undercity Gangs",
+            "id": "undercity_gangs",
+            "url": "undercity_gangs.json",
+            "color": "#8a552c",
+            "alliance": "mercenaries",
+            "description": "The Undercity on many manufacturing worlds is filled with criminal gangs vying for power. Occasionally they will ally together to defeat a common enemy and maintain the status quo.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "ascended_astroraptors": {
+            "alliance": "federation",
+            "name": "Ascended Astro-Raptors",
+            "id": "ascended_astroraptors",
+            "url": "ascended_astroraptors.json",
+            "color": "#4f90e0",
+            "version": "1.0",
+            "description": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars. They combine advanced technology with deadly close-ranged and claw-filled assaults.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "enforcers": {
+            "version": "1.0",
+            "name": "Planetary Enforcers",
+            "id": "enforcers",
+            "url": "enforcers.json",
+            "color": "#262b34",
+            "secondary_color": "#455a64",
+            "alliance": "imperial_alliance",
+            "description": "The Planetary Enforcers are responsible for maintaining peace on Imperial Alliance worlds. While they tend to avoid combat when possible, it is sometimes necessary for them to step in. They are equipped with many crowd-control measures to ensure they can keep order in the worst of circumstances.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "forge_masters": {
+            "version": "1.0",
+            "name": "Forge Masters",
+            "id": "forge_masters",
+            "url": "forge_masters.json",
+            "color": "#7a2007",
+            "secondary_color": "#a82d0a",
+            "description": "The Forge Masters are a mining race of dwarven ancestry. They roam the endless expanse in large fleets searching for exquisite loot and are not opposed to doing a job or two for anyone with the money to pay. They favor heavy armor and deadly close ranged weaponry.",
+            "alliance": "mercenaries",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "gca": {
+            "version": "1.0",
+            "name": "Galactic Corperate Allegiance",
+            "id": "gca",
+            "url": "gca.json",
+            "color": "#657432",
+            "alliance": "mercenaries",
+            "description": "The Galactic Corperate Allegiance is a brittle union of opportunistic arms dealers, cutthroat trading companies and private armies vying for control over lost sectors and profitable regions. They are equipped with the best tech and weapons money can buy and prefer stealth and crafty tactics.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "outcasts": {
+            "version": "1.0",
+            "name": "Outcasts",
+            "id": "outcasts",
+            "url": "outcasts.json",
+            "color": "#5C4033",
+            "secondary_color": "#3A3B3C",
+            "alliance": "mercenaries",
+            "description": "Pulled from many walks of life, the Outcasts all have one thing in common: A willingness to fight for their place in the galaxy.  Whether it's for coin, for a cause, or because they must, the Outcasts grab whatever gear they can scrounge and turn using it into their occupation.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "corrupted_defense_force": {
+            "name": "Corrupted Defense Force",
+            "id": "corrupted_defense_force",
+            "url": "corrupted_defense_force.json",
+            "color": "#ba7f00",
+            "secondary_color": "#343a40",
+            "alliance": "corrupted_pact",
+            "version": "1.0",
+            "description": "The Corrupted Defense Force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the Corrupted Pact against those that stay imperial.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "abyss_daemons": {
+            "version": "1.0",
+            "name": "Demons of the Abyss",
+            "id": "abyss_daemons",
+            "url": "abyss_daemons.json",
+            "color": "#B52E1F",
+            "alliance": "doom",
+            "description": "Demonic entities from another dimension, causing havoc in the name of their infernal masters.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "mechanized_focus": {"name": "Mechanized", "id": "mechanized_focus", "description": "A focus on transports and vehicle combat."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        }
+    },
+    "alliances": {
+        "alien_swarm": {"name": "Alien Swarm"},
+        "imperial_alliance": {"name": "Imperial Alliance"},
+        "elven_coaliation": {"name": "Elven Coalition"},
+        "corrupted_pact": {"name": "Corrupted Pact"},
+        "federation": {"name": "Federated Species"},
+        "greenskins": {"name": "Greenskin Tribes"},
+        "mercenaries": {"name": "Mercenaries"}
+    },
+    "categories": {
+        "command": {"name": "Command"},
+        "core": {"name": "Core"},
+        "specialist": {"name": "Specialist"},
+        "strike": {"name": "Strike"},
+        "heavy": {"name": "Heavy"},
+        "fortification": {"name": "Fortification"}
+    },
+    "organizations": {
+        "skirmish": {
+            "name": "Generalist",
+            "cost": 0,
+            "description": "A well-rounded force for taking on any mission.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 8}, "specialist": {"max": 5}, "strike": {"max": 5}, "heavy": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "strike": {
+            "name": "Strike",
+            "cost": 1,
+            "description": "A strike force for outflanking or shock assaulting.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 5}, "specialist": {"max": 5}, "strike": {"min": 2, "max": 8}, "heavy": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "specialist": {
+            "name": "Specialist",
+            "cost": 1,
+            "description": "An elite force to deal with specific targets.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 5}, "specialist": {"min": 2, "max": 8}, "strike": {"max": 5}, "heavy": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "heavy": {
+            "name": "Heavy",
+            "cost": 1,
+            "description": "A heavy force to pack a punch on the field.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 5}, "specialist": {"max": 5}, "strike": {"max": 5}, "heavy": {"min": 2, "max": 5}, "fortification": {"max": 4}}
+        },
+        "support": {
+            "name": "Support",
+            "cost": 1,
+            "description": "A small supporting force.",
+            "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 1}, "fortification": {"max": 4}}
+        }
+    },
+    "relics": {
+        "inspired": {
+            "name": "Inspired",
+            "rule": "legend_courage",
+            "description": "Upgrade one Leader model with Inspired.",
+            "flavor": "This model inspires the best in those who serve them.",
+            "points": 5
+        },
+        "expert_fighter": {
+            "name": "Expert Fighter",
+            "rule": "legend_expert_fighter",
+            "description": "Upgrade one Leader model with Expert Fighter.",
+            "flavor": "This model has fought in many close quarters fights and survived.",
+            "points": 5
+        },
+        "quick_reflexes": {
+            "name": "Quick Reflexes",
+            "rule": "legend_quick_reflexes",
+            "description": "Upgrade one Leader model with Quick Reflexes.",
+            "flavor": "This model has expert awareness and can react quickly.",
+            "points": 5
+        }
+    },
+    "powerCategories": {
+        "fire": {"name": "Fire"},
+        "water": {"name": "Water"},
+        "earth": {"name": "Earth"},
+        "air": {"name": "Air"},
+        "ice": {"name": "Ice"},
+        "nature": {"name": "Nature"},
+        "metal": {"name": "Metal"},
+        "light": {"name": "Light"},
+        "shadow": {"name": "Shadow"},
+        "death": {"name": "Death"},
+        "lunar": {"name": "Lunar"},
+        "solar": {"name": "Solar"}
+    },
+    "powers": {
+        "fireball": {"name": "Fireball", "description": "Target enemy unit within 18\" takes 3 hits with AP(0). This power may be cast unlimited times per turn.", "charge": 7, "category": "fire"},
+        "flaming_sword": {"name": "Flaming Sword", "description": "A friendly unit within 6\" gains +1 AP with one Melee weapon until the end of the turn.", "charge": 6, "category": "fire"},
+        "searing_bolt": {
+            "name": "Searing Bolt",
+            "description": "Target enemy unit within 24\" takes 1 hit with AP(7). On a casting roll of 1 or 2, they take 2 hits instead.",
+            "charge": 5,
+            "category": "fire"
+        },
+        "whirlpool": {"name": "Whirlpool", "description": "Target enemy model within 24\" and all models within 3\" of it take 1 hit with AP(0).", "charge": 7, "category": "water"},
+        "fog_bank": {
+            "name": "Fog Bank",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
+            "charge": 6,
+            "category": "water"
+        },
+        "crushing_waves": {"name": "Crushing Waves", "description": "Target enemy unit within 12\" takes 2 hits with AP(4).", "charge": 5, "category": "water"},
+        "earthen_armor": {"name": "Earthen Armor", "description": "Target friendly unit within 12\" gains +1 Save until the end of the turn.", "charge": 7, "category": "earth"},
+        "crystal_volley": {"name": "Crystal Volley", "description": "Target enemy unit within 18\" takes 3 hits with AP(1).", "charge": 6, "category": "earth"},
+        "earthquake": {"name": "Earthquake", "description": "Target enemy unit within 24\" takes 3 hits with AP(1) and has -2\" Movement until the end of the turn.", "charge": 5, "category": "earth"},
+        "violent_gale": {"name": "Violent Gale", "description": "Target enemy unit within 12\" takes 3 hits with AP(0) and is pushed 1\" away from this model.", "charge": 7, "category": "air"},
+        "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 6, "category": "air"},
+        "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 24\" takes 1 hit with AP(8).", "charge": 5, "category": "air"},
+        "frost_lance": {"name": "Frost Lance", "description": "Target enemy unit within 24\" takes 1 hit with AP(4) and has -2\" Movement until the end of the turn.", "charge": 7, "category": "ice"},
+        "whiteout": {
+            "name": "Whiteout",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
+            "charge": 6,
+            "category": "ice"
+        },
+        "blizzard": {"name": "Blizzard", "description": "Target enemy unit within 24\" takes 3 hits with AP(1) and has -1 Accuracy until the end of the turn.", "charge": 5, "category": "ice"},
+        "murder_of_crows": {
+            "name": "Murder of Crows",
+            "description": "Target enemy unit within 18\" takes 3 hits with AP(0) and has -1 Accuracy until the end of the turn.",
+            "charge": 7,
+            "category": "nature"
+        },
+        "entangling_roots": {
+            "name": "Entangling Roots",
+            "description": "Target enemy unit within 12\" takes 3 hit with AP(1) and has -2\" Movement until the end of the turn.",
+            "charge": 6,
+            "category": "nature"
+        },
+        "wild_frenzy": {
+            "name": "Wild Frenzy",
+            "description": "Target friendly unit within 12\" may make one additional attack with one Melee weapon until the end of the turn.",
+            "charge": 5,
+            "category": "nature"
+        },
+        "silver_bolt": {
+            "name": "Silver Bolt",
+            "description": "Target enemy unit within 24\" takes 1 hit with AP(5). This power may be cast unlimited times per turn.",
+            "charge": 7,
+            "category": "metal"
+        },
+        "molten_rain": {"name": "Molten Rain", "description": "Target enemy unit within 12\" take 6 automatic hits with AP(2).", "charge": 6, "category": "metal"},
+        "rust": {"name": "Rust", "description": "Target enemy unit within 12\" has -1 Save until end of turn.", "charge": 5, "category": "metal"},
+        "soul_dagger": {
+            "name": "Soul Dagger",
+            "description": "Target enemy unit within 12\" takes 1 hit with AP(3). This power can target units not within of Line of Sight.",
+            "charge": 6,
+            "category": "shadow"
+        },
+        "cloak_of_shadows": {
+            "name": "Cloak of Shadows",
+            "description": "Target a friendly unit within 12\". Until the end of the turn models suffer -1 Accuracy when shooting at this unit.",
+            "charge": 7,
+            "category": "shadow"
+        },
+        "fright": {"name": "Fright", "description": "Target enemy unit within 12\" gains 2 Shock.", "charge": 5, "category": "shadow"},
+        "blinding_shield": {
+            "name": "Blinding Shield",
+            "description": "Target a friendly unit within 12\". Until the end of the turn models suffer -1 Strength when targeting this unit with a melee attack.",
+            "charge": 7,
+            "category": "light"
+        },
+        "smite": {"name": "Smite", "description": "Target enemy unit within 12\" takes 2 hits with AP(3).", "charge": 6, "category": "light"},
+        "inspiration": {"name": "Inspiration", "description": "Target friendly unit within 12\" has +1 Courage until the end of the turn.", "charge": 5, "category": "light"},
+        "drain_life": {
+            "name": "Drain Life",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP(3). If any model is slain restore 1 wound to this model.",
+            "charge": 7,
+            "category": "death"
+        },
+        "spectral_grasp": {"name": "Spectral Grasp", "description": "Target enemy unit within 18\" take 3 hits with AP(0) and is moved 1\" towards this model.", "charge": 6, "category": "death"},
+        "doom": {"name": "Doom", "description": "Target enemy unit within 12\" has -1 Courage until the end of the turn.", "charge": 5, "category": "death"},
+        "unnerving_accuracy": {
+            "name": "Unnerving Accuracy",
+            "description": "Target friendly unit within 18\" may make one additional attack with any Ranged weapon until the end of the turn.",
+            "charge": 6,
+            "category": "solar"
+        },
+        "incinerating_beam": {"name": "Incinerating Beam", "description": "Target enemy unit within 12\" takes 1 hits with AP(8).", "charge": 7, "category": "solar"},
+        "supernova": {"name": "Supernova", "description": "Roll a d10 for each enemy unit within 6\". On a roll of 5 or lower the unit hit takes 2 hits with AP(4).", "charge": 5, "category": "solar"},
+        "rejuvenation_beam": {
+            "name": "Rejuvenation Beam",
+            "description": "Target friendly _Infantry_ unit within 12\" rolls 1D10 for each missing model in the unit. On a 3 or less that model is restored. This power may only be cast once per turn.",
+            "charge": 5,
+            "category": "lunar"
+        },
+        "detect_weakness": {
+            "name": "Detect Weakness",
+            "description": "Target enemy unit within 12\" must re-roll one succesful die on its next Save test. This power may be cast unlimited times.",
+            "charge": 6,
+            "category": "lunar"
+        },
+        "heightened_senses": {"name": "Heightened Senses", "description": "Target friendly unit within 12\" has +1 Initiative until the of the turn.", "charge": 7, "category": "lunar"}
+    },
+    "weapons": {
+        "Melee weapons": "",
+        "ccw": {"name": "Light CCW", "attacks": 1, "short": "Melee"},
+        "heavy_ccw": {"name": "CCW", "attacks": 1, "ap": 1, "short": "Melee"},
+        "chainsword": {"name": "Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
+        "chainaxe": {"name": "Chainaxe", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["rending"]},
+        "chainfist": {"name": "Chainfist", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["cumbersome", "rending"]},
+        "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 1, "ap": 3, "short": "Melee"},
+        "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "servo_arm": {"name": "Servo-Arm", "attacks": 1, "short": "Melee", "ap": 3},
+        "energy_staff": {"name": "Energy Staff", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "reach", "x": 1}]},
+        "energy_lance": {"name": "Energy Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
+        "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "energy_axe": {"name": "Energy Axe", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]},
+        "energy_mace": {"name": "Energy Mace", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lethal"]},
+        "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "reach", "x": 1}, "rending"]},
+        "energy_spear": {"name": "Energy Spear", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "reach", "x": 1}]},
+        "energy_halberd": {"name": "Energy Halberd", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending", {"id": "reach", "x": 1}]},
+        "energy_greataxe": {"name": "Energy Greataxe", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+        "energy_greatblade": {"name": "Energy Greatblade", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "energy_fist": {"name": "Energy Fist", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
+        "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "energy_greathammer": {"name": "Energy Greathammer", "short": "Melee", "attacks": 1, "ap": 8, "rules": ["cumbersome"]},
+        "energy_greatsword": {"name": "Energy Greatsword", "attacks": 1, "short": "Melee", "ap": 6},
+        "crab_flail": {"name": "Crab Flail", "attacks": 1, "short": "Melee", "ap": 3},
+        "heavy_walker_fist": {"name": "Heavy Walker Fist", "attacks": 1, "short": "Melee", "ap": 6},
+        "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 5},
+        "crab_claw": {"name": "Crab Claw", "profiles": [{"name": "Strike", "attacks": 3, "short": "Melee", "ap": 7}, {"name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3}]},
+        "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
+        "stomp": {"name": "Stomp", "attacks": 1, "short": "Melee", "ap": 1},
+        "claws_and_tendrils": {"name": "Claws and Tendrils", "attacks": 1, "short": "Melee", "ap": 6},
+        "steel_tails": {"name": "Steel Tails", "attacks": 1, "short": "Melee", "ap": 2},
+        "dragon_claws": {"name": "Dragon Claws", "attacks": 1, "short": "Melee", "ap": 4},
+        "fiend_claws": {"name": "Fiend Claws", "attacks": 1, "short": "Melee", "ap": 7},
+        "virus_injector": {"name": "Virus Injector", "attacks": 1, "short": "Melee", "ap": 6},
+        "chainsaw_glaive": {"name": "Chainsaw Glaive", "attacks": 1, "short": "Melee", "ap": 4, "rules": [{"id": "reach", "x": 1}]},
+        "maul_cutter": {"name": "Maul Cutter", "attacks": 1, "short": 6, "ap": 5},
+        "fiend_jaws": {"name": "Fiend Jaws", "attacks": 1, "short": "Melee", "ap": 3},
+        "brute_hammer": {"name": "Brute Hammer", "attacks": 1, "short": "Melee", "ap": 9},
+        "brute_flail": {"name": "Brute Flail", "attacks": 1, "short": "Melee", "ap": 4},
+        "brute_fist": {"name": "Brute Fist", "attacks": 1, "short": "Melee", "ap": 5},
+        "mutated_fists": {"name": "Mutated Fists", "attacks": 1, "short": "Melee", "ap": 3},
+        "huge_mutated_claw": {"name": "Huge Mutated Claw", "attacks": 1, "short": "Melee", "ap": 3},
+        "mutated_claws": {"name": "Mutated Claws", "attacks": 2, "short": "Melee", "ap": 3, "rules": ["rending"]},
+        "daemon_claws": {"name": "Daemon Claws", "attacks": 1, "short": "Melee", "ap": 3},
+        "daemon_axe": {"name": "Daemon Axe", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "daemon_sword": {"name": "Daemon Sword", "attacks": 1, "short": "Melee", "ap": 5},
+        "big_hammer": {"name": "Energy Greathammer", "attacks": 1, "short": "Melee", "ap": 7, "rules": ["cumbersome"]},
+        "heavy_energy_sword": {"name": "Heavy Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
+        "heavy_energy_axe": {"name": "Heavy Energy Axe", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
+        "heavy_energy_claws": {"name": "Heavy Energy Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+        "energy_gauntlets": {"name": "Energy Gauntlets", "attacks": 1, "rules": [{"id": "knockback", "x": 1}], "short": "Melee"},
+        "shock_baton": {"name": "Shock Baton", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["parry", {"id": "shocking", "x": 1}]},
+        "shock_staff": {"name": "Shock Staff", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}, {"id": "shocking", "x": 1}]},
+        "riot_shield": {"name": "Riot Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
+        "assault_ram": {"name": "Assault Ram", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id": "critical", "x": 1}, {"id": "reach", "x": 1}]},
+        "energy_knife": {"name": "Energy Knife", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "light_razor_talons": {"name": "Light Razor Talons", "attacks": 1, "short": "Melee"},
+        "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 1},
+        "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "ogre_maul": {"name": "Ogre Maul", "attacks": 2, "ap": 5, "short": "Melee"},
+        "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
+        "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
+        "elven_blade": {"name": "Elven Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "axe_halberd": {"name": "Axe-Halberd", "attacks": 1, "ap": 3, "short": "Melee"},
+        "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "short": "Melee"},
+        "heavy_fist": {"name": "Heavy Fist", "attacks": 1, "ap": 3, "short": "Melee"},
+        "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
+        "barbed_whip": {"name": "Barbed Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "rending"]},
+        "barb_sword": {"name": "Poison Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+        "barb_knife": {"name": "Poison Knife", "attacks": 1, "short": "Melee", "rules": ["poison"]},
+        "prime_chainsword": {"name": "Prime Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
+        "holy_mace": {"name": "Holy Mace", "attacks": 1, "short": "Melee", "ap": 3},
+        "Shield weapons": "",
+        "buckler": {"name": "Buckler", "attacks": 0, "short": "Melee", "rules": ["buckler"]},
+        "shield": {"name": "Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
+        "relic_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["relic_shield"]},
+        "spiked_buckler": {"name": "Spiked Buckler", "attacks": 1, "short": "Melee", "rules": ["buckler"]},
+        "spiked_shield": {"name": "Spiked Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
+        "spiked_relic_shield": {"name": "Spiked Heavy Shield", "attacks": 1, "short": "Melee", "rules": ["relic_shield"]},
+        "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
+        "Grenade weapons": "",
+        "plasma_grenades": {"name": "Plasma Grenades", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overcharge"]},
+        "marine_grenades": {
+            "name": "Marine Grenades",
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "ap": 4, "rules": ["grenade"]}]
+        },
+        "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
+        "at_grenades": {"name": "AT Grenades", "attacks": 1, "short": 6, "ap": 4, "rules": ["grenade"]},
+        "blasting_charges": {"name": "Blasting Charges", "attacks": 1, "short": 6, "ap": 4, "rules": ["grenade"]},
+        "grenade_launcher": {
+            "name": "Grenade Launcher",
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 3}]
+        },
+        "grenade_launcher_attachment": {
+            "name": "Grenade Launcher Attachment",
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3}]
+        },
+        "assault_ram_grenade": {
+            "name": "Assault Ram with Underslung Grenade Launcher",
+            "profiles": [
+                {"name": "Melee", "attacks": 1, "ap": 6, "rules": [{"id": "critical", "x": 1}, {"id": "reach", "x": 1}], "short": "Melee"},
+                {"name": "Gas", "attacks": 1, "rules": ["poison", "smoke", {"id": "blast", "x": 3}], "short": 6, "medium": 12},
+                {"name": "Frag", "attacks": 1, "rules": [{"id": "blast", "x": 3}], "short": 6, "medium": 12}
+            ]
+        },
+        "gas_grenades": {"name": "Gas Grenades", "attacks": 1, "rules": ["grenade", "poison", "smoke", {"id": "blast", "x": 3}], "short": 6},
+        "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "indirect", "smoke"]},
+        "wrist_grenades": {"name": "Wrist Grenades", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "fear_grenade_launcher": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "shocking", "x": 1}, {"id": "blast", "x": 2}]},
+        "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
+        "twin_grenade_launcher": {"name": "Twin Grenade Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "psychic_grenades": {
+            "name": "Psychic Grenades",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 3, "rules": ["grenade"]},
+                {"name": "Psychic", "attacks": 1, "short": 6, "rules": ["grenade", "psych_out", {"id": "blast", "x": 3}]}
+            ]
+        },
+        "Pistol weapons": "",
+        "pistol": {"name": "Pistol", "attacks": 1, "short": 6, "rules": ["pistol"]},
+        "heavy_pistol": {"name": "Heavy Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol"]},
+        "marine_pistol": {"name": "Marine Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol"]},
+        "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 2, "short": 6, "rules": ["pistol", "flame"]},
+        "plasma_pistol": {"name": "Plasma Pistol", "ap": 5, "short": 6, "attacks": 1, "rules": ["pistol", "overcharge"]},
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "ap": 6, "rules": ["pistol", {"id": "critical", "x": 1}]},
+        "thermal_pistol": {"name": "Thermal Pistol", "attacks": 1, "short": 6, "ap": 3, "rules": ["flame", "lethal", "pistol"]},
+        "gravity_pistol": {"name": "Gravity Pistol", "attacks": 1, "short": 6, "ap": 3, "rules": ["gravity", "pistol"]},
+        "shred_pistol": {"name": "Shred Pistol", "attacks": 2, "short": 6, "rules": ["rending"]},
+        "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 9, "ap": 1, "rules": ["pistol"]},
+        "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 6, "ap": 1, "rules": ["pistol"]},
+        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "rending"]},
+        "burst_pistol": {"name": "Burst Pistol", "attacks": 1, "short": 6, "rules": ["pistol", "rapid_fire"]},
+        "heavy_burst_pistol": {"name": "Heavy Burst Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "rapid_fire"]},
+        "assault_pistol": {"name": "Assault Pistol", "attacks": 1, "short": 6, "rules": ["assault", "pistol"]},
+        "heavy_assault_pistol": {"name": "Heavy Assault Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["assault", "pistol"]},
+        "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "rules": ["pistol", "poison"]},
+        "shotgun_pistol": {"name": "Sawn-off Shotgun", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault", "pistol"]},
+        "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4, "rules": ["breaching"]},
+        "Light weapons": "",
+        "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+        "veteran_marine_rifle": {"name": "Veteran Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
+        "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
+        "storm_rifle": {"name": "Storm Rifle", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["rapid_fire"]},
+        "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24, "rules": ["rapid_fire"]},
+        "shred_rifle": {"name": "Shred Rifle", "attacks": 2, "short": 9, "medium": 18, "rules": ["rending"]},
+        "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["brutal", "assault"]},
+        "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
+        "combat_shotgun": {"name": "Combat Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "brutal"]},
+        "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+        "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["assault"]},
+        "defense_carbine": {"name": "Defense Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+        "craft_defense_carbine": {"name": "Craftmade Defense Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "unreliable"]},
+        "defense_mac": {"name": "Defense Automatic PDW", "attacks": 2, "short": 6, "medium": 12, "rules": ["assault"]},
+        "heavy_defense_rifle": {"name": "Heavy Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+        "prime_rifle": {"name": "Prime Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rapid_fire"]},
+        "twin_heavy_carbine": {"name": "Twin Heavy Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 2, "short": 18, "medium": 36, "ap": 1, "rules": ["rapid_fire"]},
+        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "assault"]},
+        "prime_sniper_carbine": {"name": "Sniper Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "sniper", "rending"]},
+        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
+        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2},
+        "plasma_assault_rifle": {"name": "Plasma Assault Rifle", "rules": ["assault", "overcharge"], "ap": 5, "medium": 24, "short": 12, "attacks": 1},
+        "assault_carbine": {"name": "Assault Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
+        "twin_assault_carbine": {"name": "Twin Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
+        "fist_carbine": {"name": "Fist Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "twin_defense_rifle": {"name": "Twin Defense Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "smg": {"name": "Submachine Gun", "attacks": 2, "short": 6, "medium": 12, "rules": ["assault"]},
+        "twin_storm_rifle": {"name": "Twin Storm Rifle", "attacks": 2, "ap": 1, "short": 6, "medium": 12, "rules": ["rapid_fire"]},
+        "rifle": {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24},
+        "barb_rifle": {"name": "Poison Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
+        "barb_carbine": {"name": "Poison Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
+        "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 12, "medium": 24, "ap": 1},
+        "twin_marine_rifle_array": {"name": "Storm Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
+        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
+        "shard_carbine": {"name": "Shard Carbine", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending", "assault"]},
+        "shard_rifle": {"name": "Shard Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "assault"]},
+        "twin_shard_rifle": {"name": "Twin Shard Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "assault"]},
+        "Special weapons": "",
+        "spotter_rifle": {"name": "Spotter Rifle", "attacks": 1, "rules": ["spotting_laser"], "short": 12, "medium": 24},
+        "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "ap": 2, "short": 12, "medium": 24, "rules": ["assault", "lethal"]},
+        "twin_tesla_rifle": {"name": "Twin Tesla Rifle", "attacks": 2, "ap": 2, "short": 12, "medium": 24, "rules": ["assault", "lethal"]},
+        "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
+        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": ["breaching", "sniper"]},
+        "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
+        "heavy_sniper_rifle": {"name": "Heavy Sniper Rifle", "attacks": 1, "ap": 3, "short": 24, "medium": 48, "rules": ["heavy", "sniper", {"id": "deadly", "x": 3}]},
+        "prime_sniper_rifle": {
+            "name": "Prime Sniper Rifle",
+            "profiles": [
+                {"name": "Execution", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["sniper"]},
+                {"name": "Frag", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper", {"id": "blast", "x": 2}]}
+            ]
+        },
+        "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": ["sniper", {"id": "deadly", "x": 3}]},
+        "thermal_rifle": {"name": "Thermal Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["flame", "lethal"]},
+        "twin_thermal_rifle": {"name": "Twin Thermal Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["flame", "lethal"]},
+        "thermal_carbine": {"name": "Thermal Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault", "flame", "lethal"]},
+        "combi_thermal": {
+            "name": "Combi-thermal Rifle",
+            "profiles": [
+                {"name": "Thermal", "attacks": 1, "ap": 3, "short": 12, "medium": 24, "rules": ["flame", "lethal"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
+        },
+        "plasma_rifle": {"name": "Plasma Rifle", "rules": ["rapid_fire", "overcharge"], "ap": 5, "medium": 24, "short": 12, "attacks": 1},
+        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "rules": ["rapid_fire", "overcharge"], "ap": 5, "medium": 24, "short": 12, "attacks": 2},
+        "combi_plasma": {
+            "name": "Combi-plasma Rifle",
+            "profiles": [
+                {"name": "Plasma", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
+        },
+        "heavy_plasma_rifle": {"rules": ["overcharge"], "name": "Heavy Plasma Rifle", "ap": 6, "medium": 36, "short": 18, "attacks": 1},
+        "plasma_carbine": {"name": "Plasma Carbine", "rules": ["assault", "overcharge"], "ap": 5, "medium": 18, "short": 9, "attacks": 1},
+        "twin_plasma_carbine": {"name": "Twin Plasma Carbine", "rules": ["assault", "overcharge"], "ap": 5, "medium": 18, "short": 9, "attacks": 2},
+        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "combi_fusion": {
+            "name": "Combi-fusion Rifle",
+            "profiles": [
+                {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
+        },
+        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["rapid_fire", {"id": "critical", "x": 1}]},
+        "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["heavy", {"id": "critical", "x": 1}]},
+        "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["heavy", {"id": "critical", "x": 1}]},
+        "gravity_rifle": {"name": "Gravity Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["gravity"]},
+        "combi_grav": {
+            "name": "Combi-gravity Rifle",
+            "profiles": [
+                {"name": "Gravity", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["gravity"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
+        },
+        "flamethrower": {"name": "Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
+        "twin_flamethrower": {"name": "Twin Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
+        "combi_flamer": {
+            "name": "Combi-flamethrower Rifle",
+            "profiles": [
+                {"name": "Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
+        },
+        "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "flame"]},
+        "Heavy weapons": "",
+        "heavy_railgun": {"name": "Heavy Railgun", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": ["breaching", "heavy"]},
+        "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["breaching"]},
+        "rail_cannon": {"name": "Rail Cannon", "attacks": 1, "short": 30, "medium": 60, "ap": 7, "rules": ["breaching", "heavy"]},
+        "heavy_rail_cannon": {"name": "Heavy Rail Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 8, "rules": ["breaching", "heavy"]},
+        "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36, "rules": ["heavy"]},
+        "medium_machinegun": {"name": "Medium Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["heavy"]},
+        "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "rules": ["heavy"]},
+        "minigun": {"name": "Minigun", "attacks": 5, "short": 12, "medium": 24, "ap": 2},
+        "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["heavy", "indirect", "scatter", {"id": "blast", "x": 3}]},
+        "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["heavy", "indirect", "scatter", {"id": "blast", "x": 3}]},
+        "missile_launcher": {
+            "name": "Missile Launcher",
+            "rules": ["heavy"],
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 6}]
+        },
+        "twin_missile_launcher": {
+            "name": "Twin Missile Launcher",
+            "rules": ["heavy"],
+            "profiles": [{"name": "Frag", "attacks": 2, "short": 18, "medium": 36, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 2, "short": 18, "medium": 36, "ap": 6}]
+        },
+        "assault_missile_launcher": {"name": "Assault Missile Launcher", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+        "laser_cannon": {"name": "Laser Cannon", "ap": 7, "attacks": 1, "short": 24, "medium": 48, "rules": ["heavy"]},
+        "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 7, "attacks": 2, "short": 24, "medium": 48, "rules": ["heavy"]},
+        "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": ["heavy"]},
+        "heavy_mining_laser": {"name": "Heavy Mining Laser", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": ["heavy"]},
+        "twin_heavy_machinegun": {"name": "Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 2, "rules": ["heavy"]},
+        "twin_minigun": {"name": "Twin Minigun", "attacks": 10, "short": 12, "medium": 24, "ap": 2, "rules": ["heavy"]},
+        "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 3, "ap": 4, "short": 6, "medium": 12, "rules": ["flame"]},
+        "laser_machinegun": {"name": "Laser Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3, "rules": ["heavy"]},
+        "twin_laser_machinegun": {"name": "Twin Laser Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3, "rules": ["heavy"]},
+        "strike_missiles": {"name": "Strike Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6},
+        "rocket_pod": {"name": "Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+        "twin_light_machinegun": {"name": "Twin Light Machinegun", "attacks": 6, "short": 18, "medium": 36, "rules": ["heavy"]},
+        "aa_light_machinegun": {"name": "AA Light Machinegun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
+        "twin_aa_light_machinegun": {"name": "Twin AA Light Machinegun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
+        "light_laser_cannon": {"name": "Light Laser Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": ["heavy"]},
+        "plasma_cannon": {"name": "Plasma Cannon", "rules": ["heavy", "overcharge", {"id": "blast", "x": 2}], "ap": 5, "medium": 36, "short": 18, "attacks": 1},
+        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "rules": ["heavy", "overcharge", {"id": "blast", "x": 2}], "ap": 5, "medium": 36, "short": 18, "attacks": 2},
+        "fusion_bomb": {"name": "Fusion Bombs", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
+        "hunter_missiles": {"name": "Hunter Missile", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "ammo", "x": 1}]},
+        "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["heavy"]},
+        "twin_autocannon": {"name": "Twin Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["heavy"]},
+        "aa_autocannon": {"name": "AA Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air", "heavy"]},
+        "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air", "heavy"]},
+        "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["heavy"]},
+        "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "crab_cannon": {"name": "Crab Cannon", "attacks": 1, "ap": 5, "short": 18, "medium": 36, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "volley_gun": {"name": "Volley Gun", "attacks": 2, "short": 12, "ap": 2, "medium": 24},
+        "reaper_cannon": {"name": "Reaper Autocannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4},
+        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
+        "mutated_guns": {"name": "Mutated Guns", "attacks": 3, "short": 12, "medium": 24, "ap": 6, "rules": ["rending"]},
+        "havoc_missiles": {"name": "Havoc Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+        "demolition_cannon": {"name": "Demolition Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "bane_flamethrower": {"name": "Bane Flamethrower", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["flame"]},
+        "ecto_cannon": {"name": "Ecto Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
+        "forge_cannon": {"name": "Forge Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5},
+        "excruciating_cannons": {"name": "Excruciating Cannons", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+        "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
+        "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["flame"]},
+        "gravity_cannon": {"name": "Gravity Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["heavy", "gravity"]},
+        "heavy_gravity_cannon": {"name": "Heavy Gravity Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 3, "rules": ["heavy", "gravity"]},
+        "incinerator": {"name": "Incinerator", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
+        "heavy_incinerator": {"name": "Heavy Incinerator", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["heavy", "flame"]},
+        "psychic_cannon": {"name": "Psychic Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 4, "rules": ["heavy"]},
+        "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 6, "short": 12, "medium": 24, "ap": 4, "rules": ["heavy"]},
+        "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "rules": ["heavy", "overcharge", {"id": "blast", "x": 3}], "ap": 5, "medium": 36, "short": 18, "attacks": 1},
+        "twin_heavy_plasma_cannon": {"name": "Twin Heavy Plasma Cannon", "rules": ["heavy", "overcharge", {"id": "blast", "x": 3}], "ap": 5, "medium": 36, "short": 18, "attacks": 2},
+        "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": ["heavy"]},
+        "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 6, "short": 15, "medium": 30, "ap": 2, "rules": ["heavy"]},
+        "twin_heavy_gatling_gun": {"name": "Twin Heavy Gatling Gun", "attacks": 12, "short": 15, "medium": 30, "ap": 2, "rules": ["heavy"]},
+        "gatling_gun": {"name": "Gatling Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["heavy"]},
+        "twin_gatling_gun": {"name": "Twin Gatling Gun", "attacks": 8, "short": 12, "medium": 24, "ap": 2, "rules": ["heavy"]},
+        "heavy_laser_destroyer": {"name": "Heavy Laser Destroyer", "ap": 8, "attacks": 2, "short": 36, "medium": 72, "rules": ["heavy"]},
+        "twin_heavy_laser_cannon": {"name": "Twin Heavy Laser Cannon", "ap": 8, "attacks": 2, "short": 36, "medium": 72, "rules": ["heavy"]},
+        "twin_light_laser_cannon": {"name": "Twin Light Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 6, "rules": ["heavy"]},
+        "laser_talon": {"name": "Laser Talon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": ["heavy"]},
+        "twin_laser_talon": {"name": "Twin Laser Talon", "ap": 7, "attacks": 4, "short": 12, "medium": 24, "rules": ["heavy"]},
+        "heavy_fragmentation_cannon": {"name": "Heavy Fragmentation Cannon", "attacks": 2, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
+        "missile_array": {
+            "name": "Missile Array",
+            "rules": ["heavy"],
+            "profiles": [
+                {"name": "HE", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 6},
+                {"name": "AA", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["anti_air", {"id": "blast", "x": 2}]}
+            ]
+        },
+        "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["anti_air", {"id": "blast", "x": 2}]},
+        "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
+        "emp_cannon": {"name": "EMP Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
+        "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
+        "twin_shard_cannon": {"name": "Twin Shard Cannon", "attacks": 6, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
+        "irridescent_cannon": {
+            "name": "Irridescent Cannon",
+            "profiles": [
+                {"name": "Focus", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["assault"]},
+                {"name": "Lance", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": ["assault", {"id": "critical", "x": 1}]},
+                {"name": "Dispersed", "attacks": 6, "short": 18, "medium": 36, "ap": 2, "rules": ["assault"]}
+            ]
+        },
+        "twin_shard_carbine": {"name": "Twin Shard Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["rending", "assault"]},
+        "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 24, "medium": 48, "rules": [{"id": "critical", "x": 1}, "heavy"]},
+        "twin_fusion_cannon": {"name": "Twin Fusion Cannon", "ap": 7, "attacks": 2, "short": 24, "medium": 48, "rules": [{"id": "critical", "x": 1}, "heavy"]},
+        "shard_sniper": {"name": "Shard Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rending", "sniper"]},
+        "elven_missile_launcher": {
+            "name": "Elven Missile Launcher",
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 2, "short": 24, "medium": 48, "ap": 6}]
+        },
+        "twin_elven_missile_launcher": {
+            "name": "Twin Elven Missile Launcher",
+            "profiles": [{"name": "Frag", "attacks": 2, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 4, "short": 24, "medium": 48, "ap": 6}]
+        },
+        "heavy_fusion_cannon": {"name": "Heavy Fusion Cannon", "ap": 7, "medium": 60, "short": 30, "attacks": 2, "rules": ["heavy", {"id": "critical", "x": 1}]},
+        "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["breaching", "heavy", {"id": "blast", "x": 3}]},
+        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "critical", "x": 1}, "heavy"]},
+        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2, "rules": ["heavy"]},
+        "heavy_shotgun": {"name": "Heavy Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
+        "heavy_volley_gun": {"name": "Heavy Volley Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
+        "light_battle_cannon": {"name": "Light Battle Cannon", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
+        "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["heavy", "flame"]},
+        "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 42, "medium": 84, "rules": ["heavy", {"id": "blast", "x": 6}]},
+        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 18, "medium": 36, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}, {"id": "ammo", "x": 3}]},
+        "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": ["heavy", {"id": "blast", "x": 10}]},
+        "storm_missiles": {"name": "Storm Missiles", "attacks": 1, "ap": 6, "short": 36, "medium": 72, "rules": ["heavy"]},
+        "twin_shard_mortar": {"name": "Twin Shard Mortar", "attacks": 2, "ap": 3, "short": 24, "medium": 48, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "missile_rack": {
+            "name": "Missile Rack",
+            "rules": ["heavy"],
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
+        },
+        "combi_barb_rifle": {
+            "name": "Combi-poison Rifle",
+            "profiles": [
+                {"name": "Poison", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]}
+            ]
+        },
+        "seismic_cannon": {"name": "Seismic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["heavy", {"id": "knockback", "x": 1}, {"id": "shocking", "x": 1}, "unreliable"]},
+        "heavy_seismic_cannon": {
+            "name": "Heavy Seismic Cannon",
+            "attacks": 1,
+            "short": 24,
+            "medium": 48,
+            "ap": 3,
+            "rules": ["heavy", {"id": "knockback", "x": 1}, {"id": "shocking", "x": 1}, "unreliable"]
+        },
+        "fusion_beamer": {"name": "Fission Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "intensity", "x": 2}]},
+        "thermal_lance": {"name": "Thermal Lance", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": ["flame", "heavy", "lethal"]},
+        "twin_thermal_lance": {"name": "Twin Thermal Lance", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "rules": ["heavy", "flame", "lethal"]},
+        "heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "heavy_thermal_lance": {"name": "Heavy Thermal Lance", "attacks": 1, "short": 30, "medium": 60, "ap": 8, "rules": ["flame", "heavy", "lethal"]},
+        "twin_heavy_thermal_lance": {"name": "Twin Heavy Thermal Lance", "attacks": 2, "short": 30, "medium": 60, "ap": 8, "rules": ["heavy", "flame", "lethal"]},
+        "tesla_cannon": {"name": "Tesla Cannon", "attacks": 1, "ap": 4, "short": 12, "medium": 24, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "twin_tesla_cannon": {"name": "Twin Tesla Cannon", "attacks": 2, "ap": 4, "short": 12, "medium": 24, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "twin_heavy_autocannon": {"name": "Twin Heavy Autocannon", "attacks": 8, "short": 24, "medium": 48, "ap": 4, "rules": ["heavy"]},
+        "twin_flamethrower_cannon": {"name": "Twin Flamethrower Cannon", "attacks": 6, "ap": 4, "short": 6, "medium": 12, "rules": ["flame"]},
+        "twin_heavy_fusion_cannon": {"name": "Twin Heavy Fusion Cannon", "ap": 7, "medium": 60, "short": 30, "attacks": 4, "rules": ["heavy", {"id": "critical", "x": 1}]},
+        "twin_gravity_cannon": {"name": "Twin Gravity Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 3, "rules": ["gravity", "heavy"]},
+        "twin_heavy_gravity_cannon": {"name": "Twin Heavy Gravity Cannon", "attacks": 6, "short": 24, "medium": 48, "ap": 3, "rules": ["gravity", "heavy"]},
+        "mortar_cannon": {"name": "Mortar Cannon", "attacks": 1, "ap": 4, "short": 36, "medium": 72, "rules": ["heavy", "indirect", "scatter", {"id": "blast", "x": 6}]},
+        "twin_battle_cannon": {"name": "Twin Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "legend_reaping_blade": {"name": "Reaping Blade", "attacks": 3, "ap": 3, "short": "Melee", "rules": ["leeching", "lethal"]},
+        "legend_": {"name": "Twin Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": ["heavy", {"id": "blast", "x": 3}]},
+        "legend_headhunter": {"name": "Headhunter", "attacks": 1, "ap": 4, "short": 18, "medium": 36, "rules": [{"id": "critical", "x": 1}, "sniper"]},
+        "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
+        "tractor_beam": {"name": "Tractor Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
+        "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
+        "light_howitzer": {"name": "Light Howitzer", "short": 24, "medium": 48, "attacks": 1, "ap": 3, "rules": ["indirect", "scatter", {"id": "blast", "x": 5}]},
+        "medium_howitzer": {"name": "Medium Howitzer", "short": 30, "medium": 60, "attacks": 1, "ap": 4, "rules": ["indirect", "scatter", {"id": "blast", "x": 6}]},
+        "heavy_howitzer": {"name": "Heavy Howitzer", "short": 36, "medium": 72, "attacks": 1, "ap": 5, "rules": ["indirect", "scatter", {"id": "blast", "x": 7}]},
+        "plasma_mortar_cannon": {"name": "Plasma Mortar Cannon", "attacks": 1, "ap": 5, "short": 36, "medium": 72, "rules": ["heavy", "indirect", "overcharge", "scatter", {"id": "blast", "x": 6}]},
+        "gravity_mortar_cannon": {"name": "Gravity Mortar Cannon", "attacks": 2, "ap": 3, "short": 36, "medium": 72, "rules": ["gravity", "heavy", "indirect", "scatter", {"id": "blast", "x": 3}]},
+        "skybreaker_missiles": {"name": "Skybreaker Missiles", "attacks": 3, "short": 24, "medium": 48, "ap": 6, "rules": ["anti_air"]}
+    },
+    "rules": {
+        "legend_strategist": {
+            "name": "Brilliant Strategist",
+            "description": "While this model is on the board and not broken you gain 1 additional Strategy Point at the start of the round.",
+            "points": 20
+        },
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
+        "legend_quick_reflexes": {"name": "Quick Reflexes", "description": "This model gains +1 Initiative.", "points": 10},
+        "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
+        "wings": {"name": "Wings", "description": "This model may ignore models and terrain when moving.", "points": 5},
+        "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
+        "assault_ramp": {"name": "Assault Ramp", "description": "Units may disembark from this model even after it has taken two Move actions.", "points": 5},
+        "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
+        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
+        "banner_of_focus": {"name": "Banner of Focus", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Shooting weapons.", "points": 10},
+        "dozer": {"name": "Dozer", "description": "This model may cross low obstacles without penalty.", "points": 5},
+        "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
+        "dark_prism": {
+            "name": "Dark Prism",
+            "description": "Once per round, when a model with Power(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
+            "points": 5
+        },
+        "medical_training": {
+            "name": "Medical Training",
+            "description": "Whenever this model, or a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
+            "points": 15
+        },
+        "spiked_ram": {"name": "Spiked Ram", "hidden": true, "description": "This model gains Impact(+3).", "description_short": "Impact +3", "points": 6},
+        "heavy_impact": {
+            "name": "Heavy Impact",
+            "inputs": ["x"],
+            "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with AP 1.",
+            "points": ["rule.x", {"multiply": 3}]
+        },
+        "jetpack_character": {"name": "Jetpack", "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "points": 15, "description": "Fly, Ambush, Movement +2\""},
+        "jetpack": {"name": "Jetpacks", "points": 4, "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "description": "Fly, Ambush, Movement +2\""},
+        "destroyer_armor": {"name": "Destroyer Armor", "hidden": true, "description_short": "Ambush, Save +1, Movement -1\"", "points": 15, "description": "Ambush, Save +1, Movement -1\""},
+        "mutations": {
+            "name": "Mutations",
+            "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * Strength rolls of 1 or 2 gain +1 AP \n * Strength rolls of 1 or 2 cause 2 hits instead of 1. \n * +1 Save ",
+            "points": 2
+        },
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
+            "points": 5
+        },
+        "field_radio": {"name": "Field Radio", "description": "This model and friendly _Infantry_ units within 3\" gain +1 Initiative.", "points": 5},
+        "stormtrooper_tactics": {
+            "name": "Storm Trooper Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Storm Trooper_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "psychic_prowess": {
+            "name": "Prowess",
+            "inputs": ["x"],
+            "description": "All Power charge values are increased by X for this model. For example a power requiring a 6 or less now requires 6+X or less.",
+            "points": [5]
+        },
+        "hover_mode": {
+            "name": "Hover Mode",
+            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
+        },
+        "marking_flares": {
+            "name": "Marking Flares",
+            "description": "Once during this model's activation, pick an enemy unit within 24\" to become marked. Friendly units attacking a marked unit may re-roll a single failed Accuracy tests of 9+.",
+            "points": 5
+        },
+        "surveying_device": {"name": "Surveying Device", "description": "Once per round, a friendly _Infantry_ unit within 12\" may ignore the benefit of cover while shooting.", "points": 10},
+        "spotting_device": {"name": "Spotting Device", "description": "Increase the short and long range of all ranged weapons equipped by this unit by 6\".", "points": 5},
+        "no_retreat": {"name": "No Retreat", "description": "Once per round, a friendly _Infantry_ unit within 3\" may automatically pass a Break test.", "points": 2},
+        "spotting_laser": {
+            "name": "Spotting Laser",
+            "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+            "points": 5
+        },
+        "intensity": {"name": "Intensity", "inputs": ["x"], "description": "This weapon has +X AP at long range.", "points": ["rule.x", {"multiply": 1}]},
+        "inspiration": {"name": "Inspiration", "description": "Friendly units gain +1 Courage when taking Courage Tests within 6\" of this model.", "points": 5},
+        "medic_biker": {
+            "name": "Medic",
+            "description": "Whenever a friendly _Infantry_ or _Biker_ unit within 6\" loses a model or Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
+            "points": 15
+        },
+        "beast_tactics": {
+            "name": "Beast Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Beast_ or _Monster_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        }
+    },
+    "strategies": {
+        "firing_ports": {
+            "name": "Firing Ports",
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "description": "Use when activating an _Infantry_ unit embarked in a Transport. That unit may make a single _Shoot_ action.",
+            "flavor": "Mechanized forces usually have modified firing ports to allow infantry to fire their weapons while embarked.",
+            "cost": 1
+        },
+        "rapid_disembark": {
+            "name": "Rapid Disembark",
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "description": "Use when activating a transport _Vehicle_ unit. At any time during this unit's activation, all embarked units may make a free _Move_ action to disembark. This may be used even after the transport has taken 2 _Move_ actions.",
+            "flavor": "Rapidly disembarking is a difficult feat only for those expertly trained.",
+            "cost": 1
+        },
+        "well_built": {
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "name": "Well-Built",
+            "flavor": "Expertly built and well-maintained, this vehicle is prepared for battle.",
+            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+            "cost": 2
+        },
+        "toughness": {
+            "subfactions": ["toughness_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These fighters are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        "durability": {
+            "subfactions": ["toughness_focus"],
+            "name": "Durability",
+            "phase": "activation",
+            "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
+            "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
+            "cost": 1
+        },
+        "might": {
+            "subfactions": ["toughness_focus"],
+            "name": "Machine Might",
+            "phase": "activation",
+            "description": "Use when a _Vehicle_ unit attacks in melee. Successful hits gain +1 AP.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        "bolster": {
+            "subfactions": ["siege_focus"],
+            "name": "Bolster",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit is targeted by an enemy. If it did not move this round, that unit may increase its cover level by 1 (none to soft, soft to hard).",
+            "flavor": "A strong defensive position ensures greater survival, even against the toughest of weapons.",
+            "cost": 1
+        },
+        "devastation": {
+            "subfactions": ["siege_focus"],
+            "name": "Devastation",
+            "phase": "activation",
+            "description": "Use before shooting with a unit. The target reduces its cover level by 1 (hard to soft, soft to none).",
+            "flavor": "Finding and exploiting a vulnerable piece of cover can lead to devastating results.",
+            "cost": 1
+        },
+        "rapid_fire": {
+            "subfactions": ["siege_focus"],
+            "name": "Rapid Fire",
+            "phase": "activation",
+            "description": "Use before an _Infantry_ unit performs a _Shoot_ action. Successful hits generate one additional attack.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        "psychic_aim": {
+            "subfactions": ["power_focus"],
+            "name": "Psychic Aim",
+            "phase": "activation",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see.",
+            "flavor": "Vision can be used to guide one's aim.",
+            "cost": 1
+        },
+        "channeling": {
+            "subfactions": ["power_focus"],
+            "name": "Channeling",
+            "phase": "activation",
+            "flavor": "With focus and energy, even the most difficult powers can be manifested.",
+            "description": "Use before a unit rolls for casting a power. The spell charge value is increased by 1 and the spell has +6\" of range.",
+            "cost": 1
+        },
+        "dispel": {
+            "subfactions": ["power_focus"],
+            "name": "Dispel",
+            "phase": "activation",
+            "description": "Use when a Power(x) test is taken within 24\" of an Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "flavor": "With vigilant training, one can protect themselves from magic powers.",
+            "cost": 1
+        },
+        "ambush": {
+            "subfactions": ["stealth_focus"],
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "With countless battles experienced, these fighters are trained to react to any situation.",
+            "cost": "1/per"
+        },
+        "conceal": {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Imperial marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        "stealth_move": {
+            "subfactions": ["stealth_focus"],
+            "name": "Stealth Move",
+            "phase": "activation",
+            "flavor": "Moving quietly is sometimes key in advancing on the enemy.",
+            "description": "Use this strategy when an _Infantry_ unit performs a _Move_ action. Enemy units may not perform reactions to that _Move_ action.",
+            "cost": 1
+        },
+        "moving_fire": {
+            "subfactions": ["assault_focus"],
+            "name": "Moving Fire",
+            "phase": "activation",
+            "flavor": "These fighters are trained to shoot while moving to maintain pressure on their enemies.",
+            "description": "Use after an _Infantry_ unit makes a _Move_ action. That unit may make a free _Shoot_ action with -1 Accuracy. Any weapons with _Assault_ may ignore the -1 Accuracy penalty.",
+            "cost": 1
+        },
+        "fury": {
+            "subfactions": ["assault_focus"],
+            "name": "Fury",
+            "phase": "activation",
+            "flavor": "These marines are furious in resolve and can rip through their enemies.",
+            "description": "Use when an _Infantry_ unit makes a _Fight_ action. Successful hits gain +1 AP.",
+            "cost": 1
+        },
+        "assault": {
+            "subfactions": ["assault_focus"],
+            "name": "Assault",
+            "phase": "activation",
+            "flavor": "With a furious charge, these marines move into combat quickly.",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the _Charge_ action.",
+            "cost": 1
+        },
+        "tactical_retreat": {
+            "subfactions": ["tactical_focus"],
+            "name": "Tactical Retreat",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit attempts to fall back from melee. That unit automatically passes the Initiative check required to fall back.",
+            "flavor": "A quick tactical retreat and a burst of fire can cause an enemy a lot of problems.",
+            "cost": 1
+        },
+        "encircle": {
+            "subfactions": ["tactical_focus"],
+            "name": "Encircle",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Encirclement reserves before the game begins. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "flavor": "With speed and ferocity, these marines can outflank their enemies.",
+            "cost": "1/per"
+        },
+        "re_organize": {
+            "subfactions": ["tactical_focus"],
+            "name": "Re-organize",
+            "phase": "activation",
+            "description": "Use at any point during an _Infantry_ unit's activation. That unit may split into two separate units or merge with another unit of the same data-sheet. This may not exceed the maximum unit size or go below the unit's minimum size.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        "vigilance": {
+            "subfactions": ["vigilance_focus"],
+            "name": "Vigilance",
+            "phase": "activation",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these troops are trained to react to any situation.",
+            "cost": 1
+        },
+        "cautious": {
+            "subfactions": ["vigilance_focus"],
+            "name": "Cautious",
+            "phase": "activation",
+            "description": "Use after an _Infantry_ unit performs a _Move_ action. That unit may perform a free Hold action.",
+            "flavor": "Cautious movement can be key to staying alive.",
+            "cost": 1
+        },
+        "overcharge": {
+            "phase": "activation",
+            "subfactions": ["vigilance_focus"],
+            "name": "Overcharge",
+            "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
+            "description": "Use when an _Infantry_ unit makes a _Shoot_ action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        "quick_aim": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Quick Aim",
+            "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
+            "flavor": "These fighters are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
+            "cost": 1
+        },
+        "run_them_down": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Run Them Down",
+            "description": "Use when a _Vehicle_ makes a _Charge_ action. The Impact Rule gains +1 AP for the charge.",
+            "flavor": "Those clans with a focus on speed enjoy putting a little extra oomph on their vehicles, making them hit just a little harder when they ram into something.",
+            "cost": 1
+        },
+        "push_it": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Push It",
+            "description": "Use when a unit makes a _Move_ action. It gains +3\" move for that action",
+            "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
+            "cost": 1
+        },
+        "terror": {
+            "subfactions": ["shock_focus"],
+            "name": "Terror",
+            "phase": "activation",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage until the end of its activation.",
+            "flavor": "These guardians invoke a sense of fear in their enemies which has not been seen before.",
+            "cost": 1
+        },
+        "frozen_in_fear": {
+            "subfactions": ["shock_focus"],
+            "name": "Frozen in Fear",
+            "phase": "activation",
+            "flavor": "Letting out a terrible cry can sometimes leave enemies unable to react to what is happening.",
+            "description": "Use this strategy when an _Infantry_ unit performs a _Move_ action. Enemy units may not perform reactions to that _Move_ action.",
+            "cost": 1
+        },
+        "shock_tactics": {
+            "subfactions": ["shock_focus"],
+            "phase": "activation",
+            "name": "Shock Tactics",
+            "description": "Use when fighting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
+            "flavor": "With a sudden strike these fighters bring fear to their targets keeping them from retaliating.",
+            "cost": 1
+        },
+        "weak_point": {
+            "subfactions": ["firepower_focus"],
+            "name": "Weak Point",
+            "phase": "activation",
+            "description": "Use before a unit performs a _Shoot_ action. The target reduces its cover level by 1 (hard to soft, soft to none).",
+            "flavor": "Aiming for the enemy's weak point can sometimes ignore cover all together.",
+            "cost": 1
+        },
+        "burst_fire": {
+            "subfactions": ["firepower_focus"],
+            "name": "Overwhelming Firepower",
+            "phase": "activation",
+            "description": "Use before an _Infantry_ unit performs a _Shoot_ action. Successful hits generate one additional attack.",
+            "flavor": "Burst fire can be relatively effective in taking down most targets.",
+            "cost": 1
+        },
+        "crack_shot": {
+            "subfactions": ["firepower_focus"],
+            "name": "Crack Shot",
+            "phase": "activation",
+            "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
+            "flavor": "In rare occasions, weapons can be used past their effective ranges.",
+            "cost": 1
+        },
+        "rallying_move": {
+            "subfactions": ["morale_focus"],
+            "name": "Rallying Move",
+            "phase": "activation",
+            "description": "Use before a unit takes a _Move_ action. That unit may perform a free Rally action.",
+            "flavor": "Regroup and recovering before moving out can help organize for a push.",
+            "cost": 1
+        },
+        "never_surrender": {
+            "subfactions": ["morale_focus"],
+            "name": "Never Surrender",
+            "phase": "activation",
+            "description": "Use when a unit would break from morale or be destroyed due to a morale test. That unit does not break and is not destroyed.",
+            "flavor": "True toughness is standing and facing utter defeat with courage.",
+            "cost": 2
+        },
+        "bravery": {
+            "subfactions": ["morale_focus"],
+            "name": "Bravery",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "These fighters are particularly brave in the face of many horrors.",
+            "cost": 1
+        }
+    },
+    "units": {
+        "defense_line": {
+            "name": "Defense Line",
+            "description": "A prepared defense wall.",
+            "category": "fortification",
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Large Wall (8\" Section)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", "soft_cover"],
+                    "min": 1,
+                    "max": 4
+                },
+                {
+                    "name": "Twin Small Wall (4\" Sections)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [],
+                    "rules": ["terrain", "soft_cover"],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
+        "improvised_barricade": {
+            "name": "Improvised Barricade (8\"x1\" Sections)",
+            "description": "A hastily constructed barricade.",
+            "category": "fortification",
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Improvised Barricade (8\"x1\" Section)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", "clearable", {"id": "impassable", "x": "Artillery, Vehicle"}, "soft_cover"],
+                    "min": 1,
+                    "max": 2
+                }
+            ]
+        }
+    }
+}

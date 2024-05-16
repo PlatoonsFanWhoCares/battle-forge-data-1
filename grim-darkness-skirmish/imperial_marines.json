@@ -1,0 +1,2005 @@
+{
+    "name": "Imperial Marines",
+    "id": "imperial_marines",
+    "author": "guitarninja#5707",
+    "color": "#0d407f",
+    "units": {
+        "lieutenant": {
+            "name": "Lieutenant",
+            "description": "A fearless leader.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Lieutenant",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "wounds", "x": 2}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_thermal", "combi_grav", "twin_marine_rifle", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["shield", {"name": "Army Standard", "id": "inspiring"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "lieutenant_on_bike": {
+            "name": "Lieutenant on Bike",
+            "description": "A fearless leader on combat bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Lieutenant on Bike",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 2}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}, {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_thermal", "combi_grav", "twin_marine_rifle", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": [{"id": "hover", "name": "Anti-Grav Engine"}, "shield", {"name": "Army Standard", "id": "inspiring_x", "x": "Infantry, Biker"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "captain": {
+            "name": "Captain",
+            "description": "A fearless leader.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Captain",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader", "tactician", {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_thermal", "combi_grav", "twin_marine_rifle", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}], {"id": "energy_claws", "count": 6}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 4},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 4},
+                                {"id": "energy_axe", "count": 4},
+                                {"id": "energy_sword", "count": 4},
+                                {"id": "energy_fist", "count": 4},
+                                {"id": "energy_hammer", "count": 4},
+                                {"id": "energy_claws", "count": 5},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        },
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["shield", {"name": "Army Standard", "id": "inspiring"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "captain_on_bike": {
+            "name": "Captain on Bike",
+            "description": "A fearless leader on combat bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Captain on Bike",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "tactician_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 3}, {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_thermal", "combi_grav", "twin_marine_rifle", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}], {"id": "energy_claws", "count": 6}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 4},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 4},
+                                {"id": "energy_axe", "count": 4},
+                                {"id": "energy_sword", "count": 4},
+                                {"id": "energy_fist", "count": 4},
+                                {"id": "energy_hammer", "count": 4},
+                                {"id": "energy_claws", "count": 5},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": ["shield", {"name": "Army Standard", "id": "inspiring_x", "x": "Infantry, Biker"}, {"id": "hover", "name": "Anti-Grav Engine"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic": {
+            "name": "Psychic",
+            "description": "A fearless psychic.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Psychic",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "combi_grav", "combi_thermal", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_staff", "count": 3},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_on_bike": {
+            "name": "Psychic on Bike",
+            "description": "A fearless psychic on combat bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Psychic on Bike",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}, {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_thermal", "combi_grav", "twin_marine_rifle", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_staff", "count": 3},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
+                        {"addRule": ["shield", {"id": "hover", "name": "Anti-Grav Engine"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "engineer": {
+            "name": "Engineer",
+            "description": "A fearless marine engineer.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Engineer",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 6,
+                    "rules": ["engineer", "leader", {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["twin_marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma", "combi_grav", "combi_thermal", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["fusion_pistol", "gravity_pistol", "flamethrower_pistol", "plasma_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": ["thermal_rifle", "plasma_rifle", "flamethrower", "gravity_rifle", "fusion_rifle", "marine_rifle", "fusion_beamer"], "limit": 2},
+                        {"addWeapon": ["servo_arm"], "limit": 2},
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "engineer_on_bike": {
+            "name": "Engineer on Bike",
+            "description": "A fearless marine engineer on combat bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Engineer on Bike",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 8,
+                    "rules": ["engineer", {"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}, {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["twin_marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma", "combi_grav", "combi_thermal", "marine_dmr", "marine_smg"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["fusion_pistol", "gravity_pistol", "flamethrower_pistol", "plasma_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": ["plasma_rifle", "flamethrower", "gravity_rifle", "fusion_rifle", "marine_rifle", "fusion_beamer"]},
+                        {"addWeapon": ["servo_arm"], "limit": 2},
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": ["shield", {"id": "hover", "name": "Anti-Grav Engine"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "zealot": {
+            "name": "Zealot",
+            "description": "An armored priest who blesses their allies and smites their foes.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Zealot",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["battle_prayer", "leader", {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["twin_marine_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_grav", "combi_thermal", "marine_smg", "marine_dmr"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}], {"id": "energy_claws", "count": 6}]},
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 4}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 4},
+                                {"id": "energy_axe", "count": 4},
+                                {"id": "energy_mace", "count": 4},
+                                {"id": "energy_fist", "count": 4},
+                                {"id": "energy_claws", "count": 5},
+                                {"id": "energy_hammer", "count": 4},
+                                {"id": "energy_glaive", "count": 4},
+                                {"id": "energy_greatsword", "count": 4}
+                            ]
+                        },
+                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "zealot_on_bike": {
+            "name": "Zealot on Bike",
+            "description": "An armored priest on a combat bike who blesses their allies and smites their foes.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Marine Zealot on Bike",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["battle_prayer", {"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 3}, {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["twin_marine_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_grav", "combi_thermal", "marine_smg", "marine_dmr"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}], {"id": "energy_claws", "count": 6}]},
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 4}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 4},
+                                {"id": "energy_axe", "count": 4},
+                                {"id": "energy_mace", "count": 4},
+                                {"id": "energy_fist", "count": 4},
+                                {"id": "energy_claws", "count": 5},
+                                {"id": "energy_hammer", "count": 4},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": ["shield", {"id": "hover", "name": "Anti-Grav Engine"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "surgeon": {
+            "name": "Surgeon",
+            "description": "A fearless battlefield medic trained in saving lives.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Surgeon",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["medic", "support", {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_pistol", "marine_grenades", {"id": "chainsword", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 3}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "surgeon_on_bike": {
+            "name": "Surgeon on Bike",
+            "description": "A fearless battlefield medic on combat bike trained in saving lives.",
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Surgeon on Bike",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "medic_x", "x": "Infantry, Biker"}, {"id": "support_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["marine_pistol", "marine_grenades", {"id": "chainsword", "count": 3}, {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 3}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": ["shield", {"id": "hover", "name": "Anti-Grav Engine"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "imperial_marine": {
+            "name": "Imperial Marine",
+            "description": "An elite trained marine sworn to protect the Empire.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["marine_dmr", "marine_smg"]},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"addWeapon": ["fusion_bomb", "grenade_launcher_attachment"]},
+                        {"addRule": ["medic", "multi_scanner", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "imperial_marine_sergeant": {
+            "name": "Marine Sergeant",
+            "description": "An elite trained marine leader sworn to protect the Empire.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Marine Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_grav", "combi_thermal", "marine_smg", "marine_dmr", "twin_marine_rifle"]
+                        },
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}], {"id": "energy_claws", "count": 4}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": ["fusion_bomb", "grenade_launcher_attachment"]},
+                        {"addRule": ["medic", "multi_scanner", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assault_marine": {
+            "name": "Assault Marine",
+            "description": "An elite marine equipped with a jetpack trained to fight in close combat.",
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Assault Marine",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["ambush", "fly"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {"addWeapon": "grenade_launcher_attachment", "subfactions": ["assault_focus"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["medic", "multi_scanner", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assault_marine_sergeant": {
+            "name": "Assault Marine Sergeant",
+            "description": "An elite marine leader equipped with a jetpack trained to fight in close combat.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Assault Marine Sergeant",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["ambush", "fly", "leader"],
+                    "weapons": ["marine_rifle", "marine_grenades", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "combi_grav", "combi_thermal", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}], {"id": "energy_claws", "count": 4}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": "grenade_launcher_attachment", "subfactions": ["assault_focus"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["medic", "multi_scanner", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scout_marine": {
+            "name": "Scout Marine",
+            "description": "An elite trained marine specialized in infiltration and stealth tactics.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Scout Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["scout"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades", "smoke_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": [
+                                "thermal_rifle",
+                                "gravity_rifle",
+                                "fusion_rifle",
+                                "flamethrower",
+                                "plasma_rifle",
+                                "marine_shotgun",
+                                "sniper_rifle",
+                                "marine_dmr",
+                                "marine_smg",
+                                "heavy_carbine"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": [{"name": "Orbital Insertion", "id": "ambush"}, {"id": "evasive", "name": "Camouflage Cloak"}, "grappling_hook", "fear", "shield", "light_armor"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scout_marine_sergeant": {
+            "name": "Scout Marine Sergeant",
+            "description": "An elite trained marine leader specialized in infiltration and stealth tactics.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Scout Marine Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", "scout"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades", "smoke_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": [
+                                "heavy_carbine",
+                                "marine_smg",
+                                "marine_dmr",
+                                "sniper_rifle",
+                                "marine_shotgun",
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "combi_grav",
+                                "combi_thermal",
+                                "twin_marine_rifle"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}], {"id": "energy_claws", "count": 4}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": [{"name": "Orbital Insertion", "id": "ambush"}, {"id": "evasive", "name": "Camouflage Cloak"}, "grappling_hook", "fear", "shield", "light_armor"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scout_marine_heavy": {
+            "name": "Scout Marine Heavy",
+            "description": "An elite trained marine gunner specialized in infiltration and stealth tactics.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Scout Marine Heavy",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["scout"],
+                    "weapons": ["thermal_lance", "heavy_ccw", "marine_grenades", "smoke_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": "thermal_lance",
+                            "withWeapon": [
+                                "laser_sniper",
+                                "heavy_machinegun",
+                                "missile_launcher",
+                                "laser_cannon",
+                                "fusion_cannon",
+                                "plasma_cannon",
+                                "gravity_cannon",
+                                "heavy_flamethrower",
+                                "autocannon"
+                            ]
+                        },
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": [{"name": "Orbital Insertion", "id": "ambush"}, {"id": "evasive", "name": "Camouflage Cloak"}, "grappling_hook", "fear", "shield", "light_armor"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "strike_marine": {
+            "name": "Strike Marine",
+            "description": "An elite, well-equipped marine grouped up into deadly strike teams.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Strike Marine",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": [
+                                "twin_marine_rifle",
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "combi_grav",
+                                "combi_thermal",
+                                "plasma_rifle",
+                                "flamethrower",
+                                "fusion_rifle",
+                                "gravity_rifle",
+                                "thermal_rifle",
+                                "marine_shotgun",
+                                "marine_dmr",
+                                "marine_smg"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol", "storm_rifle"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 3}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": "grenade_launcher_attachment", "subfactions": ["assault_focus"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["medic", "multi_scanner", "shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "strike_marine_sergeant": {
+            "name": "Strike Marine Sergeant",
+            "description": "An elite, well-equipped marine leading a deadly strike team.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Strike Marine Sergeant",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["marine_rifle", "marine_grenades", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": [
+                                "twin_marine_rifle",
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "combi_grav",
+                                "combi_thermal",
+                                "plasma_rifle",
+                                "flamethrower",
+                                "fusion_rifle",
+                                "gravity_rifle",
+                                "thermal_rifle",
+                                "marine_shotgun",
+                                "marine_dmr",
+                                "marine_smg"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}], {"id": "energy_claws", "count": 5}]},
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol", "storm_rifle"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 3}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": "grenade_launcher_attachment", "subfactions": ["assault_focus"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["medic", "multi_scanner", "shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "strike_marine_heavy": {
+            "name": "Strike Marine Heavy",
+            "description": "An elite, well-equipped marine gunner grouped up into deadly strike teams.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Strike Marine Heavy",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["thermal_lance", "marine_grenades", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["thermal_lance"],
+                            "withWeapon": [
+                                "heavy_machinegun",
+                                "plasma_cannon",
+                                "heavy_flamethrower",
+                                "fusion_cannon",
+                                "gravity_cannon",
+                                "laser_cannon",
+                                "missile_launcher",
+                                "heavy_fragmentation_cannon",
+                                "combi_machinegun"
+                            ]
+                        },
+                        {"addWeapon": "grenade_launcher_attachment", "subfactions": ["assault_focus"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["multi_scanner", "shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hazard_marine": {
+            "name": "Hazard Marine",
+            "description": "An elite, well-equipped marine specialising in chemical and radiological weaponry.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Hazard Marine",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["heavy_ccw", "marine_grenades", {"id": "marine_pistol", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "thermal_pistol", "gravity_pistol", "fusion_pistol"], "limit": 2},
+                        {"replaceWeapon": [{"id": "marine_pistol", "count": 2}], "withWeapon": ["hazard_flamethrower", "hazard_launcher", "fusion_rifle", "gravity_rifle", "hazard_blaster"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["jetpack", "medic", "multi_scanner", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hazard_marine_sergeant": {
+            "name": "Hazard Marine Sergeant",
+            "description": "An elite, well-equipped marine leader specialising in chemical and radiological weaponry.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Hazard Marine Sergeant",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["heavy_ccw", "marine_grenades", {"id": "marine_pistol", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "thermal_pistol", "gravity_pistol", "fusion_pistol"], "limit": 2},
+                        {"replaceWeapon": [{"id": "marine_pistol", "count": 2}], "withWeapon": ["hazard_flamethrower", "hazard_launcher", "fusion_rifle", "gravity_rifle", "hazard_blaster"]},
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["jetpack", "medic", "multi_scanner", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_biker": {
+            "name": "Marine Biker",
+            "description": "Upgraded and highly trained biker armed to the teeth.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Marine Biker",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Front"]}, "marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["fusion_rifle", "flamethrower", "plasma_rifle", "thermal_rifle", "gravity_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "twin_plasma_rifle", "mount": ["Front"]},
+                                {"id": "twin_flamethrower", "mount": ["Front"]},
+                                {"id": "twin_fusion_rifle", "mount": ["Front"]},
+                                {"id": "twin_thermal_rifle", "mount": ["Front"]},
+                                {"id": "heavy_machinegun", "mount": ["Front"]},
+                                {"id": "fusion_cannon", "mount": ["Front"]},
+                                {"id": "plasma_cannon", "mount": ["Front"]},
+                                {"id": "thermal_lance", "mount": ["Front"]}
+                            ]
+                        },
+                        {"addRule": [{"id": "hover", "name": "Anti-Grav Engine"}, {"id": "light_armor", "name": "Armor Plating"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_biker_sergeant": {
+            "name": "Marine Biker Sergeant",
+            "description": "Upgraded and highly trained biker leader armed to the teeth.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Marine Biker Sergeant",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Front"]}, "marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": [
+                                "gravity_rifle",
+                                "thermal_rifle",
+                                "plasma_rifle",
+                                "flamethrower",
+                                "fusion_rifle",
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "combi_thermal",
+                                "twin_marine_rifle"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}], {"id": "energy_claws", "count": 4}]},
+                        {"replaceWeapon": ["marine_pistol"], "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol", "gravity_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "chainsword", "count": 2}],
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "twin_plasma_rifle", "mount": ["Front"]},
+                                {"id": "twin_flamethrower", "mount": ["Front"]},
+                                {"id": "twin_fusion_rifle", "mount": ["Front"]},
+                                {"id": "twin_thermal_rifle", "mount": ["Front"]},
+                                {"id": "heavy_machinegun", "mount": ["Front"]},
+                                {"id": "fusion_cannon", "mount": ["Front"]},
+                                {"id": "plasma_cannon", "mount": ["Front"]},
+                                {"id": "thermal_lance", "mount": ["Front"]}
+                            ]
+                        },
+                        {"addRule": [{"id": "hover", "name": "Anti-Grav Engine"}, {"id": "light_armor", "name": "Armor Plating"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scout_biker": {
+            "name": "Scout Biker",
+            "description": "Scout marine on a combat bike.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Scout Biker",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, "scout"],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Front"]}, "marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["marine_shotgun", "sniper_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "grenade_launcher", "mount": ["Front"]}]},
+                        {"addRule": [{"id": "hover", "name": "Anti-Grav Engine"}, {"id": "light_armor", "name": "Armor Plating"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scout_biker_sergeant": {
+            "name": "Scout Biker Sergeant",
+            "description": "Scout marine leader on a combat bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Scout Biker Sergeant",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, "scout"],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Front"]}, "marine_rifle", "marine_grenades", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["sniper_rifle", "marine_shotgun", "combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}], {"id": "energy_claws", "count": 4}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "grenade_launcher", "mount": ["Front"]}]},
+                        {"addRule": [{"id": "hover", "name": "Anti-Grav Engine"}, {"id": "light_armor", "name": "Armor Plating"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "furious_assault_marine": {
+            "name": "Furious Marine",
+            "description": "An especially angry assault marine.",
+            "category": "strike",
+            "subfactions": ["assault_focus"],
+            "models": [
+                {
+                    "name": "Furious Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "defiant", "x": 2}, "furious"],
+                    "weapons": ["marine_rifle", "marine_grenades", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["flamethrower_pistol", "fusion_pistol", "plasma_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": "jetpack"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "furious_assault_marine_sergeant": {
+            "name": "Furious Marine Sergeant",
+            "description": "An especially angry assault marine leader.",
+            "category": "command",
+            "subfactions": ["assault_focus"],
+            "models": [
+                {
+                    "name": "Furious Marine Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "defiant", "x": 2}, "furious", "leader"],
+                    "weapons": ["marine_rifle", "marine_grenades", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["flamethrower_pistol", "fusion_pistol", "plasma_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": "jetpack"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "destroyer": {
+            "name": "Destroyer",
+            "description": "Highly trained marine clad in very heavy armor.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Destroyer",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["ambush"],
+                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": "twin_marine_rifle",
+                            "withWeapon": [
+                                "combi_plasma",
+                                "combi_fusion",
+                                "combi_flamer",
+                                "combi_grav",
+                                "combi_thermal",
+                                "twin_autocannon",
+                                "thermal_lance",
+                                "gravity_cannon",
+                                "fusion_cannon",
+                                "plasma_cannon",
+                                "minigun",
+                                "missile_launcher",
+                                "heavy_flamethrower",
+                                "plasma_repeater",
+                                "thermal_carbine"
+                            ]
+                        },
+                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "chainfist", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2},
+                                {"id": "assault_drill", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": ["missile_pod"]},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "destroyer_sergeant": {
+            "name": "Destroyer Sergeant",
+            "description": "Highly trained marine clad in very heavy armor.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Destroyer Sergeant",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": "twin_marine_rifle",
+                            "withWeapon": [
+                                "combi_plasma",
+                                "combi_fusion",
+                                "combi_flamer",
+                                "combi_grav",
+                                "combi_thermal",
+                                "twin_autocannon",
+                                "thermal_lance",
+                                "gravity_cannon",
+                                "fusion_cannon",
+                                "plasma_cannon",
+                                "minigun",
+                                "missile_launcher",
+                                "heavy_flamethrower",
+                                "plasma_repeater",
+                                "thermal_carbine"
+                            ]
+                        },
+                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "chainfist", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2},
+                                {"id": "assault_drill", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": ["missile_pod"]},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "devastator": {
+            "name": "Devastator",
+            "description": "A highly trained marine armed to the teeth with advanced weaponry.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Devastator",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["plasma_rifle", "marine_grenades", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": "plasma_rifle", "withWeapon": ["gravity_rifle", "fusion_rifle", "flamethrower", "thermal_rifle", "heavy_plasma_rifle", "plasma_assault_rifle"]},
+                        {"addRule": ["shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "devastator_sergeant": {
+            "name": "Devastator Sergeant",
+            "description": "A highly trained marine leader armed to the teeth with advanced weaponry.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Devastator Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": [
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "combi_grav",
+                                "combi_thermal",
+                                "twin_marine_rifle",
+                                "plasma_rifle",
+                                "plasma_assault_rifle",
+                                "heavy_plasma_rifle",
+                                "thermal_rifle",
+                                "flamethrower",
+                                "fusion_rifle",
+                                "gravity_rifle",
+                                "marine_dmr",
+                                "marine_smg"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addRule": ["shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_devastator": {
+            "name": "Heavy Devastator",
+            "description": "A highly trained marine armed to the teeth with advanced weaponry.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Heavy Devastator",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["heavy_flamethrower", "marine_grenades", "heavy_ccw"],
+                    "options": [
+                        {
+                            "replaceWeapon": "heavy_flamethrower",
+                            "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "fusion_cannon", "plasma_cannon", "gravity_cannon", "thermal_lance", "autocannon", "minigun"]
+                        },
+                        {"addRule": ["shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_devastator_sergeant": {
+            "name": "Heavy Devastator Sergeant",
+            "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Heavy Devastator Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "marine_grenades"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": [
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "combi_grav",
+                                "combi_thermal",
+                                "twin_marine_rifle",
+                                "heavy_flamethrower",
+                                "minigun",
+                                "autocannon",
+                                "thermal_lance",
+                                "gravity_cannon",
+                                "plasma_cannon",
+                                "fusion_cannon",
+                                "laser_cannon",
+                                "missile_launcher",
+                                "heavy_machinegun",
+                                "marine_smg",
+                                "marine_dmr"
+                            ]
+                        },
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_glaive", "count": 2}
+                            ]
+                        },
+                        {"addRule": ["shield", "jetpack"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_grand_master": {
+            "name": "Psychic Grand Master",
+            "description": "A Master of psychic powers and martial combat, wielding heavy destroyer armor.",
+            "category": "command",
+            "subfactions": ["power_focus"],
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Psychic Grand Master",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 5,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "power", "x": 1}, {"id": "tactician_x", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["twin_marine_rifle", "psychic_grenade", {"id": "energy_sword", "count": 5}],
+                    "options": [
+                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "medium_machinegun", "psychic_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 5},
+                            "withWeapon": [{"id": "energy_staff", "count": 5}, {"id": "energy_halberd", "count": 5}, {"id": "energy_sword", "count": 6}, {"id": "energy_hammer", "count": 5}]
+                        },
+                        {"replaceRule": {"id": "melee_tactics", "x": 2}, "withRule": {"id": "rifle_tactics", "x": 2}},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}]},
+                        {"addRule": [{"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_captain": {
+            "name": "Psychic Captain",
+            "description": "A Psychic marine leader.",
+            "category": "command",
+            "subfactions": ["power_focus"],
+            "models": [
+                {
+                    "name": "Psychic Captain",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}, "tactician", {"id": "wounds", "x": 3}],
+                    "weapons": ["storm_rifle", "psychic_grenade", {"id": "energy_sword", "count": 4}],
+                    "options": [
+                        {"replaceWeapon": "storm_rifle", "withWeapon": "marine_smg"},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 4},
+                            "withWeapon": [{"id": "energy_staff", "count": 4}, {"id": "energy_halberd", "count": 4}, {"id": "energy_sword", "count": 5}, {"id": "energy_hammer", "count": 4}]
+                        },
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}]},
+                        {"addRule": [{"id": "defiant", "x": 3}, {"name": "Army Standard", "id": "inspiring"}, "destroyer_armor"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_marine": {
+            "name": "Psychic Marine",
+            "description": "A marine trained to hunt demons and adept in psychic powers.",
+            "category": "core",
+            "subfactions": ["power_focus"],
+            "models": [
+                {
+                    "name": "Psychic Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "power", "x": 1}],
+                    "weapons": ["storm_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "storm_rifle", "withWeapon": "marine_smg"},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {"addRule": ["ambush", {"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_marine_sergeant": {
+            "name": "Psychic Marine Sergeant",
+            "description": "A marine leader trained to hunt demons and adept in psychic powers.",
+            "category": "command",
+            "subfactions": ["power_focus"],
+            "models": [
+                {
+                    "name": "Psychic Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}],
+                    "weapons": ["storm_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["storm_rifle"],
+                            "withWeapon": [
+                                "marine_smg",
+                                "plasma_pistol",
+                                "flamethrower_pistol",
+                                "fusion_pistol",
+                                "gravity_pistol",
+                                "thermal_pistol",
+                                "heavy_flamethrower",
+                                "psychic_cannon",
+                                "medium_machinegun"
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {"addRule": ["ambush", {"id": "defiant", "x": 3}, "teleport"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "purge_marine": {
+            "name": "Purge Marine",
+            "description": "A marine trained to hunt demons with heavy psychic weapons.",
+            "category": "heavy",
+            "subfactions": ["power_focus"],
+            "models": [
+                {
+                    "name": "Purge Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "power", "x": 1}],
+                    "weapons": ["heavy_flamethrower", "psychic_grenade", "heavy_ccw"],
+                    "options": [{"replaceWeapon": ["heavy_flamethrower"], "withWeapon": ["psychic_cannon", "medium_machinegun"]}, {"addRule": ["ambush", {"id": "defiant", "x": 3}, "teleport"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "teleport_marine": {
+            "name": "Teleport Marine",
+            "description": "A marine trained to hunt demons with a teleporting backpack.",
+            "category": "strike",
+            "subfactions": ["power_focus"],
+            "models": [
+                {
+                    "name": "Teleport Marine",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "power", "x": 1}, "teleport"],
+                    "weapons": ["storm_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "storm_rifle", "withWeapon": "marine_smg"},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {"addRule": ["ambush", {"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_destroyer": {
+            "name": "Psychic Destroyer",
+            "description": "A marine in heavy armor trained to hunt demons and adept in psychic powers.",
+            "category": "specialist",
+            "subfactions": ["power_focus"],
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Psychic Destroyer",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "movement": 5,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "power", "x": 1}],
+                    "weapons": ["twin_marine_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "medium_machinegun", "psychic_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {"addRule": [{"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_destroyer_sergeant": {
+            "name": "Psychic Destroyer Sergeant",
+            "description": "A marine leader in heavy armor trained to hunt demons and adept in psychic powers.",
+            "category": "command",
+            "subfactions": ["power_focus"],
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Psychic Destroyer Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "movement": 5,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "power", "x": 1}],
+                    "weapons": ["twin_marine_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "medium_machinegun", "psychic_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {"addRule": [{"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_paladin": {
+            "name": "Psychic Paladin",
+            "description": "A tough marine in heavy armor trained to hunt demons and adept in psychic powers.",
+            "category": "specialist",
+            "subfactions": ["power_focus"],
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Psychic Paladin",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "movement": 5,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": ["twin_marine_rifle", "psychic_grenade", {"id": "energy_sword", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "medium_machinegun", "psychic_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 3},
+                            "withWeapon": [{"id": "energy_staff", "count": 3}, {"id": "energy_halberd", "count": 3}, {"id": "energy_sword", "count": 4}, {"id": "energy_hammer", "count": 3}]
+                        },
+                        {"addRule": [{"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_paladin_sergeant": {
+            "name": "Psychic Paladin Sergeant",
+            "description": "A tough marine leader in heavy armor trained to hunt demons and adept in psychic powers.",
+            "category": "command",
+            "subfactions": ["power_focus"],
+            "keywords": ["Heavy Infantry"],
+            "models": [
+                {
+                    "name": "Psychic Paladin Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "movement": 5,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": ["twin_marine_rifle", "psychic_grenade", {"id": "energy_sword", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "medium_machinegun", "psychic_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 3},
+                            "withWeapon": [{"id": "energy_staff", "count": 3}, {"id": "energy_halberd", "count": 3}, {"id": "energy_sword", "count": 4}, {"id": "energy_hammer", "count": 3}]
+                        },
+                        {"addRule": [{"id": "defiant", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_biker": {
+            "name": "Psychic Biker",
+            "description": "A marine trained to hunt demons on a combat bike.",
+            "category": "strike",
+            "subfactions": ["power_focus"],
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Psychic Marine Biker",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "power", "x": 1}],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Front"]}, "storm_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {"replace_weapon": "storm_rifle", "withWeapon": "marine_smg"},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "medium_machinegun", "mount": ["Front"]}, {"id": "heavy_fragmentation_cannon", "mount": ["Front"]}]
+                        },
+                        {"addRule": [{"id": "defiant", "x": 3}, {"id": "hover", "name": "Anti-Grav Engine"}, {"id": "light_armor", "name": "Armor Plating"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_biker_sergeant": {
+            "name": "Psychic Biker Sergeant",
+            "description": "A marine leader trained to hunt demons on a combat bike.",
+            "category": "command",
+            "subfactions": ["power_focus"],
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Psychic Marine Biker Sergeant",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "power", "x": 1}],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Front"]}, "storm_rifle", "psychic_grenade", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["storm_rifle"], "withWeapon": ["marine_smg", "plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [{"id": "energy_staff", "count": 2}, {"id": "energy_halberd", "count": 2}, {"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 2}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "medium_machinegun", "mount": ["Front"]}, {"id": "heavy_fragmentation_cannon", "mount": ["Front"]}]
+                        },
+                        {"addRule": [{"id": "defiant", "x": 3}, {"id": "hover", "name": "Anti-Grav Engine"}, {"id": "light_armor", "name": "Armor Plating"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "laser_sniper": {"name": "Laser Sniper Rifle", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["sniper"]},
+        "plasma_repeater": {"name": "Plasma Repeater", "ap": 5, "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "overcharge"]},
+        "hazard_flamethrower": {"name": "Hazard Flamethrower", "ap": 2, "attacks": 3, "short": 6, "medium": 12, "rules": ["flame", "poison"]},
+        "hazard_launcher": {"name": "Hazard Launcher", "ap": 3, "attacks": 1, "short": 12, "medium": 24, "rules": ["poison", {"id": "blast", "x": 2}]},
+        "hazard_blaster": {"name": "Hazard Blaster", "ap": 4, "attacks": 1, "short": 12, "medium": 24, "rules": ["lethal"]},
+        "marine_dmr": {"name": "Marine Marksman Rifle", "ap": 2, "attacks": 1, "short": 15, "medium": 30, "rules": ["heavy"]},
+        "marine_smg": {"name": "Marine Submachine Gun", "ap": 1, "attacks": 2, "short": 6, "medium": 12, "rules": ["assault"]},
+        "combi_machinegun": {
+            "name": "Combi-Heavy Machinegun",
+            "rules": ["heavy"],
+            "profiles": [
+                {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
+                {"name": "Twin Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]}
+            ]
+        }
+    },
+    "rules": {
+        "multi_scanner": {"name": "Multi-Scanner", "description": "Once per round, this unit may re-roll an Initiative test.", "points": 5},
+        "legend_master_duelist": {"name": "Master Duelist", "description": "This model gains +1 Strength when fighting enemy _Leader_ models.", "points": 10},
+        "legend_drill_sergeant": {"name": "Drill Sergeant", "description": "Friendly _Infantry_ models within 6\" add +3\" to the short and long range of their weapons.", "points": 10}
+    },
+    "hidden_relics": [
+        {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
+        {"subfactions": ["none", "wolf_marines"], "weapon": "ancient_chainsword", "flavor": "A chainsword crafted to destroy even the toughest enemy infantry."},
+        {"subfactions": ["none", "wolf_marines", "assault_focus", "psychic_marines"], "rule": "expert_marksman", "flavor": "A trained marksman can have a very deadly effect."},
+        {"subfactions": ["none", "wolf_marines", "assault_focus", "psychic_marines"], "rule": "mobility_training", "flavor": "A well-trained tactician in mobility warfare."},
+        {"subfactions": ["psychic_marines"], "rule": "combat_master", "flavor": "A trained fighter can dispatch even the toughest foes in deadly combat."}
+    ],
+    "relics": {
+        "legend_master_duelist": {
+            "name": "Master Duelist",
+            "rule": "legend_master_duelist",
+            "description": "Upgrade one _Leader_ model with Master Duelist.",
+            "flavor": "This master of the blade has struck down countless foes, earning them this grim title.",
+            "points": 5
+        },
+        "legend_energy_shield": {
+            "name": "Personal Shield Generator",
+            "rule": {"id": "tough", "x": 1},
+            "description": "Upgrade one _Leader_ or _Support_ model with Tough(1).",
+            "flavor": "This shield generator can be overcharged to bounce back even the toughest attacks for a moment.",
+            "points": 10
+        },
+        "legend_drill_sergeant": {
+            "name": "Drill Sergeant",
+            "rule": "legend_drill_sergeant",
+            "description": "Upgrade one _Leader_ model with Drill Sergeant.",
+            "flavor": "Through years of hard training and bellowing commands the effective range of infantry can be pushed past the limit.",
+            "points": 10
+        }
+    },
+    "strategies": [
+        {
+            "name": "Vigilance",
+            "phase": "activation",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": 1
+        },
+        {
+            "name": "Genetically Engineered",
+            "phase": "activation",
+            "description": "Use before taking Save rolls for an _Infantry_ or _Biker_ unit. It gets +1 Save.",
+            "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
+            "cost": 2
+        },
+        {
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Marines are trained to stay strong even in the toughest fights.",
+            "cost": 1
+        }
+    ],
+    "powers": {
+        "blink": {
+            "subfactions": ["power_focus"],
+            "name": "Blink",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7,
+            "category": "psychic"
+        },
+        "banishment": {"subfactions": ["power_focus"], "name": "Banishment", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 5, "category": "psychic"},
+        "purge": {"subfactions": ["power_focus"], "name": "Purge", "description": "Target enemy unit within 12\" take 8 automatic hits with AP 0.", "charge": 6, "category": "psychic"},
+        "empower": {"name": "Empower", "description": "Target friendly unit within 12“ gains +1 Strength and +1 Accuracy until the end of the turn. ", "charge": 5},
+        "snare": {"name": "Snare", "description": "Target enemy unit within 18\" has -2\" Movement until the end of the turn.", "charge": 7},
+        "barrier": {
+            "name": "Barrier",
+            "description": "Target friendly unit within 24“. Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
+            "charge": 6
+        }
+    },
+    "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+3694373482"}]
+}

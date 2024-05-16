@@ -1,0 +1,994 @@
+{
+    "name": "Human Kingdoms",
+    "id": "human_kingdoms",
+    "author": "Xekon#8266",
+    "units": {
+        "captain": {
+            "name": "Captain",
+            "description": "A captain of the Human Kingdoms who inspires his troops.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Captain",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "battlefield_commands", "x": 1}, "leader", {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "handweapon", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 3}],
+                            "withWeapon": [
+                                {"id": "great_weapon", "count": 3},
+                                {"id": "grand_hammer", "count": 3},
+                                {"id": "zweihänder", "count": 3},
+                                {"id": "handweapon", "count": 4},
+                                {"id": "polearm", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": ["heavy_pistol", "heavy_crossbow", "repeater_handgun"], "limit": 1},
+                        {"addRule": ["shield", {"id": "icon", "x": "Infantry"}]},
+                        {"replaceRule": [{"id": "battlefield_commands", "x": 1}], "withRule": [{"id": "battlefield_commands", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "captain_horse": {
+            "name": "Captain on Warhorse",
+            "description": "A captain of the Human Kingdoms who inspires his troops from horseback.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Captain on Warhorse",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "battlefield_commands", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "handweapon", "count": 3}, {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 3}],
+                            "withWeapon": [
+                                {"id": "great_weapon", "count": 3},
+                                {"id": "grand_hammer", "count": 3},
+                                {"id": "zweihänder", "count": 3},
+                                {"id": "handweapon", "count": 4},
+                                {"id": "lance", "count": 3}
+                            ]
+                        },
+                        {"addWeapon": ["heavy_pistol", "heavy_crossbow", "repeater_handgun"], "limit": 1},
+                        {"addRule": ["shield", {"id": "icon", "x": "Infantry, Cavalry"}, {"name": "Wings", "id": "fly"}]},
+                        {"replaceRule": [{"id": "battlefield_commands", "x": 1}], "withRule": [{"id": "battlefield_commands", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "battle_mage": {
+            "name": "Battlemage",
+            "description": "A powerful wizard who hurls powerful spells at their foes.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Battlemage",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": ["staff", "handweapon"],
+                    "options": [{"replaceWeapon": ["staff", "handweapon"], "withWeapon": ["great_staff"]}, {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "battle_mage_horse": {
+            "name": "Battlemage on Warhorse",
+            "description": "A powerful wizard on horseback who hurls powerful spells at their foes.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Battlemage on Warhorse",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": ["staff", "handweapon", {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["staff", "handweapon"], "withWeapon": ["great_staff"]},
+                        {"addRule": [{"name": "Wings", "id": "fly"}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "grand_mage_unicorn": {
+            "name": "Grand Mage on Unicorn",
+            "description": "A mighty wizard on a mythical unicorn who hurls powerful spells at their foes.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Grand Mage on Unicorn",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "power", "x": 2}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "handweapon", "count": 2}, {"id": "staff", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "staff", "count": 2}, {"id": "handweapon", "count": 2}], "withWeapon": [{"id": "great_staff", "count": 2}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_priest": {
+            "name": "Warrior-Priest",
+            "description": "A zealot who smites their foe with the power of divine justice.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Warrior-Priest",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["battle_prayer", "furious", "leader", {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "great_weapon", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_hammer", "count": 3}], "withWeapon": [{"id": "grand_hammer", "count": 3}, {"id": "great_hammer", "count": 4}]},
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_priest_horse": {
+            "name": "Warrior-Priest on Warhorse",
+            "description": "A zealot on horseback who smites their foe with the power of divine justice.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Warrior-Priest on Warhorse",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["battle_prayer", "furious", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "great_hammer", "count": 3}, {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_hammer", "count": 3}], "withWeapon": [{"id": "grand_hammer", "count": 3}, {"id": "great_hammer", "count": 4}]},
+                        {"replaceWeapon": [{"id": "hooves_and_teeth", "count": 2}], "withWeapon": [{"id": "fangs_and_claws", "count": 2}]},
+                        {"addRule": ["shield", {"name": "WIngs", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "engineer": {
+            "name": "Engineer",
+            "description": "An engineer of the Human Kingdoms who looks after the warmachines of the army.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Engineer",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["engineer", {"id": "leader", "x": "Vehicle, Warmachine"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["handweapon", "heavy_pistol"],
+                    "options": [{"replaceWeapon": ["heavy_pistol"], "withWeapon": ["repeater_handgun", "long_rifle", "handgun"]}, {"addWeapon": ["heavy_pistol"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "engineer_horse": {
+            "name": "Engineer on Mechanical Horse",
+            "description": "An engineer of the Human Kingdoms who looks after the warmachines of the army on horseback.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Engineer on Mechanical Horse",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["engineer", {"id": "leader", "x": "Vehicle, Warmachine"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["handweapon", "heavy_pistol", {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["repeater_handgun", "long_rifle", "handgun"]},
+                        {"addWeapon": ["heavy_pistol"]},
+                        {"addRule": [{"name": "Wings", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "paladin": {
+            "name": "Paladin",
+            "description": "A noble of the Human Kingdoms, commanding his personal knights.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Paladin",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Cavalry"}, {"id": "knight_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_handweapon", "count": 3}, "shield", {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_handweapon", "count": 3}],
+                            "withWeapon": [{"id": "lance", "count": 3}, {"id": "great_hammer", "count": 3}, {"id": "flail", "count": 3}, {"id": "great_weapon", "count": 3}]
+                        },
+                        {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spirit_guardian": {
+            "name": "Spirit Guardian",
+            "description": "A once forgotten knight who has returned to defend the great human kingdoms.",
+            "category": "hero",
+            "keywords": ["Cavalry", "Undead"],
+            "models": [
+                {
+                    "name": "Spirit Guardian",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "defiant", "x": 3}, "fly", {"id": "knight_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "grand_weapon", "count": 4}, "shield", {"id": "heavy_hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "grand_weapon", "count": 4}], "withWeapon": [{"id": "heavy_lance", "count": 4}]},
+                        {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "militia": {
+            "name": "Militia",
+            "description": "A peasant, drafted into war or defending their home.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Milita",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "weapons": ["handweapon"],
+                    "options": [
+                        {"replaceWeapon": "handweapon", "withWeapon": ["polearm", "long_spear", "bow", "crossbow", "pistol", "handgun", "great_weapon"]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "militia_leader": {
+            "name": "Militia Leader",
+            "description": "A peasant leader, drafted into war or defending their home.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Milita Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "rules": ["leader"],
+                    "weapons": ["handweapon"],
+                    "options": [{"replaceWeapon": "handweapon", "withWeapon": ["polearm", "long_spear", "bow", "crossbow", "pistol", "handgun", "great_weapon"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "man_at_arms": {
+            "name": "Man-at-arms",
+            "description": "The human kingdoms have a standing army, training every day for war.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Man-at-arms",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["handweapon"],
+                    "options": [{"replaceWeapon": ["handweapon"], "withWeapon": ["long_spear", "heavy_polearm"]}, {"addRule": ["shield"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "man_at_arms_leader": {
+            "name": "Men-at-arms Leader",
+            "description": "The human kingdoms have a standing army, training every day for war.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Man-at-arms Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["handweapon"],
+                    "options": [{"replaceWeapon": ["handweapon"], "withWeapon": ["long_spear", "heavy_polearm"]}, {"addRule": ["shield"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bowman": {
+            "name": "Bowman",
+            "description": "A trained bowman, firing at advancing enemies from afar.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Bowmen",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["long_bow", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["long_bow"], "withWeapon": ["crossbow"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bowman_leader": {
+            "name": "Bowmen Leader",
+            "description": "A bowman leader, firing at advancing enemies from afar.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Bowman Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["long_bow", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["long_bow"], "withWeapon": ["crossbow"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "handgunner": {
+            "name": "Handgunner",
+            "description": "An arquebusier.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Handgunner",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["handgun", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["handgun"], "withWeapon": ["repeater_handgun", "long_rifle"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "handgunner_leader": {
+            "name": "Handgunners Leader",
+            "description": "An arquebusier leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Handgunner Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["handgun", "light_handweapon"],
+                    "options": [{"replaceWeapon": ["handgun"], "withWeapon": ["repeater_handgun", "long_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pistolier": {
+            "name": "Mounted Pistolier",
+            "description": "",
+            "category": "elite",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Mounted Pistolier",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "weapons": [{"id": "hooves_and_teeth", "count": 2}, "handweapon", {"id": "pistol", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "pistol", "count": 2}], "withWeapon": ["grenade_launcher", "carbine", "repeater_handgun"]}, {"addRule": ["musician"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "pistolier_leader": {
+            "name": "Mounted Pistolier Leader",
+            "description": "",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Mounted Pistolier Leader",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "weapons": [{"id": "hooves_and_teeth", "count": 2}, "handweapon", {"id": "pistol", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "pistol", "count": 2}], "withWeapon": ["grenade_launcher", "carbine", "repeater_handgun"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "honor_guard": {
+            "name": "Honor Guard",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Honor Guard",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["zweihänder"],
+                    "options": [{"subfactions": ["firepower_focus"], "replaceWeapon": ["zweihänder"], "withWeapon": [["handgun", "polearm"]]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "honor_guard_leader": {
+            "name": "Honor Guard Leader",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Honor Guard Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["zweihänder"],
+                    "options": [{"subfactions": ["firepower_focus"], "replaceWeapon": ["zweihänder"], "withWeapon": [["handgun", "polearm"]]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bowman_horse": {
+            "name": "Mounted Bowman",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Mounted Bowman",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["long_bow", "spear", {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [{"replaceWeapon": ["long_bow"], "withWeapon": ["heavy_crossbow"]}, {"addRule": ["buckler"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bowman_horse_leader": {
+            "name": "Mounted Bowman Leader",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Mounted Bowman Leader",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "weapons": ["long_bow", "spear", {"id": "hooves_and_teeth", "count": 2}],
+                    "options": [{"replaceWeapon": ["long_bow"], "withWeapon": ["heavy_crossbow"]}, {"addRule": ["buckler", "champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hunter": {
+            "name": "Hunter",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Hunter",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["evasive", "scout"],
+                    "weapons": ["long_bow", "handweapon"],
+                    "options": [{"replaceWeapon": ["long_bow"], "withWeapon": ["heavy_crossbow"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hunter_leader": {
+            "name": "Hunter Leader",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Hunter Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["evasive", "leader", "scout"],
+                    "weapons": ["long_bow", "handweapon"],
+                    "options": [{"replaceWeapon": ["long_bow"], "withWeapon": ["heavy_crossbow"]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "realm_knight": {
+            "name": "Realm Knight",
+            "description": "Those who can afford better equipment and are of noble blood march united into battle.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Realm Knight",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "handweapon", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 2}],
+                            "withWeapon": [
+                                {"id": "heavy_mace", "count": 2},
+                                {"id": "great_weapon", "count": 2},
+                                {"id": "great_hammer", "count": 2},
+                                {"id": "polearm", "count": 2},
+                                {"id": "polearm", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": ["shield"]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "realm_knight_leader": {
+            "name": "Realm Knight Leader",
+            "description": "Those who can afford better equipment and are of noble blood march united into battle.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Realm Knight Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": [{"id": "handweapon", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 2}],
+                            "withWeapon": [
+                                {"id": "heavy_mace", "count": 2},
+                                {"id": "great_weapon", "count": 2},
+                                {"id": "great_hammer", "count": 2},
+                                {"id": "polearm", "count": 2},
+                                {"id": "polearm", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": ["champion", "shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "realm_knight_horse": {
+            "name": "Realm Knight on Warhorse",
+            "description": "Those who can afford a warhorse and are of noble blood ride united into battle.",
+            "category": "elite",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Realm Knight on Warhorse",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, "shield", {"id": "lance", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "lance", "count": 2}], "withWeapon": [{"id": "flail", "count": 3}, {"id": "handweapon", "count": 3}]},
+                        {"addRule": [{"name": "Hussar Wings", "id": "fear"}, {"name": "Wings", "id": "fly"}]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "realm_knight_horse_leader": {
+            "name": "Realm Knight Leader on Warhorse",
+            "description": "Those who can afford a warhorse and are of noble blood ride united into battle.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Realm Knight Leader on Warhorse",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, "shield", {"id": "lance", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "lance", "count": 2}], "withWeapon": [{"id": "flail", "count": 3}, {"id": "handweapon", "count": 3}]},
+                        {"addRule": [{"name": "Hussar Wings", "id": "fear"}, {"name": "Wings", "id": "fly"}, "champion"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "realm_knight_gryphon": {
+            "name": "Realm Knight on Lesser Gryphon",
+            "description": "Gryphons are mighty creatures and are often being mounted by noble knights.",
+            "category": "rare",
+            "keywords": ["Beast", "Cavalry"],
+            "models": [
+                {
+                    "name": "Realm Knight on Lesser Gryphon",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["fly", {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "beak_and_claws", "count": 3}, "shield", {"id": "lance", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_polearm", "count": 3}, {"id": "great_weapon", "count": 3}]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "realm_knight_gryphon_leader": {
+            "name": "Realm Knight Leader on Lesser Gryphon",
+            "description": "Gryphons are mighty creatures and are often being mounted by noble knights.",
+            "category": "hero",
+            "keywords": ["Beast", "Cavalry"],
+            "models": [
+                {
+                    "name": "Realm Knight Leader on Lesser Gryphon",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "beak_and_claws", "count": 3}, "shield", {"id": "lance", "count": 3}],
+                    "options": [{"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_polearm", "count": 3}, {"id": "great_weapon", "count": 3}]}, {"addRule": ["champion"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "crusader_horse": {
+            "name": "Crusader on Warhorse",
+            "description": "Mounted on the strongest and fastest horses of the realms, crushing enemy resistance.",
+            "category": "rare",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Crusader on Warhorse",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "grand_weapon", "count": 5}, "shield"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "grand_weapon", "count": 5}],
+                            "withWeapon": [{"id": "heavy_lance", "count": 5}, {"id": "great_flail", "count": 5}, {"id": "grand_hammer", "count": 5}]
+                        },
+                        {"addRule": [{"name": "Hussar Wings", "id": "fear"}, {"name": "Wings", "id": "fly"}]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "crusader_horse_leader": {
+            "name": "Crusader Leader on Warhorse",
+            "description": "Mounted on the strongest and fastest horses of the realms, crushing enemy resistance.",
+            "category": "hero",
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Crusader Leader on Warhorse",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "grand_weapon", "count": 5}, "shield"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "grand_weapon", "count": 5}],
+                            "withWeapon": [{"id": "heavy_lance", "count": 5}, {"id": "great_flail", "count": 5}, {"id": "grand_hammer", "count": 5}]
+                        },
+                        {"addRule": [{"name": "Hussar Wings", "id": "fear"}, {"name": "Wings", "id": "fly"}, "champion"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "crusader": {
+            "name": "Crusader",
+            "description": "Heavily armored and blessed by their faith, they face any threat with honor.",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Crusader",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "grand_weapon", "count": 5}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "grand_weapon", "count": 5}], "withWeapon": [{"id": "grand_hammer", "count": 5}, {"id": "great_flail", "count": 5}]},
+                        {"addRule": [{"name": "Angelic Wings", "id": "fly"}, "shield"]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "crusader_leader": {
+            "name": "Crusader Leader",
+            "description": "Heavily armored and blessed by their faith, they face any threat with honor.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Crusader Leader",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "grand_weapon", "count": 5}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "grand_weapon", "count": 5}], "withWeapon": [{"id": "grand_hammer", "count": 5}, {"id": "great_flail", "count": 5}]},
+                        {"addRule": [{"name": "Angelic Wings", "id": "fly"}, "shield", "champion"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cannon": {
+            "name": "Cannon",
+            "description": "",
+            "category": "rare",
+            "keywords": ["Warmachine", "Artillery"],
+            "models": [{"name": "Cannon", "weapons": ["cannon"], "rules": ["damage_chart"], "movement": 5, "shoot": 6, "fight": "-", "defense": 8, "courage": 5, "reflexes": 5, "min": 1, "max": 1}]
+        },
+        "volley_gun": {
+            "name": "Volley Gun",
+            "description": "",
+            "category": "rare",
+            "keywords": ["Warmachine", "Artillery"],
+            "models": [
+                {"name": "Volley Gun", "weapons": ["volley_gun"], "rules": ["damage_chart"], "movement": 5, "shoot": 6, "fight": "-", "defense": 8, "courage": 5, "reflexes": 5, "min": 1, "max": 1}
+            ]
+        },
+        "mortar": {
+            "name": "Mortar",
+            "description": "",
+            "category": "rare",
+            "keywords": ["Warmachine", "Artillery"],
+            "models": [{"name": "Mortar", "weapons": ["mortar"], "rules": ["damage_chart"], "movement": 5, "shoot": 6, "fight": "-", "defense": 8, "courage": 5, "reflexes": 5, "min": 1, "max": 1}]
+        }
+    },
+    "weapons": {"legend_blade": {"name": "Blade of Conquest", "attacks": 3, "ap": 3, "short": "Melee", "rules": ["enchanted", "rending"]}},
+    "rules": {
+        "battlefield_commands": {
+            "name": "Battlefield Commands",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "legend_ring": {"name": "Ring of Command", "description": "This unit may perform a group activation with one additional unit.", "points": [10]}
+    },
+    "powers": {
+        "time_warp": {
+            "name": "Time Warp",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7,
+            "category": "psychic"
+        },
+        "magic_barrier": {
+            "name": "Magic Barrier",
+            "description": "Target friendly unit within 24“. Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
+            "charge": 6
+        },
+        "banishment": {"name": "Banishment", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 5}
+    },
+    "strategies": [
+        {
+            "phase": "activation",
+            "name": "Blessed Armory",
+            "flavor": "Blessed by priests before the fight, these weapons are empowered with divine strength.",
+            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        {
+            "phase": "activation",
+            "name": "Standing Orders",
+            "description": "Use when a unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
+            "flavor": "When standing still units have more time to aim and fire on target.",
+            "cost": 1
+        },
+        {
+            "name": "Expedient Retreat",
+            "phase": "activation",
+            "flavor": "Great tacticians employ hit and run tactics to wear down their enemy without taking may losses themselves.",
+            "description": "Use after one of your _Cavalry_ units performs a _Shoot_ or _Fight_ action. It may immediately take a free _Move_ action.",
+            "cost": 1
+        }
+    ],
+    "relics": [
+        {
+            "name": "Blade of Conquest",
+            "weapon": "legend_blade",
+            "description": "Replace one Leader model Great Weapon(3) with the Blade of Conquest.",
+            "flavor": "An ancient heirloom, granted tho those who are on a divine quest.",
+            "points": 5
+        },
+        {
+            "name": "The Holy Grail",
+            "rule": "regeneration",
+            "description": "Upgrade one Leader model with Regeneration.",
+            "flavor": "A relic of legend, it grants any who drink from it eternal life.",
+            "points": 10
+        },
+        {
+            "name": "Ring of Command",
+            "rule": "legend_ring",
+            "description": "Upgrade one Leader model with the Ring of Command.",
+            "flavor": "This magical ring enhances the wearer's charisma and battlefield presence, allowing them to grant orders to more units.",
+            "points": 10
+        }
+    ]
+}

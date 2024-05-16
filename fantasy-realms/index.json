@@ -1,0 +1,1156 @@
+{
+    "name": "Mystic Realms",
+    "id": "mystic_realms",
+    "version": "1.0",
+    "reportUrl": "https://github.com/dice-guild/fantasy-realms/issues",
+    "categories": {"hero": {"name": "Hero"}, "core": {"name": "Core"}, "elite": {"name": "Elite"}, "rare": {"name": "Rare"}, "fortification": {"name": "Fortification"}},
+    "organizations": {
+        "skirmish": {
+            "name": "Generalist",
+            "cost": 0,
+            "description": "A well-rounded force for taking on any mission.",
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 5}, "elite": {"min": 0, "max": 3}, "rare": {"min": 0, "max": 2}, "fortification": {"min": 0, "max": 2}}
+        },
+        "elite": {
+            "name": "Elite",
+            "cost": 1,
+            "description": "An elite force to deal with specific targets.",
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"max": 3}, "elite": {"min": 2, "max": 5}, "rare": {"max": 2}, "fortification": {"max": 2}}
+        },
+        "rare": {
+            "name": "Rare",
+            "cost": 1,
+            "description": "A specialist force with heavy and support options.",
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"max": 3}, "elite": {"max": 3}, "rare": {"min": 2, "max": 5}, "fortification": {"max": 2}}
+        },
+        "support": {
+            "name": "Support",
+            "cost": 1,
+            "description": "A small supporting force.",
+            "categories": {"hero": {"max": 1}, "core": {"max": 2}, "elite": {"max": 2}, "rare": {"max": 2}, "fortification": {"max": 2}}
+        }
+    },
+    "factions": {
+        "scorned": {
+            "version": "0.1",
+            "name": "The Scorned",
+            "id": "scorned",
+            "url": "scorned.json",
+            "color": "#580816",
+            "description": "Once a mighty civilization that served the gods, the Scorned now use ancient rituals and powerful armies to see them reborn.",
+            "alliance": "doom",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "storm_wardens": {
+            "version": "1.0",
+            "name": "Storm Wardens",
+            "id": "storm_wardens",
+            "url": "storm_wardens.json",
+            "color": "#D4AF37",
+            "secondary_color": "#0d407f",
+            "alliance": "order",
+            "description": "Creations of an arch-wizard, the Storm Wardens exist to enforce peace around the realms - no matter who it may favour.  Their incredible weapons and armour are unmatched by other races.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "ogre_mercenaries": {
+            "version": "1.0",
+            "name": "Ogre Mercenaries",
+            "id": "ogre_mercenaries",
+            "url": "ogre_mercenaries.json",
+            "color": "#954535",
+            "alliance": "mercenaries",
+            "description": "Large-bodied mercenaries with huge appetites for gold and destruction.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "vampire_lords": {
+            "version": "1.0",
+            "name": "Vampire Lords",
+            "id": "vampire_lords",
+            "url": "vampire_lords.json",
+            "color": "#801111",
+            "alliance": "death",
+            "description": "Vampire Lords are necromancers who have learned to imbue themselves with necrotic power.  They wield their undead hordes like a weapon, to cut away those who would stand in their way.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "corrupted_legions": {
+            "version": "1.0",
+            "name": "Corrupted Legions",
+            "id": "corrupted_legions",
+            "url": "corrupted_legions.json",
+            "color": "#343a40",
+            "alliance": "doom",
+            "description": "The Corrupted Legions prove that even dead gods can be mightier than mortals. Wearing powerful cursed armour and wielding weapons with ancient enchantments, they seek the ressurection of their dark masters.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "haunting_ghosts": {
+            "version": "1.0",
+            "name": "Haunting Ghosts",
+            "id": "haunting_ghosts",
+            "url": "haunting_ghosts.json",
+            "color": "#4C838A",
+            "alliance": "death",
+            "description": "Places of necromantic power can often spontaneously bring the dead back to life, and without a leader they have only one drive:  Spread that necromantic power, through the death of those nearby!",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "high_elves": {
+            "version": "1.0",
+            "name": "High Elves",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#0d407f",
+            "alliance": "order",
+            "description": "The High Elves are dedicated to holding and defending their ancestral lands, destroying any force that dares to threaten their holdings.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "orcs_and_goblins": {
+            "version": "1.0",
+            "name": "Orcs and Goblins",
+            "id": "orcs_and_goblins",
+            "url": "orcs_and_goblins.json",
+            "color": "#50974A",
+            "alliance": "destruction",
+            "description": "Creatures from faraway lands, the Orcs and Goblins are usually content to feud among themselves - but when they turn their attention elsewhere, they prove themselves a truly powerful foe.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "sea_elves": {
+            "version": "1.0",
+            "name": "Sea Elves",
+            "id": "sea_elves",
+            "url": "sea_elves.json",
+            "color": "#03414e",
+            "alliance": "order",
+            "description": "Transmuted by ancient magic to be mightier than any other elf, the Sea Elves require incredible alchemical concoctions to survive.  They hire themselves out to other races to afford their survival, and live under the sea to avoid mortal conflict.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "mountain_dwarves": {
+            "version": "1.0",
+            "name": "Mountain Dwarves",
+            "id": "mountain_dwarves",
+            "url": "mountain_dwarves.json",
+            "color": "#A55D35",
+            "alliance": "order",
+            "description": "A stout race of miners, engineers and warriors who were driven into the dark eons again. Now that they have returned they take revenge on those that once betrayed them.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "beastmen_horde": {
+            "version": "1.0",
+            "name": "Beastmen Horde",
+            "id": "beastmen_horde",
+            "url": "beastmen_horde.json",
+            "color": "#954535",
+            "alliance": "doom",
+            "description": "The Beastmen seek nothing less than the destruction of civilization, turning it all into burning rubble.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "abyss_daemons": {
+            "version": "1.0",
+            "name": "Demons of the Abyss",
+            "id": "abyss_daemons",
+            "url": "abyss_daemons.json",
+            "color": "#B52E1F",
+            "alliance": "doom",
+            "description": "Demonic entities from another dimension, causing havoc in the name of their infernal masters.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "human_kingdoms": {
+            "version": "1.0",
+            "name": "Human Kingdoms",
+            "id": "human_kingdoms",
+            "url": "human_kingdoms.json",
+            "color": "#990c0c",
+            "alliance": "order",
+            "description": "The myriad of Human Kingdoms are mercurial and quick-blooded, wanting only peace one generation while seeking to conquer the world the next - and well-equipped for either.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "lizardmen": {
+            "version": "1.0",
+            "name": "Lizardfolk Empire",
+            "id": "lizardmen",
+            "url": "lizardmen.json",
+            "color": "#087194",
+            "alliance": "destruction",
+            "description": "A sprawling empire of jungle-dwellers who believe they are the rightful rulers of the world.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "vermin_colonies": {
+            "version": "1.0",
+            "name": "Vermin Colonies",
+            "id": "vermin_colonies",
+            "url": "vermin_colonies.json",
+            "color": "#3D3636",
+            "alliance": "doom",
+            "description": "These cunning and treacherous Vermin assemble into warhosts containing vast swarms, pestilent magic, mutated beasts and doom-tech.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "corrupted_dwarves": {
+            "version": "1.0",
+            "name": "Corrupted Dwarves",
+            "id": "corrupted_dwarves",
+            "url": "corrupted_dwarves.json",
+            "color": "#3d3354",
+            "alliance": "doom",
+            "description": "Twisted by the whispers of dead gods, the Corrupted Dwarves have learned to put chaotic magic into their machines.  They fight as much at the whims of their dark masters as their own choice.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "merchant_dwarves": {
+            "version": "1.0",
+            "name": "Merchant Dwarves",
+            "id": "merchant_dwarves",
+            "url": "merchant_dwarves.json",
+            "alliance": "mercenaries",
+            "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
+            "color": "#343a40",
+            "secondary_color": "#3d3354",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "dark_elves": {
+            "version": "1.0",
+            "name": "Corrupted Elves",
+            "id": "dark_elves",
+            "url": "dark_elves.json",
+            "color": "#4e2894",
+            "alliance": "doom",
+            "description": "Cursed by vile forces beyond mortal comprehension, these once-proud elves have become twisted parodies of their kin that lurch from the darkness into the fray.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "wood_elves": {
+            "version": "1.0",
+            "name": "Wood Elves",
+            "id": "wood_elves",
+            "url": "wood_elves.json",
+            "color": "#38733a",
+            "alliance": "order",
+            "description": "Hidden away in their forests, the Wood Elves seek only peace, and the spreading of nature's gifts.  They go to war only to fight those who would despoil their forests or stop their spread.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        },
+        "realmshapers": {
+            "version": "1.0",
+            "name": "Realmshapers",
+            "id": "realmshapers",
+            "url": "realmshapers.json",
+            "color": "#0f3923",
+            "alliance": "destruction",
+            "description": "The forces of nature rarely leave anyone alive to tell of their existence when they venture out into civilization to reclaim it.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A focus on all-out assaults and aggression."},
+                "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A focus on overwhelming firepower."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "A focus on fast and fluid movement."},
+                "tactical_focus": {"name": "Tactical", "id": "tactical_focus", "description": "A focus on outsmarting and tricking the enemy."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A focus on sneaky and silent tactics."},
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "A focus on alertness and reactivity."},
+                "power_focus": {"name": "Power", "id": "power_focus", "description": "A focus on casting stronger and more consistent powers."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "A focus on survival and unrelenting."},
+                "shock_focus": {"name": "Shock", "id": "shock_focus", "description": "A focus on striking fear into your enemies."},
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "description": "A focus on siege warfare and denying cover."},
+                "morale_focus": {"name": "Morale", "id": "morale_focus", "description": "A focus on morale and battle awareness."}
+            }
+        }
+    },
+    "weapons": {
+        "grand_hammer": {"name": "Grand Hammer", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome", "lethal"]},
+        "great_hammer": {"name": "Great Hammer", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]},
+        "heavy_hammer": {"name": "Heavy Hammer", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["cumbersome"]},
+        "hammer": {"name": "Hammer", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["cumbersome"]},
+        "light_hammer": {"name": "Light Hammer", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["cumbersome"]},
+        "great_weapon": {"name": "Great Weapon", "attacks": 1, "ap": 3, "short": "Melee"},
+        "grand_weapon": {"name": "Grand Weapon", "attacks": 1, "short": "Melee", "ap": 4},
+        "lethal_grand_weapon": {"name": "Lethal Grand Weapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal"]},
+        "zweihänder": {"name": "Zweihänder", "attacks": 1, "short": "Melee", "ap": 5},
+        "leeching_blade": {"name": "Leeching Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["leeching"]},
+        "heavy_handweapon": {"name": "Heavy Hand Weapon", "attacks": 1, "ap": 2, "short": "Melee"},
+        "handweapon": {"name": "Hand Weapon", "attacks": 1, "ap": 1, "short": "Melee"},
+        "heavy_lethal_handweapon": {"name": "Lethal Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
+        "lethal_great_weapon": {"name": "Lethal Great Weapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
+        "lethal_handweapon": {"name": "Lethal Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
+        "rending_handweapon": {"name": "Rending Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "light_handweapon": {"name": "Light Hand Weapon", "attacks": 1, "short": "Melee"},
+        "grand_axe": {"name": "Grand Battleaxe", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
+        "great_axe": {"name": "Great Battleaxe", "attacks": 1, "ap": 4, "short": "Melee"},
+        "heavy_axe": {"name": "Heavy Battleaxe", "attacks": 1, "ap": 3, "short": "Melee"},
+        "axe": {"name": "Battleaxe", "attacks": 1, "ap": 2, "short": "Melee"},
+        "light_axe": {"name": "Light Battleaxe", "attacks": 1, "ap": 1, "short": "Melee"},
+        "grand_mace": {"name": "Grand Mace", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending", "lethal"]},
+        "great_mace": {"name": "Great Mace", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
+        "heavy_mace": {"name": "Heavy Mace", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["rending"]},
+        "mace": {"name": "Mace", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "light_mace": {"name_0": "Light Mace", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "mining_drill": {"name": "Mining Drill", "attacks": 1, "ap": 7, "short": "Melee"},
+        "heavy_poison_polearm": {"name": "Poisoned Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "poison"]},
+        "poison_polearm": {"name": "Poisoned Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "poison"]},
+        "poison_grand_weapon": {"name": "Poisoned Grand Weapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["poison"]},
+        "heavy_poison_handweapon": {"name": "Poisoned Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
+        "poison_great_weapon": {"name": "Poisoned Great Weapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["poison"]},
+        "poison_handweapon": {"name": "Poisoned Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+        "pestilence_handweapon": {"name": "Pestilence Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["pestilence"]},
+        "pestilence_heavy_flail": {"name": "Pestilence Heavy Flail", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "pestilence", "cumbersome"]},
+        "mining_pick": {"name": "Mining Pick", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]},
+        "heavy_hooves_and_teeth": {"name": "Heavy Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
+        "antlers_and_hooves": {"name": "Antlers and Hooves", "attacks": 1, "short": "Melee", "ap": 1},
+        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
+        "clubbing_fists": {"name": "Clubbing Fists", "attacks": 1, "ap": 3, "short": "Melee"},
+        "crushing_fists": {"name": "Crushing Fists", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["rending"]},
+        "flaming_crushing_fists": {"name": "Flaming Crushing Fists", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["rending", ""]},
+        "crushing_maw": {"name": "Crushing Maw", "attacks": 1, "ap": 8, "short": "Melee", "rules": ["rending"]},
+        "tentacle": {"name": "Lashing Tentacle", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}]},
+        "fangs_and_claws": {"name": "Fangs and Claws", "ap": 3, "attacks": 1, "short": "Melee"},
+        "horn_and_claws": {"name": "Horn and Claws", "ap": 3, "attacks": 1, "short": "Melee"},
+        "bashing_tail": {"name": "Bashing Tail", "ap": 1, "attacks": 1, "short": "Melee"},
+        "beak": {"name": "Beak", "ap": 2, "attacks": 1, "short": "Melee"},
+        "beak_and_claws": {"name": "Beak and Claws", "ap": 3, "attacks": 1, "short": "Melee"},
+        "fangs_and_teeth": {"name": "Fangs and Teeth", "ap": 2, "attacks": 1, "short": "Melee"},
+        "spider_bite": {"name": "Spider Bite", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}], "ap": 1},
+        "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "poison_claws": {"name": "Poison Claws", "attacks": 1, "short": "Melee", "rules": ["poison"]},
+        "claws": {"name": "Claws", "attacks": 1, "ap": 1, "short": "Melee"},
+        "gnawing_teeth": {"name": "Gnawing Teeth", "attacks": 1, "short": "Melee"},
+        "banshee_wail": {"name": "Banshee Wail", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 2}]},
+        "necrotic_breath": {"name": "Necrotic Breath", "ap": 2, "attacks": 1, "short": 6, "medium": 12, "rules": ["flame", "poison"]},
+        "flame_breath": {"name": "Flame Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["flame"]},
+        "lightning_breath": {"name": "Lightning Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["lethal"]},
+        "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
+        "buckler": {"name": "Buckler", "attacks": 0, "short": "Melee", "rules": ["buckler"]},
+        "heavy_buckler": {"name": "Heavy Buckler", "attacks": 0, "short": "Melee", "rules": ["heavy_buckler"]},
+        "shield": {"name": "Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
+        "heavy_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["heavy_shield"]},
+        "enchanted_shield": {"name": "Enchanted Shield", "attacks": 0, "short": "Melee", "rules": ["enchanted_shield"]},
+        "tower_shield": {"name": "Tower Shield", "attacks": 0, "short": "Melee", "rules": ["tower_shield"]},
+        "relic_shield": {"name": "Relic Shield", "attacks": 0, "short": "Melee", "rules": ["relic_shield"]},
+        "spiked_buckler": {"name": "Spiked Buckler", "attacks": 1, "short": "Melee", "rules": ["buckler"]},
+        "spiked_heavy_buckler": {"name": "Spiked Heavy Buckler", "attacks": 1, "short": "Melee", "rules": ["heavy_buckler"]},
+        "spiked_shield": {"name": "Spiked Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
+        "spiked_heavy_shield": {"name": "Spiked Heavy Shield", "attacks": 1, "short": "Melee", "rules": ["heavy_shield"]},
+        "spiked_enchanted_shield": {"name": "Spiked Enchanted Shield", "attacks": 1, "short": "Melee", "rules": ["enchanted_shield"]},
+        "spiked_tower_shield": {"name": "Spiked Tower Shield", "attacks": 1, "short": "Melee", "rules": ["tower_shield"]},
+        "spiked_relic_shield": {"name": "Spiked Relic Shield", "attacks": 1, "short": "Melee", "rules": ["relic_shield"]},
+        "staff": {"name": "Staff", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "heavy_staff": {"name": "Heavy Staff", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "great_staff": {"name": "Great Staff", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "flail": {"name": "Flail", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "cumbersome"]},
+        "heavy_flail": {"name": "Heavy Flail", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "cumbersome"]},
+        "great_flail": {"name": "Great Flail", "attacks": 1, "ap": 5, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "cumbersome"]},
+        "spear": {"name": "Spear", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "heavy_spear": {"name": "Heavy Spear", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "long_spear": {"name": "Long Spear", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "phalanx"]},
+        "pike": {"name": "Pike", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}, "phalanx"]},
+        "net_and_spear": {"name": "Spear and Net", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["ensnare", {"id": "reach", "x": 1}]},
+        "polearm": {"name": "Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "rending_heavy_polearm": {"name": "Rending Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending", {"id": "reach", "x": 1}]},
+        "heavy_lethal_polearm": {"name": "Lethal Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "lethal_polearm": {"name": "Lethal Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "heavy_polearm": {"name": "Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "great_polearm": {"name": "Great Polearm", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "glaive": {"name": "Glaive", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending", {"id": "reach", "x": 1}]},
+        "lance": {"name": "Lance", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
+        "barbed_whip": {"name": "Barbed Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}, "rending"]},
+        "heavy_lance": {"name": "Heavy Lance", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
+        "great_lance": {"name": "Great Lance", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
+        "javelin": {"name": "Javelin", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
+        "heavy_javelin": {"name": "Heavy Javelin", "attacks": 1, "ap": 2, "short": 6, "medium": 12, "rules": ["assault"]},
+        "great_javelin": {"name": "Great Javelin", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault"]},
+        "throwing_knife": {"name": "Throwing Knife", "attacks": 1, "short": 9, "rules": ["assault"]},
+        "poison_knife": {"name": "Poisoned Throwing Knife", "attacks": 1, "short": 9, "rules": ["assault", "poison"]},
+        "throwing_axe": {"name": "Throwing Axes", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault", "rending"]},
+        "blowpipe": {"name": "Blowpipe", "attacks": 1, "short": 9, "rules": ["poison", "assault"]},
+        "short_bow": {"name": "Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18},
+        "poison_short_bow": {"name": "Poisoned Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["poison"]},
+        "lethal_short_bow": {"name": "Lethal Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["lethal"]},
+        "bow": {"name": "Bow", "attacks": 1, "ap": 1, "short": 12, "medium": 24},
+        "long_bow": {"name": "Long Bow", "attacks": 1, "ap": 1, "short": 15, "medium": 30},
+        "heavy_long_bow": {"name": "Heavy Longbow", "attacks": 1, "ap": 2, "short": 18, "medium": 36},
+        "great_bow": {"name": "Greatbow", "attacks": 1, "ap": 4, "short": 18, "medium": 36},
+        "repeater_crossbow": {"name": "Repeater-Crossbow", "attacks": 1, "ap": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "light_crossbow": {"name": "Light Crossbow", "attacks": 1, "ap": 2, "short": 12, "medium": 24},
+        "crossbow": {"name": "Crossbow", "attacks": 1, "ap": 2, "short": 15, "medium": 30},
+        "heavy_crossbow": {"name": "Heavy Crossbow", "attacks": 1, "ap": 2, "short": 18, "medium": 36},
+        "light_pistol": {"name": "Light Pistol", "ap": 1, "attacks": 1, "short": 6, "rules": ["pistol"]},
+        "light_repeater_pistol": {"name": "Light Repeater Pistol", "ap": 1, "attacks": 1, "short": 6, "rules": ["pistol", "rapid_fire"]},
+        "pistol": {"name": "Pistol", "ap": 2, "attacks": 1, "short": 6, "rules": ["pistol"]},
+        "magic_bolt": {"name": "Magic Bolt", "ap": 2, "attacks": 1, "short": 8, "rules": ["assault"]},
+        "repeater_pistol": {"name": "Repeater Pistol", "ap": 2, "attacks": 1, "short": 6, "rules": ["pistol", "rapid_fire"]},
+        "heavy_pistol": {"name": "Heavy Pistol", "ap": 3, "attacks": 1, "short": 6, "rules": ["pistol"]},
+        "heavy_repeater_pistol": {"name": "Heavy Repeater Pistol", "ap": 3, "attacks": 1, "short": 6, "rules": ["pistol", "rapid_fire"]},
+        "flamethrower_pistol": {"name": "Flamethrower Pistol", "ap": 1, "attacks": 3, "short": 6, "rules": ["pistol", "flame"]},
+        "light_handgun": {"name": "Light Handgun", "ap": 1, "attacks": 1, "short": 12, "medium": 24},
+        "light_repeater_handgun": {"name": "Light Repeater Handgun", "ap": 1, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "handgun": {"name": "Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24},
+        "repeater_handgun": {"name": "Repeater Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "long_rifle": {"name": "Long Rifle", "ap": 4, "attacks": 1, "short": 18, "medium": 36, "rules": ["sniper"]},
+        "sniper_rifle": {"name": "Sniper Rifle", "ap": 4, "attacks": 1, "short": 18, "medium": 36, "rules": ["sniper", "lethal"]},
+        "carbine": {"name": "Carbine", "ap": 2, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+        "shotgun": {"name": "Shotgun", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
+        "flamethrower_warmachine": {"name": "Flamethrower (Warmachine)", "rules": ["flame"], "attacks": 6, "ap": 2, "medium": 12, "short": 6},
+        "flamethrower": {"name": "Flamethrower", "rules": ["flame"], "attacks": 3, "ap": 1, "medium": 12, "short": 6},
+        "lethal_flamethrower": {"name": "Lethal Flamethrower", "rules": ["flame", "lethal"], "attacks": 3, "ap": 1, "medium": 12, "short": 6},
+        "mortar_rifle": {"name": "Mortar-Rifle", "short": 9, "medium": 18, "ap": 3, "attacks": 1, "rules": [{"id": "blast", "x": 3}, "scatter"]},
+        "mortar": {"name": "Mortar", "short": 12, "medium": 24, "ap": 3, "attacks": 1, "rules": [{"id": "blast", "x": 3}, "indirect", "scatter"]},
+        "poison_mortar": {"name": "Poison Mortar", "short": 12, "medium": 24, "ap": 3, "attacks": 1, "rules": [{"id": "blast", "x": 3}, "indirect", "scatter", "poison"]},
+        "heavy_mortar": {"name": "Heavy Mortar", "ap": 5, "attacks": 1, "medium": 48, "short": 24, "rules": ["scatter", {"id": "blast", "x": 3}, "indirect"]},
+        "pestilence_heavy_mortar": {"name": "Pestilence Heavy Mortar", "ap": 5, "attacks": 1, "medium": 48, "short": 24, "rules": ["scatter", {"id": "blast", "x": 3}, "indirect", "pestilence"]},
+        "handcannon": {"name": "Handcannon", "short": 9, "medium": 18, "ap": 5, "attacks": 1, "rules": [{"id": "blast", "x": 3}]},
+        "cannon": {
+            "name": "Great-Cannon",
+            "profiles": [
+                {"name": "Shrapnel", "ap": 7, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}, "scatter"]},
+                {"name": "Grapeshot", "attacks": 3, "ap": 3, "short": 6, "medium": 12}
+            ]
+        },
+        "ogre_cannon": {
+            "name": "Ogre-Sized Cannon",
+            "profiles": [{"name": "Cannon Ball", "ap": 7, "attacks": 1, "medium": 24, "short": 12}, {"name": "Grapeshot", "attacks": 6, "ap": 3, "short": 6, "medium": 12}]
+        },
+        "trebuchet": {"name": "Trebuchet", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}, "scatter"]},
+        "ballista": {"name": "Ballista", "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18}]},
+        "harpoon_rifle": {"name": "Harpoon-Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "deadly", "x": 2}]},
+        "harpoon_rifle_warmachine": {"name": "Harpoon-Rifle (Warmachine)", "ap": 8, "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "deadly", "x": 2}]},
+        "net_launcher": {"name": "Net Launcher", "attacks": 1, "ap": 2, "rules": ["ensnare", {"id": "slowing", "x": 2}, {"id": "blast", "x": 3}], "short": 12, "medium": 24},
+        "torpedoes": {"name": "Torpedoes", "attacks": 1, "ap": 5, "short": 12, "medium": 24, "rules": ["unreliable"]},
+        "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 3},
+        "volley_gun": {"name": "Volley Gun", "attacks": 3, "ap": 2, "medium": 24, "short": 12, "rules": ["rapid_fire"]},
+        "heavy_volley_gun": {"name": "Heavy Volley Gun", "attacks": 6, "ap": 3, "medium": 30, "short": 15, "rules": ["rapid_fire"]},
+        "rocket_launcher": {"name": "Rocket Launcher", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
+        "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
+        "crushing_hull": {"name": "Crushing Hull", "attacks": 3, "short": "Melee", "ap": 3},
+        "grenade_launcher": {"name": "Grenade Launcher", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
+        "tank_cannon": {"name": "Tank Cannon", "ap": 6, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
+        "tank_repeater": {"name": "Tank Repeater", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
+        "drill_cannon": {"name": "Drill Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["lethal"]},
+        "heavy_bomb": {"name": "Heavy Bomb", "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}], "ap": 4, "attacks": 1, "short": 6},
+        "medium_bomb": {"name": "Medium Bomb", "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}], "ap": 3, "attacks": 1, "short": 6},
+        "light_bomb": {"name": "Light Bomb", "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}], "ap": 2, "attacks": 1, "short": 6},
+        "gas_grenade": {"name": "Gas Grenades", "attacks": 1, "short": 6, "rules": [{"id": "blast", "x": 3}, "indirect", "grenade", "poison"]},
+        "frag_grenade": {"name": "Firebombs", "attacks": 1, "ap": 1, "short": 6, "rules": [{"id": "blast", "x": 3}, "indirect", "grenade"]},
+        "smoke_grenade": {"name": "Smokebombs", "attacks": 1, "short": 6, "rules": ["indirect", "grenade", "smoke"]},
+        "chemthrower": {"name": "Chemthrower", "rules": ["pestilence", "distracting"], "attacks": 3, "ap": 1, "medium": 12, "short": 6},
+        "barbed_net": {"name": "Barbed Net", "attacks": 1, "short": 9, "rules": ["barbed_net"]},
+        "demon_sword": {"name": "Demon Sword", "attacks": 1, "short": "Melee", "ap": 5},
+        "demon_axe": {"name": "Demon Axe", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "demon_claws": {"name": "Demon Claws", "attacks": 1, "short": "Melee", "ap": 3}
+    },
+    "rules": {
+        "poisoned_blades": {"name": "Poisoned Blades", "description": "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.", "points": 5},
+        "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
+        "legend_quick_reflexes": {"name": "Quick Reflexes", "description": "This model gains +1 Initiative.", "points": 10},
+        "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
+        "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
+        "mount_horse": {"name": "Warhorse", "description": "This model has +2\" Movement.", "points": 2},
+        "barbed_net": {"name": "Barbed Net", "description": "Units hit by this weapon half their movement until the end of the turn.", "points": 3},
+        "regeneration": {"name": "Regeneration", "description": "At the end of this unit's activation you may heal 1 wound or critical damage that has been allocated to this model.", "points": 5},
+        "monstrous_regeneration": {
+            "name": "Monstrous Regeneration",
+            "description": "At the end of this unit's activation you may heal 1 critical damage that has been allocated to this model.",
+            "points": 20
+        },
+        "enchanted": {"name": "Enchanted", "description": "This weapon hits at Strength +1.", "points": ["weapon.attacks"]},
+        "heavy_buckler": {"name": "Heavy Buckler", "description": "This model has +1 Save against melee attacks.", "points": 2},
+        "repair": {
+            "name": "Repair",
+            "inputs": ["x"],
+            "description": "At any point during this unit's activation, if within 3\" of a _Vehicle_ or _Warmachine_ unit, roll one die. On an X or less the _Vehicle_ or _Warmachine_ may remove one critical damage.",
+            "points": ["rule.x", {"multiply": 2}]
+        },
+        "engineer": {
+            "name": "Engineer",
+            "description": "At any point during this model's activation, if within 3\" of a _Vehicle_ or _Warmachine_ unit, roll one die. On a 5 or less the _Vehicle_ or _Warmachine_ may remove one critical damage.",
+            "points": 10
+        },
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
+            "points": 5
+        },
+        "trappers": {
+            "name": "Trappers",
+            "description": "When this model's unit successfully performs a counter attack or escape reaction, the charging unit suffers 6 hits with no AP.",
+            "points": [1]
+        },
+        "raise_dead": {
+            "name": "Raise Dead",
+            "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, return a model to this unit. This may not bring the unit over its starting size.",
+            "points": 2
+        },
+        "life_drain": {
+            "name": "Life Drain",
+            "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a model in this unit.",
+            "points": 2
+        },
+        "warrior_tactics": {
+            "name": "Warrior Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "ranger_tactics": {
+            "name": "Ranger Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "blackpowder_tactics": {
+            "name": "Blackpowder Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "knight_tactics": {
+            "name": "Knight Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "marauder_tactics": {
+            "name": "Marauder Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "beast_tactics": {
+            "name": "Beast Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Beast_ or _Monster_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "hover_mode": {
+            "name": "Hover Mode",
+            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
+        }
+    },
+    "powers": {
+        "searing_bolt": {"name": "Searing Bolt", "description": "Target enemy unit within 12\" takes 1 hits with AP(4).", "charge": 6, "category": "fire"},
+        "fireball": {"name": "Fireball", "description": "Target enemy unit within 12\" takes 3 hit with AP(1). This power may be cast unlimited times per turn.", "charge": 7, "category": "fire"},
+        "flaming_sword": {
+            "name": "Flaming Sword",
+            "description": "This unit gains +1 Strength and may make one additional attack with any Melee weapon until the end of the turn.",
+            "charge": 5,
+            "category": "fire"
+        },
+        "crushing_waves": {"name": "Crushing Waves", "description": "Target enemy unit within 12\" takes 4 hits with AP(4).", "charge": 5, "category": "water"},
+        "aqueous_form": {
+            "name": "Aqueous Form",
+            "description": "Target friendly unit within 12\" gets +2\" Movement and may treat Difficult Ground as normal terrain until the end of the turn.",
+            "charge": 6,
+            "category": "water"
+        },
+        "whirlpool": {"name": "Whirlpool", "description": "Target enemy unit within 24\" takes 3 hit with AP(0).", "charge": 7, "category": "water"},
+        "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP(7).", "charge": 5, "category": "air"},
+        "violent_gale": {"name": "Violent Gale", "description": "Target enemy unit within 18\" take 3 hits with AP(0) and is pushed 3\" away from this model.", "charge": 7, "category": "air"},
+        "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 6, "category": "air"},
+        "crystal_volley": {"name": "Crystal Volley", "description": "Target enemy unit within 12\" takes 5 hits each with AP(1).", "charge": 7, "category": "earth"},
+        "earthen_armor": {"name": "Earthen Armor", "description": "Target friendly unit within 12\" gains +1 Save until the end of the turn.", "charge": 6, "category": "earth"},
+        "earthquake": {
+            "name": "Earthquake",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP(1). Roll a d10 for all units within 3\" of it. On a 5 or less that unit is hit as well",
+            "charge": 5,
+            "category": "earth"
+        },
+        "wild_frenzy": {"name": "Wild Frenzy", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "category": "nature"},
+        "entangling_roots": {
+            "name": "Entangling Roots",
+            "description": "Target enemy unit within 12\" takes 3 hit with AP(0) and has -2\" Movement until the end of the turn.",
+            "charge": 6,
+            "category": "nature"
+        },
+        "poison_spores": {"name": "Poison Spores", "description": "Target enemy unit within 12\" takes 3 hits with AP(2).", "charge": 7, "category": "nature"},
+        "molten_iron": {"name": "Rust", "description": "Target enemy unit within 12\" has -1 Save until end of turn.", "charge": 5, "category": "metal"},
+        "silver_bolt": {
+            "name": "Silver Bolt",
+            "description": "Target enemy unit within 12\" takes 1 hit with AP(3). This power may be cast unlimited times per turn.",
+            "charge": 7,
+            "category": "metal"
+        },
+        "magic_shield": {
+            "name": "Magic Shield",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored. This power may be cast unlimited times.",
+            "charge": 6,
+            "category": "metal"
+        },
+        "cloak_of_shadows": {
+            "name": "Cloak of Shadows",
+            "description": "Target a friendly unit within 12\". Until the end of the turn models suffer -1 Accuracy when shooting at this unit.",
+            "charge": 6,
+            "category": "shadow"
+        },
+        "soul_dagger": {"name": "Soul Dagger", "description": "Target enemy model within 12\" takes 1 hit with AP(3).", "charge": 7, "category": "shadow"},
+        "fright": {"name": "Fright", "description": "Target enemy unit within 12\" gains 2 Shock.", "charge": 5, "category": "shadow"},
+        "inspiration": {"name": "Inspiration", "description": "Target friendly unit within 12\" removes 2 Shock.", "charge": 5, "category": "light"},
+        "blinding_shield": {
+            "name": "Blinding Shield",
+            "description": "Target a friendly unit within 12\". Until the end of the turn models suffer -1 Strength when targeting this unit with a melee attack.",
+            "charge": 6,
+            "category": "light"
+        },
+        "smite": {"name": "Smite", "description": "Target enemy unit within 18\" takes 3 hits with AP(0). This power may be cast unlimited times per turn.", "charge": 7, "category": "light"},
+        "drain_life": {
+            "name": "Drain Life",
+            "description": "Target enemy model within 12\" takes 1 hit with AP(3). If the model is slain restore 1 wound to this model.",
+            "charge": 5,
+            "category": "death"
+        },
+        "doom": {"name": "Doom", "description": "Target enemy unit within 12\" has -1 Courage until the end of the turn.", "charge": 6, "category": "death"},
+        "spectral_grasp": {"name": "Spectral Grasp", "description": "Target enemy unit within 18\" take 3 hits with AP(0) and is pulled 3\" towards this model.", "charge": 7, "category": "death"},
+        "frost_lance": {"name": "Frost Lance", "description": "Target enemy unit within 24\" takes 1 hit with AP(3).", "charge": 7, "category": "ice"},
+        "hailstorm": {"name": "Hailstorm", "description": "Target enemy unit within 18\" takes 3 hits with AP(1) and has -1 Accuracy until the end of the turn.", "charge": 6, "category": "ice"},
+        "avalanche": {"name": "Avalanche", "description": "Roll a d10 for each enemy units within 9\". On a roll of 5 or lower the unit hit takes 3 hits with AP(3).", "charge": 5, "category": "ice"}
+    },
+    "relics": {
+        "inspired": {
+            "name": "Inspired",
+            "rule": "legend_courage",
+            "description": "Upgrade one Leader model with Inspired.",
+            "flavor": "This model inspires the best in those who serve them.",
+            "points": 5
+        },
+        "expert_fighter": {
+            "name": "Expert Fighter",
+            "rule": "legend_expert_fighter",
+            "description": "Upgrade one Leader model with Expert Fighter.",
+            "flavor": "This model has fought in many close quarters fights and survived.",
+            "points": 5
+        },
+        "quick_reflexes": {
+            "name": "Quick Reflexes",
+            "rule": "legend_quick_reflexes",
+            "description": "Upgrade one Leader model with Quick Reflexes.",
+            "flavor": "This model has expert awareness and can react quickly.",
+            "points": 5
+        }
+    },
+    "alliances": {
+        "death": {"name": "Bringers of Death"},
+        "destruction": {"name": "Forces of Destruction"},
+        "order": {"name": "Keepers of Order"},
+        "doom": {"name": "Instruments of Doom"},
+        "mercenaries": {"name": "Mercenaries"}
+    },
+    "powerCategories": {
+        "fire": {"name": "Fire"},
+        "water": {"name": "Water"},
+        "earth": {"name": "Earth"},
+        "air": {"name": "Air"},
+        "ice": {"name": "Ice"},
+        "nature": {"name": "Nature"},
+        "metal": {"name": "Metal"},
+        "light": {"name": "Light"},
+        "shadow": {"name": "Shadow"},
+        "death": {"name": "Death"}
+    },
+    "strategies": {
+        "firing_ports": {
+            "name": "Firing Ports",
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "description": "Use when activating an _Infantry_ unit embarked in a Transport. That unit may make a single _Shoot_ action.",
+            "flavor": "Mechanized forces usually have modified firing ports to allow infantry to fire their weapons while embarked.",
+            "cost": 1
+        },
+        "rapid_disembark": {
+            "name": "Rapid Disembark",
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "description": "Use when activating a transport _Vehicle_ unit. At any time during this unit's activation, all embarked units may make a free _Move_ action to disembark. This may be used even after the transport has taken 2 _Move_ actions.",
+            "flavor": "Rapidly disembarking is a difficult feat only for those expertly trained.",
+            "cost": 1
+        },
+        "well_built": {
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "name": "Well-Built",
+            "flavor": "Expertly built and well-maintained, this vehicle is prepared for battle.",
+            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+            "cost": 2
+        },
+        "toughness": {
+            "subfactions": ["toughness_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These fighters are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        "durability": {
+            "subfactions": ["toughness_focus"],
+            "name": "Durability",
+            "phase": "activation",
+            "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
+            "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
+            "cost": 1
+        },
+        "might": {
+            "subfactions": ["toughness_focus"],
+            "name": "Machine Might",
+            "phase": "activation",
+            "description": "Use when a _Vehicle_ unit attacks in melee. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        "bolster": {
+            "subfactions": ["siege_focus"],
+            "name": "Bolster",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit is targeted by an enemy. If it did not move this round, that unit may increase its cover level by 1 (none to soft, soft to hard).",
+            "flavor": "A strong defensive position ensures greater survival, even against the toughest of weapons.",
+            "cost": 1
+        },
+        "devastation": {
+            "subfactions": ["siege_focus"],
+            "name": "Devastation",
+            "phase": "activation",
+            "description": "Use before shooting with a unit. The target reduces its cover level by 1 (hard to soft, soft to none).",
+            "flavor": "Finding and exploiting a vulnerable piece of cover can lead to devastating results.",
+            "cost": 1
+        },
+        "rapid_fire": {
+            "subfactions": ["siege_focus"],
+            "name": "Rapid Fire",
+            "phase": "activation",
+            "description": "Use before an _Infantry_ unit performs a _Shoot_ action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        "psychic_aim": {
+            "subfactions": ["power_focus"],
+            "name": "Psychic Aim",
+            "phase": "activation",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see.",
+            "flavor": "Magic vision can be used to guide one's aim.",
+            "cost": 1
+        },
+        "channeling": {
+            "subfactions": ["power_focus"],
+            "name": "Channeling",
+            "phase": "activation",
+            "flavor": "With focus and energy, even the most difficult powers can be manifested.",
+            "description": "Use before a unit rolls for casting a power. The spell charge value is increased by 1 and the spell has +6\" of range.",
+            "cost": 1
+        },
+        "dispel": {
+            "subfactions": ["power_focus"],
+            "name": "Dispel",
+            "phase": "activation",
+            "description": "Use when a Power(x) test is taken within 24\" of an Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "flavor": "With vigilant training, one can protect themselves from magic powers.",
+            "cost": 1
+        },
+        "ambush": {
+            "subfactions": ["stealth_focus"],
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "With countless battles experienced, these fighters are trained to react to any situation.",
+            "cost": "1/per"
+        },
+        "conceal": {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Imperial marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        "stealth_move": {
+            "subfactions": ["stealth_focus"],
+            "name": "Stealth Move",
+            "phase": "activation",
+            "flavor": "Moving quietly is sometimes key in advancing on the enemy.",
+            "description": "Use this strategy when an _Infantry_ unit performs a _Move_ action. Enemy units may not perform reactions to that _Move_ action.",
+            "cost": 1
+        },
+        "moving_fire": {
+            "subfactions": ["assault_focus"],
+            "name": "Moving Fire",
+            "phase": "activation",
+            "flavor": "These fighters are trained to shoot while moving to maintain pressure on their enemies.",
+            "description": "Use after an _Infantry_ unit makes a _Move_ action. That unit may make a free _Shoot_ action with -1 Accuracy. Any weapons with _Assault_ may ignore the -1 Accuracy penalty.",
+            "cost": 1
+        },
+        "fury": {
+            "subfactions": ["assault_focus"],
+            "name": "Fury",
+            "phase": "activation",
+            "flavor": "These marines are furious in resolve and can rip through their enemies.",
+            "description": "Use when an _Infantry_ unit makes a _Fight_ action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        "assault": {
+            "subfactions": ["assault_focus"],
+            "name": "Assault",
+            "phase": "activation",
+            "flavor": "With a furious charge, these marines move into combat quickly.",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the _Charge_ action.",
+            "cost": 1
+        },
+        "tactical_retreat": {
+            "subfactions": ["tactical_focus"],
+            "name": "Tactical Retreat",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit attempts to fall back from melee. That unit automatically passes the Initiative check required to fall back.",
+            "flavor": "A quick tactical retreat and a burst of fire can cause an enemy a lot of problems.",
+            "cost": 1
+        },
+        "encircle": {
+            "subfactions": ["tactical_focus"],
+            "name": "Encircle",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Encirclement reserves before the game begins. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "flavor": "With speed and ferocity, these marines can outflank their enemies.",
+            "cost": "1/per"
+        },
+        "re_organize": {
+            "subfactions": ["tactical_focus"],
+            "name": "Re-organize",
+            "phase": "activation",
+            "description": "Use at any point during an _Infantry_ unit's activation. That unit may split into two separate units or merge with another unit of the same data-sheet. This may not exceed the maximum unit size or go below the unit's minimum size.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        "vigilance": {
+            "subfactions": ["vigilance_focus"],
+            "name": "Vigilance",
+            "phase": "activation",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these troops are trained to react to any situation.",
+            "cost": 1
+        },
+        "cautious": {
+            "subfactions": ["vigilance_focus"],
+            "name": "Cautious",
+            "phase": "activation",
+            "description": "Use after an _Infantry_ unit performs a _Move_ action. That unit may perform a free Hold action.",
+            "flavor": "Cautious movement can be key to staying alive.",
+            "cost": 1
+        },
+        "overcharge": {
+            "phase": "activation",
+            "subfactions": ["vigilance_focus"],
+            "name": "Overcharge",
+            "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
+            "description": "Use when an _Infantry_ unit makes a _Shoot_ action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        "quick_aim": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Quick Aim",
+            "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
+            "flavor": "These fighters are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
+            "cost": 1
+        },
+        "run_them_down": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Run Them Down",
+            "description": "Use when a _Vehicle_ makes a _Charge_ action. The Impact Rule gains +1 AP for the charge.",
+            "flavor": "Those clans with a focus on speed enjoy putting a little extra oomph on their vehicles, making them hit just a little harder when they ram into something.",
+            "cost": 1
+        },
+        "push_it": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Push It",
+            "description": "Use when a unit makes a _Move_ action. It gains +3\" move for that action",
+            "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
+            "cost": 1
+        },
+        "terror": {
+            "subfactions": ["shock_focus"],
+            "name": "Terror",
+            "phase": "activation",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage until the end of its activation.",
+            "flavor": "These guardians invoke a sense of fear in their enemies which has not been seen before.",
+            "cost": 1
+        },
+        "frozen_in_fear": {
+            "subfactions": ["shock_focus"],
+            "name": "Frozen in Fear",
+            "phase": "activation",
+            "flavor": "Letting out a terrible cry can sometimes leave enemies unable to react to what is happening.",
+            "description": "Use this strategy when an _Infantry_ unit performs a _Move_ action. Enemy units may not perform reactions to that _Move_ action.",
+            "cost": 1
+        },
+        "shock_tactics": {
+            "subfactions": ["shock_focus"],
+            "phase": "activation",
+            "name": "Shock Tactics",
+            "description": "Use when fighting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
+            "flavor": "With a sudden strike these fighters bring fear to their targets keeping them from retaliating.",
+            "cost": 1
+        },
+        "weak_point": {
+            "subfactions": ["firepower_focus"],
+            "name": "Weak Point",
+            "phase": "activation",
+            "description": "Use before a unit performs a _Shoot_ action. The target reduces its cover level by 1 (hard to soft, soft to none).",
+            "flavor": "Aiming for the enemy's weak point can sometimes ignore cover all together.",
+            "cost": 1
+        },
+        "burst_fire": {
+            "subfactions": ["firepower_focus"],
+            "name": "Overwhelming Firepower",
+            "phase": "activation",
+            "description": "Use before an _Infantry_ unit performs a _Shoot_ action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "Burst fire can be relatively effective in taking down most targets.",
+            "cost": 1
+        },
+        "crack_shot": {
+            "subfactions": ["firepower_focus"],
+            "name": "Crack Shot",
+            "phase": "activation",
+            "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
+            "flavor": "In rare occasions, weapons can be used past their effective ranges.",
+            "cost": 1
+        },
+        "rallying_move": {
+            "subfactions": ["morale_focus"],
+            "name": "Rallying Move",
+            "phase": "activation",
+            "description": "Use before a unit takes a _Move_ action. That unit may perform a free Rally action.",
+            "flavor": "Regroup and recovering before moving out can help organize for a push.",
+            "cost": 1
+        },
+        "never_surrender": {
+            "subfactions": ["morale_focus"],
+            "name": "Never Surrender",
+            "phase": "activation",
+            "description": "Use when a unit would break from morale or be destroyed due to a morale test. That unit does not break and is not destroyed.",
+            "flavor": "True toughness is standing and facing utter defeat with courage.",
+            "cost": 2
+        },
+        "bravery": {
+            "subfactions": ["morale_focus"],
+            "name": "Bravery",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "These fighters are particularly brave in the face of many horrors.",
+            "cost": 1
+        }
+    }
+}
