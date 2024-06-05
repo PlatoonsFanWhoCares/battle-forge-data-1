@@ -135,7 +135,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
+            "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
             "keywords": [
                 "Infantry"
             ],
@@ -150,10 +150,11 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "options": [
+                        {"addWeapon": ["javelin"], "limit": 1}],
+                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },

@@ -1401,7 +1401,7 @@
         },
         "m18_hellcat": {
             "name": "M18 Hellcat",
-            "description": "A lightly armored but fast tank destroyer.",
+            "description": "A lightly armored but fast and powerful tank destroyer.",
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
@@ -1409,7 +1409,7 @@
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
-                    "name": "M4A1 Sherman",
+                    "name": "M18 Hellcat",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,

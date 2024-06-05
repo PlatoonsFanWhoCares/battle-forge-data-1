@@ -444,10 +444,10 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "rules": ["if_it_bleeds", "shield", "warband"],
-                    "weapons": ["spartha", "horse_attack"],
+                    "rules": ["if_it_bleeds", "shield", "warband", "mount_warrior_culture"],
+                    "weapons": ["spartha"],
                     "options": [
-                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"},
+                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe"], "modelLimit": "all"},
                         {"addWeapon": ["javelin", "francisca"], "limit": 1},
                         {"addRule": "light_armor", "modelLimit": 5}
                     ],
@@ -469,10 +469,110 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband"],
+                    "reflexes": 5,
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
                     "weapons": ["spear"],
-                    "options": [{"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
+                    {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                        {"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "late_liberi": {
+            "name": "Liberi",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "category": "core",
+            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "models": [
+                {
+                    "name": "Liberi",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "weapons": ["spear"],
+                    "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
+                    {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                        {"addWeapon": ["javelin"], "limit": 1}],
+                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "latest_liberi": {
+            "name": "Liberi",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "category": "core",
+            "subfactions": ["capetian_french"],
+            "models": [
+                {
+                    "name": "Liberi",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "weapons": ["spear"],
+                    "options": [
+                        {"addWeapon": ["javelin"], "limit": 1}],
+                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "select_liberi": {
+            "name": "Skilled Liberi",
+            "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself, often if freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him.",
+            "category": "core",
+            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "models": [
+                {
+                    "name": "Liberi",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "weapons": ["spear"],
+                    "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
+                    {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                    {"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "late_select_liberi": {
+            "name": "Skilled Liberi",
+            "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself, often if freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him.",
+            "category": "core",
+            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "models": [
+                {
+                    "name": "Liberi",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "weapons": ["spear"],
+                    "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
+                    {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                    {"addWeapon": ["javelin"], "limit": 1}],
                     "min": 5,
                     "max": 15
                 }
@@ -492,7 +592,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["unarmed", "bow"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"}, {"addRule": "agile", "modelLimit": "all"}],
                     "min": 5,
@@ -517,6 +617,30 @@
                     "rules": ["buckler", "if_it_bleeds", "skirmisher_formation", "warband"],
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceRule": "buckler", "withRule": ["shield"], "modelLimit": "all"}, {"addRule": "agile", "modelLimit": "all"}],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "elite_liberi": {
+            "name": "Veteran Liberi",
+            "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself, often if freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him.",
+            "category": "rare",
+            "subfactions": ["later_merovingian_franks"],
+            "models": [
+                {
+                    "name": "Liberi",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband"],
+                    "weapons": ["spear"],
+                    "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
+                    {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                        {"addWeapon": ["javelin", "francisca"], "limit": 1}],
                     "min": 5,
                     "max": 15
                 }
@@ -568,7 +692,7 @@
                         {"addWeapon": ["javelin", "francisca"], "limit": 1},
                         {"addRule": ["stubborn", "light_armor"], "modelLimit": "all"}
                     ],
-                    "notes": "Carol Cab Osprey states source that indicates this existed.",
+                    "notes": "Carol Cav Osprey states source that indicates this existed.",
                     "min": 5,
                     "max": 10
                 }
@@ -967,11 +1091,10 @@
                     "defense": 5,
                     "reflexes": 6,
                     "rules": ["mount_warrior_culture", "shield", "spearmen"],
-                    "weapons": ["spartha", "javelin", "horse_attack"],
+                    "weapons": ["spear", "javelin", "horse_attack"],
                     "options": [
-                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
-                        {"addWeapon": "bow"},
+                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe", "spatha"], "modelLimit": "all"},
+                        {"addWeapon": "javelin"},
                         {"addRule": ["light_armor", "heavy_armor"], "limit": 1, "modelLimit": "all"}
                     ],
                     "min": 5,
@@ -998,7 +1121,6 @@
                     "weapons": ["spartha", "javelin"],
                     "options": [
                         {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "lance"], "modelLimit": "all"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"addRule": ["light_armor", "heavy_armor"], "limit": 1, "modelLimit": "all"}
                     ],
                     "min": 5,

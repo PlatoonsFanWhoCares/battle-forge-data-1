@@ -652,11 +652,7 @@
           "weapons" : [
             "spear",
             "hand_weapon",
-            "shield",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
+            "shield"
           ],
           "options" : [
             {
@@ -1276,11 +1272,7 @@
           ],
           "weapons" : [
             "javelin",
-            "hand_weapon",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
+            "hand_weapon"
           ],
           "options" : [
             {
@@ -1320,11 +1312,7 @@
           ],
           "weapons" : [
             "javelin",
-            "hand_weapon",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
+            "hand_weapon"
           ],
           "options" : [
             {
@@ -1369,11 +1357,7 @@
           ],
           "weapons" : [
             "javelin",
-            "hand_weapon",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
+            "hand_weapon"
           ],
           "options" : [
             {
