@@ -546,7 +546,8 @@
               "replaceWeapon" : "spear",
               "withWeapon" : [
                 "spartha",
-                "hand_axe"
+                "hand_axe",
+                "heavy_throwing_spear"
               ]
             },
             {
@@ -597,7 +598,7 @@
             "warrior_culture"
           ],
           "weapons" : [
-            "hand_weapon",
+            "throwing_spear",
             "shield"
           ],
           "options" : [
@@ -916,7 +917,7 @@
     },
     "light_geoguth" : {
       "name" : "Light Geoguth Warriors",
-      "description" : "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains",
+      "description" :  "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. These men would often dine and live with their 'lord' until they were given land (A fief basically, sometimes their own father's fief) and thus able to marry. Typically these men followed less experienced leaders, warlords, and chieftains. However, as the sons of more experienced warriors, they could be found among powerful lords as well.",
       "subfactions" : [
         "anglian_kingdoms_heptarchy"
       ],
@@ -966,7 +967,7 @@
     },
     "heavy_geoguth" : {
       "name" : "Geoguth Spearmen Warriors",
-      "description" : "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. Typically these men followed less experienced leaders, warlords, and chieftains.",
+      "description" :  "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. These men would often dine and live with their 'lord' until they were given land (A fief basically, sometimes their own father's fief) and thus able to marry. Typically these men followed less experienced leaders, warlords, and chieftains. However, as the sons of more experienced warriors, they could be found among powerful lords as well.",
       "category" : "core",
       "subfactions" : [
         "anglian_kingdoms_heptarchy"
@@ -1107,7 +1108,7 @@
           ],
           "weapons" : [
             "shield",
-            "hand_weapon"
+            "throwing_spear"
           ],
           "options" : [
             {

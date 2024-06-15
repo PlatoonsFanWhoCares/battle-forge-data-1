@@ -209,10 +209,9 @@
                     "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["spear", "shield"], 
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -238,10 +237,11 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield"], 
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"}, {"addRule": "stubborn"},
+                    {"replaceRule": "sell_sword", "withRule": ["stubborn"]}
+                ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -267,10 +267,9 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield"], 
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -299,7 +298,7 @@
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -325,10 +324,9 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield"], 
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -388,9 +386,10 @@
                 "weapons": ["spartha", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"},{"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                            {"replaceWeapon": "spartha", "withWeapon": "throwing_spear"},
                             {"replaceWeapon": "javelin", "withWeapon": "lance"}],
                 "min": 5,
-                "max": 10
+                "max": 15
             }
         ]
     },

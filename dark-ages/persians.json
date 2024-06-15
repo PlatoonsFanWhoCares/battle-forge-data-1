@@ -592,12 +592,12 @@
                 }
             ]
         },
-        "roxolani_noble_cavalry_lancers": {
-            "name": "Roxolani Noble Cavalry Lancers",
+        "noble_clibanarii_lancers": {
+            "name": "Noble Clibanarii Lancers",
             "description": "Overtime the Sarmatians began to mimic their Iranian or Turkic ancestors, wearing increasing amounts of scale, cloth, and mail armor, and adopting shock cavalry tactics.",
             "category": "elite",
-            "subfactions": ["none", "latter_persian"],
-            "keywords": ["Cavalry"],
+            "subfactions": ["none", "latter_persian", "early_persian"],
+            "keywords": ["Cavalry", "Drilled"],
             "models": [
                 {
                     "name": "Roxolani Noble",

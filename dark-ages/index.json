@@ -214,6 +214,15 @@
         }
       ]
     },
+    "throwing_spear" : {
+      "name" : "Throwing Spear",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 1,
+      "rules" : [
+        "overhead_throw"
+      ]
+    },
     "pike" : {
       "name" : "Pike",
       "attacks" : 1,
@@ -245,7 +254,7 @@
       "name" : "Javelins",
       "attacks" : 1,
       "short" : 12,
-      "ap" : 1,
+      "ap" : 0,
       "rules" : [
         "assault",
         "hurled_weapons"
@@ -267,7 +276,7 @@
       "name" : "Heavy Throwing Spears",
       "attacks" : 1,
       "short" : 6,
-      "ap" : 2,
+      "ap" : 1,
       "rules" : [
         "assault",
         "hurled_weapons"
@@ -278,21 +287,21 @@
       "attacks" : 1,
       "short" : 9,
       "medium" : 18,
-      "ap" : 1
+      "ap" : 0
     },
     "bow" : {
       "name" : "Bow",
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
-      "ap" : 1
+      "ap" : 0
     },
     "sling" : {
       "name" : "Sling",
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
-      "ap" : 1,
+      "ap" : 0,
       "rules" : [
         "rapid_fire"
       ]
@@ -302,7 +311,7 @@
       "attacks" : 2,
       "short" : 12,
       "medium" : 24,
-      "ap" : 2,
+      "ap" : 1,
       "rules" : [
         "rapid_fire"
       ]
@@ -312,7 +321,7 @@
       "attacks" : 1,
       "short" : 15,
       "medium" : 30,
-      "ap" : 2,
+      "ap" : 1,
       "rules" : [
         "indirect"
       ]
@@ -485,6 +494,13 @@
         0
       ]
     },
+    "overhead_throw" : {
+      "name" : "Overhead Throw",
+      "description" :  "When Charging; This weapon may engage and fight models up to 1\" away. Enemy models count as engaged and must still move into base contact to fight unless they also have reach.",
+      "points" : [
+        0.5
+      ]
+    },
     "skirmisher_formation" : {
       "name" : "Skirmisher Formation",
       "description" : "This unit has +1 Save against ranged attacks made at long range or at a range of more than 6\" and -1 Save against melee attacks.",
@@ -533,6 +549,14 @@
         -2
       ]
     },
+    "sell-sword" : {
+      "name" : "Sell Sword",
+      "description" : "",
+      "flavor" : "",
+      "points" : [
+        -1
+      ]
+    },
     "light_footed" : {
       "name" : "Light Footed",
       "description" : "This unit gets +1 Movement.",
@@ -558,12 +582,12 @@
     },
     "mount_horse" : {
       "name" : "Mounted (Horse)",
-      "description" : "Increase this model's Movement by 2\". This model may dismount at the end of any Move action. A model that has dismounted may no longer remount.",
+      "description" : "Increase this model's Movement by 2\", unless the unit is save 9 (Melee or Ranged), in which case movement increases by only 1\". This model may dismount at the end of any Move action. A model that has dismounted may no longer remount.",
       "points" : 2
     },
     "war_horse" : {
       "name" : "War Horse (Destrier/Stallion)",
-      "description" : "Increase this model's Movement by 2\". This model may dismount at the end of any Move action. A model that has dismounted may no longer remount. This model gets an additional Melee attack with AP0.",
+      "description" : "Increase this model's Movement by 2\", unless the unit is save 9 (Melee or Ranged), in which case movement increases by only 1\". This model may dismount at the end of any Move action. A model that has dismounted may no longer remount. This model gets an additional Melee attack with AP0.",
       "points" : 3
     },
     "travel_horse" : {

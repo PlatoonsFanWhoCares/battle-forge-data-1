@@ -3,7 +3,7 @@
     "name": "British And Welsh Kingdoms (Brythonic)",
     "subfactions": {
         "south_welsh": {
-            "name": "Southern Welsh (600-1100)",
+            "name": "Southern Welsh / Gwent (600-1100)",
             "phase": "activation",
             "id": "south_welsh",
             "description": "While seperated and hostile to one another, the southern Welsh kingdoms could easily unify to resist Anglo-Saxon aggression. They were heavily renown for their use of the bow, and became an inspiration to future generations.",
@@ -11,7 +11,7 @@
         }
     ,
         "powys": {
-            "name": "Eastern Welsh (600-720)",
+            "name": "Eastern Welsh/Powys (600-720)",
             "phase": "activation",
             "id": "powys",
             "description": "Before they were occupied by the Anglo-Saxons, these people made moderate use of the bow and were most successful in battle when raiding Anglo-Saxon settlers.",
@@ -34,7 +34,7 @@
         "restricted": "true"
     },
         "early_strathclyde": {
-            "name": "Northern Welsh (500-700)",
+            "name": "Northern Welsh / Strathclyde (500-700)",
             "phase": "activation",
             "id": "early_strathclyde",
             "description": "South of the Picts and Scots, north of the Angles and Romano-British, lived four Celtic kingdoms. The strongest and best remembered was Strathclyde. These areas treasured their horses more than all others in the British Isles, and would thus work the hardest to have the finest horses and mounted warriors.",
@@ -54,13 +54,6 @@
             "phase": "activation",
             "id": "dumnonia",
             "description": "This Celtic/Welsh area contained Dumnonia, which has lands suitable for the raising of horses and some of the remaining Romano 'stud-farms'. This kingdom also had the best access to trade with the continent and the surviving Romans.",
-            "restricted": "true"
-        },
-        "anglian_kingdoms_heptarchy": {
-            "name": "Anglian Kingdoms Heptarchy (600-700 AD)",
-            "phase": "activation",
-            "id": "anglian_kingdoms_heptarchy",
-            "description": "The Angles/Anglos had their own kingdoms that were considered part of the 'Heptarchy', specifically East Anglia, Merica, Bernicia, and Deira. The 'North Angles' (Bernica and Deira) were unified into 'Northumbria' in 604 AD, (and despite converting after almost all the Saxon Kingdoms), they then had a 'golden age of religious and artistic works' from 650-750. ",
             "restricted": "true"
         }
     },
@@ -118,7 +111,8 @@
                     {"addRule": "agile"}, 
                     {"addRule": "reluctant"}
                 ],
-                    "min": 5,
+                "notes": "Age of Arthur, makes sense for the period.",
+                "min": 5,
                     "max": 10
                 }
             ]
@@ -144,11 +138,12 @@
                     "wounds": 1,
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
-                    {"replaceRule": "warrior_culture", "withRule": "spearmen"},
+                    {"replaceRule": "warrior_culture", "withRule": "light_spearmen"},
                     {"addRule": "reluctant"}
                 
                 ],
-                    "min": 5,
+                "notes": "Age of Arthur, makes sense for the period.",
+                "min": 5,
                     "max": 15
                 }
             ]
@@ -176,7 +171,8 @@
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
                 {"replaceRule": "light_spearmen", "withRule": "warrior_culture"}
             ],
-                    "min": 5,
+            "notes": "WAB: ShieldWall",
+            "min": 5,
                     "max": 15
                 }
             ]
@@ -207,7 +203,8 @@
                     {"replaceRule": ["warrior_culture", "light_infantry"], "withRule": "spearmen"},
                     {"addRule": "reluctant"}
                 ],
-                    "min": 5,
+                "notes": "Total War: Attila: Charlemagne. Is similar to other cultures of the period. WAB doesn't give enough unit choices and it's dumb.",
+                "min": 5,
                     "max": 10
                 }
             ]
@@ -910,9 +907,9 @@
         },
         "helwyr": {
             "name": "Helwyr",
-            "description": "Helwyr (Hunters) were those likely to have an example of the early Welsh longbow. Made of elm, the early Welsh longbow was based around power, rather than long range. '",
+            "description": "Helwyr (Hunters) were those likely to have an example of the early Welsh longbow. Made of elm, the early Welsh longbow was based around power, rather than long range.'",
             "category": "rare",
-            "subfactions": ["gwynedd", "powys"],
+            "subfactions": ["gwynedd", "powys", "south_welsh"],
             "min": 1,
             "max": 1,
             "rules": ["skirmisher_formation", "warband", "if_it_bleeds"],
@@ -947,7 +944,7 @@
                         },
                         {"addRule": "agile"}
                     ],
-                    "notes": "Add special rules here",
+                    "notes": "The Longbow, Osprey ; Ravenfeast mentions an article. Welsh Bow/ Welsh Longbow is present in Total War: ATTILA - Age of Charlemagne.",
                     "rules": [],
                     "min": 5,
                     "max": 10
@@ -1088,14 +1085,14 @@
         "cost": 1
     },
     {
-        "subfactions": ["early_gwynedd"],
+        "subfactions": ["powys"],
         "phase": "The Hunt",
         "description": "Use before shooting with a unit. Add 3' to the short and long ranges of all weapons for that unit.",
         "flavor": "",
         "cost": 1
     },
     {
-        "subfactions": ["early_gwynedd", "gwynedd", "early_strathclyde", "dumnonia", "south_welsh"],
+        "subfactions": ["early_gwynedd", "gwynedd", "early_strathclyde", "dumnonia", "south_welsh", "none", "powys"],
         "name": "Celtic Warfare",
         "phase": "activation",
         "description": "Use after an Infantry unit makes a Move action. That unit may make a free Shoot action with -1 Accuracy. Any weapons with Assault may ignore the -1 Accuracy penalty.",
@@ -1103,7 +1100,7 @@
         "cost": 1
     },
     {
-        "subfactions": ["early_gwynedd", "gwynedd", "early_strathclyde", "dumnonia", "south_welsh"],
+        "subfactions": ["early_gwynedd", "gwynedd", "early_strathclyde", "dumnonia", "south_welsh", "none", "powys"],
         "name": "Move and Rally",
         "phase": "activation",
         "description": "Use before a unit takes a Move action. After the move, that unit may perform a free Rally action.",
@@ -1111,15 +1108,15 @@
         "cost": 1
     },
     {
-        "subfactions": ["gwynedd"],
+        "subfactions": ["gwynedd", "early_strathclyde", "south_welsh", "early_gwynedd"],
         "name": "Mixed Weapons",
         "phase": "activation",
-        "description": "Use before a unit makes a charge action (Requires unit to have javelins and no spears), half the unit's figures may make a 'Shoot' action with their javelins.",
+        "description": "Use before a unit makes a charge action (Requires unit to have javelins and no spears), half the unit's figures may make a 'Shoot' action with their javelins. (There are no penalties for shooting this way.)",
         "flavor": "",
         "cost": 1
     },
     {
-        "subfactions": ["south_welsh"],
+        "subfactions": ["south_welsh", "powys"],
         "name": "Through The Door",
         "phase": "activation",
         "description": "Use before a unit makes a Shoot action with Bows or Welsh longbows. The Shoot action gains +1 AP.",

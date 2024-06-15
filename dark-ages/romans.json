@@ -34,7 +34,7 @@
       "name" : "Byzantine Empire (583-641 AD)",
       "phase" : "activation",
       "id" : "byzantine_empire",
-      "description" : "",
+      "description" : "This was the period of the reforms of Emperor Maurice. He was a memember of the Julian dynasty, but his armies more resembled the Heraclian successors.",
       "restricted" : "true"
     },
     "three_short" : {
@@ -612,7 +612,7 @@
           "wounds" : 1,
           "rules" : [
             "light_infantry",
-            "spearmen"
+            "light_spearmen"
           ],
           "weapons" : [
             "shield",
@@ -643,26 +643,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "veteran_limitanei" : {
       "name" : "Guard Limitanei",
@@ -691,7 +672,7 @@
           "rules" : [
             "light_infantry",
             "stubborn",
-            "spearmen"
+            "light_spearmen"
           ],
           "weapons" : [
             "spear",
@@ -721,26 +702,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "milites" : {
       "name" : "Milites",
@@ -793,26 +755,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "palatini_milites" : {
       "name" : "Palatinae Milites",
@@ -868,26 +811,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "semissalis" : {
       "name" : "Semissalis",
@@ -943,26 +867,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "sagittarii" : {
       "name" : "Sagittarii",
@@ -999,26 +904,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "equites" : {
       "name" : "Equites",
@@ -1045,7 +931,8 @@
           "rules" : [
             "light_cavalry",
             "shield",
-            "war_horse"
+            "horse", 
+            "mount_warrior_culture"
           ],
           "weapons" : [
             "spartha",
@@ -1071,26 +958,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "equites_scout" : {
       "name" : "Equites Scouts",
@@ -1138,30 +1006,11 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "heavy_stratiotai_equites" : {
       "name" : "Heavy Stratiotai Equites",
-      "description" : "The Stratiotai were holders of a 'Strateia', a general military service obligation. These men were banned from agricultural work and commercial employment, and they had reduced taxes. Justinian had laws banning them from private employment, with huge fines to employers (Likely nobles wanting mercenaries). The Stratiotai resembled state pay and supplies when they build public buildings or took part in military campaigns. In sources, Stratiotai are classified as separate from 'foederati' and 'phoideratoi'. During this time infantry was increasingly relegated to being secondary importance and status, while most of the armed forces were made up of foreigners or partial foreigners.",
+      "description" : "The Stratiotai were holders of a 'Strateia', a general military service obligation. These men were banned from agricultural work and commercial employment, and they had reduced taxes. Justinian had laws banning them from private employment, with huge fines to employers (Likely nobles wanting mercenaries). The Stratiotai received state pay and supplies when they build public buildings or took part in military campaigns. In sources, Stratiotai are classified as separate from 'foederati' and 'phoideratoi'. During this time infantry was increasingly relegated to being secondary importance and status, while most of the armed forces were made up of foreigners or partial foreigners.",
       "category" : "core",
       "subfactions" : [
         "byzantine_empire",
@@ -1218,26 +1067,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "veteran_equites_sagitarii" : {
       "name" : "Veteran Equites Sagittarii",
@@ -1287,26 +1117,7 @@
           "max" : 10
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "eastern_equites_sagittarii" : {
       "name" : "Eastern Equites Sagittarii",
@@ -3156,10 +2967,10 @@
     },
     "phoideratoi" : {
       "name" : "Phoideratoi",
-      "description" : "The 'Phoideratoi' ('Allies'), had evolved from the Foederati and were regularly paid units, that were mixed units consisting of 'romans' and 'barbarians'. Over time they became increase 'roman' and professional, till they were functionally indistinguishable from other infantry.",
+      "description" : "The 'Phoideratoi' ('Allies'), had evolved from the Foederati and were regularly paid units, that were mixed units consisting of 'Romans' and 'barbarians'. Over time they became increase 'Roman' and professional, till they were functionally indistinguishable from other infantry.",
       "category" : "core",
       "subfactions" : [
-        "early_byzantine_empire"
+        "early_byzantine_empire", "byzantine_empire"
       ],
       "keywords" : [
         "Drilled",
@@ -3199,29 +3010,10 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "mounted phoideratoi" : {
-      "name" : "Phoideratoi Cavalry ",
+      "name" : "Phoideratoi Cavalry",
       "description" : "The 'Phoideratoi' ('Allies'), had evolved from the Foederati and were regularly paid units, that were mixed units consisting of 'romans' and 'barbarians'. Over time they became increase 'roman' and professional, till they were functionally indistinguishable from other infantry.",
       "category" : "core",
       "subfactions" : [
@@ -3285,26 +3077,174 @@
           "max" : 15
         }
       ],
-      "options" : [
+      "options" : []
+    },
+    "mounted_comitatus" : {
+      "name" : "Comitatus Cavalry",
+      "description" : "",
+      "category" : "core",
+      "subfactions" : [
+        "early_byzantine_empire"
+      ],
+      "keywords" : [
+        "Drilled",
+        "Cavalry"
+      ],
+      "models" : [
         {
-          "addRule" : [
-            "champion"
+          "name" : "Comitatus Cavalry",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "rules" : [
+            "mount_horse",
+            "shield"
           ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
+          "weapons" : [
+            "spear"
           ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
+          "options" : [
+            {
+              "replaceWeapon" : "spear",
+              "withWeapon" : [
+                "spartha"
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "heavy_armor",
+                "light_armor"
+              ],
+              "limit" : 1,
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "superior_cavalry",
+                "mount_warrior_culture"
+              ],
+              "modelLimit" : "all"
+            }
           ],
-          "modelLimit" : 1
+          "notes": "GG, Limit of 2",       
+          "min" : 5,
+          "max" : 15
         }
-      ]
+      ],
+      "options" : []
+    },
+    "mounted_archer_comitatus" : {
+      "name" : "Comitatus Archer Cavalry",
+      "description" : "",
+      "category" : "core",
+      "subfactions" : [
+        "early_byzantine_empire"
+      ],
+      "keywords" : [
+        "Drilled",
+        "Cavalry"
+      ],
+      "models" : [
+        {
+          "name" : "Comitatus Cavalry",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "rules" : [
+            "mount_horse",
+            "buckler"
+          ],
+          "weapons" : [
+            "composite_bow", "hand_weapon"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "hand_weapon",
+              "withWeapon" : [
+                "spartha"
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "heavy_armor",
+                "light_armor"
+              ],
+              "limit" : 1,
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "superior_cavalry",
+                "mount_warrior_culture"
+              ],
+              "modelLimit" : "all"
+            }
+          ],
+          "notes": "GG, Limit of 2. I need to rename this unit.",       
+          "min" : 5,
+          "max" : 15
+        }
+      ],
+      "options" : []
+    },
+    "mounted_kontos_comitatus" : {
+      "name" : "Comitatus Kontos Cavalry",
+      "description" : "",
+      "category" : "core",
+      "subfactions" : [
+        "early_byzantine_empire"
+      ],
+      "keywords" : [
+        "Drilled",
+        "Cavalry"
+      ],
+      "models" : [
+        {
+          "name" : "Comitatus Cavalry",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "rules" : [
+            "mount_horse",
+            "buckler"
+          ],
+          "weapons" : [
+            "kontos", "hand_weapon"
+          ],
+          "options" : [
+            {
+              "addRule" : [
+                "heavy_armor",
+                "light_armor"
+              ],
+              "limit" : 1,
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "superior_cavalry",
+                "mount_warrior_culture"
+              ],
+              "modelLimit" : "all"
+            }
+          ],
+          "notes": "GG, Limit of 2. I need to rename this unit.",       
+          "min" : 5,
+          "max" : 15
+        }
+      ],
+      "options" : []
     },
     "stratiotai_skutatoi" : {
       "name" : "Stratiotai Skutatoi",
@@ -3356,26 +3296,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "stratiotai_sagittarii" : {
       "name" : "Stratiotai Sagittarii",
@@ -3413,26 +3334,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "milita_kontaratoi" : {
       "name" : "Militia Kontaratoi Themata",
@@ -3547,26 +3449,7 @@
           "max" : 15
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "bagaudae" : {
       "name" : "Bagaudae",
@@ -3677,6 +3560,11 @@
       "cost" : 1
     },
     "combat_reform" : {
+      "subfactions" : [
+        "early_byzantine_empire",
+        "byzantine_empire",
+        "three_short"
+      ],
       "name" : "Combat Reform",
       "phase" : "activation",
       "description" : "Use when a _Drilled_ unit gets charged. You can move the unit up to 2\".",
@@ -3722,7 +3610,7 @@
       ],
       "phase" : "activation",
       "name" : "Shock Attack",
-      "description" : "Use when charging with a _Cavalry unit. If the attack hits, assign 2 additional Shock.",
+      "description" : "", 
       "flavor" : "After the archers dispersed the enemy, cavalry launch shock attacks to keep them from retaliating.",
       "cost" : 1
     },

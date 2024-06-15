@@ -70,10 +70,10 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["shield","hand_weapon"],
+                    "weapons": ["shield","throwing_spear"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "travel_horse"}, {"addRule": "stubborn"},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addRule": "light_armor", "modelLimit": 5}],
                     "min": 5,
                     "max": 15
@@ -101,10 +101,10 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["shield","hand_weapon"],
+                    "weapons": ["shield","throwing_spear"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "travel_horse"}, {"addRule": "stubborn"},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addRule": "light_armor", "modelLimit": 5}],
                     "min": 5,
                     "max": 15
@@ -166,11 +166,11 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["shield","hand_weapon"],
+                    "weapons": ["shield","throwing_spear"],
                     "options": [{"addRule": "stubborn"},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
                         {"addRule": "light_armor", "modelLimit": 5}],
                     "min": 5,
                     "max": 15
@@ -364,9 +364,9 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["hand_weapon", "javelin"],
-                    "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
-                    {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}, {"addRule": "agile"}
+                    "weapons": ["throwing_spear", "javelin"],
+                    "options": [{"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}, {"addRule": "agile"}
                     ],
                     "min": 5,
                     "max": 10
@@ -393,9 +393,9 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["hand_weapon", "javelin"],
-                    "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
-                    {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}
+                    "weapons": ["throwing_spear", "javelin"],
+                    "options": [{"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}
                     ],
                     "min": 5,
                     "max": 15
@@ -421,7 +421,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["javelin", "hand_weapon"],
+                    "weapons": ["javelin", "throwing_spear"],
                     "options": [
                         {"replaceWeapon": "javelin", "withWeapon": ["sling"]}, 
                         {"replaceRule": "skirmisher_formation", "withRule": ["light_infantry"]},
@@ -485,13 +485,13 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"
+                    "weapons": ["throwing_spear", "shield", "javelin"
                     ],
                     "options": [
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
                         {"addRule": "scout"},
                         {"addRule": "travel_horse"}
                     ],
@@ -520,14 +520,14 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"
+                    "weapons": ["throwing_spear", "shield", "javelin"
                     ],
                     "options": [
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
                         {"replaceWeapon": "shield", "withWeapon": ["two_handed_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"addRule": "scout"},
                         {"addRule": "travel_horse"}
@@ -557,10 +557,10 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"],
+                    "weapons": ["throwing_spear"],
                     "options": [
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "javelin"},
                         {"addRule": "mount_warrior_culture"}
                     ],
@@ -589,12 +589,12 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"
+                    "weapons": ["throwing_spear"
                     ],
                     "options": [
                         {"addRule": "buckler"},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "kontos"},
                         {"addRule": "mount_warrior_culture"}
                     ],
@@ -623,11 +623,11 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"],
+                    "weapons": ["throwing_spear"],
                     "options": [
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
                         {"addRule": "mount_warrior_culture"}],
                         "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian) both agree that thrusting spears are in and javelins are out for the Vandals.",
                     "min": 5,
@@ -655,12 +655,12 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"
+                    "weapons": ["throwing_spear"
                     ],
                     "options": [
                         {"addRule": "buckler"},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "kontos"},
                         {"addRule": "mount_warrior_culture"}
                     ],
@@ -689,12 +689,12 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"
+                    "weapons": ["throwing_spear"
                     ],
                     "options": [
                         {"addRule": "buckler"},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "kontos"},
                         {"addRule": "cloth_horse_armor"}
                     ],
@@ -723,10 +723,10 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"],
+                    "weapons": ["throwing_spear"],
                     "options": [
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "javelin"}, {"addRule": "cloth_horse_armor"}
                     ],
                     "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian)both lists the East Goths as using barding, likely copied from the Romans or Persians.",
@@ -755,11 +755,11 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword"],
+                    "weapons": ["throwing_spear"],
                     "options": [
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "javelin"}
                     ],
                     "min": 5,
@@ -771,66 +771,6 @@
             "name": "Mounted Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
             "subfactions": ["gepids_lombards", "none", "early_hre", "west_goths"],
-            "category": "core",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
-            "keywords": [
-                "Cavalry"
-            ],
-            "models": [
-                {
-                    "name": "Franci",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["sword", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor", "modelLimit": 5},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
-                    "min": 5,
-                    "max": 15
-                }
-            ]
-        },
-        "franci": {
-            "name": "Franci",
-            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["gepids_lombards", "none", "italo_lombards", "early_hre", "burgundy", "west_goths"],
-            "category": "core",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
-            "keywords": [
-                "Infantry"
-            ],
-            "models": [
-                {
-                    "name": "Franci",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
-                    "min": 5,
-                    "max": 15
-                }
-            ]
-        },
-        "vandal_franci": {
-            "name": "Vandal Franci",
-            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["vandals"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -848,11 +788,105 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield","hand_weapon"],
-                    "options": [{"addRule": "light_armor"},
+                    "weapons": ["sword", "shield"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor", "modelLimit": 5},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]}],
+                        {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "franci": {
+            "name": "Franci",
+            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
+            "subfactions": ["none", "italo_lombards", "early_hre", "burgundy", "west_goths"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "warrior_culture"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Franci",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear", "shield","hand_weapon"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "gep_lom_franci": {
+            "name": "Franci",
+            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
+            "subfactions": ["gepids_lombards"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "warrior_culture", "light_infantry", "shield"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Franci",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "vandal_franci": {
+            "name": "Vandal Franci",
+            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
+            "subfactions": ["vandals"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "light_cavalry", "shield"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Franci",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon"],
+                    "options": [{"addRule": "light_armor"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]}
+                    ],
                         "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian) both agree that thrusting spears are in and javelins are out for the Vandals.",
                     "min": 5,
                     "max": 10
@@ -895,7 +929,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
+            "rules": ["warband", "if_it_bleeds", "spearmen", "shield"],
             "keywords": [
                 "Infantry"
             ],
@@ -909,15 +943,16 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "travel_horse"},
                         {"addRule": "light_armor"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
                         {"addRule": "scout"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -950,7 +985,7 @@
                         {"addRule": "scout"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -975,12 +1010,12 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear", "shield"],
                     "options": [
                         {"addRule": "light_armor"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]}],
+                        {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]}],
                         "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian) both agree that thrusting spears are in and javelins are out for the Vandals.",
                     "min": 5,
                     "max": 10
@@ -994,7 +1029,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1008,11 +1043,12 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["throwing_spear"],
                     "options": [{"addWeapon": "javelin"},
                         {"addRule": "light_armor"},
-                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addRule": "scout"}
                     ],
                         "notes": "Hans Delbruck (Super hardcore Geramn historian) lists the West Goths as being quite talented with throwing spears from horseback.",
@@ -1042,11 +1078,12 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["throwing_spear", "shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
                         {"addRule": "light_armor"},
-                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}],
                         "notes": "Hans Delbruck (Super hardcore Geramn historian) lists the West Goths as being quite talented with throwing spears from horseback.",
                     "min": 5,
                     "max": 10
@@ -1060,7 +1097,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "superior_cavalry", "if_it_bleeds", "mount_horse", "mount_warrior_culture"],
+            "rules": ["warband", "superior_cavalry", "if_it_bleeds", "mount_horse", "mount_warrior_culture", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1074,11 +1111,12 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear"],
                     "options": [
                         {"addRule": "light_armor"}, {"addRule": "cloth_horse_armor"},
                         {"addRule": "superior_cavalry"}, {"addRule": "furious_charge"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
                     "min": 5,
                     "max": 10
@@ -1092,7 +1130,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse", "buckler"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "buckler", "mount_warrior_culture"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1299,7 +1337,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["spearmen"],
+            "rules": ["spearmen", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1313,13 +1351,13 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"],
+                    "weapons": ["sword", "javelin"],
                     "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                                {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": ["javelin", "sword"], "withWeapon": "spear"},
                                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                                 {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
                     "min": 5,
-                    "max": 1
+                    "max": 15
                 }
             ]
         },
