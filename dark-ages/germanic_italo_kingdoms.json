@@ -6,7 +6,9 @@
             "name": "Italo Lombards (775-1100 AD)",
             "phase": "activation",
             "id": "italo_lombards",
-            "description": "After the region was divided from the rest of 'Italy' by being conquered by the Frankish Empire, the cities were being rebuilt and the region was becoming a vital trade hub connecting Europe, Africa, and the Near East.",
+            "description": "The northern Lombard-Italian kingdom was conquered in 774 by the Carolingian Franks. It would over time be folded into what became the Holy Roman Empire. Northern Italia had the independent duchy of Spoleto. Southern Italia included the independent duchies of Benevento and Amalfi, along with the independent principalities of Capua and Salerno. The  remaining independent Italo-Lombards in the southern fell to the Sicilian-Normans/Italo-Normans by 1077.",
+            "gameplay_tips": "WAB: GG suggests this faction have a 1 to 1 ratio of heavy to medium cavalry, with more experianced warriors being at least half. However, unlike the other kingdoms of it's period, it suggests up to half can be Liberi and Coloni. Only the Flemish have better infantry, while this faction has perfectly good cavalry options.",
+            "design_notes": "This might need to be split into the North and South Italo-Lombards due to the latters ability to access Norman mercenaries and not other kinds that north Italia could access",
             "restricted": "true"
         },
         "early_hre": {
@@ -25,41 +27,39 @@
         }
 },
     "units": {
-        "skirmishers": {
-            "name": "Landless Skirmishers",
-            "description": "A band of the impoverished, landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons.",
-            "subfactions": [],
-            "category": "rare",
+        "coloni_skirm": {
+            "name": "Coloni Skirmishers",
+            "description": "A band of the impoverished and landless men who could only bring the clothes on their back, a short blade or club, and some ranged weapons. These 'Coloni' were fond of the bow, but generally used any ranged weapon that would prevent them from having to fight in melee. This was a common fate of people called to service, but incredibly poor, extending all the way back to the Republican Romans.",
+            "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "skirmisher_formation", "if_it_bleeds"],
-            "keywords": ["Infantry"],
+            "subfactions": ["early_hre", "burgundy", "italo_lombards", "none"],
             "models": [
                 {
                     "name": "Lowborn",
-                    "courage": 5,
                     "movement": 7,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["javelin", "hand_weapon"],
-                    "options": [{"replaceWeapon": "javelin", "withWeapon": [
-                                "bow",
-                                "sling"
-                            ]},
-                            {"addRule": "buckler"}, {"addRule": "reluctant"}, {"addRule": "agile"}
-                        ],
+                    "rules": ["if_it_bleeds", "skirmisher_formation", "warband"],
+                    "weapons": ["short_bow", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "short_bow", "withWeapon": ["sling", "javelin", "bow"], "modelLimit": "all"},
+                        {"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"},
+                        {"addRule": ["buckler", "strider", "stubborn", "agile", "reluctant"], "modelLimit": "all"}
+                    ],
+                    "notes": "LK, The Aachen capitulary contained a further provision that no soldier should carry a cudgel (baculum), but rather a bow. It's often assumed this provision applies to free peasants of impoverished or middling means",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
         "light_tribal_warriors": {
             "name": "Light Tribal Warriors",
             "description": "As the Germanic Cultures conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated or abandoned. The Gepids and Lombards included Saxons and Slavs in some of their armies.",
-            "subfactions": ["migration_period_germanics", "gepids_lombards", "none", "italo_lombards", "west_goths", "ostrogoths"
+            "subfactions": ["none", "burgundy", "italo_lombards", "early_hre"
             ],
             "category": "core",
             "min": 1,
@@ -88,7 +88,7 @@
         "tribal_warriors": {
             "name": "Tribal Warriors",
             "description": "As the Germanic Cultures conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated or abandoned. The Gepids and Lombards included Saxons and Slavs in some of their armies.",
-            "subfactions": ["migration_period_germanics", "gepids_lombards", "none", "italo_lombards", "west_goths"
+            "subfactions": ["none", "burgundy", "italo_lombards", "early_hre"
             ],
             "category": "core",
             "min": 1,
@@ -213,9 +213,9 @@
         },  
         "rich_mount_franci": {
             "name": "Merchant Militia",
-            "description": "The southern areas of Gaul/Francia, were wealthier and retained more elements of Romano-Gallo civilization. The trading ports and merchant towns of these areas could produce wealthy nobles, with vested self-interest in maintaining the current political order.",
+            "description": "The southern areas of Gaul/Francia, along with the northern areas of Italia, were wealthier and retained more elements of Romano-Gallo civilization. The trading ports and merchant towns of these areas could produce wealthy nobles, with vested self-interest in maintaining the current political order.",
             "subfactions": ["italo_lombards", "burgundy"],
-            "category": "core",
+            "category": "rare",
             "min": 1,
             "max": 1,
             "rules": ["warband", "if_it_bleeds", "mount_horse"],
@@ -240,7 +240,7 @@
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
                         {"addRule": "light_armor"}, {"addRule": "reluctant"}, {"addRule": "stubborn"}
                     ],
-                    "notes": "Carol Cab Osprey states source that indicates this existed.",
+                    "notes": "Carol Cav Osprey states source that indicates this existed.",
                     "min": 5,
                     "max": 10
                 }
@@ -249,7 +249,7 @@
         "mount_franci": {
             "name": "Mounted Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["gepids_lombards", "none", "early_hre", "west_goths"],
+            "subfactions": ["italo_lombards", "burgundy", "none", "early_hre"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -267,7 +267,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield","hand_weapon"],
+                    "weapons": ["sword", "shield"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor", "modelLimit": 5},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
@@ -279,7 +279,7 @@
         "franci": {
             "name": "Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["gepids_lombards", "none", "italo_lombards", "early_hre", "burgundy", "west_goths"],
+            "subfactions": ["italo_lombards", "burgundy", "none", "early_hre"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -308,9 +308,9 @@
         },
         "drilled_italo_franci": {
             "name": "Drilled Italian Town Militia",
-            "description": "Italy was one of the most urbanized and wealthy parts of Europe, and the townsfolk provided fairly reasonable militia.",
+            "description": "Italia was one of the most urbanized and wealthy parts of Europe, and the townsfolk provided fairly reasonable militia. This unit can also represent a well-practiced rural/village milita of middle class landowners 'Liberi'",
             "subfactions": ["italo_lombards"],
-            "category": "core",
+            "category": "rare",
             "min": 1,
             "max": 1,
             "rules": ["spearmen"],
@@ -319,7 +319,7 @@
             ],
             "models": [
                 {
-                    "name": "Franci",
+                    "name": "Liberi",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -332,15 +332,16 @@
                         {"addRule": "light_armor"}, {"addRule": "stubborn"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
+                    "notes": "WAB: GG suggests for this unit to exist. There should be only one for every 500 points.",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
         "italian_militia": {
             "name": "Italian Communal Militia",
             "description": "While northern Italy had plenty of reasonable or even good spear militia, the poorer or less trained members of its militia armies were meager.",
-            "subfactions": ["italo_lombards", "gepids_lombards"],
+            "subfactions": ["italo_lombards"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -358,11 +359,12 @@
                     "defense": 5,
                     "reflexes": 4,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear", "shield"],
                     "options": [{"addWeapon": "javelin"}, {"addWeapon": "reluctant"},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
+                    "notes": "TTS&ADLG, along with WAB:FS:HRE states this unit should be here. ADLG says its not just city or towns, but also villages or rural areas.",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -396,10 +398,38 @@
                 }
             ]
         },
+        "liberi": {
+            "name": "Liberi",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
+            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "spearmen", "shield", "scout"],
+            "keywords": [
+                "Infantry", "Heavy_Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Liberi",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"replaceWeapon": "shield", "withWeapon": ["bow"]}],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
         "later_freemen": {
             "name": "Freemen Milita",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none", "west_goths"],
+            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -418,8 +448,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["spear", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]}],
+                    "options": [{"addWeapon": "javelin"}],
                     "min": 5,
                     "max": 10
                 }
@@ -484,51 +513,20 @@
                 }
             ]
         },
-        "veteran_italo_franci": {
-            "name": "Veteran Franci Militia",
-            "description": "Among the Italo-Lombards, some of the Franci militia became wealthy and well trained enough, to be a sort of 'elite militia'.",
-            "subfactions": ["italo_lombards"],
-            "category": "rare",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
-            "keywords": [
-                "Infantry", "Heavy_Infantry"
-            ],
-            "models": [
-                {
-                    "name": "Franci",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"addRule": "light_armor"},
-                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "italian_milites": {
-            "name": "Italian Milites",
-            "description": "The milites (Previously a Roman term for 'soldier) were a professional soldier class, who often fought on horseback, as had increasingly been the tradition and focus of the Lombards over the previous few hundred years. While similar to the 'knights' of later periods, which this class would evolve into (Especially for the Normans), they focused less on the thrusting spear or lance, and more on the throwing spear and sword.",
+        "foot_italian_milites": {
+            "name": "Dismounted Lombard Gasindi",
+            "description": "The Gasindi (Companions) were feudal vassals of the Lombard king. Because they served a similar role as the 'milites' (Latin for ''soldier''), it is possible that they were sometimes referred to as such, or that they served alongside such types of warriors. These vassals often fought on horseback, as had increasingly been the tradition and focus of the Lombards over the previous few hundred years. While the gasindi would evolve into the 'knights' of later periods, the Lombards are different from the Franks in that the Lombards had a longer history of fighting with the cavalry spear.",
             "subfactions": ["italo_lombards"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["spearmen"],
+            "rules": ["shield"],
             "keywords": [
-                "Cavalry"
+                "Infantry"
             ],
             "models": [
                 {
-                    "name": "Milites",
+                    "name": "Gasindio",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -536,13 +534,50 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"],
+                    "weapons": ["hand_weapon"],
                     "options": [{"addRule": "travel_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                                {"replaceWeapon": "javelin", "withWeapon": "spear"},
-                                {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                                {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+                    {"addWeapon": "javelin"},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": "spear"},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
+                    "notes": "(Quad LkI) WAB: GG uses the term milites. TtS uses 'nobles and gasindii'. The WAB:AoA2 and Total War: ATTILA - Age of Charlemagne both messed up and used the term gastald/o to refer to warrior nobility at the rank of a knight or milites. Some wargaming miniature companies use this term instead and it's definition seems more appropriate.",
                     "min": 5,
-                    "max": 1
+                    "max": 15
+                }
+            ]
+        },"italian_milites": {
+            "name": "Lombard Gasindi",
+            "description": "The Gasindi (Companions) were feudal vassals of the Lombard king. Because they served a similar role as the 'milites' (Latin for ''soldier''), it is possible that they were sometimes referred to as such, or that they served alongside such types of warriors. These vassals often fought on horseback, as had increasingly been the tradition and focus of the Lombards over the previous few hundred years. While the gasindi would evolve into the 'knights' of later periods, the Lombards are different from the Franks in that the Lombards had a longer history of fighting with the cavalry spear.",
+            "subfactions": ["italo_lombards"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Gasindio",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon"],
+                    "options": [{"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                    {"addWeapon": "javelin"}, {"addWeapon": "horse_attack"},
+                    {"addRule": "mount_warrior_culture"},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": "spear"},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                                {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
+                    "notes": "(Quad LkI) WAB: GG uses the term milites. TtS uses 'nobles and gasindii'. The WAB:AoA2 and Total War: ATTILA - Age of Charlemagne both messed up and used the term gastald/o to refer to warrior nobility at the rank of a knight or milites. Some wargaming miniature companies use this term instead and it's definition seems more appropriate.",
+                    "min": 5,
+                    "max": 15
                 }
             ]
         },
@@ -716,7 +751,7 @@
         "levee_crossbowmen": {
             "name": "Crossbow Militia",
             "description": ".",
-            "subfactions": ["burgundy", "italo_lombards"],
+            "subfactions": ["burgundy", "italo_lombards", "early_hre"],
             "category": "rare",
             "min": 1,
             "max": 1,
@@ -725,16 +760,17 @@
             "models": [
                 {
                     "name": "Lowborn",
-                    "courage": 5,
+                    "courage": 4,
                     "movement": 7,
-                    "shoot": 4,
+                    "shoot": 5,
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["crossbow", "hand_weapon"],
-                    "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"},{"addRule": "agile"}
+                    "options": [{"addRule": "reluctant"},{"addRule": "agile"}
                         ],
+                    "notes": "No idea if HRE should have this unit.",
                     "min": 5,
                     "max": 10
                 }
@@ -760,40 +796,62 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["crossbow", "hand_weapon"],
-                    "options": [{"addRule": "light_armor"}
+                    "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"}, {"addRule": "sell_sword"}
                         ],
                     "min": 5,
                     "max": 10
                 }
             ]
         },
-        "mercenary_crossbowmen": {
-            "name": "Mercenary Crossbowmen",
-            "description": "The crossbow rapidly became popular with the French and Italians, but mercenary serjeants could also be Nordic, Norman, or Flemish.",
-            "subfactions": ["burgundy", "italo_lombards"],
-            "category": "rare",
-            "min": 1,
-            "max": 1,
-            "rules": ["skirmisher_formation"],
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Serjeants",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["crossbow", "hand_weapon"],
-                    "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"}
-                        ],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
+        "mag_elite_steppe_nomad_archer": {
+      "name": "Magyar Mounted Archer",
+      "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
+      "subfactions": [
+        "italo_lombards"
+      ],
+      "category": "core",
+      "rules": [
+        "skirmisher_formation",
+        "mount_horse"
+      ],
+      "keywords": [
+        "Cavalry"
+      ],
+      "models": [
+        {
+          "name": "Magyar Tribesman",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": [
+            "bow",
+            "hand_weapon"
+          ],
+          "options": [            
+            {"addRule": ["buckler"], "modelLimit": "all"},
+            {"addRule": ["fear"], "modelLimit": "all"},
+            {
+              "replaceWeapon": "hand_weapon",
+              "withWeapon": "javelin"
+            },
+            {
+              "replaceWeapon": "hand_weapon",
+              "withWeapon": "throwing_spear"
+            },
+            {
+              "replaceWeapon": "bow",
+              "withWeapon": "composite_bow"
+            }
+          ],
+          "notes": "(Quad LkI) WAB:GG. TtS, ALDG, WAB:FS:HRE suggest this unit should be here." ,
+          "min": 5,
+          "max": 10
+        }
+      ]
+    },
     "dux": {
         "name": "Dux",
         "description": "Dux, was a latin word meaning 'leader' or 'general'. The Dux made up the upper echelons of power in Germanic society, and the word would evolve into the familiar 'Duke'.",
@@ -825,8 +883,8 @@
     },
     "gastald": {
         "name": "Gastaldo",
-        "description": "As paid officials with direct allegiance to the roving Lombard kings, a gastald was an official with civil, military, and judicial power over an urban area.",
-        "subfactions": ["gepids_lombards"],
+        "description": "Gastaldo (“stewards”), were paid officials with direct allegiance to the roving Lombard kings, a gastald was an official with civil, military, and judicial power over an urban area.",
+        "subfactions": ["italo_lombards"],
         "category": "command",
         "min": 1,
         "max": 1,
@@ -837,16 +895,18 @@
                 "name": "Gastald",
                 "courage": 6,
                 "movement": 6,
-                "shoot": 6,
-                "fight": 6,
+                "shoot": 5,
+                "fight": 5,
                 "defense": 6,
                 "reflexes": 7,
                 "wounds": 2,
                 "weapons": ["spear", "shield", "javelin"],
-                "options": [{"addRule": "war_horse"}, {"addRule":  "mount_horse"},
+                "options": [{"addRule": "war_horse"},
                         {"replaceWeapon": ["spear", "shield"], 
-                            "withWeapon": "bow"}
+                            "withWeapon": "bow"},
+                            {"addRule": "mount_horse"}, {"addRule": "war_horse"}
                     ],
+                "notes": "(Quad LkI) The WAB and Total War: ATTILA - Age of Charlemagne both messed up and thought this term referred to warrior nobility at the rank of a knight or milites. Instead, this term refers to something like a Comes/Count.",
                 "min": 1,
                 "max": 1
             }
@@ -855,7 +915,7 @@
     "comes": {
         "name": "Comes",
         "description": "A Comes (plural, comites), was another latin word, like 'Dux'. This word meant 'companion', but increasingly among late Romans and 'Migration Era' Germanic peoples, meant 'military leader'. This word eventually evolved into the term 'count' and became a rank of nobility.",
-        "subfactions": ["none", "burgundy", "early_hre", "italo_lombards", "migration_period_germanics", "west_goths", "vandals", "ostrogoths"],
+        "subfactions": ["none", "burgundy", "early_hre"],
         "category": "command",
         "min": 1,
         "max": 1,
@@ -885,7 +945,7 @@
         "name": "Bishop",
         "description": "As the Germanics christianized, Christianity (The Germanics were not always Catholic) became a center of their lives. The Church had access to so much wealth and lands, that some of its officals assembled their own armies and operated as warlords.",
         "category": "command",
-        "subfactions": ["gepids_lombards", "none", "early_hre"],
+        "subfactions": ["italo_lombards", "none", "early_hre"],
         "min": 1,
         "max": 1,
         "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader", "man_of_god"],
@@ -893,12 +953,12 @@
         "models": [
             {
                 "name": "Abbod",
-                "courage": 4,
+                "courage": 6,
                 "movement": 6,
-                "shoot": 4,
-                "fight": 4,
-                "defense": 3,
-                "reflexes": 4,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 6,
                 "wounds": 2,
                 "weapons": ["spear", "shield"],
                 "options": [{"addRule": "war_horse"}, {"addRule":  "mount_horse"},
@@ -923,12 +983,12 @@
         "models": [
             {
                 "name": "Abbod",
-                "courage": 4,
+                "courage": 6,
                 "movement": 6,
-                "shoot": 4,
-                "fight": 4,
-                "defense": 3,
-                "reflexes": 4,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 6,
                 "wounds": 2,
                 "weapons": ["spear", "shield"],
                 "options": [{"addRule": "war_horse"},{"addRule":  "mount_horse"},
@@ -953,12 +1013,12 @@
         "models": [
             {
                 "name": "Abbod",
-                "courage": 3,
+                "courage": 5,
                 "movement": 6,
-                "shoot": 3,
-                "fight": 3,
-                "defense": 3,
-                "reflexes": 3,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 5,
                 "wounds": 1,
                 "weapons": ["spear", "shield"],
                 "options": [{"addRule": "war_horse"}, {"addRule":  "mount_horse"},

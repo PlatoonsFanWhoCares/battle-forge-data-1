@@ -397,34 +397,6 @@
             }
         ]
     },
-    "young_nomad_archer": {
-        "name": "Young Bulgarian Mounted Archer",
-        "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people serving or working with the Rus, could be Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.", 
-        "subfactions": ["none", "early_bulgars"],
-        "category": "rare",
-        "min": 1,
-        "max": 1,
-        "rules": ["light_cavalry", "buckler", "mount_horse"],
-        "keywords": [
-            "Cavalry"
-        ],
-        "models": [
-            {
-                "name": "Steppe Nomads",
-                "courage": 5,
-                "movement": 8,
-                "shoot": 5,
-                "fight": 5,
-                "defense": 6,
-                "reflexes": 5,
-                "wounds": 1,
-                "weapons": ["hand_weapon", "bow"
-                ],
-                "min": 5,
-                "max": 10
-            }
-        ]
-    },
     "bulgarian_mounted_archer": {
         "name": "Bulgarian Mounted Archer",
         "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people serving or working with the Rus, could be Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.", 
@@ -432,22 +404,29 @@
         "category": "core",
         "min": 1,
         "max": 1,
-        "rules": ["light_cavalry", "buckler", "mount_horse"],
+        "rules": ["light_cavalry", "mount_horse"],
         "keywords": [
             "Cavalry"
         ],
         "models": [
             {
-                "name": "Steppe Nomads",
+                "name": "Horse Archer",
                 "courage": 5,
                 "movement": 8,
-                "shoot": 6,
+                "shoot": 5,
                 "fight": 5,
-                "defense": 6,
-                "reflexes": 6,
+                "defense": 5,
+                "reflexes": 5,
                 "wounds": 1,
                 "weapons": ["hand_weapon", "bow"
                 ],
+                "options": [
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "spear"},
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "throwing_spear"},
+                    {"replaceWeapon": "bow", "withWeapon": "composite_bow"},
+                        {"addRule": ["buckler"], "modelLimit": "all"}
+                ],
+                "notes": "(Quad LkI [Needs Nomad Cavalry??]) WAB:GG ",
                 "min": 5,
                 "max": 10
             }
@@ -460,22 +439,100 @@
         "category": "core",
         "min": 1,
         "max": 1,
-        "rules": ["light_cavalry", "buckler", "mount_horse", "light_armor"],
+        "rules": ["light_cavalry", "mount_horse"],
         "keywords": [
             "Cavalry"
         ],
         "models": [
             {
-                "name": "Steppe Nomads",
+                "name": "Horse Archer",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 1,
+                "weapons": ["hand_weapon", "bow"
+                ],
+                "options": [
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "spear"},
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "throwing_spear"},
+                    {"replaceWeapon": "bow", "withWeapon": "composite_bow"},
+                        {"addRule": ["buckler"], "modelLimit": "all"}
+                ],
+                "notes": "(Quad LkI [Needs Nomad Cavalry??]) WAB:GG ",
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "elite_bulgarian_mounted_archer": {
+        "name": "Elite Bulgarian Mounted Archer",
+        "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people serving or working with the Rus, could be Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.", 
+        "subfactions": ["none", "early_bulgars"],
+        "category": "core",
+        "min": 1,
+        "max": 1,
+        "rules": ["light_cavalry", "mount_horse"],
+        "keywords": [
+            "Cavalry"
+        ],
+        "models": [
+            {
+                "name": "Horse Archer",
                 "courage": 5,
                 "movement": 8,
                 "shoot": 6,
                 "fight": 5,
-                "defense": 6,
+                "defense": 5,
                 "reflexes": 6,
                 "wounds": 1,
                 "weapons": ["hand_weapon", "bow"
                 ],
+                "options": [
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "spear"},
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "throwing_spear"},
+                    {"replaceWeapon": "bow", "withWeapon": "composite_bow"},
+                        {"addRule": ["buckler"], "modelLimit": "all"}
+                ],
+                "notes": "(Quad LkI [Needs Expert Horseman & Feigned Flight??]) WAB:GG ",
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "elite_middle_bulgarian_mounted_archer": {
+        "name": "Elite Bulgarian Mounted Archer",
+        "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people serving or working with the Rus, could be Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.", 
+        "subfactions": ["none", "middle_bulgars"],
+        "category": "core",
+        "min": 1,
+        "max": 1,
+        "rules": ["light_cavalry", "mount_horse"],
+        "keywords": [
+            "Cavalry"
+        ],
+        "models": [
+            {
+                "name": "Horse Archer",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["hand_weapon", "bow"
+                ],
+                "options": [
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "spear"},
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "throwing_spear"},
+                    {"replaceWeapon": "bow", "withWeapon": "composite_bow"},
+                        {"addRule": ["light_armor"], "modelLimit": "all"},
+                        {"addRule": ["buckler"], "modelLimit": "all"}
+                ],
+                "notes": "(Quad LkI [Needs Expert Horseman & Feigned Flight??]) WAB:GG ",
                 "min": 5,
                 "max": 10
             }

@@ -460,7 +460,7 @@
             "name": "Liberi",
             "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
             "category": "core",
-            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "subfactions": ["later_merovingian_franks"],
             "models": [
                 {
                     "name": "Liberi",
@@ -485,7 +485,7 @@
             "name": "Liberi",
             "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
             "category": "core",
-            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "subfactions": ["none", "aquitaine", "carolingian_french", "capetian_french"],
             "models": [
                 {
                     "name": "Liberi",
@@ -742,11 +742,11 @@
                     "defense": 5,
                     "reflexes": 6,
                     "rules": ["if_it_bleeds", "shield", "stubborn", "warband"],
-                    "weapons": ["spartha", "horse_attack"],
+                    "weapons": ["spartha"],
                     "options": [
                         {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"},
                         {"addWeapon": ["javelin", "francisca"], "limit": 1},
-                        {"addRule": ["light_armor", "furious_charge", "superior_cavalry"], "modelLimit": "all"}
+                        {"addRule": ["light_armor", "furious_charge", "superior_cavalry", "heavy_armor"], "modelLimit": "all"}
                     ],
                     "notes": "Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
@@ -772,10 +772,11 @@
                     "weapons": ["spear"],
                     "options": [
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"], "modelLimit": "all"},
+                        {"replaceWeapon": "spear", "withWeapon": ["spatha"], "modelLimit": "all"},
                         {"addWeapon": ["javelin", "francisca"], "limit": 1},
-                        {"addRule": ["scout", "light_armor", "stubborn"], "modelLimit": "all"}
+                        {"addRule": ["scout", "light_armor", "stubborn", "heavy_armor"], "modelLimit": "all"}
                     ],
-                    "notes": "Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
+                    "notes": "(LKi) TTS states that cavalry declined in importance during this era. No proof for serious use of lances or cavalry spears. Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
                     "max": 15
                 }
@@ -797,15 +798,15 @@
                     "defense": 5,
                     "reflexes": 6,
                     "rules": ["if_it_bleeds", "shield", "warband"],
-                    "weapons": ["spear", "horse_attack"],
+                    "weapons": ["throwing_spear"],
                     "options": [
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe"], "modelLimit": "all"},
-                        {"addWeapon": ["javelin", "francisca"], "limit": 1},
-                        {"addRule": ["scout", "light_armor", "stubborn"], "modelLimit": "all"}
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"], "modelLimit": "all"},
+                        {"addWeapon": ["javelin", "francisca", "spartha"], "limit": 1},
+                        {"addRule": ["scout", "light_armor", "stubborn", "heavy_armor"], "modelLimit": "all"}
                     ],
-                    "notes": "Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
+                    "notes": "(LKi) TTS states that cavalry declined in importance during this era. No proof for serious use of lances or cavalry spears. Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -853,7 +854,7 @@
                         {"addWeapon": "bow"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -881,7 +882,7 @@
                         {"addRule": ["furious_charge", "superior_cavalry"], "modelLimit": "all"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -1012,6 +1013,7 @@
                         {"replaceWeapon": ["spartha"], "withWeapon": ["spear"], "modelLimit": "all"},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"addWeapon": "bow"},
+                        {"replaceWeapon": "javelin", "withWeapon": ["bow"]},
                         {"addRule": ["light_armor", "stubborn"], "modelLimit": "all"}
                     ],
                     "min": 5,
@@ -1084,21 +1086,23 @@
             "models": [
                 {
                     "name": "Milites",
-                    "movement": 8,
+                    "movement": 6,
                     "courage": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "rules": ["mount_warrior_culture", "shield", "spearmen"],
-                    "weapons": ["spear", "javelin", "horse_attack"],
+                    "rules": ["mount_warrior_culture", "shield", "spearmen", "war_horse"],
+                    "weapons": ["spear", "javelin"],
                     "options": [
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe", "spatha"], "modelLimit": "all"},
-                        {"addWeapon": "javelin"},
-                        {"addRule": ["light_armor", "heavy_armor"], "limit": 1, "modelLimit": "all"}
+                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe", "spatha", "throwing_spear"], "modelLimit": "all"},
+                        {"addWeapon": "javelin"}, {"addWeapon": "spartha"},
+                        {"addRule": ["light_armor", "heavy_armor"], "limit": 1, "modelLimit": "all"},
+                        {"replaceRule": "war_horse", "withRule": ["mount_horse"]}
                     ],
+                    "notes": "(LkI)",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -1120,11 +1124,13 @@
                     "rules": ["furious_charge", "shield"],
                     "weapons": ["spartha", "javelin"],
                     "options": [
-                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "lance"], "modelLimit": "all"},
+                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear", "throwing_spear"], "modelLimit": "all"},
+                        {"replaceWeapon": "javelin", "withWeapon": ["throwing_spear"], "modelLimit": "all"},
                         {"addRule": ["light_armor", "heavy_armor"], "limit": 1, "modelLimit": "all"}
                     ],
+                    "notes": "(LkI)",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -1293,7 +1299,7 @@
                         {"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"},
                         {"addRule": ["buckler", "strider", "stubborn"], "modelLimit": "all"}
                     ],
-                    "notes": "The Aachen capitulary contained a further provision that no soldier should carry a cudgel (baculum), but rather a bow.",
+                    "notes": "The Aachen capitulary contained a further provision that no soldier should carry a cudgel (baculum), but rather a bow. It's often assumed this provision applies to free peasants of impoverished or middling means",
                     "min": 5,
                     "max": 15
                 }

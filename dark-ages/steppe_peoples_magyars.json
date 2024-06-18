@@ -290,11 +290,10 @@
         }
       ]
     },
-    "young_steppe_nomad_archer": {
+    "steppe_nomad_archer": {
       "name": "Young Steppe Nomad Mounted Archer",
       "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
       "subfactions": [
-        "magyars",
         "none",
         "early_khazar",
         "sarmatians"
@@ -336,11 +335,10 @@
         }
       ]
     },
-    "steppe_nomad_archer": {
+    "elite_steppe_nomad_archer": {
       "name": "Steppe Nomad Mounted Archer",
       "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
       "subfactions": [
-        "magyars",
         "none",
         "early_khazar",
         "sarmatians"
@@ -356,7 +354,7 @@
       ],
       "models": [
         {
-          "name": "Steppe Nomads",
+          "name": "Tribesmen",
           "courage": 5,
           "movement": 6,
           "shoot": 6,
@@ -382,7 +380,105 @@
         }
       ]
     },
-    "young_steppe_nomad_cavalry": {
+    "mag_steppe_nomad_archer": {
+      "name": "Young Magyar Mounted Archer",
+      "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
+      "subfactions": [
+        "magyars"
+      ],
+      "category": "core",
+      "rules": [
+        "skirmisher_formation",
+        "mount_horse"
+      ],
+      "keywords": [
+        "Cavalry"
+      ],
+      "models": [
+        {
+          "name": "Magyar Tribesman",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "weapons": [
+            "bow",
+            "hand_weapon"
+          ],
+          "options": [            
+            {"addRule": ["buckler"], "modelLimit": "all"},
+            {"addRule": ["fear"], "modelLimit": "all"},
+            {
+              "replaceWeapon": "hand_weapon",
+              "withWeapon": "javelin"
+            },
+            {
+              "replaceWeapon": "hand_weapon",
+              "withWeapon": "throwing_spear"
+            },
+            {
+              "replaceWeapon": "bow",
+              "withWeapon": "composite_bow"
+            }
+          ],
+          "notes": "(LkI) WAB:GG" ,
+          "min": 5,
+          "max": 10
+        }
+      ]
+    },
+    "mag_elite_steppe_nomad_archer": {
+      "name": "Magyar Mounted Archer",
+      "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
+      "subfactions": [
+        "magyars"
+      ],
+      "category": "core",
+      "rules": [
+        "skirmisher_formation",
+        "mount_horse"
+      ],
+      "keywords": [
+        "Cavalry"
+      ],
+      "models": [
+        {
+          "name": "Magyar Tribesman",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": [
+            "bow",
+            "hand_weapon"
+          ],
+          "options": [            
+            {"addRule": ["buckler"], "modelLimit": "all"},
+            {"addRule": ["fear"], "modelLimit": "all"},
+            {
+              "replaceWeapon": "hand_weapon",
+              "withWeapon": "javelin"
+            },
+            {
+              "replaceWeapon": "hand_weapon",
+              "withWeapon": "throwing_spear"
+            },
+            {
+              "replaceWeapon": "bow",
+              "withWeapon": "composite_bow"
+            }
+          ],
+          "notes": "(LkI) WAB:GG" ,
+          "min": 5,
+          "max": 10
+        }
+      ]
+    },
+    "steppe_nomad_cavalry": {
       "name": "Young Steppe Nomad Cavalry",
       "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
       "subfactions": [
@@ -431,7 +527,7 @@
         }
       ]
     },
-    "steppe_nomad_cavalry": {
+    "elite_steppe_nomad_cavalry": {
       "name": "Steppe Nomad Cavalry",
       "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers. Such people could be Magyars, Khazars, Kazakhs, desendents of the Sarmatians, desendents of the Huns, or any number of other nomadic peoples within the area.",
       "subfactions": [

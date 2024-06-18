@@ -6,14 +6,14 @@
       "name" : "Late Romans (300-399 AD)",
       "phase" : "activation",
       "id" : "slightly_late_roman",
-      "description" : "After the 'Third Century Crisis', the Roman Empire was stiched back together and reformed by Diocletian, than Constantine the Great, which would give it another hundred years to live.",
+      "description" : "After the 'Third Century Crisis', the Roman Empire was stitched back together and reformed by Diocletian, than Constantine the Great, which would give it another hundred years to live.",
       "restricted" : "true"
     },
     "late_roman" : {
       "name" : "Late Romans (400-500 AD)",
       "phase" : "activation",
       "id" : "late_roman",
-      "description" : "In the year 410AD Rome would be sacked by Visigoth allies, who were enraged that the Emperor had their families murdered. After this event, the Western Roman Empire would decline and decline, before collapsing into ruin. ",
+      "description" : "In the year 410AD Rome would be sacked by Visigoth allies, who were enraged that the Emperor had their families murdered. After this event, the Western Roman Empire would lose a series of battles over around 40 years, resulting in horrific losses in manpower and territory. At that point, the Western Roman Empire would decline and decline, before collapsing into ruin. ",
       "restricted" : "true"
     },
     "east_roman" : {
@@ -161,7 +161,7 @@
     },
     "magnate" : {
       "name" : "Magnate",
-      "description" : "A 'Magnate' was an appointed offical, powerful landowner, or wealthy merchant. With these kinds of resources, they either were or would eventually become noblity. Such types of men were not military leaders, or part of a military social class, but they could muster fairly reasonable armies of their own.",
+      "description" : "A 'Magnate' (Lierally, 'great man') was an appointed offical, powerful landowner, or wealthy merchant. With these kinds of resources, they either were or would eventually become noblity. Such types of men were not military leaders, or part of a military social class, but they could muster fairly reasonable armies of their own.",
       "category" : "command",
       "models" : [
         {

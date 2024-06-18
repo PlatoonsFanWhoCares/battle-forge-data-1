@@ -23,6 +23,7 @@
             "phase": "activation",
             "id": "gepids_lombards",
             "description": "These two cultures lived in what is now North Western Germany. Due to the chaos of the period, and the intrusion of other warrior cultures, they moved increasingly south over time. The two clashed in what is now Austria, and the victorious Lombards fled their 'allies' into what is now Northern Italy. They remained there for centuries.",
+            "gameplay_tips": "It is extremely widely established in wargaming (WAB/TtS/ADLG/Saga) that once the Lombards settled in Italia, that they should be fighting predominantly as mounted warriors.",
             "restricted": "true"
         },
         "vandals": {
@@ -395,8 +396,43 @@
                     "wounds": 1,
                     "weapons": ["throwing_spear", "javelin"],
                     "options": [{"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
-                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}
+                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                    {"addRule": "reluctant"},
+                    {"addRule": "sell_sword"}
                     ],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "saxon_tribal_warriors": {
+            "name": "Tribal Warriors",
+            "description": "As the Germanic Cultures conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated or abandoned. The Gepids and Lombards included Saxons and Slavs in some of their armies.",
+            "subfactions": ["gepids_lombards"
+            ],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "shield", "if_it_bleeds", "warrior_culture"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Tribal Warrior",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear", "javelin"],
+                    "options": [{"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                    {"replaceWeapon": "throwing_spear", "withWeapon": ["heavy_throwing_spear"]},
+                    {"addRule": "reluctant"},
+                    {"addRule": "sell_sword"}
+                    ],
+                    "notes": "(Quad LkI) WAB:GG suggests this unit should be here. Tts says Saxons can be taken as allies. ADLG has these units statted and included.",
                     "min": 5,
                     "max": 15
                 }
@@ -469,7 +505,7 @@
             "name": "Comitatus",
             "description": "There was many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
             "category": "elite",
-            "subfactions": ["migration_period_germanics", "gepids_lombards", "none", "italo_lombards", "west_goths", "ostrogoths"
+            "subfactions": ["migration_period_germanics", "none", "west_goths", "ostrogoths"
             ],
             "min": 1,
             "max": 1,
@@ -537,11 +573,47 @@
                 }
             ]
         },
+        "lombard_comitatus": {
+            "name": "Dismounted Lombard Gasindi",
+            "description": "The Gasindi (Companions) appear to be the personal bodyguard of important Lombard nobles. There were many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
+            "category": "elite",
+            "subfactions": ["gepids_lombards"
+            ],
+            "min": 1,
+            "max": 1,
+            "rules": ["fierce", "warrior_culture"],
+            "keywords": ["Infantry", "Heavy_Infantry"],
+            "models": [
+                {
+                    "name": "Comitatus",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear", "shield", "javelin"
+                    ],
+                    "options": [
+                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"addRule": "scout"},
+                        {"addRule": "travel_horse"}
+                    ],
+                    "notes": "'Society and Warfare in Lombard Italy.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
         "shield_mount_comitatus": {
             "name": "Shielded and Mounted Comitatus",
             "description": "There was many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
             "category": "elite",
-            "subfactions": ["migration_period_germanics", "gepids_lombards", "none", "italo_lombards", "west_goths"
+            "subfactions": ["migration_period_germanics", "none", "west_goths"
             ],
             "min": 1,
             "max": 1,
@@ -569,11 +641,45 @@
                 }
             ]
         },
+        "lombard_shield_mount_comitatus": {
+            "name": "Shielded and Mounted Lombard Gasindi",
+            "description": "The Gasindi (Companions) appear to be the personal bodyguard of important Lombard nobles. There were many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
+            "category": "elite",
+            "subfactions": ["gepids_lombards"
+            ],
+            "min": 1,
+            "max": 1,
+            "rules": ["fierce", "mount_horse", "shield","superior_cavalry", "furious_charge"],
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Comitatus",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear"],
+                    "options": [
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"addWeapon": "javelin"},
+                        {"addRule": "mount_warrior_culture"},
+                        {"addRule": "heavy_armor"}
+                    ],
+                    "notes": "'Society and Warfare in Lombard Italy.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
         "mount_comitatus": {
             "name": "Mounted Comitatus",
             "description": "There was many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
             "category": "elite",
-            "subfactions": ["migration_period_germanics", "gepids_lombards", "none", "italo_lombards", "west_goths", "burgundians"
+            "subfactions": ["migration_period_germanics", "none", "west_goths", "burgundians"
             ],
             "min": 1,
             "max": 1,
@@ -595,14 +701,51 @@
                         {"addRule": "buckler"},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
-                        {"addWeapon": "kontos"},
-                        {"addRule": "mount_warrior_culture"}
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["kontos"]},
+                        {"addRule": "mount_warrior_culture"},
+                        {"addRule": "heavy_armor"}
                     ],
                     "min": 5,
                     "max": 15
                 }
             ]
         },  
+        "lombard_mount_comitatus": {
+            "name": "Mounted Lombard Gasindi",
+            "description": "The Gasindi (Companions) appear to be the personal bodyguard of important Lombard nobles. There was many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
+            "category": "elite",
+            "subfactions": ["gepids_lombards"
+            ],
+            "min": 1,
+            "max": 1,
+            "rules": ["fierce", "mount_horse", "superior_cavalry", "furious_charge"],
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Comitatus",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear"
+                    ],
+                    "options": [
+                        {"addRule": "buckler"},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["kontos"]},
+                        {"addRule": "mount_warrior_culture"},
+                        {"addRule": "heavy_armor"}
+                    ],
+                    "notes": "'Society and Warfare in Lombard Italy.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        }, 
         "shield_vandal_comitatus": {
             "name": "Shielded Vandal Comitatus",
             "description": "There was many different words for personal guards and retinues of powerful nobles, such as for lords or even a king. They were just as skilled as fighting on foot and on horseback, and were similar to the 'honor guard' units of other cultures. The latin term 'Comitatus' (Retainer), is used to refer to the general concept of such loyal warriors.",
@@ -628,6 +771,7 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"addRule": "heavy_armor"},
                         {"addRule": "mount_warrior_culture"}],
                         "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian) both agree that thrusting spears are in and javelins are out for the Vandals.",
                     "min": 5,
@@ -662,7 +806,8 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "kontos"},
-                        {"addRule": "mount_warrior_culture"}
+                        {"addRule": "mount_warrior_culture"},
+                        {"addRule": "heavy_armor"}
                     ],
                     "min": 5,
                     "max": 10
@@ -696,7 +841,8 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "kontos"},
-                        {"addRule": "cloth_horse_armor"}
+                        {"addRule": "cloth_horse_armor"},
+                        {"addRule": "heavy_armor"}
                     ],
                     "min": 5,
                     "max": 15
@@ -727,7 +873,8 @@
                     "options": [
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
-                        {"addWeapon": "javelin"}, {"addRule": "cloth_horse_armor"}
+                        {"addWeapon": "javelin"}, {"addRule": "cloth_horse_armor"},
+                        {"addRule": "heavy_armor"}
                     ],
                     "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian)both lists the East Goths as using barding, likely copied from the Romans or Persians.",
                     "min": 5,
@@ -760,6 +907,7 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"addRule": "heavy_armor"},
                         {"addWeapon": "javelin"}
                     ],
                     "min": 5,
@@ -770,7 +918,7 @@
         "mount_franci": {
             "name": "Mounted Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["gepids_lombards", "none", "early_hre", "west_goths"],
+            "subfactions": ["none", "west_goths", "gepids_lombards"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -798,10 +946,44 @@
                 }
             ]
         },
+        "lombard_mount_franci": {
+            "name": "Mounted Lombard Retainers",
+            "description": "After migrating into Italia, the Lombards became increasingly mounted in their way of fighting. This unit represents the 'retainers' and 'followers' of 'Gasindi' (Companions) and Gastaldo (“steward”). These warriors would likely be franci (Latin), the landowning class.",
+            "subfactions": ["gepids_lombards"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Franci",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["sword", "shield"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor", "modelLimit": 5},
+                    {"addRule": "mount_warrior_culture"},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+                    "notes": "(Quad LkI) TtS says spear cav called 'Retainers'. ADLG calls them 'followers' and gives them similar stats. WAB:GG treats them as regular barbarian mounted freemen.",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
         "franci": {
             "name": "Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["none", "italo_lombards", "early_hre", "burgundy", "west_goths"],
+            "subfactions": ["none", "west_goths"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -821,6 +1003,7 @@
                     "wounds": 1,
                     "weapons": ["throwing_spear", "shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
+                    {"addRule": "reluctant"},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}],
                     "min": 5,
@@ -832,7 +1015,7 @@
             "name": "Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
             "subfactions": ["gepids_lombards"],
-            "category": "core",
+            "category": "rare",
             "min": 1,
             "max": 1,
             "rules": ["warband", "if_it_bleeds", "warrior_culture", "light_infantry", "shield"],
@@ -851,9 +1034,11 @@
                     "wounds": 1,
                     "weapons": ["hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
+                    {"addRule": "stubborn"},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]}],
+                    "notes": "(Quad LkI) WAB:GG states infantry should be rare and should be a little braver than other factions. TtS and ADLG match this suggestion.",
                     "min": 5,
                     "max": 10
                 }
@@ -896,7 +1081,7 @@
         "italian_militia": {
             "name": "Italian Communal Militia",
             "description": "While northern Italy had plenty of reasonable or even good spear militia, the poorer or less trained members of its militia armies were meager.",
-            "subfactions": ["italo_lombards", "gepids_lombards"],
+            "subfactions": ["gepids_lombards"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -1271,7 +1456,7 @@
         "mounted_freemen": {
             "name": "Mounted Freemen",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["gepids_lombards", "none", "italo_lombards", "early_hre", "burgundy", "west_goths"],
+            "subfactions": ["gepids_lombards", "none", "west_goths"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -1296,68 +1481,6 @@
                     ],
                     "min": 5,
                     "max": 10
-                }
-            ]
-        },
-        "veteran_italo_franci": {
-            "name": "Veteran Franci Militia",
-            "description": "Among the Italo-Lombards, some of the Franci militia became wealthy and well trained enough, to be a sort of 'elite militia'.",
-            "subfactions": ["italo_lombards"],
-            "category": "rare",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
-            "keywords": [
-                "Infantry", "Heavy_Infantry"
-            ],
-            "models": [
-                {
-                    "name": "Franci",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"addRule": "light_armor"},
-                        {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "italian_milites": {
-            "name": "Italian Milites",
-            "description": "The milites (Previously a Roman term for 'soldier) were a professional soldier class, who often fought on horseback, as had increasingly been the tradition and focus of the Lombards over the previous few hundred years. While similar to the 'knights' of later periods, which this class would evolve into (Especially for the Normans), they focused less on the thrusting spear or lance, and more on the throwing spear and sword.",
-            "subfactions": ["italo_lombards"],
-            "category": "core",
-            "min": 1,
-            "max": 1,
-            "rules": ["spearmen", "shield"],
-            "keywords": [
-                "Cavalry"
-            ],
-            "models": [
-                {
-                    "name": "Milites",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["sword", "javelin"],
-                    "options": [{"addRule": "war_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                                {"replaceWeapon": ["javelin", "sword"], "withWeapon": "spear"},
-                                {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                                {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
-                    "min": 5,
-                    "max": 15
                 }
             ]
         },
@@ -1393,6 +1516,41 @@
                 }
             ]
         },
+        "elite_bulgarian_mounted_archer": {
+        "name": "Bulgarian Mercenaries/Settlers",
+        "description": "Eastern Europe and Northwestern Asia (The Eurasian Steppe), were areas very supportive of horses and a nomaidic way of life. As such the area produced a wide range of expert horse archers.", 
+        "subfactions": ["none", "gepids_lombards"],
+        "category": "rare",
+        "min": 1,
+        "max": 1,
+        "rules": ["light_cavalry", "mount_horse"],
+        "keywords": [
+            "Cavalry"
+        ],
+        "models": [
+            {
+                "name": "Horse Archer",
+                "courage": 5,
+                "movement": 8,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["hand_weapon", "bow"
+                ],
+                "options": [
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "spear"},
+                    {"replaceWeapon": "hand_weapon"}, {"withWeapon": "throwing_spear"},
+                    {"replaceWeapon": "bow", "withWeapon": "composite_bow"},
+                        {"addRule": ["buckler"], "modelLimit": "all"}
+                ],
+                "notes": "(Quad LkI) [Needs Expert Horseman & Feigned Flight?? Better description?]) WAB:GG for stats. ALDG says Bulgar Mounted Archers after 650, WAB:FS:HRE calls them 'settlers' and says  668-700AD. Lets them have throwing spear and light armor. TtS says Bulgar allies for early Lombards. Saga says to rename Breton Mercanaries to Bulgar Merenaries",
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
     "dux": {
         "name": "Dux",
         "description": "Dux, was a latin word meaning 'leader' or 'general'. The Dux made up the upper echelons of power in Germanic society, and the word would evolve into the familiar 'Duke'.",
@@ -1425,7 +1583,7 @@
     },
     "gastald": {
         "name": "Gastaldo",
-        "description": "As paid officials with direct allegiance to the roving Lombard kings, a gastald was an official with civil, military, and judicial power over an urban area.",
+        "description": "Gastaldo (“stewards”), were paid officials with direct allegiance to the roving Lombard kings, a gastald was an official with civil, military, and judicial power over an urban area.",
         "subfactions": ["gepids_lombards"],
         "category": "command",
         "min": 1,
