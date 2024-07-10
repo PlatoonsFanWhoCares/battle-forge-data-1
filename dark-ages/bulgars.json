@@ -44,9 +44,10 @@
                         "defense": 5,
                         "reflexes": 5,
                         "wounds": 1,
-                        "weapons": ["spear", "javelin", "shield"],
+                        "weapons": ["spear", "javelin"],
                         "options": [{"replaceWeapon": "spear", 
                             "withWeapon": ["hand_axe"]},
+                            {"addRule": "strider"},
                             {"addRule": "agile"}],
                         "min": 5,
                         "max": 10
@@ -71,9 +72,10 @@
                         "defense": 5,
                         "reflexes": 5,
                         "wounds": 1,
-                        "weapons": ["spear", "javelin", "shield"],
+                        "weapons": ["spear", "javelin"],
                         "options": [{"replaceWeapon": "shield", 
                             "withWeapon": ["bow"]},
+                            {"addRule": "strider"},
                             {"addRule": "agile"}],
                         "min": 5,
                         "max": 10
@@ -102,6 +104,7 @@
                     "weapons": ["hand_weapon", "javelin", "shield"],
                     "options": 
                     [{"addRule": "agile"},
+                    {"addRule": "strider"},
                     {"replaceWeapon": "unarmed", "withWeapon": "hand_weapon"}],
                     "min": 10,
                     "max": 10
@@ -129,6 +132,7 @@
                     "wounds": 1,
                     "weapons": ["unarmed", "bow"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": "hand_weapon"},
+                    {"addRule": "strider"},
                     {"addRule": "agile"}],
                     "min": 10,
                     "max": 10
@@ -158,6 +162,7 @@
                     "options": [{"replaceWeapon": "javelin", 
                         "withWeapon": ["spear"]},
                         {"replaceWeapon": "unarmed", "withWeapon": "hand_weapon"},
+                        {"addRule": "strider"},
                         {"addRule": "agile"}],
                     "min": 10,
                     "max": 10

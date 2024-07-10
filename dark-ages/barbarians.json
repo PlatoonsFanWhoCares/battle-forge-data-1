@@ -207,7 +207,7 @@
             "former_foederati": {
                 "name": "Former Foederati",
                 "description": "The 'Foederati' (The term comes from a Latin word for 'treaty'), were often allied 'barbarian' peoples or tribes that were bound by treaty and subsidized with land, money, or resources; to act as a 'buffer force' or mercenaries.",
-                "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians"],
+                "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians", "gepids_lombards"],
                 "category": "rare",
                 "min": 1,
                 "max": 1,
@@ -235,7 +235,7 @@
             "former_foederati_veterans": {
                 "name": "Former Foederati Veterans",
                 "description": "As time passed, warriors would gain renown, experience, and wealth. This meant better equipment and fighting ability.",
-                "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians"],
+                "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians", "gepids_lombards"],
                 "category": "rare",
                 "min": 1,
                 "max": 1,
@@ -279,7 +279,8 @@
                         "reflexes": 4,
                         "wounds": 1,
                         "weapons": ["hand_weapon"],
-                        "options": [{"addWeapon": "javelin"},{"addRule": "agile"}],
+                        "options": [{"addWeapon": "javelin"},{"addRule": "agile"},
+                        {"addRule": "strider"}],
                         "min": 5,
                         "max": 10
                     }
@@ -307,6 +308,7 @@
                         "weapons": ["hand_weapon"],
                         "options": [{"addWeapon": "javelin"},{"addWeapon": "stones"},
                         {"addRule": "agile"},
+                        {"addRule": "strider"},
                         {"replaceRule": "buckler", "withRule": ["shield"]}],
                         "min": 5,
                         "max": 10
@@ -338,7 +340,9 @@
                                 "sling",
                                 "short_bow"
                             ]},
-                            {"addRule": "buckler"}, {"addRule": "reluctant"}, {"addRule": "agile"}
+                            {"addRule": "buckler"}, {"addRule": "reluctant"},
+                            {"addRule": "strider"},
+                            {"addRule": "agile"}
                         ],
                     "min": 5,
                     "max": 10
@@ -367,7 +371,9 @@
                     "wounds": 1,
                     "weapons": ["throwing_spear", "javelin"],
                     "options": [{"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
-                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}, {"addRule": "agile"}
+                    {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                    {"addRule": "strider"},
+                    {"addRule": "agile"}
                     ],
                     "min": 5,
                     "max": 10
@@ -464,6 +470,7 @@
                             {"addRule": "buckler"},
                             {"addRule": "reluctant"},
                             {"addRule": "warrior_culture"},
+                            {"addRule": "strider"},
                             {"addRule": "agile"}, {"addRule": "stubborn"}, {"addRule": "travel_horse"}
                         ],
                     "min": 5,
@@ -493,6 +500,7 @@
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [
                             {"addRule": "buckler"}, {"replaceRule": "skirmisher_formation", "withRule": ["light_infantry"]},
+                            {"replaceRule": "travel_horse", "withRule": ["scout"]},
                             {"addRule": "reluctant"},
                             {"addRule": "agile"}, {"addRule": "stubborn"}
                         ],
@@ -564,6 +572,7 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"addRule": "scout"},
                         {"addRule": "travel_horse"}
@@ -918,7 +927,7 @@
         "mount_franci": {
             "name": "Mounted Franci",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
-            "subfactions": ["none", "west_goths", "gepids_lombards"],
+            "subfactions": ["none", "west_goths"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -946,9 +955,41 @@
                 }
             ]
         },
+        "mount_franci_rec": {
+            "name": "Mounted Lombard Warrior",
+            "description": "After migrating into Italia, the Lombards became increasingly mounted in their way of fighting. This unit represents the 'retainers' and 'followers' of 'Gasindi' (Companions) and Gastaldo (“steward”). Like other post-Roman barbarian successor states, some portion of free Lombard households were obligated to one or more military recruits and equip him with their own resources. It isn't clear if these families were just middle class freemen (Who could afford their own riding horse for their provided recruit and everything else), or a special warrior class, but the records left behind imply something between the two. As such, this type of Lombard warrior comes in multiple variations, to suit different perspectives on what a Lombard recruit was like.",
+            "subfactions": ["gepids_lombards"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "light_cavalry"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Franci",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["sword", "shield"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor", "modelLimit": 5},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+                    "notes": "(Quad LkI)"  ,
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "lombard_mount_franci": {
             "name": "Mounted Lombard Retainers",
-            "description": "After migrating into Italia, the Lombards became increasingly mounted in their way of fighting. This unit represents the 'retainers' and 'followers' of 'Gasindi' (Companions) and Gastaldo (“steward”). These warriors would likely be franci (Latin), the landowning class.",
+            "description": "After migrating into Italia, the Lombards became increasingly mounted in their way of fighting. This unit represents the 'retainers' and 'followers' of 'Gasindi' (Companions) and Gastaldo (“steward”). Like other post-Roman barbarian successor states, some portion of free Lombard households were obligated to one or more military recruits and equip him with their own resources. It isn't clear if these families were just middle class freemen (Who could afford their own riding horse for their provided recruit and everything else), or a special warrior class, but the records left behind imply something between the two. As such, this type of Lombard warrior comes in multiple variations, to suit different perspectives on what a Lombard recruit was like.",
             "subfactions": ["gepids_lombards"],
             "category": "core",
             "min": 1,
@@ -974,7 +1015,7 @@
                         {"replaceWeapon": "sword", "withWeapon": ["spear"]},
                         {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
-                    "notes": "(Quad LkI) TtS says spear cav called 'Retainers'. ADLG calls them 'followers' and gives them similar stats. WAB:GG treats them as regular barbarian mounted freemen.",
+                    "notes": "(Quad LkI) 'Society and Warfare in Lombard Italy'. TtS says spear cav called 'Retainers'. ADLG calls them 'followers' and gives them similar stats. WAB:GG treats them as regular barbarian mounted freemen.",
                     "min": 5,
                     "max": 15
                 }
@@ -1001,7 +1042,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["throwing_spear", "shield","hand_weapon"],
+                    "weapons": ["throwing_spear", "shield"],
                     "options": [{"addWeapon": "javelin"},
                     {"addRule": "reluctant"},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
@@ -1013,7 +1054,7 @@
         },
         "gep_lom_franci": {
             "name": "Franci",
-            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those with more money and resources.",
+            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse. Like other post-Roman barbarian successor states, some portion of free Lombard households were obligated to one or more military recruits and equip him with their own resources. It isn't clear if these families were just middle class freemen (Who could afford their own riding horse for their provided recruit and everything else), or a special warrior class, but the records left behind imply something between the two. As such, this type of Lombard warrior comes in multiple variations, to suit different perspectives on what a Lombard recruit was like.",
             "subfactions": ["gepids_lombards"],
             "category": "rare",
             "min": 1,
@@ -1038,7 +1079,7 @@
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]}],
-                    "notes": "(Quad LkI) WAB:GG states infantry should be rare and should be a little braver than other factions. TtS and ADLG match this suggestion.",
+                    "notes": "(Quad LkI) 'Society and Warfare in Lombard Italy'. WAB:GG states infantry should be rare and should be a little braver than other factions. TtS and ADLG match this suggestion.",
                     "min": 5,
                     "max": 10
                 }
@@ -1148,7 +1189,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1162,11 +1203,12 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear"],
                     "options": [{"addWeapon": "javelin"},
                         {"addRule": "light_armor"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]},
+                        {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
                         {"addRule": "scout"}
                     ],
                     "min": 5,
@@ -1181,7 +1223,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1195,7 +1237,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
+                    "weapons": ["spear"],
                     "options": [
                         {"addRule": "light_armor"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
@@ -1249,7 +1291,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1263,7 +1305,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["throwing_spear", "shield","hand_weapon"],
+                    "weapons": ["throwing_spear"],
                     "options": [{"addWeapon": "javelin"},
                         {"addRule": "light_armor"},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
@@ -1329,9 +1371,9 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["kontos","hand_weapon"],
-                    "options": [
-                        {"addRule": "light_armor"}],
+                    "weapons": ["kontos"],
+                    "options": [{"addRule": "light_armor"}, 
+                    {"addRule": "superior_cavalry"}, {"addRule": "furious_charge"}],
                     "min": 5,
                     "max": 10
                 }
@@ -1390,7 +1432,9 @@
                     "wounds": 1,
                     "weapons": ["shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},{"addRule": "agile"}],
+                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                        {"addRule": "strider"},
+                        {"addRule": "agile"}],
                     "min": 5,
                     "max": 10
                 }
@@ -1417,7 +1461,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear", "shield"],
                     "options": [{"addWeapon": "javelin"},
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]}],
                     "min": 5,
@@ -1434,7 +1478,7 @@
             "max": 1,
             "rules": ["warband", "if_it_bleeds", "light_infantry"],
             "keywords": [
-                "Infantry", "Heavy_Infantry"
+                "Infantry"
             ],
             "models": [
                 {
@@ -1447,38 +1491,9 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["bow","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},{"addRule": "agile"}],
-                    "min": 5,
-                    "max": 10
-                }
-            ]
-        },
-        "mounted_freemen": {
-            "name": "Mounted Freemen",
-            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["gepids_lombards", "none", "west_goths"],
-            "category": "core",
-            "min": 1,
-            "max": 1,
-            "rules": ["warband", "if_it_bleeds", "light_cavalry", "travel_horse", "spearmen"],
-            "keywords": [
-                "Cavalry"
-            ],
-            "models": [
-                {
-                    "name": "Freeman",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
-                        {"replaceRule": "travel_horse", "withRule": ["mount_horse"]}
-                    ],
+                    {"addRule": "strider"},
+                    {"addRule": "agile"}],
                     "min": 5,
                     "max": 10
                 }

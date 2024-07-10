@@ -78,8 +78,9 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["javelin", "hand_weapon"],
-                    "options": [
+                    "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                     {"addRule": "agile"},
+                    {"addRule": "strider"},
                     {"addRule": "reluctant"}],
                     "min": 5,
                     "max": 10
@@ -107,8 +108,10 @@
                     "wounds": 1,
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
+                    {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                     {"replaceRule": "light_infantry", "withRule": "light_spearmen"},
                     {"addRule": "agile"}, 
+                {"addRule": "strider"},
                     {"addRule": "reluctant"}
                 ],
                 "notes": "Age of Arthur, makes sense for the period.",
@@ -139,12 +142,12 @@
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
                     {"replaceRule": "warrior_culture", "withRule": "light_spearmen"},
+                    {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                     {"addRule": "reluctant"}
-                
                 ],
                 "notes": "Age of Arthur, makes sense for the period.",
-                "min": 5,
-                    "max": 15
+                "min": 10,
+                    "max": 20
                 }
             ]
         },
@@ -169,6 +172,7 @@
                     "wounds": 1,
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
+                    {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                 {"replaceRule": "light_spearmen", "withRule": "warrior_culture"}
             ],
             "notes": "WAB: ShieldWall",
@@ -205,7 +209,7 @@
                 ],
                 "notes": "Total War: Attila: Charlemagne. Is similar to other cultures of the period. WAB doesn't give enough unit choices and it's dumb.",
                 "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -299,7 +303,7 @@
         },
         "teulu": {
             "name": "Teulu",
-            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tailey' translates to 'family'. Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege.", 
+            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tay-ley'), translates to 'family'. Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege. These are the 'ring-men' that are spoken of in britonic and Welsh poetry.", 
             "category": "elite",
             "subfactions": ["british", "none"],
             "min": 1,
@@ -642,7 +646,9 @@
                             ]
                         }, 
                         {"addRule": "reluctant"},
-                        {"addRule": "agile"}, {"addRule": "buckler"}
+                        {"addRule": "agile"}, 
+                {"addRule": "strider"},
+                        {"addRule": "buckler"}
                     ],
                     "notes": "Add special rules here",
                     "rules": [],
@@ -697,6 +703,7 @@
                             ]
                         }, 
                         {"addRule": "reluctant"},
+                {"addRule": "strider"},
                         {"addRule": "agile"}
                     ],
                     "notes": "Add special rules here",
@@ -801,6 +808,7 @@
                                 "sling"
                             ]
                         },
+                        {"addRule": "strider"},
                         {"addRule": "agile"}
                     ],
                     "notes": "Add special rules here",
@@ -848,6 +856,7 @@
                             ]
                         },
                         {"addRule": "agile"},
+                        {"addRule": "strider"},
                         {"addRule": "travel_horse"},
                         {"addRule": "buckler"}
                     ],
@@ -868,7 +877,7 @@
             "rules": ["light_cavalry", "warband", "if_it_bleeds", "mount_horse"],
             "options": [],
             "keywords": [
-                "Infantry", "Skirmisher"
+                "Cavalry", "Skirmisher"
             ],
             "models": [
                 {
@@ -894,7 +903,6 @@
                                 "sling"
                             ]
                         },
-                        {"addRule": "agile"},
                         {"addRule": "stubborn"},
                         {"addRule": "buckler"}
                     ],
@@ -942,7 +950,7 @@
                                 "welsh_longbow"
                             ]
                         },
-                        {"addRule": "agile"}
+                        {"addRule": "agile"}, {"addRule": "strider"}
                     ],
                     "notes": "The Longbow, Osprey ; Ravenfeast mentions an article. Welsh Bow/ Welsh Longbow is present in Total War: ATTILA - Age of Charlemagne.",
                     "rules": [],
@@ -976,9 +984,8 @@
                         "javelin", "hand_weapon"
                     ],
                     "options": [
-                        {
-                            "addWeapon": "shield"
-                        }
+                        {"addRule": "shield"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"], "modelLimit": "all"}
                     ],
                     "notes": "Add special rules here",
                     "rules": [],
@@ -1013,14 +1020,21 @@
                         "javelin", "hand_weapon"
                     ],
                     "options": [
-                        {
-                            "addWeapon": "shield"},
-                            {
-                                "replaceWeapon": "javelin",
+                        {"addRule": "shield"},
+                            {"replaceWeapon": "javelin",
                                 "withWeapon": [
                                     "heavy_throwing_spear"
-                                ]
-                            }
+                                ]},
+                                {"replaceWeapon": "javelin",
+                                "withWeapon": [
+                                    "throwing_spear"
+                                ]},
+                            {"replaceWeapon": "hand_weapon",
+                                "withWeapon": [
+                                    "heavy_throwing_spear"]
+                            },
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"], "modelLimit": "all"},
+                        {"replaceRule": "light_cavalry", "withRule": ["mount_warrior_culture"], "modelLimit": "all"}
                         ],
                     "notes": "Add special rules here",
                     "rules": [],

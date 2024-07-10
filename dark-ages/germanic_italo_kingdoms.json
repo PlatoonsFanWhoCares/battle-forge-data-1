@@ -78,7 +78,10 @@
                     "wounds": 1,
                     "weapons": ["hand_weapon", "javelin"],
                     "options": [
-                        {"addWeapon": "hand_axe"}, {"addWeapon": "spartha"}, {"addRule": "agile"}
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe", "spartha", "throwing_spear"], "modelLimit": "all"},
+                        {"replaceWeapon": "javelin", "withWeapon": ["throwing_spear"], "modelLimit": "all"},
+                        {"addRule": "strider"},
+                        {"addRule": "agile"}
                     ],
                     "min": 5,
                     "max": 10
@@ -107,10 +110,11 @@
                     "wounds": 1,
                     "weapons": ["hand_weapon", "javelin"],
                     "options": [
-                        {"addWeapon": "hand_axe"}, {"addWeapon": "spartha"}
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe", "spartha", "throwing_spear"], "modelLimit": "all"},
+                        {"replaceWeapon": "javelin", "withWeapon": ["throwing_spear"], "modelLimit": "all"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -122,7 +126,7 @@
             ],
             "min": 1,
             "max": 1,
-            "rules": ["fierce", "spearmen"],
+            "rules": ["fierce", "spearmen", "shield"],
             "keywords": ["Infantry", "Heavy_Infantry"],
             "models": [
                 {
@@ -134,16 +138,18 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"
+                    "weapons": ["sword", "javelin"
                     ],
-                    "options": [
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                    "options": [ {"addWeapon": "throwing_spear"},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["spear"]}
+                        {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "javelin", "withWeapon": ["throwing_spear"]},
+                        {"addRule": "scout"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -168,13 +174,15 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["sword"],
-                    "options": [
+                    "options": [{"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
+                    {"replaceWeapon": "sword", "withWeapon": ["spear"]},
+                    {"replaceWeapon": "javelin", "withWeapon": ["throwing_spear"]},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
                         {"addWeapon": "javelin"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -207,7 +215,7 @@
                         {"addWeapon": "kontos"}
                     ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },  
@@ -218,7 +226,7 @@
             "category": "rare",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -232,17 +240,17 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["shield","hand_weapon"],
+                    "weapons": ["hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
                         {"addRule": "light_armor"}, {"addRule": "reluctant"}, {"addRule": "stubborn"}
                     ],
                     "notes": "Carol Cav Osprey states source that indicates this existed.",
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -253,7 +261,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -267,12 +275,14 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield"],
+                    "weapons": ["hand_weapon"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor", "modelLimit": 5},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+                    {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"addRule": "scout"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -283,9 +293,9 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
+            "rules": ["warband", "if_it_bleeds", "spearmen", "shield"],
             "keywords": [
-                "Infantry"
+                "Infantry", "Heavy_Infantry"
             ],
             "models": [
                 {
@@ -297,12 +307,12 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
+                    "weapons": ["spear"],
                     "options": [{"addWeapon": "javelin"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -313,7 +323,7 @@
             "category": "rare",
             "min": 1,
             "max": 1,
-            "rules": ["spearmen"],
+            "rules": ["spearmen", "shield"],
             "keywords": [
                 "Infantry", "Heavy_Infantry"
             ],
@@ -327,7 +337,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
+                    "weapons": ["spear"],
                     "options": [{"addWeapon": "javelin"},
                         {"addRule": "light_armor"}, {"addRule": "stubborn"},
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
@@ -345,7 +355,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["if_it_bleeds", "spearmen"],
+            "rules": ["if_it_bleeds", "spearmen", "shield"],
             "keywords": [
                 "Infantry"
             ],
@@ -359,7 +369,7 @@
                     "defense": 5,
                     "reflexes": 4,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
+                    "weapons": ["spear"],
                     "options": [{"addWeapon": "javelin"}, {"addWeapon": "reluctant"},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
                     "notes": "TTS&ADLG, along with WAB:FS:HRE states this unit should be here. ADLG says its not just city or towns, but also villages or rural areas.",
@@ -375,7 +385,7 @@
             "category": "rare",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_horse", "light_cavalry"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "light_cavalry", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -389,8 +399,10 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield","hand_weapon"],
+                    "weapons": ["sword"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                    {"addWeapon": "throwing_spear"},
+                    {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
                     "min": 5,
@@ -405,7 +417,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen", "shield", "scout"],
+            "rules": ["warband", "if_it_bleeds", "spearmen", "shield"],
             "keywords": [
                 "Infantry", "Heavy_Infantry"
             ],
@@ -419,8 +431,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["spear"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]}],
+                    "options": [{"addWeapon": "javelin"}],
                     "min": 5,
                     "max": 15
                 }
@@ -433,7 +444,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
+            "rules": ["warband", "if_it_bleeds", "spearmen", "shield"],
             "keywords": [
                 "Infantry", "Heavy_Infantry"
             ],
@@ -447,8 +458,11 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["spear", "shield","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"}],
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}, 
+                    {"replaceRule": "spearmen", "withRule": ["light_infantry"]}
+                ],
+                "notes": "(Quad LkI): Checked the various lists and this should line up for all of them." ,
                     "min": 5,
                     "max": 10
                 }
@@ -457,13 +471,13 @@
         "archer_freemen": {
             "name": "Freemen Archer Milita",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none", "west_goths"],
+            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none"],
             "category": "core",
             "min": 1,
             "max": 1,
             "rules": ["warband", "if_it_bleeds", "light_infantry"],
             "keywords": [
-                "Infantry", "Heavy_Infantry"
+                "Infantry"
             ],
             "models": [
                 {
@@ -476,7 +490,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["bow","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},{"addRule": "agile"}],
+                    "options": [{"addRule": "agile"},
+                    {"addRule": "strider"}                
+                ],
+                    "notes": "(Quad LkI) Checked all the lists and as many sources as possible. This should be correct for all armies or sub-factions involved. ",
                     "min": 5,
                     "max": 10
                 }
@@ -485,11 +502,11 @@
         "mounted_freemen": {
             "name": "Mounted Freemen",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["gepids_lombards", "none", "italo_lombards", "early_hre", "burgundy", "west_goths"],
+            "subfactions": ["none", "italo_lombards", "early_hre", "burgundy"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "light_cavalry", "travel_horse", "spearmen"],
+            "rules": ["warband", "if_it_bleeds", "light_cavalry", "travel_horse"],
             "keywords": [
                 "Cavalry"
             ],
@@ -505,9 +522,13 @@
                     "wounds": 1,
                     "weapons": ["shield","hand_weapon"],
                     "options": [{"addWeapon": "javelin"},
+                    {"addRule": "stubborn"},
                         {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": "throwing_spear"},
                         {"replaceRule": "travel_horse", "withRule": ["mount_horse"]}
                     ],
+                    "notes": "(Quad LkI) WAB:GG, WAB:FS:HRE, and WAB:SW provide stats. Some guesswork and reading had to be used to fill in gaps.",
                     "min": 5,
                     "max": 10
                 }
@@ -535,7 +556,8 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["hand_weapon"],
-                    "options": [{"addRule": "travel_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                    "options": [{"addRule": "travel_horse"}, {"addRule": "scout"},
+                    {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                     {"addWeapon": "javelin"},
                                 {"replaceWeapon": "hand_weapon", "withWeapon": "spear"},
                                 {"replaceWeapon": "hand_weapon", "withWeapon": "throwing_spear"},
@@ -588,7 +610,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": [],
+            "rules": ["shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -602,17 +624,19 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"],
+                    "weapons": ["sword", "javelin"],
                     "options": [{"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                         {"addRule": "furious_charge"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
                                 {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "sword", "withWeapon": "throwing_spear"},
                                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                                 {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
                                 {"replaceRule": "travel_horse", "withRule": ["mount_horse"]},
                                 {"addRule": "mount_warrior_culture"}
                             ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -623,7 +647,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": [],
+            "rules": ["shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -637,13 +661,17 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"],
-                    "options": [{"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                    "weapons": ["sword", "javelin"],
+                    "options": [{"addRule": "mount_horse"}, 
+                    {"addRule": "scout"},
+                    {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                                 {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "sword", "withWeapon": ["throwing_spear"]},
                                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                                 {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -654,7 +682,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["mount_horse"],
+            "rules": ["mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -668,17 +696,18 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"],
+                    "weapons": ["sword", "javelin"],
                     "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]},
                      {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                         {"addRule": "furious_charge"}, 
                                 {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
                                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                                 {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
                                 {"addRule": "mount_warrior_culture"}
                             ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -689,7 +718,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["reluctant", "mount_horse"],
+            "rules": ["reluctant", "mount_horse", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -703,17 +732,18 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"],
-                    "options": [{"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                    "weapons": ["sword", "javelin"],
+                    "options": [
+                     {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                         {"addRule": "furious_charge"}, 
                                 {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
                                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                                 {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
-                                {"replaceRule": "travel_horse", "withRule": ["mount_horse"]}
-                            
+                                {"addRule": "mount_warrior_culture"}
                             ],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -724,7 +754,7 @@
             "subfactions": ["italo_lombards", "early_hre", "burgundy"],
             "min": 1,
             "max": 1,
-            "rules": ["light_cavalry"],
+            "rules": ["light_cavalry", "mount_horse", "shield"],
             "keywords": ["Cavalry"],
             "models": [
                 {
@@ -736,13 +766,16 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["sword", "shield", "javelin"
+                    "weapons": ["sword", "javelin"
                     ],
-                    "options": [{"addRule":  "mount_horse"},
+                    "options": [
                         {"addRule": "stubborn"},
+                        {"addRule": "mount_warrior_culture"},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]},
+                        {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
+                        {"replaceWeapon": "javelin", "withWeapon": "spear"},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
+                    "notes": "(LkI)",
                     "min": 5,
                     "max": 10
                 }
@@ -768,7 +801,9 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["crossbow", "hand_weapon"],
-                    "options": [{"addRule": "reluctant"},{"addRule": "agile"}
+                    "options": [{"addRule": "reluctant"},
+                    {"addRule": "strider"},
+                    {"addRule": "agile"}
                         ],
                     "notes": "No idea if HRE should have this unit.",
                     "min": 5,
@@ -796,7 +831,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["crossbow", "hand_weapon"],
-                    "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"}, {"addRule": "sell_sword"}
+                    "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"}, 
+                    {"addRule": "sell_sword"},
+                    {"addRule": "strider"},
+                    {"addRule": "agile"}
                         ],
                     "min": 5,
                     "max": 10

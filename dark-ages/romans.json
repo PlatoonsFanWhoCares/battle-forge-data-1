@@ -834,11 +834,12 @@
           "courage" : 6,
           "shoot" : 6,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 6,
           "rules" : [
             "shield",
-            "spearmen"
+            "spearmen",
+            "light_armor"
           ],
           "weapons" : [
             "spartha"
@@ -2784,26 +2785,7 @@
           "max" : 10
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "foederati_veterans" : {
       "name" : "Foederati Veterans",
@@ -2944,26 +2926,7 @@
           "max" : 10
         }
       ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
+      "options" : []
     },
     "phoideratoi" : {
       "name" : "Phoideratoi",
@@ -2974,7 +2937,7 @@
       ],
       "keywords" : [
         "Drilled",
-        "Infantry"
+        "Infantry", "Heavy_Infantry"
       ],
       "models" : [
         {

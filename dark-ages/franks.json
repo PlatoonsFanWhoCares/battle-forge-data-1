@@ -55,7 +55,9 @@
                     "reflexes": 7,
                     "rules": [{"id": "field_orders", "x": 2}, "lead_by_example", "leader", {"id": "wounds", "x": 3}],
                     "weapons": ["hand_weapon", "shield", "javelin"],
-                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"]}, {"replaceWeapon": "javelin", "withWeapon": ["francisca"]}, {"addWeapon": "bow"}],
+                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"]}, 
+                    {"replaceWeapon": "javelin", "withWeapon": ["francisca"]}, 
+                    {"addWeapon": "bow"}],
                     "min": 1,
                     "max": 1
                 }
@@ -308,10 +310,10 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 4,
-                    "rules": ["if_it_bleeds", "spearmen", "warband"],
-                    "weapons": ["spear", "shield", "javelin"],
+                    "rules": ["if_it_bleeds", "light_spearmen", "warband", "shield"],
+                    "weapons": ["throwing_spear", "javelin"],
                     "min": 5,
-                    "max": 15
+                    "max": 20
                 }
             ]
         },
@@ -331,7 +333,9 @@
                     "reflexes": 4,
                     "rules": ["buckler", "if_it_bleeds", "light_infantry", "warband"],
                     "weapons": ["hand_weapon"],
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "agile", "modelLimit": "all"}],
+                    "options": [{"addWeapon": "javelin"}, 
+                    {"addRule": "strider"},
+                    {"addRule": "agile", "modelLimit": "all"}],
                     "min": 5,
                     "max": 15
                 }
@@ -353,7 +357,10 @@
                     "reflexes": 5,
                     "rules": ["if_it_bleeds", "shield", "warband", "warrior_culture"],
                     "weapons": ["hand_weapon"],
-                    "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"}, {"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "options": [{"addRule": "reluctant"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe", "spear", "throwing_spear"], "modelLimit": "all"},
+                     {"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "notes": "(Quad LkI): Mostly a combination of the WAB:GG and WAB:AoA interpretations.", 
                     "min": 5,
                     "max": 15
                 }
@@ -376,7 +383,8 @@
                     "reflexes": 5,
                     "rules": ["shield", "if_it_bleeds", "warband"],
                     "weapons": ["spartha"],
-                    "options": [{"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"}, {"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "options": [{"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear", "throwing_spear"], "modelLimit": "all"}, {"addWeapon": ["javelin", "francisca", "throwing_spear"], "limit": 1}],
+                    "notes": "(Quad LkI): Mostly a combination of the WAB:GG and WAB:AoA, TTS interpretations.", 
                     "min": 5,
                     "max": 10
                 }
@@ -398,8 +406,9 @@
                     "reflexes": 5,
                     "rules": ["if_it_bleeds", "reluctant", "shield", "spearmen", "warband"],
                     "weapons": ["spear"],
+                    "notes": "(Quad LkI): Mostly a combination of the WAB:GG, WAB:AoA interpretations.", 
                     "min": 5,
-                    "max": 10
+                    "max": 20
                 }
             ]
         },
@@ -420,10 +429,11 @@
                     "rules": ["if_it_bleeds", "shield", "warband", "warrior_culture"],
                     "weapons": ["hand_weapon"],
                     "options": [
-                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe", "spear", "throwing_spear"], "modelLimit": "all"},
                         {"addWeapon": ["javelin", "francisca"], "limit": 1},
                         {"addRule": "light_armor", "modelLimit": 5}
                     ],
+                    "notes": "(Quad LkI): Mostly a combination of the WAB:GG and WAB:AoA interpretations.", 
                     "min": 5,
                     "max": 15
                 }
@@ -447,10 +457,11 @@
                     "rules": ["if_it_bleeds", "shield", "warband", "mount_warrior_culture"],
                     "weapons": ["spartha"],
                     "options": [
-                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe"], "modelLimit": "all"},
-                        {"addWeapon": ["javelin", "francisca"], "limit": 1},
+                        {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "throwing_spear"], "modelLimit": "all"},
+                        {"addWeapon": ["javelin", "francisca", "throwing_spear"], "limit": 1},
                         {"addRule": "light_armor", "modelLimit": 5}
                     ],
+                    "notes": "(Quad LkI): Mostly a combination of the WAB:GG and WAB:AoA interpretations.", 
                     "min": 5,
                     "max": 10
                 }
@@ -458,7 +469,7 @@
         },
         "liberi": {
             "name": "Liberi",
-            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them. Warriors recruited from the south or east fought in shieldwall as spearmen, while Franks from the north or north east preferred to fight like their ancestors.",
             "category": "core",
             "subfactions": ["later_merovingian_franks"],
             "models": [
@@ -474,8 +485,9 @@
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                    {"replaceWeapon": "spear", "withWeapon": ["francisca"]},
                         {"addWeapon": ["javelin", "francisca"], "limit": 1}],
-                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
+                    "notes": "(Quad LkI): Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
                     "min": 5,
                     "max": 15
                 }
@@ -483,9 +495,9 @@
         },
         "late_liberi": {
             "name": "Liberi",
-            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them.",
+            "description": "Previously known as 'Franci', the Liberi (Latin) were the landowning class. By the time of Charlemagne, the 'Franci'/'Liberi' answering the Heerbann increasingly found themselves fighting without horses, and religated to paying for the equipment of the 'milities', which was quite expensive. This was a considerable burden to the poor landowners, basically low class 'freemen', who hoped to be under the service of a lord rich enough to, help them afford their obligations or ask less of them. Warriors recruited from the south or east fought in shieldwall as spearmen, while Franks from the north or north east preferred to fight like their ancestors.",
             "category": "core",
-            "subfactions": ["none", "aquitaine", "carolingian_french", "capetian_french"],
+            "subfactions": ["none", "aquitaine", "carolingian_french"],
             "models": [
                 {
                     "name": "Liberi",
@@ -499,8 +511,9 @@
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                    {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
                         {"addWeapon": ["javelin"], "limit": 1}],
-                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
+                    "notes": " Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
                     "min": 5,
                     "max": 15
                 }
@@ -524,7 +537,7 @@
                     "weapons": ["spear"],
                     "options": [
                         {"addWeapon": ["javelin"], "limit": 1}],
-                    "notes": "Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
+                    "notes": "(Quad LkI): Age of Char Osprey states that freemen were required to assemble as a mounted warrior. There is a lot of debate if troops fought mounted, but the horse was required. To prevent this unit from spawning on a horse and staying on it. I've given the unit scout for now.",
                     "min": 5,
                     "max": 15
                 }
@@ -532,9 +545,9 @@
         },
         "select_liberi": {
             "name": "Skilled Liberi",
-            "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself, often if freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him.",
+            "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself. In a similar situation, when freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him. Warriors recruited from the south or east fought in shieldwall as spearmen, while Franks from the north or north east preferred to fight like their ancestors.",
             "category": "core",
-            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "subfactions": ["later_merovingian_franks"],
             "models": [
                 {
                     "name": "Liberi",
@@ -548,17 +561,22 @@
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                    {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
+                    {"replaceWeapon": "spear", "withWeapon": ["francisca"]},
+                    {"addRule": "light_armor"},
+                    {"addRule": "stubborn"},
                     {"addWeapon": ["javelin", "francisca"], "limit": 1}],
                     "min": 5,
-                    "max": 15
+                    "max": 15,
+                    "notes": "(Quad LkI) Matches TTS, unit like this mentioned in WAB:GG. This is here for balancing and to give flexibility, but it also matches some historical documentation."
                 }
             ]
         },
         "late_select_liberi": {
-            "name": "Skilled Liberi",
+            "name": "Skilled/Veteran Liberi",
             "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself, often if freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him.",
             "category": "core",
-            "subfactions": ["later_merovingian_franks", "aquitaine", "carolingian_french", "capetian_french"],
+            "subfactions": ["aquitaine", "carolingian_french", "capetian_french"],
             "models": [
                 {
                     "name": "Liberi",
@@ -572,7 +590,9 @@
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                    {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
                     {"addWeapon": ["javelin"], "limit": 1}],
+                    "note": "Not entirely sure if this type of infantry was still around, however I know that plenty of Carolingian veterans did exist from all the fighting.",
                     "min": 5,
                     "max": 15
                 }
@@ -594,7 +614,10 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["unarmed", "bow"],
-                    "options": [{"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"}, {"addRule": "agile", "modelLimit": "all"}],
+                    "options": [{"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"}, 
+                    {"addRule": "strider"},
+                    {"addRule": "agile", "modelLimit": "all"}],
+                    "notes": "(Quad LkI): Mentioned and hinted to in every single system, and is backed up by documentation and regulations of the period.",
                     "min": 5,
                     "max": 15
                 }
@@ -616,31 +639,10 @@
                     "reflexes": 5,
                     "rules": ["buckler", "if_it_bleeds", "skirmisher_formation", "warband"],
                     "weapons": ["javelin", "hand_weapon"],
-                    "options": [{"replaceRule": "buckler", "withRule": ["shield"], "modelLimit": "all"}, {"addRule": "agile", "modelLimit": "all"}],
-                    "min": 5,
-                    "max": 15
-                }
-            ]
-        },
-        "elite_liberi": {
-            "name": "Veteran Liberi",
-            "description": "While the landed warrior nobility often needed five farms (His fief) to his name to support himself, often if freemen were called to fight, they would be required to send the best man of five farms and use the five farms to equip him.",
-            "category": "rare",
-            "subfactions": ["later_merovingian_franks"],
-            "models": [
-                {
-                    "name": "Liberi",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband"],
-                    "weapons": ["spear"],
-                    "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
-                    {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
-                        {"addWeapon": ["javelin", "francisca"], "limit": 1}],
+                    "options": [{"replaceRule": "buckler", "withRule": ["shield"], "modelLimit": "all"}, 
+                    {"addRule": "strider"},
+                    {"addRule": "agile", "modelLimit": "all"}],
+                    "notes": "(Quad LkI): Mentioned in WAB:SW and could fit some unit descriptions from other systems.",
                     "min": 5,
                     "max": 15
                 }
@@ -717,10 +719,10 @@
                     "weapons": ["spartha"],
                     "options": [
                         {"replaceWeapon": "spartha", "withWeapon": ["hand_axe", "spear"], "modelLimit": "all"},
-                        {"addWeapon": ["francisca", "javelin"], "limit": 1},
+                        {"addWeapon": ["francisca", "javelin", "throwing_spear"], "limit": 1},
                         {"addRule": ["light_armor", "furious_charge", "superior_cavalry"], "modelLimit": "all"}
                     ],
-                    "notes": "Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
+                    "notes": "(Quad LkI) Mostly inspired by WAB:GG. Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
                     "max": 10
                 }
@@ -748,7 +750,7 @@
                         {"addWeapon": ["javelin", "francisca"], "limit": 1},
                         {"addRule": ["light_armor", "furious_charge", "superior_cavalry", "heavy_armor"], "modelLimit": "all"}
                     ],
-                    "notes": "Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
+                    "notes": "(Quad LkI) Mostly inspired by WAB:GG. Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
                     "max": 10
                 }
@@ -959,6 +961,7 @@
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"addWeapon": "bow"}
                     ],
+                    "notes": "This army list and these two units need to be examined over closely. The lists for them are rather thrown together and so checking documentation might be a good idea.",
                     "min": 5,
                     "max": 15
                 }
@@ -980,10 +983,9 @@
                     "defense": 6,
                     "reflexes": 6,
                     "rules": ["fierce", "light_cavalry", "shield", "mount_warrior_culture"],
-                    "weapons": ["spartha", "javelin", "horse_attack"],
+                    "weapons": ["spartha", "javelin"],
                     "options": [
                         {"replaceWeapon": "spartha", "withWeapon": ["hand_axe"], "modelLimit": "all"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"addWeapon": "bow"},
                         {"addRule": ["furious_charge", "superior_cavalry"], "modelLimit": "all"}
                     ],
@@ -994,7 +996,7 @@
         },
         "latest_pueri_light_cav": {
             "name": "Pueri Light Cavalry ",
-            "description": "Pueri ('Boys') stopped being a term specificly for the personial guard of nobles, and started being a term for poorer nobles, squires, and 'Franci'/'Liberi' who had their own horse, but weren't stuck paying for the equipment of a milites. The bulk of warriors who served under Charlemagne, could afford a war-horse valued at 12 cows or 4 mares, but a helmet/sword would be 6/7 more cows, and a coat of mail another 12 cows.",
+            "description": "Pueri ('Boys') stopped being a term specificly for the personial guard of nobles, and started being a term for poorer nobles (Such as 'milites'), squires, and 'Franci'/'Liberi' who had their own horse, but weren't stuck paying for the equipment of a milites. The bulk of warriors who served under Charlemagne, could afford a war-horse valued at 6-12 cows or 2-4 mares, but a helmet/sword would be 6/7 more cows, and a coat of mail another 12 cows.",
             "category": "core",
             "subfactions": ["carolingian_french"],
             "keywords": ["Cavalry"],
@@ -1010,12 +1012,40 @@
                     "rules": ["light_cavalry", "shield"],
                     "weapons": ["spartha", "javelin"],
                     "options": [
-                        {"replaceWeapon": ["spartha"], "withWeapon": ["spear"], "modelLimit": "all"},
-                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
-                        {"addWeapon": "bow"},
-                        {"replaceWeapon": "javelin", "withWeapon": ["bow"]},
+                        {"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"], "modelLimit": "all"},
+                        {"replaceWeapon": ["hand_weapon"], "withWeapon": ["spartha"], "modelLimit": "all"},
+                        {"replaceWeapon": ["javelin"], "withWeapon": ["throwing_spear"], "modelLimit": "all"},
                         {"addRule": ["light_armor", "stubborn"], "modelLimit": "all"}
                     ],
+                    "note": "(LkI) Need to check if this unit gets mail as option or not",
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "latest_pueri_bow_light_cav": {
+            "name": "Pueri Light Bow Cavalry ",
+            "description": "Pueri ('Boys') stopped being a term specificly for the personial guard of nobles, and started being a term for poorer nobles (Such as 'milites'), squires, and 'Franci'/'Liberi' who had their own horse, but weren't stuck paying for the equipment of a milites. The bulk of warriors who served under Charlemagne, could afford a war-horse valued at 6-12 cows or 2-4 mares, but a helmet/sword would be 6/7 more cows, and a coat of mail another 12 cows.",
+            "category": "core",
+            "subfactions": ["carolingian_french"],
+            "keywords": ["Cavalry"],
+            "models": [
+                {
+                    "name": "Pueri Horseman",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["light_cavalry"],
+                    "weapons": ["hand_weapon", "bow"],
+                    "options": [
+                        {"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"], "modelLimit": "all"},
+                        {"replaceWeapon": ["hand_weapon"], "withWeapon": ["spartha"], "modelLimit": "all"},
+                        {"addRule": ["light_armor", "stubborn"], "modelLimit": "all"}
+                    ],
+                    "note": "(Quad LkI) Need to check if this unit gets mail as option or not",
                     "min": 5,
                     "max": 10
                 }
@@ -1271,7 +1301,7 @@
                     "options": [
                         {"replaceWeapon": "short_bow", "withWeapon": ["bow", "sling", "javelin"], "modelLimit": "all"},
                         {"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"},
-                        {"addRule": ["buckler", "strider", "stubborn"], "modelLimit": "all"}
+                        {"addRule": ["buckler", "strider", "stubborn", "agile"], "modelLimit": "all"}
                     ],
                     "min": 5,
                     "max": 15
@@ -1297,7 +1327,7 @@
                     "options": [
                         {"replaceWeapon": "short_bow", "withWeapon": ["sling", "javelin", "bow"], "modelLimit": "all"},
                         {"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"},
-                        {"addRule": ["buckler", "strider", "stubborn"], "modelLimit": "all"}
+                        {"addRule": ["buckler", "strider", "stubborn", "agile"], "modelLimit": "all"}
                     ],
                     "notes": "The Aachen capitulary contained a further provision that no soldier should carry a cudgel (baculum), but rather a bow. It's often assumed this provision applies to free peasants of impoverished or middling means",
                     "min": 5,
@@ -1325,7 +1355,7 @@
                         {"replaceWeapon": "unarmed", "withWeapon": ["hand_weapon"], "modelLimit": "all"},
                         {"replaceWeapon": "javelin", "withWeapon": ["sling"], "modelLimit": "all"},
                         {"replaceRule": "skirmisher_formation", "withRule": ["light_infantry"], "modelLimit": "all"},
-                        {"addRule": ["buckler", "strider", "stubborn"], "modelLimit": "all"}
+                        {"addRule": ["buckler", "strider", "stubborn", "agile"], "modelLimit": "all"}
                     ],
                     "min": 5,
                     "max": 15
@@ -1480,7 +1510,7 @@
             ]
         }
     },
-    "weapons": {"francisca": {"name": "Francisca", "attacks": 1, "short": 9, "ap": 2, "rules": ["assault", "rending"]}},
+    "weapons": {"francisca": {"name": "Francisca", "attacks": 1, "short": 6, "ap": 2, "rules": ["assault", "overhead_throw"]}},
     "rules": {
         "the_emperor": {"name": "The Emperor", "hidden": false, "description_short": "This model may target a third unit with the Field Orders special rule.", "points": [10]},
         "power_behind_the_throne": {"name": "The Emperor", "hidden": false, "description_short": "This model may target a third unit with the Field Orders special rule.", "points": [10]},
