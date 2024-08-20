@@ -931,7 +931,7 @@
           "reflexes" : 6,
           "rules" : [
             "light_cavalry",
-            "shield",
+            "buckler",
             "horse", 
             "mount_warrior_culture"
           ],
@@ -947,7 +947,12 @@
             },
             {
               "replaceWeapon" : "javelin",
-              "withWeapon" : "heavy_throwing_spear",
+              "withWeapon" : "throwing_spear",
+              "modelLimit" : "all"
+            },
+            {
+              "replaceRule" : "buckler",
+              "withRule" : "shield",
               "modelLimit" : "all"
             },
             {
@@ -955,8 +960,9 @@
               "modelLimit" : "all"
             }
           ],
+          "notes": "(LkI) Mixture of WAB:AoA and Fall of the West",
           "min" : 5,
-          "max" : 15
+          "max" : 10
         }
       ],
       "options" : []
@@ -985,7 +991,7 @@
           "rules" : [
             "light_cavalry",
             "mount_horse",
-            "shield"
+            "buckler"
           ],
           "weapons" : [
             "spartha",
@@ -998,11 +1004,128 @@
               "modelLimit" : "all"
             },
             {
+              "replaceRule" : "buckler",
+              "withRule" : "shield",
+              "modelLimit" : "all"
+            },
+            {
               "replaceWeapon" : "javelin",
               "withWeapon" : "heavy_throwing_spear",
               "modelLimit" : "all"
             }
           ],
+          "min" : 5,
+          "max" : 10
+        }
+      ],
+      "options" : []
+    },
+    "heavy_equites" : {
+      "name" : "Equites (Shock Cavalry)",
+      "description" : "The 'Scutarii' were named after their large shields and the 'Promoti' after their quality. These types of cavalry are an evolution from earlier Roman cavalry, taking on an increasingly more effective role in battle and eclipsing the infantry.",
+      "category" : "core",
+      "subfactions" : [
+        "none",
+        "slightly_late_roman",
+        "late_roman",
+        "later_eastern_roman"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "models" : [
+        {
+          "name" : "Eques",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "rules" : [
+            "light_armor",
+            "shield",
+            "horse", 
+            "mount_warrior_culture"
+          ],
+          "weapons" : [
+            "spartha",
+            "javelin"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "spartha",
+              "withWeapon" : "spear",
+              "modelLimit" : "all"
+            },
+            {
+              "replaceRule" : "shield",
+              "withRule" : "large_shield",
+              "modelLimit" : "all"
+            },
+            {
+              "replaceWeapon" : "javelin",
+              "withWeapon" : "throwing_spear",
+              "modelLimit" : "all"
+            }
+          ],
+          "notes": "(LkI) Mixture of WAB:AoA and Fall of the West",
+          "min" : 5,
+          "max" : 15
+        }
+      ],
+      "options" : []
+    },
+    "heavy_elite_equites" : {
+      "name" : "Equites Palatini(Shock Cavalry)",
+      "description" : "The 'Scutarii' were named after their large shields and the 'Promoti' after their quality. These types of cavalry are an evolution from earlier Roman cavalry, taking on an increasingly more effective role in battle and eclipsing the infantry. Seperate from the Limitanei and the Comitatenses, were the Palatini (Palace Troops), who were better paid and respected. While these units started out as troops personally organized and commanded by the Emperor, in some documents they are so plentiful, that they can't all be elite. There are many arguments among scholars, about the exact level of quality the late romans were capable of, in terms of training, material, and experience.",
+      "category" : "core",
+      "subfactions" : [
+        "none",
+        "slightly_late_roman",
+        "late_roman",
+        "later_eastern_roman"
+      ],
+      "keywords" : [
+        "Cavalry", "Drilled"
+      ],
+      "models" : [
+        {
+          "name" : "Eques",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "rules" : [
+            "light_armor",
+            "shield",
+            "horse", 
+            "mount_warrior_culture"
+          ],
+          "weapons" : [
+            "spartha",
+            "javelin"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "spartha",
+              "withWeapon" : "spear",
+              "modelLimit" : "all"
+            },
+            {
+              "replaceRule" : "shield",
+              "withRule" : "large_shield",
+              "modelLimit" : "all"
+            },
+            {
+              "replaceWeapon" : "javelin",
+              "withWeapon" : "throwing_spear",
+              "modelLimit" : "all"
+            }
+          ],
+          "notes": "(LkI) Mixture of WAB:AoA and Fall of the West",
           "min" : 5,
           "max" : 15
         }

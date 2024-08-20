@@ -64,6 +64,7 @@
                                 "sling"
                             ]},
                             {"addRule": "buckler"},
+                            {"addRule": "strider"},
                             {"addRule": "reluctant"},{"addRule": "agile"}
                         ],
                     "min": 5,
@@ -94,6 +95,7 @@
                     "options": [
                         {"replaceWeapon": "javelin", "withWeapon": ["sling"]},
                             {"addRule": "buckler"},
+                            {"addRule": "strider"},
                             {"addRule": "reluctant"}, {"addRule": "agile"}
                         ],
                     "min": 5,
@@ -121,7 +123,9 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["bow", "hand_weapon"],
-                    "options": [{"addRule": "reluctant"}, {"addRule": "agile"}
+                    "options": [{"addRule": "reluctant"}, 
+                    {"addRule": "strider"},
+                    {"addRule": "agile"}
                         ],
                     "min": 5,
                     "max": 10
@@ -135,7 +139,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+            "rules": ["if_it_bleeds", "shield", "spearmen", {"id": "scout", "name": "Riding Horse"}, "warband"],
             "keywords": [
                 "Infantry"
             ],
@@ -183,7 +187,7 @@
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
                     "min": 5,
-                    "max": 10
+                    "max": 15
                 }
             ]
         },
@@ -267,7 +271,9 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["spear", "shield"], 
-                    "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"}],
+                    "options": [{"addWeapon": "javelin"},
+                    {"id": "scout", "name": "Riding Horse"},
+                    {"addRule": "light_armor"}],
                     "min": 5,
                     "max": 15
                 }
@@ -296,6 +302,7 @@
                     "wounds": 1,
                     "weapons": ["hand_axe", "shield"], 
                     "options": [{"addWeapon": "javelin"}, {"addRule": "light_armor"},
+                    {"id": "scout", "name": "Riding Horse"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]}],
                     "min": 5,
                     "max": 15
@@ -355,6 +362,7 @@
                     "options": [{"addWeapon": "javelin"},
                         {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
+                        {"addRule": "strider"},
                         {"addRule": "reluctant"},{"addRule": "agile"}
                     ],
                     "min": 5,
@@ -369,9 +377,9 @@
         "category": "core",
         "min": 1,
         "max": 1,
-        "rules": ["furious_charge"],
+        "rules": ["furious_charge", "mount_horse", "shield"],
         "keywords": [
-            "Infantry"
+            "Cavalry"
         ],
         "models": [
             {
@@ -383,11 +391,46 @@
                 "defense": 5,
                 "reflexes": 6,
                 "wounds": 1,
-                "weapons": ["spartha", "shield", "javelin"],
-                "options": [{"addRule": "war_horse"},{"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                            {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                "weapons": ["spartha", "javelin"],
+                "options": [{"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                {"replaceRule": "mount_horse", "withRule": ["war_horse"]},
+                {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                {"addWeapon": "throwing_spear"},
                             {"replaceWeapon": "spartha", "withWeapon": "throwing_spear"},
+                            {"replaceWeapon": "spartha", "withWeapon": "spear"},
                             {"replaceWeapon": "javelin", "withWeapon": "lance"}],
+                "min": 5,
+                "max": 15
+            }
+        ]
+    },
+    "dismounted_knights": {
+        "name": "Dismounted Knights",
+        "description": "Having evolved from the milites (Previously a Roman term for 'soldier) the professional soldier class, who often fought on horseback, the 'knight' was an increasingly professonalizing clas of soldier. Slowly bit by bit this professional class of warrior, became closer to a high class noble then a well off freeman or middle class landowner. The normans were the 'spearpoint', pun intended of this new evolution, as their calvary turned away from the throwing spear and sword, and towards the lance and stabbing spear. Despite these slow and study changes, for many decades the average 'knight' or 'milites' was a veteran mercenary or soldier, who had accumulated wealth and experience over time.",
+        "subfactions": ["duchy_of_normany"],
+        "category": "core",
+        "min": 1,
+        "max": 1,
+        "rules": ["shield"],
+        "keywords": [
+            "Infantry", "Heavy_Infantry"
+        ],
+        "models": [
+            {
+                "name": "Knights",
+                "courage": 5,
+                "movement": 6,
+                "shoot": 5,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spartha", "javelin"],
+                "options": [{"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                {"addWeapon": "throwing_spear"},
+                            {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                            {"replaceWeapon": "spartha", "withWeapon": "throwing_spear"}],
                 "min": 5,
                 "max": 15
             }
@@ -400,7 +443,7 @@
         "category": "core",
         "min": 1,
         "max": 1,
-        "rules": ["furious_charge"],
+        "rules": ["furious_charge", "shield", "mount_horse"],
         "keywords": [
             "Infantry"
         ],
@@ -414,8 +457,45 @@
                 "defense": 5,
                 "reflexes": 6,
                 "wounds": 1,
-                "weapons": ["spartha", "shield", "javelin"],
-                "options": [{"addRule": "war_horse"}, {"addRule": "mount_horse"}, {"addRule": "light_armor"},
+                "weapons": ["spartha", "javelin"],
+                "options": [{"replaceRule": "mount_horse", "withRule": ["war_horse"]},
+                {"addRule": "light_armor"},
+                {"addRule": "heavy_armor"},
+                {"addWeapon": "throwing_spear"},
+                {"replaceWeapon": "spartha", "withWeapon": "throwing_spear"},
+                            {"replaceWeapon": "javelin", "withWeapon": "spear"}],
+                "min": 5,
+                "max": 10
+            }
+        ]
+    },
+    "foot_allied_knights": {
+        "name": "Dismounted Allied Knights",
+        "description": "These 'knights' are mercenaries and allies from Brittany, or the Franks. Being of the later Frankish era, they have suitable horses and kit for being 'shock cavalry', but they don't have all the right equipment. They do however, have better training in ranged weaponary then most and are quite experienced, being mercenaries.",
+        "subfactions": ["duchy_of_normany", "bretons"],
+        "category": "core",
+        "min": 1,
+        "max": 1,
+        "rules": ["shield"],
+        "keywords": [
+            "Infantry"
+        ],
+        "models": [
+            {
+                "name": "Knights",
+                "courage": 5,
+                "movement": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 1,
+                "weapons": ["spartha", "javelin"],
+                "options": [{"addRule": "light_armor"},
+                {"addRule": "heavy_armor"},
+                {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                {"replaceWeapon": "spartha", "withWeapon": "throwing_spear"},
+                {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"}],
                 "min": 5,
                 "max": 10
@@ -442,7 +522,7 @@
                 "reflexes": 5,
                 "wounds": 1,
                 "weapons": ["crossbow", "hand_weapon"],
-                "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"}
+                "options": [{"addRule": "light_armor"}, {"addRule": "reluctant"}, {"addRule": "strider"}
                     ],
                 "min": 5,
                 "max": 10
@@ -470,6 +550,7 @@
                 "wounds": 2,
                 "weapons": ["spartha", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "mount_horse"},
+                {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                     {"replaceWeapon": "javelin", 
                         "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
                         {"replaceWeapon": "shield", 
@@ -501,6 +582,7 @@
                 "wounds": 2,
                 "weapons": ["spear", "shield", "javelin"],
                 "options": [{"addRule": "war_horse"}, {"addRule": "mount_horse"},
+                {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                     {"replaceWeapon": "javelin", 
                         "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
                         {"replaceWeapon": ["spear", "shield"], 
@@ -536,7 +618,9 @@
                             "sling"
                         ]},
                         {"addRule": "buckler"},
-                        {"addRule": "reluctant"},{"addRule": "agile"}
+                        {"addRule": "strider"},
+                        {"addRule": "reluctant"},{"addRule": "agile"}, 
+                        {"addRule": "strider"}
                     ],
                 "min": 5,
                 "max": 10
@@ -566,6 +650,7 @@
                 "options": [
                     {"replaceWeapon": "javelin", "withWeapon": ["sling"]},
                         {"addRule": "buckler"},
+                        {"addRule": "strider"},
                         {"addRule": "reluctant"},{"addRule": "agile"}
                     ],
                 "min": 5,
@@ -593,7 +678,9 @@
                 "reflexes": 5,
                 "wounds": 1,
                 "weapons": ["bow", "hand_weapon"],
-                "options": [{"addRule": "reluctant"},{"addRule": "agile"}
+                "options": [{"addRule": "reluctant"},
+                {"addRule": "strider"},
+                {"addRule": "agile"}
                     ],
                 "min": 5,
                 "max": 10
@@ -625,6 +712,7 @@
                 "options": [{"addWeapon": "javelin"},
                 {"addWeapon": "hand_weapon"},
                     {"replaceWeapon": "spear", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                    {"addRule": "strider"},
                     {"addRule": "agile"}],
                 "min": 5,
                 "max": 10
@@ -667,7 +755,7 @@
         "category": "core",
         "min": 1,
         "max": 1,
-        "rules": ["warband", "if_it_bleeds", "light_infantry"],
+        "rules": ["warband", "if_it_bleeds", "light_infantry", "shield"],
         "keywords": [
             "Infantry"
         ],
@@ -681,23 +769,24 @@
                 "defense": 5,
                 "reflexes": 5,
                 "wounds": 1,
-                "weapons": ["spear", "shield","hand_weapon"],
+                "weapons": ["spear"],
                 "options": [{"addWeapon": "javelin"},
-                    {"replaceWeapon": "spear", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Francisca"}]},
+                    {"replaceWeapon": "spear", "withWeapon": "throwing_spear"},
+                    {"addRule": "strider"},
                     {"addRule": "agile"}],
                 "min": 5,
                 "max": 10
             }
         ]
     },
-"milites": {
+"bre_milites": {
     "name": "Breton Milites",
     "description": "The milites (Previously a Roman term for 'soldier) were a professional soldier class, who often fought on horseback, as had increasingly been the tradition and focus of the Franks over the previous few hundred years. While similar to the 'knights' of later periods, which this class would evolve into (Especially for the Normans), they focused less on the thrusting spear or lance, and more on the throwing spear and sword.",
     "subfactions": ["bretons"],
     "category": "core",
     "min": 1,
     "max": 1,
-    "rules": ["furious_charge", "light_cavalry", "mount_horse"],
+    "rules": ["furious_charge", "light_cavalry", "mount_horse", "shield"],
     "keywords": [
         "Cavalry"
     ],
@@ -711,10 +800,44 @@
             "defense": 5,
             "reflexes": 6,
             "wounds": 1,
-            "weapons": ["sword", "shield", "javelin"],
+            "weapons": ["sword", "javelin"],
             "options": [{"replaceRule": "mount_horse", "withRule": ["war_horse"]},
             {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+                        {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
+            "min": 5,
+            "max": 10
+        }
+    ]
+},
+"foot_bre_milites": {
+    "name": "Dismounted Breton Milites",
+    "description": "The milites (Previously a Roman term for 'soldier) were a professional soldier class, who often fought on horseback, as had increasingly been the tradition and focus of the Franks over the previous few hundred years. While similar to the 'knights' of later periods, which this class would evolve into (Especially for the Normans), they focused less on the thrusting spear or lance, and more on the throwing spear and sword.",
+    "subfactions": ["bretons"],
+    "category": "core",
+    "min": 1,
+    "max": 1,
+    "rules": ["shield"],
+    "keywords": [
+        "Infantry", "Heavy_Infantry"
+    ],
+    "models": [
+        {
+            "name": "Milites",
+            "courage": 5,
+            "movement": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 6,
+            "wounds": 1,
+            "weapons": ["sword", "javelin"],
+            "options": [
+            {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                        {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+                        {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"replaceWeapon": "javelin", "withWeapon": "spear"},
                         {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
@@ -730,7 +853,7 @@
     "subfactions": ["bretons", "duchy_of_normany", "none", "italo_normans"],
     "min": 1,
     "max": 1,
-    "rules": ["light_cavalry", "travel_horse"],
+    "rules": ["light_cavalry", "travel_horse", "shield"],
     "keywords": ["Cavalry"],
     "models": [
         {
@@ -742,10 +865,10 @@
             "defense": 5,
             "reflexes": 5,
             "wounds": 1,
-            "weapons": ["sword", "shield", "javelin"
+            "weapons": ["sword", "javelin"
             ],
             "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]},
-                {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+            {"addWeapon": "throwing_spear"},
                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
             "min": 5,
             "max": 10
@@ -759,7 +882,7 @@
     "subfactions": ["bretons", "duchy_of_normany", "none"],
     "min": 1,
     "max": 1,
-    "rules": ["light_cavalry", "travel_horse"],
+    "rules": ["light_cavalry", "travel_horse", "shield"],
     "keywords": ["Cavalry"],
     "models": [
         {
@@ -771,10 +894,10 @@
             "defense": 5,
             "reflexes": 5,
             "wounds": 1,
-            "weapons": ["sword", "shield", "javelin"
+            "weapons": ["sword", "javelin"
             ],
             "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]}, {"addRule": "light_armor"},
-                {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+            {"addWeapon": "throwing_spear"},
                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
             "min": 5,
             "max": 10
@@ -787,7 +910,7 @@
     ],
     "min": 1,
     "max": 1,
-    "rules": ["light_cavalry", "travel_horse"],
+    "rules": ["light_cavalry", "travel_horse", "shield"],
     "keywords": ["Cavalry"],
     "models": [
         {
@@ -799,10 +922,10 @@
             "defense": 5,
             "reflexes": 5,
             "wounds": 1,
-            "weapons": ["sword", "shield", "javelin"
+            "weapons": ["sword", "javelin"
             ],
             "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]},
-                {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+            {"addWeapon": "throwing_spear"},
                 {"replaceWeapon": "sword", "withWeapon": ["spartha"]}],
             "min": 5,
             "max": 10
@@ -830,6 +953,7 @@
                     "wounds": 2,
                     "weapons": ["spear", "shield"],
                     "options": [{"addRule": "war_horse"}, {"addRule": "mount_horse"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"addRule": "light_armor"},
                         {"addRule": "travel_horse"},
                         {"addRule": "heavy_armor"}
@@ -860,6 +984,7 @@
                     "wounds": 1,
                     "weapons": ["spear", "shield"],
                     "options": [{"addRule": "mount_horse"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"addRule": "light_armor"},
                         {"addRule": "travel_horse"}
                         ],
@@ -892,6 +1017,7 @@
                 "weapons": ["spear", "shield","hand_weapon"],
                 "options": [{"addWeapon": "javelin"},
                     {"addRule": "light_armor"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                     {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
                 "min": 5,
@@ -984,7 +1110,7 @@
                 "wounds": 1,
                 "weapons": ["sword", "shield", "javelin"],
                 "options": [{"addRule": "travel_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                            {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+                {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                             {"replaceWeapon": "javelin", "withWeapon": "spear"},
                             {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
                             {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
@@ -1013,77 +1139,157 @@
                 "reflexes": 4,
                 "wounds": 1,
                 "weapons": ["hand_weapon"],
-                "options": [{"addWeapon": "javelin"},{"addRule": "agile"}],
+                "options": [{"addWeapon": "javelin"},
+                {"addRule": "strider"},
+                {"addRule": "agile"}],
                 "min": 10,
                 "max": 10
             }
         ]
-    }        
-},
+    },
 "young_ministerialis": {
-    "name": "Young Ministerialis",
-    "description": "The Ministerialis were unfree knights (warrior nobles), who according to the law had borrowed land from their lord and had to ask for permission to marry. In practice, they mostly behaved like free people, and often had multiple masters. As long as they remained available to serve and didn't serve their main lord's enemies, that was good enough.",
-    "subfactions": ["duchy_frisia"],
-    "category": "core",
-    "min": 1,
-    "max": 1,
-    "rules": [""],
-    "keywords": [
-        "Cavalry"
-    ],
-    "models": [
-        {
+            "name": "Young Ministerialis",
+            "description": "The Ministerialis were unfree knights (warrior nobles), who according to the law had borrowed land from their lord and had to ask for permission to marry. In practice, they mostly behaved like free people, and often had multiple masters. As long as they remained available to serve and didn't serve their main lord's enemies, that was good enough.",
+            "subfactions": ["duchy_frisia"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["travel_horse", "shield"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Ministerialis",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["sword", "javelin"],
+                    "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]},
+                     {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                        {"addRule": "furious_charge"}, 
+                                {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                                {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                                {"addRule": "mount_warrior_culture"}
+                            ],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "foot_young_ministerialis": {
+            "name": "Dismounted Young Ministerialis",
+            "description": "The Ministerialis were unfree knights (warrior nobles), who according to the law had borrowed land from their lord and had to ask for permission to marry. In practice, they mostly behaved like free people, and often had multiple masters. As long as they remained available to serve and didn't serve their main lord's enemies, that was good enough.",
+            "subfactions": ["duchy_frisia"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["shield"],
+            "keywords": [
+                "Infantry", "Heavy_Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Ministerialis",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["sword", "javelin"],
+                    "options": [
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                     {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                                {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                                {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}
+                            ],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "ministerialis": {
             "name": "Ministerialis",
-            "courage": 5,
-            "movement": 6,
-            "shoot": 5,
-            "fight": 6,
-            "defense": 5,
-            "reflexes": 5,
-            "wounds": 1,
-            "weapons": ["sword", "shield", "javelin"],
-            "options": [{"addRule": "war_horse"},{"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                {"addRule": "furious_charge"},
-                        {"replaceWeapon": "javelin", "withWeapon": "spear"},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
-            "min": 5,
-            "max": 10
+            "description": "The Ministerialis were unfree knights (warrior nobles), who according to the law had borrowed land from their lord and had to ask for permission to marry. In practice, they mostly behaved like free people, and often had multiple masters. As long as they remained available to serve and didn't serve their main lord's enemies, that was good enough.",
+            "subfactions": ["duchy_frisia"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["reluctant", "mount_horse", "shield"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Ministerialis",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["sword", "javelin"],
+                    "options": [
+                     {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                        {"addRule": "furious_charge"}, 
+                                {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                                {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]},
+                                {"addRule": "mount_warrior_culture"}
+                            ],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "foot_ministerialis": {
+            "name": "Dismounted Ministerialis",
+            "description": "The Ministerialis were unfree knights (warrior nobles), who according to the law had borrowed land from their lord and had to ask for permission to marry. In practice, they mostly behaved like free people, and often had multiple masters. As long as they remained available to serve and didn't serve their main lord's enemies, that was good enough.",
+            "subfactions": ["duchy_frisia"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["reluctant", "mount_horse", "shield"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Ministerialis",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["sword", "javelin"],
+                    "options": [
+                     {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
+                        {"id": "scout", "name": "Riding Horse"},
+                                {"replaceWeapon": "javelin", "withWeapon": "spear"},
+                                {"replaceWeapon": "javelin", "withWeapon": "throwing_spear"},
+                                {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
+                                {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}
+                            ],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
         }
-    ]
-},
-"ministerialis": {
-    "name": "Ministerialis",
-    "description": "The Ministerialis were unfree knights (warrior nobles), who according to the law had borrowed land from their lord and had to ask for permission to marry. In practice, they mostly behaved like free people, and often had multiple masters. As long as they remained available to serve and didn't serve their main lord's enemies, that was good enough.",
-    "subfactions": ["duchy_frisia"],
-    "category": "core",
-    "min": 1,
-    "max": 1,
-    "rules": ["reluctant"],
-    "keywords": [
-        "Cavalry"
-    ],
-    "models": [
-        {
-            "name": "Ministerialis",
-            "courage": 6,
-            "movement": 6,
-            "shoot": 5,
-            "fight": 6,
-            "defense": 5,
-            "reflexes": 6,
-            "wounds": 1,
-            "weapons": ["sword", "shield", "javelin"],
-            "options": [{"addRule": "war_horse"},{"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "heavy_armor"},
-                {"addRule": "furious_charge"},
-                        {"replaceWeapon": "javelin", "withWeapon": "spear"},
-                        {"replaceWeapon": "sword", "withWeapon": ["spartha"]},
-                        {"replaceWeapon": "sword", "withWeapon": ["hand_axe"]}],
-            "min": 5,
-            "max": 10
-        }
-    ]
-},
+    },
     "weapons": {},
     "rules": {
         "fierce": {

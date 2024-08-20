@@ -27,7 +27,7 @@
         }
     ,
     "early_gwynedd": {
-        "name": "Western Welsh (400-700)",
+        "name": "Western Cymry Welsh (400-700)",
         "phase": "activation",
         "id": "early_gwynedd",
         "description": "The Welsh areas that still remain within 'Wales' in the modern day, with the greatest being the kingdom of Gwynedd. They are recorded as adopting guerilla tactics, but remaining trained with the throwing and thrusting spear.",
@@ -82,6 +82,7 @@
                     {"addRule": "agile"},
                     {"addRule": "strider"},
                     {"addRule": "reluctant"}],
+                    "notes": "This one Rome Total War mod from like 2008 has resulted in words showing up when I do research or look at some wargames, but most of the words they used are spelled wrong, are too recent, or lack clear word histories. As such I find that WAB/Osprey is my main source.",
                     "min": 5,
                     "max": 10
                 }
@@ -109,12 +110,12 @@
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
                     {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
-                    {"replaceRule": "light_infantry", "withRule": "light_spearmen"},
+                    {"replaceRule": "warrior_culture", "withRule": "light_spearmen"},
                     {"addRule": "agile"}, 
                 {"addRule": "strider"},
                     {"addRule": "reluctant"}
                 ],
-                "notes": "Age of Arthur, makes sense for the period.",
+                "notes": "(LkI) Age of Arthur, makes sense for the period.",
                 "min": 5,
                     "max": 10
                 }
@@ -145,7 +146,7 @@
                     {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                     {"addRule": "reluctant"}
                 ],
-                "notes": "Age of Arthur, makes sense for the period.",
+                "notes": "(Quad LkI) Age of Arthur, makes sense for the period. TTS says deep warbands for all Welsh/Britons, but Saga and WAB say only for British Successors. TTS also says Romano-British can percist, though as javelinmen and spearmen till 580.",
                 "min": 10,
                     "max": 20
                 }
@@ -175,7 +176,7 @@
                     {"replaceWeapon": "hand_weapon", "withWeapon": ["throwing_spear"]},
                 {"replaceRule": "light_spearmen", "withRule": "warrior_culture"}
             ],
-            "notes": "WAB: ShieldWall",
+            "notes": "WAB: ShieldWall, Ravenfeast. Clash of Spears: Dark Ages Playtest also matches this.",
             "min": 5,
                     "max": 15
                 }
@@ -207,7 +208,7 @@
                     {"replaceRule": ["warrior_culture", "light_infantry"], "withRule": "spearmen"},
                     {"addRule": "reluctant"}
                 ],
-                "notes": "Total War: Attila: Charlemagne. Is similar to other cultures of the period. WAB doesn't give enough unit choices and it's dumb.",
+                "notes": "(LkI) Ravenfeast. Total War: Attila: Charlemagne. Is similar to other cultures of the period. WAB doesn't give enough unit choices and it's dumb.",
                 "min": 5,
                     "max": 15
                 }
@@ -234,11 +235,12 @@
                     "wounds": 1,
                     "weapons": ["hand_weapon", "javelin", "shield"],
                     "options": [{
-                        "replaceWeapon": "javelin",
+                        "replaceWeapon": ["javelin", "shield"],
                         "withWeapon": [
                             "bow"
                         ]
                     }],
+                    "notes": "(LkI) WAB: Shieldwall indicates that the given kingdoms were very Bow heavy. Clash of Spears Dark Ages suggests this unit should be good at charging, but none of the other systems suggest this at all. Ravenfeast makes the seperate 'hunter' unit central for the faction.",
                     "min": 5,
                     "max": 10
                 }
@@ -268,6 +270,7 @@
                     {"addRule": "stubborn"},
                     {"replaceRule": "buckler", "withRule": "shield"}
                         ],
+                    "notes": "(Quad LkI) Every system says ponies or light horses for mounted warriors, including DUX BELLORUM (Fifth system). Considering that the later Anglo-Saxons would be struggling to have solid numbers of good war horses, this makes sense.",    
                     "min": 5,
                     "max": 10
                 }
@@ -296,6 +299,7 @@
                     "options": [{"replaceWeapon": "hand_weapon", "withWeapon":"spartha"},
                     {"replaceRule": "light_cavalry", "withRule": ["mount_warrior_culture"]}
                 ],
+                "notes": "(Quad LkI) WAB says they should get proper horses. DUX BELLORUM gives the options for some warlords/warbands in this region to have surviving stud farms or continental horse supply. TTS also says Romano-British can percist with Equites, till 580.",
                     "min": 5,
                     "max": 10
                 }
@@ -303,7 +307,7 @@
         },
         "teulu": {
             "name": "Teulu",
-            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tay-ley'), translates to 'family'. Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege. These are the 'ring-men' that are spoken of in britonic and Welsh poetry.", 
+            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tay-ley'), translates to 'family' (Shortening of a word that means 'House Army'). Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege. These are the 'ring-men' that are spoken of in Britonic and Welsh poetry.", 
             "category": "elite",
             "subfactions": ["british", "none"],
             "min": 1,
@@ -327,10 +331,12 @@
                     ],
                     "options": [{"addWeapon": "javelin"},
                     {"addRule": "light_armor"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
                         {"replaceRule": "warrior_culture", "withRule": "spearmen"}],
+                    "notes": "(Quad LkI) Sources indicate that the Teulu were often mounted, while others say they were 'swift-moving'",    
                     "min": 5,
                     "max": 15
                 }
@@ -338,7 +344,7 @@
         },
         "late_gwyneed_teulu": {
             "name": "Gwynedd Teulu",
-            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tailey' translates to 'family'. Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege.", 
+            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tay-ley'), translates to 'family' (Shortening of a word that means 'House Army'). Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege. These are the 'ring-men' that are spoken of in Britonic and Welsh poetry.", 
             "category": "elite",
             "subfactions": ["early_gwynedd", "gwynedd"],
             "min": 1,
@@ -362,10 +368,12 @@
                     ],
                     "options": [{"addWeapon": "javelin"},
                     {"addRule": "light_armor"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]}
                     ],
+                    "notes": "(Quad LkI) Sources indicate that the Teulu were often mounted, while others say they were 'swift-moving'",    
                     "min": 5,
                     "max": 15
                 }
@@ -375,11 +383,13 @@
             "name": "Successor Teulu Riders",
             "description": "While there was a shortage, some of the old Romano-British 'stud-farm's survived, and a higher quality 'war-horse' could be supplied to a select few.", 
             "category": "elite",
-            "subfactions": ["british"],
+            "subfactions": ["british", "dumnonia"],
             "min": 1,
             "max": 1,
             "rules": ["travel_horse", "light_cavalry"],
-            "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]}],
+            "options": [
+                [{"id": "scout", "name": "Riding Horse"}],
+                {"replaceRule": "travel_horse", "withRule": ["mount_horse"]}],
             "keywords": [
                 "Cavalry"
             ],
@@ -401,6 +411,7 @@
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
                         {"replaceRule": "light_cavalry", "withRule": ["mount_warrior_culture"]}    
                     ],
+                    "notes": "(Quad LkI) WAB/TTS says they can be as good as veteran medium cavalry. DUX BELLORUM gives the options for some warlords/warbands in this region to have surviving stud farms or continental horse supply. Sources indicate that the Teulu were often mounted, while others say they were 'swift-moving'",    
                     "min": 5,
                     "max": 10
                 }
@@ -408,7 +419,7 @@
         },
         "south_teulu": {
             "name": "Southern Teulu",
-            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tailey' translates to 'family'. Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege.", 
+            "description": "Like many other counterparts, the old Welsh word 'Teulu' (Spoken as 'Tay-ley'), translates to 'family' (Shortening of a word that means 'House Army'). Personally knowing and being related to the royal family or highest nobility, these warriors have a vested interest in victory for their liege. These are the 'ring-men' that are spoken of in Britonic and Welsh poetry.", 
             "category": "elite",
             "subfactions": [
                 "south_welsh"
@@ -439,6 +450,7 @@
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["bow"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["welsh_longbow"]}
                     ],
+                    "notes": "(Quad LkI) Sources indicate that the Teulu were often mounted, while others say they were 'swift-moving'",    
                     "min": 5,
                     "max": 15
                 }
@@ -451,10 +463,11 @@
             "subfactions": ["early_strathclyde"],
             "min": 1,
             "max": 1,
-            "rules": ["travel_horse", "light_cavalry"],
-            "options": [{"replaceRule": "travel_horse", "withRule": ["mount_horse"]}],
+            "rules": ["travel_horse", "light_cavalry", "shield"],
+            "options": [[{"id": "scout", "name": "Riding Horse"}],
+            {"replaceRule": "travel_horse", "withRule": ["mount_horse"]}],
             "keywords": [
-                "Infantry"
+                "Cavalry"
             ],
             "models": [
                 {
@@ -466,13 +479,14 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["hand_weapon", "shield"
+                    "weapons": ["hand_weapon"
                     ],
                     "options": [{"addWeapon": "javelin"},
                     {"addRule": "light_armor"},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
-                        {"addWeapon": "spear"}],
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spear"]}
+],
                     "min": 5,
                     "max": 10
                 }
@@ -511,6 +525,43 @@
                 }
             ]
         },
+        "british_teulu_elite": {
+            "name": "Successor Teulu Marxọgjon",
+            "description": "The word 'marxọg' of this period, translated to 'Steed/Stallion having person'. Today the word is 'marchog', and it translates to 'nobleman', 'knight' (As in Chess), or 'horseman'. This unit represents the wealthy Teulu who had proper warhorses and training, and were drilled by a suitable nobleman or leader. If you want, you can imagine them as the 'knights' that road alongside Arthur or one of the men who inspired his legend", 
+            "category": "elite",
+            "subfactions": ["british", "dumnonia"],
+            "min": 1,
+            "max": 1,
+            "rules": ["mount_horse", "mount_warrior_culture", "superior_cavalry", "drakū"],
+            "options": [
+                [{"id": "scout", "name": "Riding Horse"}]
+            ],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Hearthguard",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "shield"
+                    ],
+                    "options": [{"addWeapon": "javelin"},
+                    {"addRule": "light_armor"},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]}
+                    ],
+                    "notes": "(Quad LkI) WAB has this as a character ability or quality.",    
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
         "rex": {
             "name": "Rex",
             "description": "Rex is Latin for 'King', and was the word used for leaders of kingdoms, while the memory of Romano-British Civilization remained.",
@@ -532,7 +583,7 @@
                     "wounds": 2,
                     "weapons": ["spear", "shield"],
                     "options": [
-                        {"addWeapon": "javelin"},{"addRule": "mount_horse"}, {"addRule": "war_horse"},
+                        {"addWeapon": "javelin"},{"addRule": "mount_horse"}, 
                         {
                             "replaceWeapon": "spear",
                             "withWeapon": [
@@ -567,7 +618,7 @@
                     "wounds": 2,
                     "weapons": ["spear", "shield"],
                     "options": [
-                        {"addWeapon": "javelin"}, {"addRule": "war_horse"},
+                        {"addWeapon": "javelin"}, 
                     {"addRule": "mount_horse"},
                         {"replaceWeapon": ["spear", "shield"]}
                         ],
@@ -584,7 +635,8 @@
             "min": 1,
             "max": 1,
             "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader", "buckler",{"id": "wounds", "x": 2}],
-            "options": [{"addRule": "travel_horse"}],
+            "options": [[{"id": "scout", "name": "Riding Horse"}],
+            {"addRule": "travel_horse"}],
             "keywords": ["Command"],
             "models": [
                 {
@@ -597,7 +649,7 @@
                     "reflexes": 7,
                     "wounds": 2,
                     "weapons": ["spartha", "javelin"],
-                    "options": [{"addRule": "war_horse"},
+                    "options": [
                     {"addRule": "mount_horse"}],
                     "min": 1,
                     "max": 1
@@ -651,7 +703,7 @@
                         {"addRule": "buckler"}
                     ],
                     "notes": "Add special rules here",
-                    "rules": [],
+                    "rules": "(LkI) WAB: SW and TtS",
                     "min": 5,
                     "max": 10
                 }
@@ -707,7 +759,6 @@
                         {"addRule": "agile"}
                     ],
                     "notes": "Add special rules here",
-                    "rules": [],
                     "min": 5,
                     "max": 10
                 }
@@ -734,6 +785,7 @@
                     "weapons": ["spear", "shield"],
                     "options": [{"addRule": "mount_horse"},
                         {"addRule": "light_armor"},
+                        [{"id": "scout", "name": "Riding Horse"}],
                         {"addRule": "travel_horse"}
                         ],
                     "min": 1,
@@ -764,6 +816,7 @@
                     "options": [{"addRule": "mount_horse"},
                         {"addRule": "light_armor"},
                         {"addRule": "travel_horse"},
+                        [{"id": "scout", "name": "Riding Horse"}],
                         {"addRule": "leader"}
                         ],
                     "min": 1,
@@ -779,7 +832,8 @@
             "min": 1,
             "max": 1,
             "rules": ["skirmisher_formation", "warband", "if_it_bleeds"],
-            "options": [{"addRule": "travel_horse"}],
+            "options": [[{"id": "scout", "name": "Riding Horse"}],
+                {"addRule": "travel_horse"}],
             "keywords": [
                 "Infantry", "Skirmisher"
             ],
@@ -858,6 +912,7 @@
                         {"addRule": "agile"},
                         {"addRule": "strider"},
                         {"addRule": "travel_horse"},
+                        [{"id": "scout", "name": "Riding Horse"}],
                         {"addRule": "buckler"}
                     ],
                     "notes": "Add special rules here",
@@ -921,7 +976,9 @@
             "min": 1,
             "max": 1,
             "rules": ["skirmisher_formation", "warband", "if_it_bleeds"],
-            "options": [{"addRule": "travel_horse"}],
+            "options": [{"addRule": "travel_horse"},
+            [{"id": "scout", "name": "Riding Horse"}]
+        ],
             "keywords": [
                 "Infantry", "Skirmisher"
             ],
@@ -950,6 +1007,7 @@
                                 "welsh_longbow"
                             ]
                         },
+                        {"addRule": "stubborn"},
                         {"addRule": "agile"}, {"addRule": "strider"}
                     ],
                     "notes": "The Longbow, Osprey ; Ravenfeast mentions an article. Welsh Bow/ Welsh Longbow is present in Total War: ATTILA - Age of Charlemagne.",
@@ -1042,11 +1100,65 @@
                     "max": 10
                 }
             ]
-        }   
-    },
-    "weapons": {"spear": {"name": "Spear", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "reach", "x": 1}, {"id": "impale"}]},
-    "shield": {"name": "Shield", "attacks": 0, "short": "Melee", "rules": [{"id": "shield"}]}
+        },
+        "early_ceithern": {
+            "name": "Irish/Scotti Ceithern Allies",
+            "description": "The widespread poverty and isolation of Ireland resulted in it's Ceithern (Group of Soldiers), being rather poorly equipped, compared to the warriors and soldiers of other peoples.",
+            "subfactions": ["british", "early_gwynedd", "south_welsh"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "buckler", "if_it_bleeds", "light_infantry"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ceithirne",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["hand_weapon", "javelin"],
+                    "options": [
+                    {"addRule": "agile"}, {"addRule": "strider"}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "curaidh": {
+            "name": "Irish Curaidh Ally / Foederatus",
+            "description": "'Curaidh' (Coo-Re, Irish for 'Hero'). These nobles either commanded bands of warriors when the king went to battle, or they commanded troops by themselves for minor battles.",
+            "subfactions": ["british", "early_gwynedd", "south_welsh"],
+            "category": "rare",
+            "min": 1,
+            "max": 1,
+            "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader", "buckler",{"id": "wounds", "x": 2}, "superior_warrior"],
+            "options": [[{"id": "scout", "name": "Riding Horse"}],
+            {"addRule": "travel_horse"}],
+            "keywords": ["Command"],
+            "models": [
+                {
+                    "name": "Curaidh",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 2,
+                    "weapons": ["spartha", "javelin"],
+                    "options": [
+                    {"addRule": "mount_horse"}],
+                    "notes": "(LkI) This unit's name and baseline stats reflect WAB:AoA, but the additional ability reflects Saga Shieldwall and Hail Caesar: Shieldwall",
+                    "min": 1,
+                    "max": 1 
+                }   ]
+    }
 },
+    "weapons": "" ,
     "rules": {
         "welsh_longbow": {"name": "Welsh Longbow", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "king_of_three_kingdoms": {
@@ -1064,6 +1176,11 @@
                         "name": "Retinue",
                         "description": "For every unit of this type chosen, at least one unit with the 'minor_leader' or 'leader' rules must be chosen as well. ",
                         "points": 0
+                      },
+        "drakū": {
+                        "name": "Marchogion Draig (Dragon's Stallion-Men)",
+                        "description": "For every unit with this rule, there must be a unit with the 'leader' or 'minor leader rules' with the rules of: 'mount_horse', 'mount_warrior_culture', 'superior_cavalry' ",
+                        "points": 20
                       }
         },
     "relics": {
@@ -1115,10 +1232,11 @@
     },
     {
         "subfactions": ["early_gwynedd", "gwynedd", "early_strathclyde", "dumnonia", "south_welsh", "none", "powys"],
-        "name": "Move and Rally",
+        "name": "Our Rugged Homelands",
         "phase": "activation",
-        "description": "Use before a unit takes a Move action. After the move, that unit may perform a free Rally action.",
+        "description": "Use before a unit takes a Move action into or through 'Difficult Ground' or 'Obscuring Cover'. After the move, if the unit is still partially or fully in 'Difficult Ground' or 'Obscuring Cover', that unit may perform a free Rally action.",
         "flavor": "",
+        "notes": "This is inspired by WAB:AoA's 'Run for the Woods', Saga AoV Welsh abilities, and the playtesting rules for Dark Ages Clash of Spears. It does match historical patterns as well.",
         "cost": 1
     },
     {

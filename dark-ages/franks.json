@@ -481,7 +481,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband",
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]}
+                ],
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
@@ -507,7 +509,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "rules": ["if_it_bleeds", "shield", "spearmen",
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                    "warband"],
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
@@ -533,7 +537,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "rules": ["if_it_bleeds", "shield", "spearmen", 
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                    "warband"],
                     "weapons": ["spear"],
                     "options": [
                         {"addWeapon": ["javelin"], "limit": 1}],
@@ -557,7 +563,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "rules": ["if_it_bleeds", "shield", "spearmen", 
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                    "warband"],
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
@@ -586,7 +594,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "rules": ["if_it_bleeds", "shield", "spearmen", "warband", "scout"],
+                    "rules": ["if_it_bleeds", "shield", "spearmen", 
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                    "warband"],
                     "weapons": ["spear"],
                     "options": [{"replaceRule": "spearmen", "withRule": ["warrior_culture"], "modelLimit": "all"},
                     {"replaceWeapon": "spear", "withWeapon": ["hand_weapon"]},
@@ -775,8 +785,9 @@
                     "options": [
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"], "modelLimit": "all"},
                         {"replaceWeapon": "spear", "withWeapon": ["spatha"], "modelLimit": "all"},
-                        {"addWeapon": ["javelin", "francisca"], "limit": 1},
-                        {"addRule": ["scout", "light_armor", "stubborn", "heavy_armor"], "modelLimit": "all"}
+                        {"addWeapon": ["javelin", "francisca"], "limit": 1},        
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                        {"addRule": ["light_armor", "stubborn", "heavy_armor"], "modelLimit": "all"}
                     ],
                     "notes": "(LKi) TTS states that cavalry declined in importance during this era. No proof for serious use of lances or cavalry spears. Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
@@ -804,7 +815,8 @@
                     "options": [
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"], "modelLimit": "all"},
                         {"addWeapon": ["javelin", "francisca", "spartha"], "limit": 1},
-                        {"addRule": ["scout", "light_armor", "stubborn", "heavy_armor"], "modelLimit": "all"}
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                        {"addRule": ["light_armor", "stubborn", "heavy_armor"], "modelLimit": "all"}
                     ],
                     "notes": "(LKi) TTS states that cavalry declined in importance during this era. No proof for serious use of lances or cavalry spears. Hans Delbruck (Super hardcore Geramn historian) says the math does not add up. The early Merovingians are covered in multiple WAB books with slightly different units.",
                     "min": 5,
@@ -814,21 +826,22 @@
         },
         "tribal_warriors": {
             "name": "Tribal Warriors",
-            "description": "As the Merovingians conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinants before they had fully been assimilated into 'Franks'.",
+            "description": "As the Merovingians conquered other peoples and tribes, expanding their armies, some of these people fought as allies or subordinates before they had fully been assimilated into 'Franks'. During this time period, these could be the Burgundians and Thuringians who had been first subjugated by Clovis, or even Saxon mercenaries or subjects",
             "category": "core",
             "subfactions": ["early_merovingian_franks", "later_merovingian_franks", "none"],
             "models": [
                 {
-                    "name": "Duguth",
+                    "name": "Warrior",
                     "movement": 7,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "rules": ["buckler", "if_it_bleeds", "light_infantry", "warband", "warrior_culture"],
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [{"replaceRule": ["light_infantry", "buckler"], "withRule": ["shield"], "modelLimit": "all"}, {"addRule": "strider", "modelLimit": "all"}],
+                    "notes": "(Quad LkI) WAB:GG and TtS",
                     "min": 5,
                     "max": 15
                 }

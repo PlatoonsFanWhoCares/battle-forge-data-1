@@ -40,7 +40,7 @@
                     "wounds": 1,
                     "weapons": ["hand_weapon", "javelin"],
                     "options": [
-                    {"addRule": "agile"}],
+                    {"addRule": "agile"}, {"addRule": "strider"}],
                     "min": 5,
                     "max": 10
                 }
@@ -156,6 +156,35 @@
                 }
             ]
         },
+        "curaidh": {
+            "name": "Irish Curaidh Ally / Foederatus",
+            "description": "'Curaidh' (Coo-Re, Irish for 'Hero'). These nobles either commanded bands of warriors when the king went to battle, or they commanded troops by themselves for minor battles.",
+            "subfactions": "none",
+            "category": "command",
+            "min": 1,
+            "max": 1,
+            "rules": ["lead_by_example",{"id": "field_orders", "x": 1}, "leader", "buckler",{"id": "wounds", "x": 2}, "superior_warrior"],
+            "options": [[{"id": "scout", "name": "Riding Horse"}],
+            {"addRule": "travel_horse"}],
+            "keywords": ["Command"],
+            "models": [
+                {
+                    "name": "Curaidh",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 2,
+                    "weapons": ["spartha", "javelin"],
+                    "options": [
+                    {"addRule": "mount_horse"}],
+                    "notes": "(LkI) This unit's name and baseline stats reflect WAB:AoA, but the additional ability reflects Saga Shieldwall and Hail Caesar: Shieldwall",
+                    "min": 1,
+                    "max": 1 
+                }   ]
+    },
         "late_combrogi_archers": {
             "name": "Priodaur Archers",
             "description": "The Priodaur (Freemen) were mostly ordinary people who had experiance in raiding bands or training in militias. The Powys were heavy users of the bow, and the possible ancestors of later British archers.",

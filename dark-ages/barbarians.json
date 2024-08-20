@@ -3,10 +3,10 @@
     "name": "Invading Tribes",
     "subfactions": {
         "migration_period_germanics": {
-            "name": "Migration Period Germanics (250 - 561 AD)",
+            "name": "Migration Period Germanics (250 - 400~ AD) / Thuringian (356-500~)",
             "phase": "activation",
             "id": "migration_period_germanics",
-            "description": "The Germanics (Mostly, Goths, Visigoths, Suebi, and Vandals) were a hostile, frontier people during the beginning of this era. They would often be strong allies or enemies of the Romans during this period, with their allegiances being decided by what they viewed as the best opportunity.",
+            "description": "The Germanics (Mostly, Goths, Visigoths, Suebi, Thuringian, Alemanni and Vandals) were a hostile, frontier people during the beginning of this era. They would often be strong allies or enemies of the Romans during this period, with their allegiances being decided by what they viewed as the best opportunity.",
             "restricted": "true"
         }
     ,
@@ -42,22 +42,22 @@
         "restricted": "true"
     },
     "burgundians": {
-        "name": "Burgundians (250-532 AD)",
+        "name": "Burgundians & Alemanni (250-532 AD)",
         "phase": "activation",
-        "id": "west_goths",
-        "description": "While sackers of Rome, the Visigoths conquered much in Gaul, and retained control of 'Spain' till the 8th century. Unlike their various Germanic 'cousins', they were more flexible in their fighting styles, but were praised for their talent with the javelin thrown from horseback.",
-        "restricted": "true"
+        "id": "burgundians",
+        "description": "",
+        "restricted": "false"
     }
 },
     "units": {
         "germanic_warriors": {
             "name": "Germanic Warriors",
             "description": "Under many of the Germanic rulars of the time, The Romans, with their Catholicism, were isolated to the civilian world. More than one source tells of Gothic women being chastied for letting their boys learn to read. The fewer (Compared to Romantics) Germanics were set apart to be warriors; while their swords, mail, and even horses they had made them proud and boastful, eager to prove their worth, and unwilling to be a coward in front of others.",
-            "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians"],
+            "subfactions": ["migration_period_germanics", "burgundians", "none"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "warrior_culture"],
+            "rules": ["warband", "if_it_bleeds", "warrior_culture", "shield"],
             "keywords": [
                 "Infantry"
             ],
@@ -71,10 +71,43 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["shield","throwing_spear"],
+                    "weapons": ["throwing_spear"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "travel_horse"}, {"addRule": "stubborn"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"addRule": "light_armor", "modelLimit": 5}],
+                    "rules": "(LkI) WAB: Core and WAB Arm Of Antiq mixed with filling in caps using WAB: GG",    
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "gothic_warriors": {
+            "name": "Gothic Warriors",
+            "description": "Under many of the Germanic rulars of the time, The Romans, with their Catholicism, were isolated to the civilian world. More than one source tells of Gothic women being chastied for letting their boys learn to read. The fewer (Compared to Romantics) Germanics were set apart to be warriors; while their swords, mail, and even horses they had made them proud and boastful, eager to prove their worth, and unwilling to be a coward in front of others.",
+            "subfactions": ["ostrogoths"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "warrior_culture", "shield"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Freeman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear"],
+                    "options": [{"addWeapon": "javelin"}, {"addRule": "travel_horse"}, {"addRule": "stubborn"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"addRule": "light_armor", "modelLimit": 5}],
                     "min": 5,
                     "max": 15
@@ -84,11 +117,11 @@
         "trusted_germanic_warriors": {
             "name": "Dugundiz Germanic Warriors",
             "description": "The Dugundiz (Trusted, Capable) were the freeman and warrior class who having finished their young adulthood, now were experianced fighters of reasonable skill.",
-            "subfactions": ["migration_period_germanics", "ostrogoths"],
+            "subfactions": ["migration_period_germanics", "ostrogoths", "none"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "warrior_culture"],
+            "rules": ["warband", "if_it_bleeds", "warrior_culture", "shield"],
             "keywords": [
                 "Infantry"
             ],
@@ -102,20 +135,22 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["shield","throwing_spear"],
+                    "weapons": ["throwing_spear"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "travel_horse"}, {"addRule": "stubborn"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"addRule": "light_armor", "modelLimit": 5}],
+                    "notes": "(LkI) WAB: armiesofantiquity and WAB Core say that earlier Germans were stubborn, so its possible that their desendents would be similar.",    
                     "min": 5,
                     "max": 15
                 }
             ]
         },
         "trusted_burgundian_warriors": {
-            "name": "Dugundiz Burgundian Warriors",
+            "name": "Germanic Warriors",
             "description": "The Dugundiz (Trusted, Capable) were the freeman and warrior class who having finished their young adulthood, now were experianced fighters of reasonable skill.",
-            "subfactions": ["burgundians"],
+            "subfactions": ["burgundians", "alemanni"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -133,14 +168,14 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["shield","hand_weapon"],
+                    "weapons": ["hand_weapon", "shield"],
                     "options": [{"addWeapon": "javelin"}, {"addRule": "mount_horse"}, {"addRule": "light_armor"}, {"addRule": "stubborn"},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "hand_weapon", "withWeapon": ["hand_axe"]},
-                        {"replaceWeapon": "shield", "withWeapon": ["two_handed_axe"]},
-                        {"addWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
+                        {"replaceWeapon": ["shield", "hand_weapon"], "withWeapon": ["two_handed_axe"]},
                         {"addRule": "light_armor", "modelLimit": 5}
                     ],
+                    "notes": "Barbarian Invasion",
                     "min": 5,
                     "max": 15
                 }
@@ -153,7 +188,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "mount_warrior_culture", "light_cavalry", "mount_horse"],
+            "rules": ["warband", "if_it_bleeds", "mount_warrior_culture", "light_cavalry", "mount_horse", "shield"],
             "keywords": [
                 "Infantry"
             ],
@@ -167,7 +202,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["shield","throwing_spear"],
+                    "weapons": ["throwing_spear"],
                     "options": [{"addRule": "stubborn"},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
@@ -181,11 +216,11 @@
             "lowborn_spear_levy": {
                 "name": "Peasant Spear Levy",
                 "description": "Due to the plentiful supply of landless men, spears, and shields; it is likely that if the Germanics were involved in a battle that required them to defend their lands, rather then raid those of another, they would attempt to form a basic spear levy as was common at the time. While the Germanic culture was full of raids and tribal warfare, it was the landowning, 'freemen' who had experiance and equipment.",
-                "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians"],
+                "subfactions": ["migration_period_germanics", "ostrogoths", "burgundians", "none", "alemanni"],
                 "category": "core",
                 "min": 1,
                 "max": 1,
-                "rules": ["warband", "shield", "if_it_bleeds", "spearmen"],
+                "rules": ["warband", "shield", "if_it_bleeds", "light_spearmen"],
                 "keywords": ["Infantry"],
                 "models": [
                     {
@@ -199,8 +234,8 @@
                         "wounds": 1,
                         "weapons": ["spear", "javelin"],
                         "options": [{"addRule": "agile"}],
-                        "min": 5,
-                        "max": 15
+                        "min": 10,
+                        "max": 20
                     }
                 ]
             },
@@ -225,8 +260,10 @@
                         "wounds": 1,
                         "weapons": ["spear", "hand_weapon"],
                         "options": [{"addWeapon": "javelin"}, {"addRule": "mount_horse"},
-                            {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]}
+                            {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                            {"replaceRule": "shield", "WithRule": "large_shield"}
                             ],
+                        "notes": "All of these tribes are confirmed as having been Foederati. FlavivsAetivs says these troops were often trained and equipped like regular Romans.",
                         "min": 5,
                         "max": 15
                     }
@@ -253,7 +290,9 @@
                         "wounds": 1,
                         "weapons": ["spear", "hand_weapon"],
                         "options": [{"addWeapon": "javelin"}, {"addRule": "mount_horse"}, {"addRule": "light_armor"},
-                            {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]}],
+                            {"replaceWeapon": "hand_weapon", "withWeapon": ["spartha"]},
+                            {"replaceRule": "shield", "WithRule": "large_shield"}
+                        ],
                         "min": 5,
                         "max": 15
                     }
@@ -281,8 +320,8 @@
                         "weapons": ["hand_weapon"],
                         "options": [{"addWeapon": "javelin"},{"addRule": "agile"},
                         {"addRule": "strider"}],
-                        "min": 5,
-                        "max": 10
+                        "min": 10,
+                        "max": 20
                     }
                 ]
             },
@@ -310,8 +349,9 @@
                         {"addRule": "agile"},
                         {"addRule": "strider"},
                         {"replaceRule": "buckler", "withRule": ["shield"]}],
-                        "min": 5,
-                        "max": 10
+                        "notes" : "BarbariansProf on Reddit (with sources) confirms the Runnaway Slaves of Rome Total War: Barbarian Invasion",
+                        "min": 10,
+                        "max": 20
                     }
                 ]
             },
@@ -471,6 +511,7 @@
                             {"addRule": "reluctant"},
                             {"addRule": "warrior_culture"},
                             {"addRule": "strider"},
+                            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                             {"addRule": "agile"}, {"addRule": "stubborn"}, {"addRule": "travel_horse"}
                         ],
                     "min": 5,
@@ -500,7 +541,7 @@
                     "weapons": ["javelin", "hand_weapon"],
                     "options": [
                             {"addRule": "buckler"}, {"replaceRule": "skirmisher_formation", "withRule": ["light_infantry"]},
-                            {"replaceRule": "travel_horse", "withRule": ["scout"]},
+                            {"replaceRule": "travel_horse", "withRule": [{"id": "scout", "name": "Riding Horse"}]},
                             {"addRule": "reluctant"},
                             {"addRule": "agile"}, {"addRule": "stubborn"}
                         ],
@@ -536,7 +577,7 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
-                        {"addRule": "scout"},
+                        [{"id": "scout", "name": "Riding Horse"}],
                         {"addRule": "travel_horse"}
                     ],
                     "min": 5,
@@ -574,7 +615,7 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
                         {"replaceWeapon": "javelin", "withWeapon": [{"id": "heavy_throwing_spear", "name": "Angon"}]},
-                        {"addRule": "scout"},
+                        [{"id": "scout", "name": "Riding Horse"}],
                         {"addRule": "travel_horse"}
                     ],
                     "min": 5,
@@ -609,7 +650,7 @@
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
-                        {"addRule": "scout"},
+                        [{"id": "scout", "name": "Riding Horse"}],
                         {"addRule": "travel_horse"}
                     ],
                     "notes": "'Society and Warfare in Lombard Italy.",
@@ -818,6 +859,7 @@
                         {"addRule": "mount_warrior_culture"},
                         {"addRule": "heavy_armor"}
                     ],
+                    "notes": "WAB:GG and Hans Delbruck (Super hardcore Geramn historian) both agree that thrusting spears are in and javelins are out for the Vandals.",
                     "min": 5,
                     "max": 10
                 }
@@ -1151,7 +1193,7 @@
         "warrior_elite": {
             "name": "Warrior Elite",
             "description": "Among the 'Freemen' were 'warriors' who had obtained greater experiance and training. Those who had volunteered for raids or campaigns, or survived various 'calls to muster' would find opportunity to become full time warriors or even warrior nobility.",
-            "subfactions": ["gepids_lombards", "none", "west_goths"],
+            "subfactions": ["gepids_lombards", "none", "west_goths", "burgundians", "alemanni"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -1175,8 +1217,9 @@
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]},
                         {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
-                        {"addRule": "scout"}
+                        [{"id": "scout", "name": "Riding Horse"}]
                     ],
+                    "notes": "Alemanni have veteran warriors in Impetus, with same stats as Foederati for other factions.",
                     "min": 5,
                     "max": 15
                 }
@@ -1250,7 +1293,7 @@
             ]
         },
         "mount_westgoth_warrior_elite": {
-            "name": "Mounted Visigoth Warrior Elite",
+            "name": "Mounted Visigoth Elite",
             "description": "Among the 'Freemen' were 'warriors' who had obtained greater experiance and training. Those who had volunteered for raids or campaigns, or survived various 'calls to muster' would find opportunity to become full time warriors or even warrior nobility.",
             "subfactions": ["west_goths"],
             "category": "core",
@@ -1324,7 +1367,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "superior_cavalry", "if_it_bleeds", "mount_horse", "mount_warrior_culture", "shield"],
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "mount_warrior_culture", "shield"],
             "keywords": [
                 "Cavalry"
             ],
@@ -1345,6 +1388,110 @@
                         {"replaceWeapon": "spear", "withWeapon": ["spartha"]},
                         {"replaceWeapon": "spear", "withWeapon": ["throwing_spear"]},
                         {"replaceWeapon": "spear", "withWeapon": ["hand_axe"]}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "mount_burgundian_warrior_elite": {
+            "name": "Mounted Burgundian/Alemanni Warrior Elite",
+            "description": "Among the 'Freemen' were 'warriors' who had obtained greater experiance and training. Those who had volunteered for raids or campaigns, or survived various 'calls to muster' would find opportunity to become full time warriors or even warrior nobility.",
+            "subfactions": ["burgundians"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Warrior",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"addRule": "light_armor"},
+                        {"addRule": "superior_cavalry"}, {"addRule": "furious_charge"},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]},
+                        {"addRule": "scout"}
+                    ],
+                        "notes": "TTS, Barbarian Invasion",
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "veteran_mount_burgundian_warrior_elite": {
+            "name": "Mounted Veteran Burgundian/Alemanni Warrior Elite",
+            "description": "Among the 'Freemen' were 'warriors' who had obtained greater experiance and training. Those who had volunteered for raids or campaigns, or survived various 'calls to muster' would find opportunity to become full time warriors or even warrior nobility.",
+            "subfactions": ["burgundians"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield", {"addRule": "superior_cavalry"}],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Warrior",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"addRule": "light_armor"},
+                        {"addRule": "furious_charge"},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}],
+                        "notes": "(Quad LkI)",
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "mount_alemanni_warrior_elite": {
+            "name": "Light Mounted Alemanni Warrior Elite",
+            "description": "Among the 'Freemen' were 'warriors' who had obtained greater experiance and training. Those who had volunteered for raids or campaigns, or survived various 'calls to muster' would find opportunity to become full time warriors or even warrior nobility.",
+            "subfactions": ["alemanni"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds", "mount_horse", "shield", "light_cavalry"],
+            "keywords": [
+                "Cavalry"
+            ],
+            "models": [
+                {
+                    "name": "Warrior",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["throwing_spear"],
+                    "options": [{"addWeapon": "javelin"},
+                        {"addRule": "light_armor"},
+                        {"addRule": "superior_cavalry"},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spartha"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["spear"]},
+                        {"replaceWeapon": "throwing_spear", "withWeapon": ["hand_axe"]}],
+                        "notes": "(LkI) Impetus gives Alemnni to have medium cavalry option.",
                     "min": 5,
                     "max": 10
                 }
@@ -1443,11 +1590,11 @@
         "later_freemen": {
             "name": "Freemen Milita",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none", "west_goths"],
+            "subfactions": ["burgundians", "none", "west_goths"],
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["warband", "if_it_bleeds", "spearmen"],
+            "rules": ["warband", "if_it_bleeds", "spearmen", "shield"],
             "keywords": [
                 "Infantry", "Heavy_Infantry"
             ],
@@ -1461,9 +1608,8 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["spear", "shield"],
-                    "options": [{"addWeapon": "javelin"},
-                        {"replaceWeapon": "shield", "withWeapon": ["bow"]}],
+                    "weapons": ["spear"],
+                    "options": [{"addWeapon": "javelin"}],
                     "min": 5,
                     "max": 10
                 }
@@ -1472,7 +1618,7 @@
         "archer_freemen": {
             "name": "Freemen Archer Milita",
             "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
-            "subfactions": ["italo_lombards", "early_hre", "burgundy", "none", "west_goths"],
+            "subfactions": ["burgundians", "none", "west_goths", "ostrogoths", "vandals"],
             "category": "core",
             "min": 1,
             "max": 1,
@@ -1490,12 +1636,42 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bow","hand_weapon"],
-                    "options": [{"addWeapon": "javelin"},
+                    "weapons": ["short_bow","hand_weapon"],
+                    "options": [{"replaceWeapon": ["short_bow"], "withWeapon": ["bow"]},
                     {"addRule": "strider"},
                     {"addRule": "agile"}],
+                "notes": "(LkI) WAB:GG says all barbarians should be able to have freemen as light infantry with short bow or bow. WAB armiesofantiquity says Gothic/Vandals should be able to give their infantry short bows. Mixture of Barbarian Invasion and checking TTS, along with some Goggling.",
                     "min": 5,
                     "max": 10
+                }
+            ]
+        },
+        "mass_archer_freemen": {
+            "name": "Mass Freemen Archer Milita",
+            "description": "The franci (Latin) were the landowning class, some with enough money to afford a horse, but with most just having enough to have at least decent equipment. This unit represents those who had less land and resources, but still could support themselves and show up with the basics.",
+            "subfactions": ["ostrogoths", "gepids_lombards"],
+            "category": "core",
+            "min": 1,
+            "max": 1,
+            "rules": ["warband", "if_it_bleeds"],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Freeman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["short_bow","hand_weapon"],
+                    "options": [{"replaceWeapon": ["short_bow"], "withWeapon": ["bow"]}],
+                "notes": "TTS says that low quality mass bowman should be available to Ostrogoths, Lombards, and Gepids.",
+                    "min": 10,
+                    "max": 15
                 }
             ]
         },
@@ -1526,6 +1702,7 @@
                         [{"replaceWeapon": "hand_weapon"}, {"withWeapon": "javelin"}],
                         [{"replaceWeapon": "bow"}, {"withWeapon": "composite_bow"}]
                     ],
+                    "notes": "TTS says Visigoth but not Ostrogoth, but definitely Vandals. Rome Total War: Barbarian Invasion says for both." ,
                     "min": 5,
                     "max": 10
                 }
@@ -1629,7 +1806,7 @@
     "comes": {
         "name": "Comes",
         "description": "A Comes (plural, comites), was another latin word, like 'Dux'. This word meant 'companion', but increasingly among late Romans and 'Migration Era' Germanic peoples, meant 'military leader'. This word eventually evolved into the term 'count' and became a rank of nobility.",
-        "subfactions": ["none", "burgundy", "early_hre", "italo_lombards", "migration_period_germanics", "west_goths", "vandals", "ostrogoths"],
+        "subfactions": ["none", "burgundians", "migration_period_germanics", "west_goths", "vandals", "ostrogoths"],
         "category": "command",
         "min": 1,
         "max": 1,
@@ -1679,6 +1856,7 @@
                 "options": [{"addRule": "mount_horse"},
                     {"addRule": "light_armor"},
                     {"addRule": "travel_horse"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                     {"addRule": "heavy_armor"}
                     ],
                 "min": 1,
@@ -1708,6 +1886,7 @@
                 "weapons": ["spear", "shield"],
                 "options": [{"addRule": "mount_horse"},
                     {"addRule": "light_armor"},
+                    {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
                     {"addRule": "travel_horse"}
                     ],
                 "min": 1,

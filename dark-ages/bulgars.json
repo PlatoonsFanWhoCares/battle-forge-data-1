@@ -54,7 +54,7 @@
                     }
                 ]
             },
-            "tribal_archers": {
+            "tribal_skirmisher": {
                 "name": "Tribal Skirmisher Allies",
                 "description": "",
                 "category": "rare",
@@ -73,11 +73,37 @@
                         "reflexes": 5,
                         "wounds": 1,
                         "weapons": ["spear", "javelin"],
-                        "options": [{"replaceWeapon": "shield", 
-                            "withWeapon": ["bow"]},
+                        "options": [
                             {"addRule": "strider"},
                             {"addRule": "agile"}],
-                        "min": 5,
+                        "min": 10,
+                        "max": 10
+                    }
+                ]
+            },
+            "tribal_archers": {
+                "name": "Tribal Archer Allies",
+                "description": "",
+                "category": "rare",
+                "min": 1,
+                "max": 1,
+                "rules": ["warband", "shield", "if_it_bleeds", "light_infantry"],
+                "keywords": ["Infantry"],
+                "models": [
+                    {
+                        "name": "Tribal",
+                        "courage": 4,
+                        "movement": 6,
+                        "shoot": 5,
+                        "fight": 4,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "wounds": 1,
+                        "weapons": ["hand_weapon", "bow"],
+                        "options": [
+                            {"addRule": "strider"},
+                            {"addRule": "agile"}],
+                        "min": 10,
                         "max": 10
                     }
                 ]

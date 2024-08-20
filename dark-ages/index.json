@@ -383,7 +383,8 @@
       "name" : "One Handed Axe",
       "attacks" : 1,
       "short" : "Melee",
-      "ap" : 2
+      "ap" : 2,
+      "notes": "Clash of Spears playtesting suggests this, among various RPGs and some minor wargaming systems."
     },
     "heavy_mace" : {
       "name" : "Heavy Mace",
@@ -395,7 +396,8 @@
       "name" : "Two Handed Axe",
       "attacks" : 1,
       "short" : "Melee",
-      "ap" : 3
+      "ap" : 3,
+      "notes": "Can not be used while being mounted."
     },
     "shield" : {
       "name" : "Shield",
@@ -496,14 +498,14 @@
     },
     "overhead_throw" : {
       "name" : "Overhead Throw",
-      "description" :  "When Charging; This weapon may engage and fight models up to 1\" away. Enemy models count as engaged and must still move into base contact to fight unless they also have reach.",
+      "description" :  "When Charging (Even as a Reaction); This weapon may engage and fight models up to 1\" away. Enemy models count as engaged and must still move into base contact to fight unless they also have 'Reach' or 'Overhead Throw'.",
       "points" : [
         0.5
       ]
     },
     "skirmisher_formation" : {
       "name" : "Skirmisher Formation",
-      "description" : "This unit has +1 Save against ranged attacks made at long range or at a range of more than 6\" and -1 Save against melee attacks.",
+      "description" : "This unit has +1 Save against ranged attacks made at long range, behind Obscuring Cover, or at a range of more than 6\" and -1 Save against melee attacks.",
       "flavor" : "This unit is part of a spread out formation, which means it can more easily dodge incoming missiles, but is more vunerable to being rushed by infantry.",
       "points" : [
         0
@@ -511,7 +513,7 @@
     },
     "vet_skirmisher_formation" : {
       "name" : "Veteran Skirmishers",
-      "description" : "This unit has +1 Save against ranged attacks made at long range or at a range of more than 6\" and -1 Save against melee attacks. It has +1 Initiative when rushing.",
+      "description" : "This unit has +1 Save against ranged attacks made at long range, behind Obscuring Cover, or at a range of more than 6\" and -1 Save against melee attacks. It has +1 Initiative when rushing.",
       "flavor" : "This unit is part of a spread out formation, which means it can more easily dodge incoming missiles, but is more vunerable to being rushed by infantry.",
       "points" : [
         0.5
@@ -519,7 +521,7 @@
     },
     "light_infantry" : {
       "name" : "Light Infantry",
-      "description" : "(This unit cannot use the \"Spearmen\" special rule) When this unit is deployed, arrives from reserves or makes a Move or Evade action it can choose to gain or lose Skirmisher Formation (+1 Save against ranged attacks made at long range or at a range of more than 6“ and -1 Save against melee attacks) until the end of the game. \n",
+      "description" : "(This unit cannot use the \"Spearmen\" special rule) When this unit is deployed, arrives from reserves or makes a Move or Evade action it can choose to gain or lose Skirmisher Formation (+1 Save against ranged attacks made at long range, behind 'Obscuring Cover', or at a range of more than 6“. -1 Save against melee attacks) until the end of the game. \n",
       "flavor" : "This unit can choose to fight as skirmishers as a loose formation, or 'close up' to fight as traditional infantry.",
       "points" : [
         1
@@ -580,6 +582,13 @@
         4
       ]
     },
+    "superior_warrior" : {
+      "name" : "Superior Warrior",
+      "description" : " This unit may re-roll failed Strength tests when charging or making a Fight reaction when being charged.",
+      "points" : [
+        4
+      ]
+    },
     "mount_horse" : {
       "name" : "Mounted (Horse)",
       "description" : "Increase this model's Movement by 2\", unless the unit is save 9 (Melee or Ranged), in which case movement increases by only 1\". This model may dismount at the end of any Move action. A model that has dismounted may no longer remount.",
@@ -602,7 +611,7 @@
     },
     "horse_armor" : {
       "name" : "Horse Armor",
-      "description" : "This model has +1 Save.",
+      "description" : "This model has +1 Save. Unit has -1' of Movement.",
       "points" : [
         "model.rules.wounds.x",
         {
@@ -710,7 +719,7 @@
     },
     "light_spearmen" : {
       "name" : "Light Spearmen",
-      "description" : "(Requires Spear, shield and to be unmounted) Should this unit do a 'Hold' action and be charged by a _Cavalry_ unit before it's next turn, it has +1 Strength when performing an Attack reaction and ignores the enemy “Horseman Warrior Culture“ special rule.",
+      "description" : "(Requires Spear/Throwing Spear, shield and to be unmounted) Should this unit do a 'Hold' action and be charged by a _Cavalry_ unit before it's next turn, it has +1 Strength when performing an Attack reaction and ignores the enemy “Horseman Warrior Culture“ special rule.",
       "points" : 0
     },
     "light_professional_swordsmen" : {

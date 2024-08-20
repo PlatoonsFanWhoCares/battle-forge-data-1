@@ -62,7 +62,7 @@
           "name" : "Ealdorman",
           "movement" : 6,
           "courage" : 6,
-          "shoot" : 0,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 6,
           "reflexes" : 6,
@@ -116,7 +116,7 @@
           "wounds" : 2,
           "rules" : [
             "leader",
-            "warrior"
+            "warrior_culture"
           ],
           "weapons" : [
             "spear",
@@ -177,6 +177,7 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "war_horse"
             },
@@ -224,6 +225,7 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "war_horse"
             },
@@ -271,6 +273,7 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "war_horse"
             },
@@ -325,7 +328,8 @@
             },
             {
               "addRule" : "travel_horse"
-            }
+            },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]}
           ],
           "min" : 1,
           "max" : 1
@@ -368,6 +372,7 @@
             {
               "addRule" : "light_armor"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "travel_horse"
             }
@@ -413,6 +418,7 @@
             {
               "addRule" : "mount_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "travel_horse"
             }
@@ -559,6 +565,7 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addWeapon" : "javelin"
             },
@@ -612,6 +619,7 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addWeapon" : "javelin"
             },
@@ -813,7 +821,7 @@
             }
           ],
           "min" : 5,
-          "max" : 10
+          "max" : 15
         }
       ]
     },
@@ -854,6 +862,7 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "light_armor"
             }
@@ -903,9 +912,11 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : [
                 "agile",
+                "strider",
                 "light_armor"
               ]
             }
@@ -1074,6 +1085,7 @@
             {
               "addWeapon" : "javelin"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "travel_horse"
             }
@@ -1121,6 +1133,7 @@
             {
               "addWeapon" : "javelin"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : "travel_horse"
             }
@@ -1168,10 +1181,12 @@
             {
               "addRule" : "travel_horse"
             },
+            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
             {
               "addRule" : [
                 "agile",
-                "shield"
+                "shield",
+                "strider"
               ]
             },
             {
