@@ -1,6 +1,6 @@
 {
     "id": "saxons",
-    "name": "Saxons",
+    "name": "Saxons & Angles",
     "subfactions": {
         "early_saxon_kingdoms": {
             "name": "Early Saxon Kingdoms (400s-600s AD)",
@@ -25,6 +25,13 @@
             "description": "Kent, Wessex, Sussex, Essex.",
             "restricted": "true"
         },
+        "anglian_kingdoms_heptarchy" : {
+            "name" : "Anglian Kingdoms Heptarchy (600-700 AD)",
+            "phase" : "activation",
+            "id" : "anglian_kingdoms_heptarchy",
+            "description" : "The Angles/Anglos had their own kingdoms that were considered part of the 'Heptarchy', specifically East Anglia, Merica, Bernicia, and Deira. The 'North Angles' (Bernica and Deira) were unified into 'Northumbria' in 604 AD, (and despite converting after almost all the Saxon Kingdoms), they then had a 'golden age of religious and artistic works' from 650-750. ",
+            "restricted" : "disabled"
+          },
         "late_pagan": {
             "name": "Late Pagan Saxons (701-785 AD)",
             "phase": "activation",
@@ -37,7 +44,7 @@
         "ceorl": {
             "name": "Ceorl Militia",
             "description": "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. Even before the Anglo-Saxon traditions of a trained militia, there was the practice of the 'hundradeflocc' as recorded by the Romans. Reportively a German noble was required to provide a hundred 'picked' men to form a militia, during emergencies or to add extra numbers in times of war.",
-            "subfactions": ["heptarchy"],
+            "subfactions": ["heptarchy", "anglian_kingdoms_heptarchy"],
             "category": "rare",
             "min": 1,
             "max": 1,

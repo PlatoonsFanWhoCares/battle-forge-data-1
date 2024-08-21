@@ -12,7 +12,7 @@
         },
         "norse": {"name": "Norse (800-1015)", "phase": "activation", "id": "norse", "description": "Regular norse.", "restricted": "true"},
         "north_sea_empire": {
-            "name": "Norse (1016 and 1035)",
+            "name": "Norse (1016-1042/43)",
             "phase": "activation",
             "id": "north_sea_empire",
             "description": "Cnut the Great was king of: Denmark, England and Norway; and his empire is known today as the 'North Sea Empire'",
@@ -164,9 +164,17 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": ["if_it_bleeds", "spearmen", "warband"],
-                    "weapons": ["hand_weapon", "shield"],
-                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"], "modelLimit": "all"}],
+                    "rules": ["if_it_bleeds", "warrior_culture", "warband", "shield"],
+                    "weapons": ["hand_weapon"],
+                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["throwing_spear"], "modelLimit": "all"},
+                    {
+                        "replaceRule" : "warrior_culture",
+                        "withRule" : [
+                          "light_spearmen"
+                        ]
+                      }
+                ],
+                "notes": "(LkI) WAB:",
                     "min": 5,
                     "max": 15
                 }

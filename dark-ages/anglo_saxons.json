@@ -30,13 +30,6 @@
       "description" : "The Danes, managed to conquer the Anglo-Saxons, and after the death of their leader and a rebellion among the various subjects, a new king rose to unite all the holdings. Even after the Danes, Norse, and other peoples were driven out a second time, the culture of the Anglo-Saxons had changed greatly. Many of their elite warriors were now 'Housecarls', much of the land was under the 'Danelaw', and the new introduced culture, like the Saxons, blended in and became an important part of the regional culture and identity.",
       "restricted" : "true"
     },
-    "anglian_kingdoms_heptarchy" : {
-      "name" : "Anglian Kingdoms Heptarchy (600-700 AD)",
-      "phase" : "activation",
-      "id" : "anglian_kingdoms_heptarchy",
-      "description" : "The Angles/Anglos had their own kingdoms that were considered part of the 'Heptarchy', specifically East Anglia, Merica, Bernicia, and Deira. The 'North Angles' (Bernica and Deira) were unified into 'Northumbria' in 604 AD, (and despite converting after almost all the Saxon Kingdoms), they then had a 'golden age of religious and artistic works' from 650-750. ",
-      "restricted" : "true"
-    },
     "northumbria" : {
       "name" : "Northumbria (700-1066 AD)",
       "phase" : "activation",
@@ -65,7 +58,7 @@
           "shoot" : 5,
           "fight" : 6,
           "defense" : 6,
-          "reflexes" : 6,
+          "reflexes" : 7,
           "wounds" : 2,
           "rules" : [
             "leader"
@@ -91,6 +84,7 @@
               "addRule" : "mount_horse"
             }
           ],
+          "notes":"(LkI) WAB:Shieldwall says this unit should get two attacks. Also it says that Ealdorman were the cause of a lot of the territorial losses to the Vikings and the DaneLaw",
           "min" : 1,
           "max" : 1
         }
@@ -102,7 +96,11 @@
       "category" : "command",
       "subfactions" : [
         "anglo_danes",
-        "none"
+        "none",
+        "wessex",
+        "merica",
+        "late_kent",
+        "northumbria"
       ],
       "models" : [
         {
@@ -147,55 +145,11 @@
         }
       ]
     },
-    "aetheling" : {
-      "name" : "Aetheling",
-      "description" : "The word 'Aetheling' was desended from Saxon, Germanic, and Anglos words, and meant 'belonging to, a royal family'. This term was often used for princes and people of the royal family, who were not the king or queen.",
-      "category" : "command",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy"
-      ],
-      "models" : [
-        {
-          "name" : "Aetheling",
-          "courage" : 6,
-          "movement" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "wounds" : 2,
-          "rules" : [
-            "leader",
-            "warrior"
-          ],
-          "weapons" : [
-            "spartha",
-            "buckler",
-            "javelin"
-          ],
-          "options" : [
-            {
-              "addRule" : "travel_horse"
-            },
-            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
-            {
-              "addRule" : "war_horse"
-            },
-            {
-              "addRule" : "mount_horse"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
     "cyning" : {
       "name" : "Cyning",
       "description" : "The term 'Cyning', is a sibling word of 'king' and as such has the same meaning. As such, the 'Cyning' ruled over a 'Cyningdom', of which there was many before any specific Cyningdom was able to conquer the others.",
       "category" : "command",
       "subfactions" : [
-        "anglian_kingdoms_heptarchy",
         "late_kent",
         "merica",
         "wessex",
@@ -455,30 +409,105 @@
           "wounds" : 1,
           "rules" : [
             "warband",
-            "if_it_bleeds"
+            "if_it_bleeds",
+            "spearmen",
+            "shield"
           ],
           "weapons" : [
-            "spear",
-            "shield"
+            "spear"
           ],
           "options" : [
             {
               "addWeapon" : "javelin"
             }
           ],
+          "notes": "(LkI) WAB:Shieldwall and Saga:AoV",
           "min" : 10,
           "max" : 20
         }
       ]
     },
+    "kent_warriors" : {
+      "name" : "Kentish Ceorl Warriors",
+      "description" : "A band of freemen/ceorls (Pronouced Churls), who in exchange for their lands and their freedom, serve their lord in martial service 2 months a year. As is the tradition of these people, they fight shoulder to shoulder, in the 'shield wall'. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but paid taxes in return for protection.",
+      "category" : "core",
+      "subfactions" : [
+        "late_kent"
+      ],
+      "keywords" : [
+        "Infantry",
+        "Ceorl"
+      ],
+      "models" : [
+        {
+          "name" : "Ceorl",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "wounds" : 1,
+          "rules" : [
+            "warband",
+            "if_it_bleeds",
+            "warrior_culture",
+            "shield"
+          ],
+          "weapons" : [
+            "throwing_spear"
+          ],
+          "options" : [
+            {
+              "addWeapon" : "javelin"
+            }
+          ],
+          "notes": "(LkI) WAB:Shieldwall and Saga:AoV",
+          "min" : 10,
+          "max" : 20
+        }
+      ]
+    },
+    "bondi_militia": {
+            "name": "Bondi Leidang Militia",
+            "description": "Like many other lands, the Norse had a pool of freemen that they would call up for military service if the need was requrired. Technically there was many men required to serve as Bondi within the 'leidang', but calling them all up for service would leave the land fallow, the rocks unmined, and the timber uncut. As such few of the bondi were called up at any time. The bondi, not being professional warriors, liked to guard the flanks and rear of armies, while also providing plenty of archer support.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Bondir Militia",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": ["if_it_bleeds", "warrior_culture", "warband", "shield"],
+                    "weapons": ["hand_weapon"],
+                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["throwing_spear"], "modelLimit": "all"},
+                    {
+                        "replaceRule" : "warrior_culture",
+                        "withRule" : [
+                          "light_spearmen"
+                        ]
+                      }
+                ],
+                    "notes": "(LkI) WAB:Shieldwall and Saga:AoV",
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
     "great_bordweall" : {
       "name" : "Thegn Bordweall",
-      "description" : "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
+      "description" : "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families. Over time the Thegns would increasingly be encouraged and forced to field their own retainers and servants.",
       "category" : "core",
       "subfactions" : [
         "wessex",
         "none",
-        "anglo_danes"
+        "anglo_danes",
+        "merica",
+        "northumbria",
+        "kent"
       ],
       "keywords" : [
         "Infantry",
@@ -497,7 +526,8 @@
           "rules" : [
             "warband",
             "if_it_bleeds",
-            "spearmen"
+            "spearmen",
+            "shield"
           ],
           "weapons" : [
             "spear",
@@ -511,14 +541,15 @@
               "addRule" : "light_armor"
             }
           ],
+          "notes":"(LkI) WAB:Shieldwall, Saga:AoV, and TTS.",
           "min" : 5,
-          "max" : 10
+          "max" : 15
         }
       ]
     },
     "merican_thegn" : {
-      "name" : "Merican/Kent Thegn Bordweall",
-      "description" : "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
+      "name" : "Merican Thegns",
+      "description" : "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families. Over time the Thegns would increasingly be encouraged and forced to field their own retainers and servants.",
       "category" : "core",
       "subfactions" : [
         "merica",
@@ -541,7 +572,8 @@
           "rules" : [
             "warband",
             "if_it_bleeds",
-            "spearmen"
+            "light_cavalry",
+            "light_infantry"
           ],
           "weapons" : [
             "spear",
@@ -553,7 +585,7 @@
               "withWeapon" : [
                 "spartha",
                 "hand_axe",
-                "heavy_throwing_spear"
+                "throwing_spear"
               ]
             },
             {
@@ -573,14 +605,15 @@
               "addRule" : "light_armor"
             }
           ],
+          "notes":"(LkI) WAB:Shieldwall, Saga:AoV, and TTS.",
           "min" : 5,
           "max" : 10
         }
       ]
     },
-    "northumbria_thegn" : {
-      "name" : "Northumbria Thegn Bordweall",
-      "description" : "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families.",
+    "kent_northumbria_thegn" : {
+      "name" : "Kent/Northumbria Thegn Warriors",
+      "description" : "Minor noblemen (Thegn), 'wealthy peasants' (Geneats), and what appears to be some of the middle class, made up a class of 'retainers' who served the king and his nobles. They were the more experienced, martial foundation of Anglo-Saxon Armies. The poorest thegn had enough land to support five whole families. Over time the Thegns would increasingly be encouraged and forced to field their own retainers and servants.",
       "category" : "core",
       "subfactions" : [
         "northumbria"
@@ -627,6 +660,7 @@
               "addRule" : "light_armor"
             }
           ],
+          "notes":"(LkI) WAB:Shieldwall, Saga:AoV, and TTS.",
           "min" : 5,
           "max" : 10
         }
@@ -684,8 +718,10 @@
     },
     "geburs" : {
       "name" : "Geburs",
-      "description" : "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
-      "category" : "rare",
+      "description" : "One of the aspects of the Anglo-Saxon culture that seperated it from others, was that people who didn't own all their own land were present in battle. Only recently were misconceptions cleared up, by the understanding that the 'Geburs' that took to the field were not conscripts, but retainers, rent-payers, and servants of Theigns. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
+      "category" : "core",
+      "subfactions" : [
+      ],
       "min" : 1,
       "max" : 1,
       "models" : [
@@ -731,6 +767,7 @@
               ]
             }
           ],
+          "notes":"(LkI) WAB:Shieldwall, Saga:AoV, and TTS. Further sources are on the website of Oplot (Me).",
           "min" : 5,
           "max" : 10
         }
@@ -738,11 +775,12 @@
     },
     "geburs_spear" : {
       "name" : "Gebur Spearmen",
-      "description" : "Like many cultures, including the Romans, those who couldn't fully afford their own spear and shield often fought as skirmishers. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
+      "description" : "One of the aspects of the Anglo-Saxon culture that seperated it from others, was that people who didn't own all their own land were present in battle. Only recently were misconceptions cleared up, by the understanding that the 'Geburs' that took to the field were not conscripts, but retainers, rent-payers, and servants of Theigns. Geburs were indeed 'freemen' and thus 'Ceorls', but they didn't independently own enough land to support their families. As such they had to work 2 days out of the week, at least, on their lord's lands. Many of them were former slaves, or the desendents of such people.",
       "category" : "rare",
       "keywords" : [
         "Infantry",
-        "Ceorl"
+        "Ceorl",
+        "Low_Combined"
       ],
       "models" : [
         {
@@ -752,12 +790,13 @@
           "shoot" : 5,
           "fight" : 4,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 4,
           "wounds" : 1,
           "rules" : [
             "warband",
             "if_it_bleeds",
-            "spearmen"
+            "spearmen",
+            "shield"
           ],
           "weapons" : [
             "spear"
@@ -766,11 +805,14 @@
             {
               "addRule" : [
                 "agile",
-                "stubborn",
-                "shield"
+                "stubborn"
               ]
+            },
+            {
+              "addWeapon" : "javelin"
             }
           ],
+          "notes":"(LkI) WAB:Shieldwall, Saga:AoV, and TTS. Further sources are on the website of Oplot (Me).",
           "min" : 10,
           "max" : 20
         }
@@ -822,276 +864,6 @@
           ],
           "min" : 5,
           "max" : 15
-        }
-      ]
-    },
-    "Duguth_Bordweall" : {
-      "name" : "Duguth Spearmen Bordweall",
-      "description" : "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
-      "category" : "core",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy"
-      ],
-      "models" : [
-        {
-          "name" : "Duguth",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "wounds" : 1,
-          "rules" : [
-            "warband",
-            "if_it_bleeds",
-            "spearmen"
-          ],
-          "weapons" : [
-            "shield",
-            "spartha",
-            "javelin"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : "spartha",
-              "withWeapon" : [
-                "spear"
-              ]
-            },
-            {
-              "addRule" : "travel_horse"
-            },
-            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
-            {
-              "addRule" : "light_armor"
-            }
-          ],
-          "min" : 10,
-          "max" : 20
-        }
-      ]
-    },
-    "Duguth_Light" : {
-      "name" : "Light Duguth Warriors",
-      "description" : "The Dugutb (pronounced Doo-gutb) were the more experienced and accomplished warriors, and like many other cultures, including other 'barbarians' and even the Romans, older men typically had better equipment, resilience, and experience. As Saxon warlords or nobles gained power and grew older, they would draw in more and more of these experienced fighters, along with having their inexperienced fighters become experienced over time.",
-      "category" : "core",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy"
-      ],
-      "models" : [
-        {
-          "name" : "Duguth",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "wounds" : 1,
-          "rules" : [
-            "warband",
-            "buckler",
-            "light_infantry",
-            "if_it_bleeds",
-            "spearmen"
-          ],
-          "weapons" : [
-            "spartha"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : "spartha",
-              "withWeapon" : [
-                "spear"
-              ]
-            },
-            {
-              "addWeapon" : "javelin"
-            },
-            {
-              "addRule" : "travel_horse"
-            },
-            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
-            {
-              "addRule" : [
-                "agile",
-                "strider",
-                "light_armor"
-              ]
-            }
-          ],
-          "min" : 5,
-          "max" : 10
-        }
-      ]
-    },
-    "light_geoguth" : {
-      "name" : "Light Geoguth Warriors",
-      "description" :  "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. These men would often dine and live with their 'lord' until they were given land (A fief basically, sometimes their own father's fief) and thus able to marry. Typically these men followed less experienced leaders, warlords, and chieftains. However, as the sons of more experienced warriors, they could be found among powerful lords as well.",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy"
-      ],
-      "category" : "core",
-      "min" : 1,
-      "max" : 3,
-      "rules" : [
-        "warband",
-        "buckler",
-        "fierce",
-        "light_infantry",
-        "if_it_bleeds",
-        "spearmen"
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "models" : [
-        {
-          "name" : "Geoguth",
-          "courage" : 5,
-          "movement" : 7,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "wounds" : 1,
-          "weapons" : [
-            "spartha",
-            "javelin"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : "spartha",
-              "withWeapon" : [
-                "spear"
-              ]
-            },
-            {
-              "addRule" : "agile"
-            }
-          ],
-          "min" : 5,
-          "max" : 10
-        }
-      ]
-    },
-    "heavy_geoguth" : {
-      "name" : "Geoguth Spearmen Warriors",
-      "description" :  "A band of Geoguth (Pronouced Yoo-Guths), was the young men and boys of a warband. These men would often dine and live with their 'lord' until they were given land (A fief basically, sometimes their own father's fief) and thus able to marry. Typically these men followed less experienced leaders, warlords, and chieftains. However, as the sons of more experienced warriors, they could be found among powerful lords as well.",
-      "category" : "core",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy"
-      ],
-      "models" : [
-        {
-          "name" : "Geoguth",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "wounds" : 1,
-          "rules" : [
-            "warband",
-            "shield",
-            "fierce",
-            "if_it_bleeds",
-            "spearmen"
-          ],
-          "weapons" : [
-            "spartha",
-            "javelin"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : "spartha",
-              "withWeapon" : [
-                "spear"
-              ]
-            }
-          ],
-          "min" : 10,
-          "max" : 20
-        }
-      ]
-    },
-    "ceorl" : {
-      "name" : "Ceorl Militia",
-      "description" : "A band of freemen/ceorls (Pronouced Churls), typically made up of the conquered peoples living within the lands of a Saxon/Angles king, warlord, or noble. A Ceorl, being free, was not property and neither was his children. The Ceorl often owned his own lands, but paid taxes in return for protection.",
-      "category" : "core",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy",
-        "none"
-      ],
-      "keywords" : [
-        "Infantry",
-        "Ceorl"
-      ],
-      "models" : [
-        {
-          "name" : "Ceorl",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "wounds" : 1,
-          "rules" : [
-            "warband",
-            "shield",
-            "if_it_bleeds",
-            "spearmen"
-          ],
-          "weapons" : [
-            "spear"
-          ],
-          "min" : 10,
-          "max" : 20
-        }
-      ]
-    },
-    "heavy_hearthguard" : {
-      "name" : "Heavy Hearthguard",
-      "description" : "The Gedribt/Gedriht (pronounced Tedrict/Yedrict) were like the 'Angle' lord's 'hearthguard'. These men were known to have unflinchy loyalty and were willing to do any act of cruelity or violence without thought for their 'lord'. In exchange, they are given honor, glory, respect, all the finer things in life, women, and a place by the fire. These wealthier of these men even owned and rode horses into battle.",
-      "category" : "elite",
-      "subfactions" : [
-        "anglian_kingdoms_heptarchy"
-      ],
-      "models" : [
-        {
-          "name" : "Gedribt",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "wounds" : 1,
-          "weapons" : [
-            "shield",
-            "hand_weapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : "hand_weapon",
-              "withWeapon" : [
-                "hand_axe",
-                "spartha"
-              ]
-            },
-            {
-              "addWeapon" : "javelin"
-            },
-            {"addRule": [{"id": "scout", "name": "Riding Horse"}]},
-            {
-              "addRule" : "travel_horse"
-            }
-          ],
-          "min" : 5,
-          "max" : 10
         }
       ]
     },
@@ -1567,7 +1339,7 @@
       ],
       "name" : "Shield Wall",
       "phase" : "activation",
-      "description" : "Only units with shields and spears equipped (light infantry not included), if that unit moved one or no times this round, and if charged or targeted by a shooting attack it gets +1 Save (But only against one attack) and ignores the 'superior_cavalry' rule. This effect remains in place till the unit moves.",
+      "description" : "Only units with shields and spears equipped (light infantry not included), if that unit moved one or no times this round, and if charged, or targetted by a 'fight' or shooting attack it gets +1 Save (But only against one attack) and ignores the 'superior_cavalry' rule. This effect remains in place till the unit moves.",
       "flavor" : "The bordweall (Old English for 'Shield Wall'), was a tactic and model of fighting that grew popular with the Anglo-Saxons right before or around the start of the Viking Invasion. Communities were organized into sizes that would produce a 'fyrd', which is a part time militia of freemen/ceorls, who fought shoulder to shoulder in formation.",
       "cost" : 1
     },
@@ -1592,7 +1364,7 @@
       ],
       "name" : "Combined Units",
       "phase" : "pre-game",
-      "description" : "A _Thegn_ unit can join a _Ceorl_ unit before the game for 1 point each. Only one _Thegn_ unit can be attached to a _Ceorl_ unit.",
+      "description" : "A _Thegn_ unit can join a _Ceorl_ or _Gebur_ or 'Low-Combined' unit before the game for 1 point each. Combined, they may not exceed 20 models. While combined, the stronger unit's initiative and courage is used, but incoming missile fire is divided among both units.",
       "flavor" : ".",
       "cost" : 1
     },
@@ -1608,14 +1380,14 @@
       "phase" : "activation",
       "description" : "'Use when activating a 'Low-Combined' unit which is combined with a Thegn unit. It gains +1 Strength until the end of the turn.",
       "flavor" : ".",
-      "cost" : 0
+      "tips": "This ability is useful if the Thegn's in the front are being thinned or if the combined unit is being attacked where the Low Combined unit is.",
+      "cost" : 1
     },
     {
       "subfactions" : [
         "merica",
         "wessex",
         "late_kent",
-        "anglo_danes",
         "none",
         "anglian_kingdoms_heptarchy"
       ],
@@ -1637,6 +1409,14 @@
       "phase" : "activation",
       "description" : "Choose 1 or 2 units with the 'spearman' rule, which are being charged. Increase their Initiative by +1 during any attempt to 'Counter Attack'.",
       "cost" : 1
+    },
+    {
+      "subfactions" : [
+        "anglo_danes"
+      ],
+      "name" : "Boar Snout",
+      "phase" : "activation",
+      "description" : "Use when an _Infantry_ unit makes a Charge action. All their Melee weapons gain +1 AP for that attack.",
+      "cost" : 1
     }
-  ]
-}
+  ]}
